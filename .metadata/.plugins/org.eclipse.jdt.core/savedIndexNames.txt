@@ -1,34 +1,4 @@
-INDEX VERSION 1.131+C:\workspace\java\spring5\.metadata\.plugins\org.eclipse.jdt.core
-3688233713.index
-2994552673.index
-3173990942.index
-2453961326.index
-2356015491.index
-2063236677.index
-655214987.index
-2724345021.index
-1180489742.index
-2445986091.index
-1394848873.index
-1607282252.index
-1633992518.index
-3632558312.index
-2707737922.index
-663432935.index
-3964918290.index
-866495595.index
+INDEX VERSION 1.131+C:\workspace\java\test\spring5_study\.metadata\.plugins\org.eclipse.jdt.core
 2729203103.index
-783211393.index
-243551156.index
-1713295793.index
-2327184759.index
-1215025111.index
-1998870236.index
-1110334383.index
-72535324.index
-4152861994.index
-2857209468.index
-146530134.index
-1703361771.index
-2161747041.index
-2409191641.index
+3470297773.index
+2900718447.index
