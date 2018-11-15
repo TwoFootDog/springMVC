@@ -6,4 +6,14 @@
 <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
 <fullyQualifiedTypeName name="java.io.IOException"/>
 <fullyQualifiedTypeName name="java.time.format.DateTimeFormatter"/>
+<fullyQualifiedTypeName name="org.springframework.context.annotation.FilterType"/>
+<fullyQualifiedTypeName name="java.lang.annotation.Retention"/>
+<fullyQualifiedTypeName name="org.springframework.context.support.AbstractApplicationContext"/>
+<fullyQualifiedTypeName name="spring.Client"/>
+<fullyQualifiedTypeName name="spring.Client2"/>
+<fullyQualifiedTypeName name="org.aspectj.apache.bcel.classfile.Signature"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="org.aspectj.lang.Signature"/>
+<fullyQualifiedTypeName name="config.AppCtx"/>
+<fullyQualifiedTypeName name="chap07.Calculator"/>
 </qualifiedTypeNameHistroy>

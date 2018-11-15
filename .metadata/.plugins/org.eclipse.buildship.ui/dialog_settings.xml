@@ -5,6 +5,6 @@
 	</section>
 	<section name="org.eclipse.buildship.ui.wizard.project.creation">
 		<item value="true" key="use_default_location"/>
-		<item value="C:\workspace\java\spring5\chap04_autowired" key="project_location"/>
+		<item value="C:\workspace\java\test\spring5_study\chap07_aop" key="project_location"/>
 	</section>
 </section>
