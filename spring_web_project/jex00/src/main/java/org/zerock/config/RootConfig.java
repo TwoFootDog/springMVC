@@ -20,8 +20,10 @@ public class RootConfig {
 	@Bean
 	public DataSource dataSource() {
 		HikariConfig hikariConfig = new HikariConfig();
-		hikariConfig.setDriverClassName("org.mariadb.jdbc.Driver");
-		hikariConfig.setJdbcUrl("jdbc:mariadb://127.0.0.1:3306/test");
+//		hikariConfig.setDriverClassName("org.mariadb.jdbc.Driver");
+//		hikariConfig.setJdbcUrl("jdbc:mariadb://127.0.0.1:3306/test");
+		hikariConfig.setDriverClassName("net.sf.log4jdbc.sql.jdbcapi.DriverSpy");
+		hikariConfig.setJdbcUrl("jdbc:log4jdbc:mariadb://127.0.0.1:3306/test");
 		hikariConfig.setUsername("root");
 		hikariConfig.setPassword("2815");
 

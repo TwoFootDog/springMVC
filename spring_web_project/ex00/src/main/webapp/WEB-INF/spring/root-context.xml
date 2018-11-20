@@ -8,8 +8,10 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 	
 	<bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
-		<property name="driverClassName" value="org.mariadb.jdbc.Driver"></property>
-		<property name="jdbcUrl" value="jdbc:mariadb://127.0.0.1:3306/test"></property>
+		<!-- <property name="driverClassName" value="org.mariadb.jdbc.Driver"></property>
+		<property name="jdbcUrl" value="jdbc:mariadb://127.0.0.1:3306/test"></property> -->
+		<property name="driverClassName" value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy"></property>
+		<property name="jdbcUrl" value="jdbc:log4jdbc:mariadb://127.0.0.1:3306/test"></property>
 		<property name="username" value="root"></property>
 		<property name="password" value="2815"></property>
 	</bean>
@@ -22,7 +24,7 @@
 		<property name="dataSource" ref="dataSource"></property>
 	</bean>
 	
-	<mybatis-spring:scan base-package="org.zeorck.mapper"></mybatis-spring:scan>
+	<mybatis-spring:scan base-package="org.zerock.mapper"></mybatis-spring:scan>
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
 		<context:component-scan base-package="org.zeorck.sample"></context:component-scan>
