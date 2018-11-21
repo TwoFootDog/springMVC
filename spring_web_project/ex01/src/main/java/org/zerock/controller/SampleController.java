@@ -35,16 +35,11 @@ public class SampleController {
 		return "ex01";
 	}
 	
-/*	@GetMapping("/ex02")
+	@GetMapping("/ex02")
 	public String ex02(@RequestParam("name") String name, @RequestParam("age") int age) {
 		log.info("name : " + name);
 		log.info("age : " + age);
 		return "ex02";
-	}*/
-	
-	@GetMapping("/ex02")
-	public void ex02(@RequestParam("name") String name, @RequestParam("age") int age) {
-		log.info("name : " + name);
-		log.info("age : " + age);
 	}
+	
 }
