@@ -1,5 +1,7 @@
 package org.zerock.controller;
 
+import java.util.ArrayList;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -42,4 +44,10 @@ public class SampleController {
 		return "ex02";
 	}
 	
+	
+	@GetMapping("/ex02List")
+	public String ex02List(@RequestParam("ids")ArrayList<String> ids) {
+		log.info("ids : " + ids);
+		return "ex02List";
+	}
 }
