@@ -41,4 +41,24 @@ public class BoardController {
 		log.info("/get");
 		model.addAttribute("board", boardService.get(bno));
 	}
+	
+	@PostMapping("/modify")
+	public String modify(BoardVO board, RedirectAttributes rttr) {
+		log.info("modify : " + board);
+		
+		if(boardService.modify(board)) {
+			rttr.addFlashAttribute("result", "success");
+		}
+		return "redirect:/board/list";
+	}
+	
+	@PostMapping("/remove")
+	public String remove(@RequestParam("bno") Long bno, RedirectAttributes rttr) {
+		log.info("remove...." + bno);
+		if (boardService.remove(bno)) {
+			rttr.addFlashAttribute("result", "success");
+		}
+		
+		return "redirect:/board/list";
+	}
 }
