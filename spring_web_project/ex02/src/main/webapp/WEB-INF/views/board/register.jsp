@@ -21,7 +21,7 @@
 			<div class="panel panel-default">
 				<div class="panel-heading">Board Register</div>
 				<div class="panel-body">
-					<form role="foem" action="/board/register" method="post">
+					<form role="form" action="/board/register" method="post">
 						<div class="form-group">
 							<label>Title</label>
 							<input class="form-control" name='title'>
