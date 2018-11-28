@@ -19,8 +19,8 @@
 	<selectKey keyProperty="bno" order="BEFORE" resultType="long">
 		select nextval(seq_board) from dual
 	</selectKey>
-	insert into tbl_board (bno, title, content, writer)
-	values (#{bno}, #{title}, #{content}, #{writer})
+	insert into tbl_board (bno, title, content, writer, registDate, updateDate)
+	values (#{bno}, #{title}, #{content}, #{writer}, sysdate(), sysdate())
 </insert>
 
 <select id="read" resultType="org.zerock.domain.BoardVO">
