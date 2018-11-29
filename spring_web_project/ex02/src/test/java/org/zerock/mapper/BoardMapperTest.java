@@ -1,12 +1,17 @@
 package org.zerock.mapper;
 
+import java.util.List;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.zerock.domain.BoardVO;
-import org.zerock.mapper.BoardMapper;
+import org.zerock.domain.Criteria;
+import org.zerock.service.BoardService;
 
 import lombok.Setter;
 import lombok.extern.log4j.Log4j;
@@ -18,7 +23,23 @@ public class BoardMapperTest {
 
 	@Setter(onMethod_ = @Autowired)
 	private BoardMapper boardMapper;
+	
+	@Setter(onMethod_ = @Autowired)
+	private BoardService boardService;
+	
+	
+	@Test
+	public void testGetList() {
+		boardService.getList(new Criteria(1,3)).forEach(board -> log.info(board));
+	}
 
+	@Test
+	public void testPaging() {
+		Criteria cri = new Criteria(2, 5);
+		List<BoardVO> list = boardMapper.getListWithPaging(cri);
+		list.forEach(board -> log.info(board));
+	}
+	
 /*	@Test
 	public void testGetList() {
 		boardMapper.getList().forEach(board -> log.info(board));
@@ -55,7 +76,7 @@ public class BoardMapperTest {
 		log.info("Delete count : " + boardMapper.delete(5L));
 	}*/
 	
-	@Test
+/*	@Test
 	public void testUpdate() { 
 		BoardVO board = new BoardVO();
 		board.setBno(6L);
@@ -65,5 +86,5 @@ public class BoardMapperTest {
 		
 		int count = boardMapper.update(board);
 		log.info("update count : " + count);
-	}
+	}*/
 }

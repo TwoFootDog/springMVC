@@ -10,6 +10,17 @@
 		]]>
 </select>
 
+<select id="getListWithPaging" resultType="org.zerock.domain.BoardVO">
+	<![CDATA[
+	SELECT
+		BNO, TITLE, CONTENT, WRITER, REGISTDATE, UPDATEDATE
+		FROM TBL_BOARD
+		WHERE BNO > 0
+	ORDER BY BNO
+	LIMIT #{startAmount}, #{amount}
+	]]>
+</select>
+
 <insert id="insert">
 	insert into tbl_board (bno, title, content, writer)
 	values (nextval(seq_board), #{title}, #{content}, #{writer})

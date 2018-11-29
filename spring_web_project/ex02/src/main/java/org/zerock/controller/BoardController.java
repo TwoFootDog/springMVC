@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.zerock.domain.BoardVO;
+import org.zerock.domain.Criteria;
 import org.zerock.service.BoardService;
 
 import lombok.AllArgsConstructor;
@@ -22,9 +23,10 @@ public class BoardController {
 	private BoardService boardService;
 
 	@GetMapping("/list")
-	public void list(Model model) {
-		log.info("list");
-		model.addAttribute("list", boardService.getList());
+	public void list(Criteria cri, Model model) {
+		cri.setStartAmount();
+		log.info("list...cri " + cri);
+		model.addAttribute("list", boardService.getList(cri));
 	}
 	
 	@GetMapping("/register")
