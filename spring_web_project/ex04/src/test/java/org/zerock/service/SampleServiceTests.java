@@ -23,7 +23,7 @@ public class SampleServiceTests {
 		log.info(service);
 		log.info(service.getClass().getName());
 //		log.info(service.doAdd("123", "456"));
-		log.info(service.doAdd("123", "ABC"));
+		log.info(service.doAdd("123", "456"));
 	}
 	
 }
