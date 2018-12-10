@@ -27,5 +27,5 @@
 	<mybatis-spring:scan base-package="org.zerock.mapper"></mybatis-spring:scan>
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
-		<context:component-scan base-package="org.zeorck.sample"></context:component-scan>
+		<context:component-scan base-package="org.zerock.sample"></context:component-scan>
 </beans>

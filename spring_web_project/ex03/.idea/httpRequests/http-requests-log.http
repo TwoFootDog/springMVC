@@ -1,0 +1,211 @@
+POST http://localhost:8080/sample/ticket
+Content-Type: application/json
+
+{ "tno": "11",   "owner": "bb",   "grade": "cc" }
+
+<> 2018-12-10T061206.200.xml
+
+###
+
+POST http://localhost:8080/sample/ticket
+Content-Type: application/json
+
+{ "tno": "22",   "owner": "bb",   "grade": "cc" }
+
+<> 2018-12-10T054345.200.xml
+
+###
+
+POST http://localhost:8080/sample/ticket
+Content-Type: application/json
+
+{ "tno": "11",   "owner": "bb",   "grade": "cc" }
+
+<> 2018-12-10T054328.200.xml
+
+###
+
+POST http://localhost:8080/sample/ticket
+
+Content-Type: application/json  { "tno": "11",   "owner": "bb",   "grade": "cc" }
+
+<> 2018-12-10T054207.415.html
+
+###
+
+POST http://localhost:8080/sample/ticket
+
+Content-Type: application/json  { "tno": "11",   "owner": "bb",   "grade": "cc" }
+
+<> 2018-12-10T054115.415.html
+
+###
+
+POST http://localhost:8080/sample/ticket
+Content-Type: application/json
+
+{ "tno": "11",   "owner": "bb",   "grade": "cc" }
+
+<> 2018-12-10T054054.200.xml
+
+###
+
+POST http://localhost:8080/sample/ticket
+Content-Type: application/json
+
+{ "tno": "11",   "owner": "bb",   "grade": "cc" }
+
+<> 2018-12-10T054041.200.xml
+
+###
+
+POST http://localhost:8080/sample/ticket
+Content-Type: application/json
+
+{ "tno": "11",   "owner": "bb",   "grade": "cc" }
+
+<> 2018-12-10T054040.200.xml
+
+###
+
+POST http://localhost:8080/sample/ticket
+
+{ "tno": "11",   "owner": "bb",   "grade": "cc" }
+
+<> 2018-12-10T054026.415.html
+
+###
+
+POST http://localhost:8080/sample/ticket
+
+{ "tno": "11",   "owner": "bb",   "grade": "cc" }
+
+<> 2018-12-10T053724.415.html
+
+###
+
+POST http://localhost:8080/sample/ticket
+
+{ "tno": "11",   "owner": "bb",   "grade": "cc" }
+
+<> 2018-12-10T053718.415.html
+
+###
+
+POST http://localhost:8080/sample/ticket
+
+{ "tno": "11",   "owner": "bb",   "grade": "cc" }
+
+<> 2018-12-10T053633.415.html
+
+###
+
+POST http://localhost:8080/sample/ticket
+
+{   "tno": "11",   "owner": "bb",   "grade": "cc" }
+
+<> 2018-12-10T053606.415.html
+
+###
+
+POST http://localhost:8080/sample/ticket
+
+{"tno" : "1", "owner" : "kang", "grade" : "2"}
+
+<> 2018-12-10T053526.415.html
+
+###
+
+POST http://localhost:8080/sample/ticket
+
+{"tno" : 1, "owner" : "kang", "grade" : "2"}
+
+<> 2018-12-10T053512.415.html
+
+###
+
+POST http://localhost:8080/sample/ticket
+
+["tno" : 1, "owner" : "kang", "grade" : "2"]
+
+<> 2018-12-10T053015.405.html
+
+###
+
+POST http://localhost:8080/sample/ticket
+
+["tno" : 1, "owner" : "kang", "grade" : "2"]
+
+<> 2018-12-10T052547.405.html
+
+###
+
+POST http://localhost:8080/sample/ticket
+
+["tno : 1", "owner : kang", "grade : 2"]
+
+<> 2018-12-10T052412.405.html
+
+###
+
+POST http://localhost:8080/sample/ticket
+tno: 5
+owner: aaaa
+grade: 12
+
+<> 2018-12-10T052105.405.html
+
+###
+
+POST http://localhost:8080/sample/ticket
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-10T052021.405.html
+
+###
+
+GET http://localhost:8080/sample/product/aa/1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-10T014618.200.xml
+
+###
+
+GET http://localhost:8080/sample/product/aa/1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-10T014617.200.xml
+
+###
+
+GET http://localhost:8080/sample/product/aa/1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-10T014610.200.xml
+
+###
+
+GET http://localhost:8080/sample/product/aa/1.json
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-10T014605.200.json
+
+###
+
+GET http://localhost:8080/sample/product/aa/1.json
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8080/sample/product/aa/1.json
+Accept: */*
+Cache-Control: no-cache
+
+###
+
