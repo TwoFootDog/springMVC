@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" addBOMForNewFiles="with NO BOM">
+    <file url="file://$PROJECT_DIR$/src/main/java/org/zerock/contoller/BoardController.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/zerock/domain/BoardVO.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/zerock/domain/Criteria.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/zerock/domain/PageDTO.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/zerock/mapper/BoardMapper.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/zerock/service/BoardService.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/zerock/service/BoardServiceImpl.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/log4jdbc.log4j2.properties" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/org.zerock/mapper" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/test/java/org/zerock/controller/BoardControllerTests.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/test/java/org/zerock/mapper/BoardMapperTest.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/test/java/org/zerock/persistence/DataSourceTests.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/test/java/org/zerock/persistence/JDBCTests.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/test/java/org/zerock/service/BoardServiceTests.java" charset="UTF-8" />
     <file url="PROJECT" charset="x-windows-949" />
   </component>
 </project>
