@@ -44,8 +44,6 @@ public class SampleController {
             result = ResponseEntity.status(HttpStatus.OK).body(vo);
         }
         return result;
-
-
     }
 
     @GetMapping(value = "/getMap")

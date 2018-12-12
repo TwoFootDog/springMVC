@@ -10,6 +10,10 @@
     <file url="file://$PROJECT_DIR$/src/main/java/org/zerock/service/BoardServiceImpl.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources/log4jdbc.log4j2.properties" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources/org.zerock/mapper" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/org/zerock/mapper/BoardMapper.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/includes" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/test/java/org/zerock/controller/BoardControllerTests.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/test/java/org/zerock/mapper/BoardMapperTest.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/test/java/org/zerock/persistence/DataSourceTests.java" charset="UTF-8" />

@@ -11,7 +11,7 @@
       <Collation>utf8_general_ci</Collation>
     </schema>
     <schema id="3" parent="1" name="mysql">
-      <Collation>latin1_swedish_ci</Collation>
+      <Collation>utf8_general_ci</Collation>
     </schema>
     <schema id="4" parent="1" name="performance_schema">
       <Collation>utf8_general_ci</Collation>
@@ -1310,100 +1310,201 @@
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <table id="328" parent="5" name="seq_board"/>
-    <table id="329" parent="5" name="tbl_board">
+    <table id="329" parent="5" name="seq_reply"/>
+    <table id="330" parent="5" name="tbl_board">
       <Collation>utf8_general_ci</Collation>
     </table>
-    <column id="330" parent="328" name="next_not_cached_value">
+    <table id="331" parent="5" name="tbl_reply">
+      <Collation>utf8_general_ci</Collation>
+    </table>
+    <column id="332" parent="328" name="next_not_cached_value">
       <Position>1</Position>
       <DataType>bigint(21)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="331" parent="328" name="minimum_value">
+    <column id="333" parent="328" name="minimum_value">
       <Position>2</Position>
       <DataType>bigint(21)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="332" parent="328" name="maximum_value">
+    <column id="334" parent="328" name="maximum_value">
       <Position>3</Position>
       <DataType>bigint(21)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="333" parent="328" name="start_value">
+    <column id="335" parent="328" name="start_value">
       <Position>4</Position>
       <Comment>start value when sequences is created or value if RESTART is used</Comment>
       <DataType>bigint(21)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="334" parent="328" name="increment">
+    <column id="336" parent="328" name="increment">
       <Position>5</Position>
       <Comment>increment value</Comment>
       <DataType>bigint(21)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="335" parent="328" name="cache_size">
+    <column id="337" parent="328" name="cache_size">
       <Position>6</Position>
       <DataType>bigint(21) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="336" parent="328" name="cycle_option">
+    <column id="338" parent="328" name="cycle_option">
       <Position>7</Position>
       <Comment>0 if no cycles are allowed, 1 if the sequence should begin a new cycle when maximum_value is passed</Comment>
       <DataType>tinyint(1) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="337" parent="328" name="cycle_count">
+    <column id="339" parent="328" name="cycle_count">
       <Position>8</Position>
       <Comment>How many cycles have been done</Comment>
       <DataType>bigint(21)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="338" parent="329" name="bno">
+    <column id="340" parent="329" name="next_not_cached_value">
+      <Position>1</Position>
+      <DataType>bigint(21)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="341" parent="329" name="minimum_value">
+      <Position>2</Position>
+      <DataType>bigint(21)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="342" parent="329" name="maximum_value">
+      <Position>3</Position>
+      <DataType>bigint(21)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="343" parent="329" name="start_value">
+      <Position>4</Position>
+      <Comment>start value when sequences is created or value if RESTART is used</Comment>
+      <DataType>bigint(21)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="344" parent="329" name="increment">
+      <Position>5</Position>
+      <Comment>increment value</Comment>
+      <DataType>bigint(21)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="345" parent="329" name="cache_size">
+      <Position>6</Position>
+      <DataType>bigint(21) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="346" parent="329" name="cycle_option">
+      <Position>7</Position>
+      <Comment>0 if no cycles are allowed, 1 if the sequence should begin a new cycle when maximum_value is passed</Comment>
+      <DataType>tinyint(1) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="347" parent="329" name="cycle_count">
+      <Position>8</Position>
+      <Comment>How many cycles have been done</Comment>
+      <DataType>bigint(21)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="348" parent="330" name="bno">
       <Position>1</Position>
       <DataType>bigint(10)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="339" parent="329" name="title">
+    <column id="349" parent="330" name="title">
       <Position>2</Position>
       <DataType>varchar(200)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="340" parent="329" name="content">
+    <column id="350" parent="330" name="content">
       <Position>3</Position>
       <DataType>varchar(2000)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="341" parent="329" name="writer">
+    <column id="351" parent="330" name="writer">
       <Position>4</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="342" parent="329" name="registDate">
+    <column id="352" parent="330" name="registDate">
       <Position>5</Position>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="343" parent="329" name="updatedate">
+    <column id="353" parent="330" name="updatedate">
       <Position>6</Position>
       <DataType>datetime|0s</DataType>
       <DefaultExpression>sysdate()</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="344" parent="329" name="PRIMARY">
+    <key id="354" parent="330" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>bno</ColNames>
       <Primary>1</Primary>
     </key>
+    <column id="355" parent="331" name="rno">
+      <Position>1</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="356" parent="331" name="bno">
+      <Position>2</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="357" parent="331" name="reply">
+      <Position>3</Position>
+      <DataType>varchar(1000)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="358" parent="331" name="replyer">
+      <Position>4</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="359" parent="331" name="replyDate">
+      <Position>5</Position>
+      <DataType>datetime|0s</DataType>
+      <DefaultExpression>sysdate()</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="360" parent="331" name="updateDate">
+      <Position>6</Position>
+      <DataType>datetime|0s</DataType>
+      <DefaultExpression>sysdate()</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="361" parent="331" name="FK_REPLY_BOARD">
+      <ColNames>bno</ColNames>
+      <Type>btree</Type>
+    </index>
+    <foreign-key id="362" parent="331" name="FK_REPLY_BOARD">
+      <ColNames>bno</ColNames>
+      <RefSchemaName>test</RefSchemaName>
+      <RefTableName>tbl_board</RefTableName>
+      <RefColNames>bno</RefColNames>
+    </foreign-key>
   </database-model>
 </dataSource>
