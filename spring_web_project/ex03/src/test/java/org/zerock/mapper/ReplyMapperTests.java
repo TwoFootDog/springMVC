@@ -19,7 +19,7 @@ public class ReplyMapperTests {
     @Setter(onMethod_ = @Autowired)
     private ReplyMapper replyMapper;
 
-    private Long[] bnoArr = {3L, 4L, 6L, 7L, 8L};
+    private Long[] bnoArr = {6L, 7L, 8L, 9L, 10L};
 
     @Test
     public void testCreate() {
@@ -27,7 +27,7 @@ public class ReplyMapperTests {
             ReplyVO replyVO = new ReplyVO();
             replyVO.setBno(bnoArr[i%5]);
             replyVO.setReply("댓글테스트" + i);
-            replyVO.setReplyer("테스터" + i);
+            replyVO.setReplyer("댓글테스터" + i);
             replyMapper.insert(replyVO);
         });
     }

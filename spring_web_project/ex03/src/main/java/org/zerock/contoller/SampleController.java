@@ -7,13 +7,13 @@ import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
+import lombok.extern.log4j.Log4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.zerock.domain.SampleVO;
 
-import lombok.extern.log4j.Log4j;
 import org.zerock.domain.Ticket;
 
 
