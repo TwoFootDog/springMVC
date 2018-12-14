@@ -64,13 +64,13 @@ public class SampleController {
     @GetMapping(value = "/getSample")
     public SampleVO getSample() {
 
-        return new SampleVO(112, "½ºÅ¸", "·Îµå");
+        return new SampleVO(112, "ìŠ¤íƒ€", "ë¡œë“œ");
     }
 
     @GetMapping(value = "/getText", produces = "text/plain; charset=UTF-8")
     public String getText() {
         log.info("MIME TYPE : " + MediaType.TEXT_PLAIN_VALUE);
 
-        return "¾È³çÇÏ¼¼¿ä";
+        return "ì•ˆë…•í•«ì—ã…›";
     }
 }

@@ -22,19 +22,42 @@ public class ReplyMapperTests {
     private Long[] bnoArr = {6L, 7L, 8L, 9L, 10L};
 
     @Test
+    public void testUpdate() {
+        Long targetRno = 3002L;
+        ReplyVO replyVO = replyMapper.read(3002L);
+        replyVO.setReply("ëŒ“ê¸€í…ŒìŠ¤íŠ¸ ìˆ˜ì •ë³¸");
+        int count = replyMapper.update(replyVO);
+        log.info("update count : " + count);
+    }
+
+
+    @Test
+    public void testDelete() {
+        Long targetRno = 3001L;
+        replyMapper.delete(targetRno);
+    }
+
+    @Test
+    public void testRead() {
+        Long targetRno = 3001L;
+        ReplyVO replyVO = replyMapper.read(targetRno);
+        log.info(replyVO);
+    }
+
+    @Test
     public void testCreate() {
         IntStream.rangeClosed(1,10).forEach(i->{
             ReplyVO replyVO = new ReplyVO();
             replyVO.setBno(bnoArr[i%5]);
-            replyVO.setReply("´ñ±ÛÅ×½ºÆ®" + i);
-            replyVO.setReplyer("´ñ±ÛÅ×½ºÅÍ" + i);
+            replyVO.setReply("ëŒ“ê¸€í…ŒìŠ¤íŠ¸" + i);
+            replyVO.setReplyer("ëŒ“ê¸€í…ŒìŠ¤í„°" + i);
             replyMapper.insert(replyVO);
-        });
-    }
+    });
+}
 
-/*    @Test
+    @Test
     public void testMapper() {
         log.info(replyMapper);
-    }*/
+    }
 
 }

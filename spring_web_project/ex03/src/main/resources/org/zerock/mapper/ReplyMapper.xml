@@ -4,7 +4,21 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.zerock.mapper.ReplyMapper">
     <insert id="insert">
-        insert into tbl_reply (rno, bno, reply, replyer, replyDate, updateDate)
+        insert into tbl_reply (rno, bno, reply, replyer, replydate, updatedate)
         values (nextval(seq_reply), #{bno}, #{reply}, #{replyer}, sysdate(), sysdate())
     </insert>
+
+    <select id="read" resultType="org.zerock.domain.ReplyVO">
+        select * from tbl_reply where rno = #{rno}
+    </select>
+
+    <delete id="delete">
+        delete from tbl_reply where rno = #{rno}
+    </delete>
+
+    <update id="update">
+        UPDATE TBL_REPLY
+        SET REPLY = #{reply}, UPDATEDATE = SYSDATE()
+        WHERE RNO = #{rno}
+    </update>
 </mapper>
