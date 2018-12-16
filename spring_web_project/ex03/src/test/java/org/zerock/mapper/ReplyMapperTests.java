@@ -26,8 +26,8 @@ public class ReplyMapperTests {
         IntStream.rangeClosed(1,10).forEach(i->{
             ReplyVO replyVO = new ReplyVO();
             replyVO.setBno(bnoArr[i%5]);
-            replyVO.setReply("´ñ±ÛÅ×½ºÆ®" + i);
-            replyVO.setReplyer("´ñ±ÛÅ×½ºÅÍ" + i);
+            replyVO.setReply("ëŒ“ê¸€í…ŒìŠ¤íŠ¸" + i);
+            replyVO.setReplyer("ëŒ“ê¸€í…ŒìŠ¤í„°" + i);
             replyMapper.insert(replyVO);
         });
     }
