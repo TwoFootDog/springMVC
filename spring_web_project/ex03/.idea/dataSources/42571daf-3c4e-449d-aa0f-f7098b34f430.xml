@@ -1464,6 +1464,7 @@
     <column id="355" parent="331" name="rno">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="356" parent="331" name="bno">
@@ -1496,5 +1497,20 @@
       <DefaultExpression>sysdate()</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
+    <index id="361" parent="331" name="FK_REPLY_BOARD">
+      <ColNames>bno</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="362" parent="331" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>rno</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="363" parent="331" name="FK_REPLY_BOARD">
+      <ColNames>bno</ColNames>
+      <RefSchemaName>test</RefSchemaName>
+      <RefTableName>tbl_board</RefTableName>
+      <RefColNames>bno</RefColNames>
+    </foreign-key>
   </database-model>
 </dataSource>

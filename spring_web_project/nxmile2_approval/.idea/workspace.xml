@@ -6,20 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ab0b816-a40a-4b12-87fc-61500083e5c5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../ex02/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex02/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex02/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex02/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex02/src/test/java/org/zerock/controller/BoardControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex02/src/test/java/org/zerock/controller/BoardControllerTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex02/target/test-classes/org/zerock/controller/BoardControllerTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ex02/target/test-classes/org/zerock/controller/BoardControllerTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex02/target/test-classes/org/zerock/service/BoardServiceTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ex02/target/test-classes/org/zerock/service/BoardServiceTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex03/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex03/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex03/src/main/webapp/WEB-INF/views/board/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03/src/main/webapp/WEB-INF/views/board/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex03/src/test/java/org/zerock/mapper/ReplyMapperTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03/src/test/java/org/zerock/mapper/ReplyMapperTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex03/target/contoller-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/org/zerock/contoller/SampleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03/target/contoller-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/org/zerock/contoller/SampleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex03/target/contoller-1.0.0-BUILD-SNAPSHOT/WEB-INF/spring/root-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03/target/contoller-1.0.0-BUILD-SNAPSHOT/WEB-INF/spring/root-context.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex03/target/test-classes/org/zerock/mapper/ReplyMapperTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03/target/test-classes/org/zerock/mapper/ReplyMapperTests.class" afterDir="false" />
-    </list>
+    <list default="true" id="9ab0b816-a40a-4b12-87fc-61500083e5c5" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +50,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-config/dispatcher-servlet.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="368">
-              <caret line="16" column="8" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+              <caret line="16" column="8" lean-forward="true" selection-end-line="16" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -246,7 +233,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544981556654" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544981562524" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -364,12 +351,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1544974539910</updated>
-      <workItem from="1544974541157" duration="4166000" />
+      <workItem from="1544974541157" duration="4299000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4166000" />
+    <option name="totallyTimeSpent" value="4299000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -381,7 +368,7 @@
       <window_info id="UI Designer" />
       <window_info id="Favorites" side_tool="true" />
       <window_info id="Web" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Application Servers" weight="0.32924107" />
       <window_info anchor="bottom" id="Spring" />
@@ -394,7 +381,7 @@
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.23102678" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32924107" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32924107" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -451,7 +438,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-config/dispatcher-servlet.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
-          <caret line="16" column="8" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+          <caret line="16" column="8" lean-forward="true" selection-end-line="16" selection-end-column="8" />
         </state>
       </provider>
     </entry>
