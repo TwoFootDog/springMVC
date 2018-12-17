@@ -7,10 +7,10 @@
 
     <!-- HikariCP connection pool bean 셋팅-->
     <bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
-        <property name="driverClassName" value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy"></property>
-        <property name="jdbcUrl" value="jdbc:log4jdbc:mariadb://127.0.0.1:3306/test"></property>
+        <property name="driverClassName" value="org.mariadb.jdbc.Driver"></property>
+        <property name="jdbcUrl" value="jdbc:mariadb://127.0.0.1:3306/test"></property>
         <property name="username" value="root"></property>
-        <property name="password" value="1111"></property>
+        <property name="password" value="2815"></property>
     </bean>
 
     <!-- 커넥션 pool을 사용할 dataSource bean 셋팅-->
@@ -24,9 +24,11 @@
     </bean>
 
     <!-- base-package 에 정의된 package 내 클래스 및 xml을 SQL 처리를 위한 mapper로 인식-->
-    <mybatis-spring:scan base-package="com.zptutxptc.mapper" />
+    <mybatis-spring:scan base-package="com.tpptu.mapper" />
+    <mybatis-spring:scan base-package="com.tpcom_apr.mapper" />
 
     <!-- base-package에 정의된 package내 소스 중 @Component가 작성된 Class를 bean으로 인식-->
-    <context:component-scan base-package="com.zptutxptc.service" />
+    <context:component-scan base-package="com.tpptu.service" />
+    <context:component-scan base-package="com.tpcom_apr.service" />
 
 </beans>

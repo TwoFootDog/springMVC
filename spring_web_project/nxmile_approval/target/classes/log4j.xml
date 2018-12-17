@@ -11,7 +11,7 @@
 	</appender>
 	
 	<!-- Application Loggers -->
-	<logger name="com.zptutxptc.contoller">
+	<logger name="com.tpptu.contoller">
 		<level value="info" />
 	</logger>
 	
