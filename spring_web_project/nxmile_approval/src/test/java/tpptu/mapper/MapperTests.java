@@ -44,4 +44,9 @@ public class MapperTests {
         log.info("TimeMapper Class Name : " + timeMapper.getClass().getName());
         log.info("getTime : " + timeMapper.getTime());
     }
+
+    @Test
+    public void testGetReplyer() {
+        log.info("testReplyer : " + timeMapper.getReplyer(3002L));
+    }
 }

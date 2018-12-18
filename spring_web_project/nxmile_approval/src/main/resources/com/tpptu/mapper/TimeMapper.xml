@@ -6,4 +6,8 @@
     <select id="getTime" resultType="string">
         select sysdate() from dual
     </select>
+
+    <select id="getReplyer" resultType="string">
+      select replyer from tbl_reply where rno=#{rno}
+    </select>
 </mapper>

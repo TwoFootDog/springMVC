@@ -7,8 +7,10 @@
 
     <!-- HikariCP connection pool bean 셋팅-->
     <bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
-        <property name="driverClassName" value="org.mariadb.jdbc.Driver"></property>
-        <property name="jdbcUrl" value="jdbc:mariadb://127.0.0.1:3306/test"></property>
+        <!--<property name="driverClassName" value="org.mariadb.jdbc.Driver"></property>-->
+        <!--<property name="jdbcUrl" value="jdbc:mariadb://127.0.0.1:3306/test"></property>-->
+        <property name="driverClassName" value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy"></property>
+        <property name="jdbcUrl" value="jdbc:log4jdbc:mariadb://127.0.0.1:3306/test"></property>
         <property name="username" value="root"></property>
         <property name="password" value="2815"></property>
     </bean>
