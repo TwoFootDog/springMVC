@@ -2,24 +2,28 @@ package com.tpptu.controller;
 
 import com.tpptu.domain.ZptutxptcInputVO;
 import com.tpptu.domain.ZptutxptcOutputVO;
+import com.tpptu.service.ZptutxptcService;
+import lombok.Setter;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class HomeController {
 
+    @Setter(onMethod_={@Autowired})
+    ZptutxptcService zptutxptcService;
 
 
-    @PostMapping("/zptutxptc")
-    public ZptutxptcOutputVO zptutcptc(@RequestBody ZptutxptcInputVO inputVO) {
+    @PostMapping(value = "/zptutxptc", consumes = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<ZptutxptcOutputVO> zptutcptc(@RequestBody ZptutxptcInputVO inputVO) {
 
-        return new ZptutxptcOutputVO();
+        return zptutxptcService.syncCall(inputVO);
     }
 
-    @GetMapping("/")
+    @GetMapping(value = "/")
     public String home(Model model) {
         model.addAttribute("hi", "Hello~~");
         return "home";

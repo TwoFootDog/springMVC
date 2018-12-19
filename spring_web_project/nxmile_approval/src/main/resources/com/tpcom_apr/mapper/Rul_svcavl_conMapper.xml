@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.tpcom_apr.mapper">
+<mapper namespace="com.tpcom_apr.mapper.Rul_svcavl_conMapper">
     <select id="rul_svcavl_con_tpcom_vs2001">
       SELECT
         mbrsh_pgm_id,
@@ -11,6 +11,10 @@
         msg_fg,
         mcht_mng_yn,
       FROM rul_svcavl_con
+      where organ_cd = #{organ_cd}
+      and telgrm_no = #{telgrm_no}
+      and svc_modu_id = #{svc_modu_id}
+      and apl_yn = 'Y'
     </select>
     
 </mapper>
