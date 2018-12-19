@@ -3,6 +3,7 @@ package com.tpptu.controller;
 import com.tpptu.domain.ZptutxptcInputVO;
 import com.tpptu.domain.ZptutxptcOutputVO;
 import com.tpptu.service.ZptutxptcService;
+import lombok.AllArgsConstructor;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -11,9 +12,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@AllArgsConstructor
 public class HomeController {
 
-    @Setter(onMethod_={@Autowired})
+//    @Setter(onMethod_={@Autowired})
     ZptutxptcService zptutxptcService;
 
 
