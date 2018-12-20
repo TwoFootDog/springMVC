@@ -1,8 +1,12 @@
 package com.tpcom_apr.domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class BmComOnmsgchkInputVO {
     private String svc_modu_id;
     private String telgrm_no;

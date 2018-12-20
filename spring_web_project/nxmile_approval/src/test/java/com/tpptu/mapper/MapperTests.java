@@ -1,4 +1,4 @@
-package tpptu.mapper;
+package com.tpptu.mapper;
 
 import com.tpptu.mapper.TimeMapper;
 import lombok.Setter;

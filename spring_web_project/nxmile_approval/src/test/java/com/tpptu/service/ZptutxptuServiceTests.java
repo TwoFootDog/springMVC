@@ -1,4 +1,4 @@
-package tpptu.service;
+package com.tpptu.service;
 
 public class ZptutxptuServiceTests {
 }

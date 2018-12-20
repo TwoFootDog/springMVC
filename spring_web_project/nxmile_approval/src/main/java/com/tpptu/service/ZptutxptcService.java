@@ -1,13 +1,9 @@
 package com.tpptu.service;
 
-import com.tpcom_apr.domain.BmComOnmsgchkInputVO;
-import com.tpcom_apr.service.BmComOnmsgchkModule;
 import com.tpptu.domain.ZptutxptcInputVO;
 import com.tpptu.domain.ZptutxptcOutputVO;
 import lombok.AllArgsConstructor;
-import lombok.Setter;
 import lombok.extern.log4j.Log4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;

@@ -7,15 +7,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5113db8d-b6a3-4ac0-b35e-eb1f3774eece" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/nxmile_approval_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/nxmile_approval_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/17767cd7-215e-4198-a9d5-1ffcf5e9857c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/17767cd7-215e-4198-a9d5-1ffcf5e9857c.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex02/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex02/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/mapper/Rul_svcavl_conMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/mapper/Rul_svcavl_conMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/BmComOnmsgchkModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/BmComOnmsgchkModule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tpptu/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tpptu/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/domain/BmComOnmsgchkInputVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/domain/BmComOnmsgchkInputVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/domain/BmComOnmsgchkOutputVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/domain/BmComOnmsgchkOutputVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/domain/Rul_svcavl_con_tpcom_vs2001InputVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/domain/Rul_svcavl_con_tpcom_vs2001InputVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/domain/Rul_svcavl_con_tpcom_vs2001OutputVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/domain/Rul_svcavl_con_tpcom_vs2001OutputVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/BmComOnmsgchkModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/BmComOnmsgchkModuleImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tpptu/service/ZptutxptcService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tpptu/service/ZptutxptcService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/tpcom_apr/mapper/Rul_svcavl_conMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/tpcom_apr/mapper/Rul_svcavl_conMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tpptu/controller/HomeControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/tpptu/controller/HomeControllerTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tpptu/domain/ZptutxptcInputVOTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/tpptu/domain/ZptutxptcInputVOTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tpptu/mapper/MapperTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/tpptu/mapper/MapperTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tpptu/service/ZptutxptuServiceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/tpptu/service/ZptutxptuServiceTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tpcom_apr/domain/BmComOnmsgchkInputVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tpcom_apr/domain/BmComOnmsgchkInputVO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tpcom_apr/domain/BmComOnmsgchkOutputVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tpcom_apr/domain/BmComOnmsgchkOutputVO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tpcom_apr/mapper/Rul_svcavl_conMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tpcom_apr/mapper/Rul_svcavl_conMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tpcom_apr/mapper/Rul_svcavl_conMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tpcom_apr/mapper/Rul_svcavl_conMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tpptu/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tpptu/controller/HomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tpptu/service/ZptutxptcService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tpptu/service/ZptutxptcService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/tpptu/controller/HomeControllerTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/tpptu/domain/ZptutxptcInputVOTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/tpptu/mapper/MapperTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/tpptu/service/ZptutxptuServiceTests.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -73,8 +87,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/tpptu/service/ZptutxptcService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="419">
-              <caret line="48" column="91" lean-forward="true" selection-start-line="48" selection-start-column="52" selection-end-line="48" selection-end-column="91" />
+            <state relative-caret-position="11">
+              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -83,10 +97,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tpptu/controller/HomeController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/domain/BmComOnmsgchkInputVO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="294">
+              <caret line="14" column="27" lean-forward="true" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -94,17 +111,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/com/tpcom_apr/mapper/Rul_svcavl_conMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/domain/BmComOnmsgchkInputVO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+            <state relative-caret-position="276">
+              <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -112,35 +120,53 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/domain/BmComOnmsgchkOutputVO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+            <state relative-caret-position="184">
+              <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="das://17767cd7-215e-4198-a9d5-1ffcf5e9857c/schema/test/table/rul_svcavl_con.sql">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/mapper/Rul_svcavl_conMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="24" column="59" selection-start-line="24" selection-start-column="59" selection-end-line="24" selection-end-column="59" />
+            <state relative-caret-position="138">
+              <caret line="6" column="74" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="74" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/BmComOnmsgchkModule.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/service_interface/BmComOnmsgchkModule.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="161">
+              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/mapper/Rul_svcavl_conMapper.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/BmComOnmsgchkModuleImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="621">
+              <caret line="39" column="10" lean-forward="true" selection-start-line="39" selection-start-column="10" selection-end-line="39" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/tpcom_apr/service/BmComOnmsgchkModuleTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="401">
+              <caret line="25" column="49" lean-forward="true" selection-start-line="25" selection-start-column="49" selection-end-line="25" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -151,8 +177,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/domain/Rul_svcavl_con_tpcom_vs2001InputVO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+            <state relative-caret-position="207">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -160,8 +189,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/domain/Rul_svcavl_con_tpcom_vs2001OutputVO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            <state relative-caret-position="207">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -173,8 +205,8 @@
       <list>
         <option value="spring-beans.schema" />
         <option value="Jsp File" />
-        <option value="Interface" />
         <option value="mapper xml" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -204,18 +236,25 @@
         <option value="$PROJECT_DIR$/src/main/java/com/tpcom_apr/mapper/RUL_SVCAVL_CON_Mapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tpptu/domain/ZptutxptcInputVO.java" />
         <option value="$PROJECT_DIR$/src/main/resources/com/tpcom_apr/mapper/RUL_SVCAVL_CON_Mapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tpcom_apr/domain/BmComOnmsgchkInputVO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tpcom_apr/domain/BmComOnmsgchkOutputVO.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/17767cd7-215e-4198-a9d5-1ffcf5e9857c/console.sql" />
         <option value="17767cd7-215e-4198-a9d5-1ffcf5e9857c/schema/test/table/rul_svcavl_con.sql" />
         <option value="$PROJECT_DIR$/src/main/java/com/tpptu/service/ZptutxptcService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tpptu/controller/HomeController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/BmComOnmsgchkModule.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tpcom_apr/domain/Rul_svcavl_con_tpcom_vs2001InputVO.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/tpcom_apr/mapper/Rul_svcavl_conMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/tpcom_apr/domain/rul_svcavl_con_tpcom_vs2001OutputVO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tpcom_apr/mapper/Rul_svcavl_conMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/BmComOnmsgchkModule.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/Interface/BmComOnmsgchkModule.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/service_nterface/BmComOnmsgchkModule.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tpcom_apr/domain/BmComOnmsgchkInputVO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tpcom_apr/domain/BmComOnmsgchkOutputVO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tpcom_apr/domain/Rul_svcavl_con_tpcom_vs2001OutputVO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tpcom_apr/domain/Rul_svcavl_con_tpcom_vs2001InputVO.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/tpcom_apr/mapper/Rul_svcavl_conMapper.xml" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/17767cd7-215e-4198-a9d5-1ffcf5e9857c/console.sql" />
+        <option value="$PROJECT_DIR$/src/test/java/com/tpcom_apr/service/BmComOnmsgchkModuleTests.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/BmComOnmsgchkModuleImpl.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/tpcom_apr/mapper/Rul_svcavl_conMapperTests.java" />
       </list>
     </option>
   </component>
@@ -337,6 +376,17 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="tpcom_apr" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="service_interface" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nxmile_approval" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nxmile_approval" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="tpptu" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -416,6 +466,65 @@
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="nxmile_approval" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nxmile_approval" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nxmile_approval" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nxmile_approval" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nxmile_approval" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nxmile_approval" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nxmile_approval" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nxmile_approval" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="tpcom_apr" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nxmile_approval" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nxmile_approval" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="tpcom_apr" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nxmile_approval" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nxmile_approval" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="tpcom_apr" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nxmile_approval" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nxmile_approval" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="tpptu" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -426,9 +535,9 @@
     <property name="DatabaseDriversLRU" value="mariadb" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545215182277" />
-    <property name="database.console.LAST_STATE" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ex03" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545325639806" />
+    <property name="database.console.LAST_STATE" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ex02" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="SDKs" />
@@ -459,7 +568,39 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.nxmile_tomcat_run">
+  <component name="RunManager" selected="JUnit.Rul_svcavl_conMapperTests">
+    <configuration name="Rul_svcavl_conMapperTests.rul_svcavl_conMapperTests" type="AndroidJUnit" temporary="true" nameIsGenerated="true">
+      <module name="nxmile_approval" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tpcom_apr.mapper.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.tpcom_apr.mapper" />
+      <option name="MAIN_CLASS_NAME" value="com.tpcom_apr.mapper.Rul_svcavl_conMapperTests" />
+      <option name="METHOD_NAME" value="rul_svcavl_conMapperTests" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BmComOnmsgchkModuleTests.testBmComOnmsgchkModule" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="nxmile_approval" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tpcom_apr.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.tpcom_apr.service" />
+      <option name="MAIN_CLASS_NAME" value="com.tpcom_apr.service.BmComOnmsgchkModuleTests" />
+      <option name="METHOD_NAME" value="testBmComOnmsgchkModule" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MapperTests.testGetReplyer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="nxmile_approval" />
       <extension name="coverage">
@@ -492,18 +633,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MapperTests.testMyBatis" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Rul_svcavl_conMapperTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="nxmile_approval" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tpptu.mapper.*" />
+          <option name="PATTERN" value="com.tpcom_apr.mapper.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tpptu.mapper" />
-      <option name="MAIN_CLASS_NAME" value="tpptu.mapper.MapperTests" />
-      <option name="METHOD_NAME" value="testMyBatis" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="com.tpcom_apr.mapper" />
+      <option name="MAIN_CLASS_NAME" value="com.tpcom_apr.mapper.Rul_svcavl_conMapperTests" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -582,9 +721,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.Rul_svcavl_conMapperTests" />
+        <item itemvalue="JUnit.BmComOnmsgchkModuleTests.testBmComOnmsgchkModule" />
+        <item itemvalue="Android JUnit.Rul_svcavl_conMapperTests.rul_svcavl_conMapperTests" />
         <item itemvalue="JUnit.MapperTests.testGetReplyer" />
         <item itemvalue="JUnit.MapperTests.testGetTime" />
-        <item itemvalue="JUnit.MapperTests.testMyBatis" />
       </list>
     </recent_temporary>
   </component>
@@ -608,40 +749,44 @@
       <workItem from="1545150573912" duration="2761000" />
       <workItem from="1545187707752" duration="7378000" />
       <workItem from="1545237103924" duration="1348000" />
+      <workItem from="1545317201900" duration="6114000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MapperTests_testMyBatis - 2018.12.18 at 01h 37m 54s.xml">
-      <configuration name="MapperTests.testMyBatis" configurationId="JUnit" />
+    <history-entry file="Rul_svcavl_conMapperTests_rul_svcavl_conMapperTests - 2018.12.21 at 01h 43m 08s.xml">
+      <configuration name="Rul_svcavl_conMapperTests.rul_svcavl_conMapperTests" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="MapperTests_testMyBatis - 2018.12.18 at 01h 39m 07s.xml">
-      <configuration name="MapperTests.testMyBatis" configurationId="JUnit" />
+    <history-entry file="Rul_svcavl_conMapperTests_rul_svcavl_conMapperTests - 2018.12.21 at 01h 43m 30s.xml">
+      <configuration name="Rul_svcavl_conMapperTests.rul_svcavl_conMapperTests" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="MapperTests_testGetTime - 2018.12.18 at 01h 43m 13s.xml">
-      <configuration name="MapperTests.testGetTime" configurationId="JUnit" />
+    <history-entry file="Rul_svcavl_conMapperTests_rul_svcavl_conMapperTests - 2018.12.21 at 01h 47m 09s.xml">
+      <configuration name="Rul_svcavl_conMapperTests.rul_svcavl_conMapperTests" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="MapperTests_testGetTime - 2018.12.18 at 09h 53m 28s.xml">
-      <configuration name="MapperTests.testGetTime" configurationId="JUnit" />
+    <history-entry file="Rul_svcavl_conMapperTests_rul_svcavl_conMapperTests - 2018.12.21 at 01h 55m 25s.xml">
+      <configuration name="Rul_svcavl_conMapperTests.rul_svcavl_conMapperTests" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="MapperTests_testGetReplyer - 2018.12.18 at 09h 58m 55s.xml">
-      <configuration name="MapperTests.testGetReplyer" configurationId="JUnit" />
+    <history-entry file="Rul_svcavl_conMapperTests_rul_svcavl_conMapperTests - 2018.12.21 at 01h 57m 18s.xml">
+      <configuration name="Rul_svcavl_conMapperTests.rul_svcavl_conMapperTests" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="MapperTests_testGetReplyer - 2018.12.18 at 11h 18m 22s.xml">
-      <configuration name="MapperTests.testGetReplyer" configurationId="JUnit" />
+    <history-entry file="BmComOnmsgchkModuleTests_testBmComOnmsgchkModule - 2018.12.21 at 01h 57m 27s.xml">
+      <configuration name="BmComOnmsgchkModuleTests.testBmComOnmsgchkModule" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MapperTests_testGetReplyer - 2018.12.18 at 11h 31m 04s.xml">
-      <configuration name="MapperTests.testGetReplyer" configurationId="JUnit" />
+    <history-entry file="BmComOnmsgchkModuleTests_testBmComOnmsgchkModule - 2018.12.21 at 01h 58m 55s.xml">
+      <configuration name="BmComOnmsgchkModuleTests.testBmComOnmsgchkModule" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MapperTests_testGetReplyer - 2018.12.18 at 11h 32m 00s.xml">
-      <configuration name="MapperTests.testGetReplyer" configurationId="JUnit" />
+    <history-entry file="BmComOnmsgchkModuleTests_testBmComOnmsgchkModule - 2018.12.21 at 02h 01m 04s.xml">
+      <configuration name="BmComOnmsgchkModuleTests.testBmComOnmsgchkModule" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MapperTests_testGetReplyer - 2018.12.18 at 11h 55m 29s.xml">
-      <configuration name="MapperTests.testGetReplyer" configurationId="JUnit" />
+    <history-entry file="BmComOnmsgchkModuleTests_testBmComOnmsgchkModule - 2018.12.21 at 02h 05m 55s.xml">
+      <configuration name="BmComOnmsgchkModuleTests.testBmComOnmsgchkModule" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Rul_svcavl_conMapperTests - 2018.12.21 at 02h 07m 24s.xml">
+      <configuration name="Rul_svcavl_conMapperTests" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38694000" />
+    <option name="totallyTimeSpent" value="44808000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -656,7 +801,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23081024" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23347548" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -666,7 +811,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32887402" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.328125" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -677,19 +822,19 @@
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="CheckStyle" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.32887402" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.328125" />
       <window_info anchor="bottom" id="Java Enterprise" order="14" />
       <window_info anchor="bottom" id="Database Changes" order="15" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="16" />
-      <window_info anchor="bottom" id="Database Console" order="17" visible="true" weight="0.32254463" />
+      <window_info anchor="bottom" id="Database Console" order="17" weight="0.32254463" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.25266525" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.25266525" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Key Promoter X" order="6" />
-      <window_info anchor="right" id="Database" order="7" weight="0.17857143" />
+      <window_info anchor="right" id="Database" order="7" visible="true" weight="0.17857143" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="9" />
     </layout>
@@ -713,14 +858,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zptutxptc/mapper/ZptutxptcMapper.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/tpptu/controller/HomeControllerTests.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/tpptu/controller/HomeControllerTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
           <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/tpptu/domain/ZptutxptcInputVOTests.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/tpptu/domain/ZptutxptcInputVOTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
           <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
@@ -729,7 +874,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/tpptu/mapper/ZptutxptcMappterTests.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/BM_COM_ONMSGCHK.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/tpptu/service/ZptutxptuServiceTests.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/tpptu/service/ZptutxptuServiceTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="64">
           <caret line="4" selection-start-line="4" selection-end-line="4" />
@@ -747,7 +892,7 @@
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/97b9fcd7-6066-4215-94f4-7148bcacf203/console.sql" />
     <entry file="das://97b9fcd7-6066-4215-94f4-7148bcacf203/schema/test/table/tbl_reply" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/tpptu/mapper/MapperTests.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/tpptu/mapper/MapperTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="27" column="34" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
@@ -809,7 +954,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/17767cd7-215e-4198-a9d5-1ffcf5e9857c/console.sql" />
     <entry file="jar://$PROJECT_DIR$/lib/spring-context-4.3.18.RELEASE.jar!/org/springframework/stereotype/Repository.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
@@ -846,78 +990,123 @@
       </provider>
     </entry>
     <entry file="das://17767cd7-215e-4198-a9d5-1ffcf5e9857c/schema/test/table/rul_svcavl_con.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="24" column="59" selection-start-line="24" selection-start-column="59" selection-end-line="24" selection-end-column="59" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/domain/BmComOnmsgchkInputVO.java">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/17767cd7-215e-4198-a9d5-1ffcf5e9857c/console.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+        <state relative-caret-position="92">
+          <caret line="4" column="10" lean-forward="true" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tpptu/controller/HomeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="368">
+          <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/domain/BmComOnmsgchkOutputVO.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/tpcom_apr/mapper/Rul_svcavl_conMapperTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        <state relative-caret-position="179">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/tpcom_apr/service/BmComOnmsgchkModuleTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="25" column="49" lean-forward="true" selection-start-line="25" selection-start-column="49" selection-end-line="25" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tpptu/service/ZptutxptcService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="48" column="91" lean-forward="true" selection-start-line="48" selection-start-column="52" selection-end-line="48" selection-end-column="91" />
+        <state relative-caret-position="11">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/BmComOnmsgchkModule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/com/tpcom_apr/mapper/Rul_svcavl_conMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="276">
+          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/domain/BmComOnmsgchkInputVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="27" lean-forward="true" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/domain/BmComOnmsgchkOutputVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/domain/Rul_svcavl_con_tpcom_vs2001InputVO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+        <state relative-caret-position="207">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/domain/Rul_svcavl_con_tpcom_vs2001OutputVO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="207">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/mapper/Rul_svcavl_conMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="138">
+          <caret line="6" column="74" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="74" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/service_interface/BmComOnmsgchkModule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/BmComOnmsgchkModuleImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="39" column="10" lean-forward="true" selection-start-line="39" selection-start-column="10" selection-end-line="39" selection-end-column="10" />
         </state>
       </provider>
     </entry>

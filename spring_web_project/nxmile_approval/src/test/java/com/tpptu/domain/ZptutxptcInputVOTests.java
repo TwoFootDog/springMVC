@@ -1,4 +1,4 @@
-package tpptu.domain;
+package com.tpptu.domain;
 
 public class ZptutxptcInputVOTests {
 }
