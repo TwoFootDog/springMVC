@@ -1,11 +1,13 @@
 package com.tpptu.controller;
 
+import com.commons.domain.CustomizeHeaderVO;
 import com.tpptu.domain.ZptutxptcInputVO;
 import com.tpptu.domain.ZptutxptcOutputVO;
 import com.tpptu.service.ZptutxptcService;
 import lombok.AllArgsConstructor;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
@@ -20,9 +22,10 @@ public class HomeController {
 
 
     @PostMapping(value = "/zptutxptc", consumes = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<ZptutxptcOutputVO> zptutcptc(@RequestBody ZptutxptcInputVO inputVO) {
+    public ResponseEntity<ZptutxptcOutputVO> zptutcptc(@RequestHeader("CustomizeHeader") String Header,
+                                                       @RequestBody ZptutxptcInputVO inputVO) {
 
-        return zptutxptcService.syncCall(inputVO);
+        return zptutxptcService.syncCall(Header, inputVO);
     }
 
     @GetMapping(value = "/")
