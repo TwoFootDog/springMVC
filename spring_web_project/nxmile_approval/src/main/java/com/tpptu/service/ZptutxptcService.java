@@ -25,14 +25,14 @@ import java.util.Map;
 public class ZptutxptcService {
     OnmsgchkService onmsgchkService;
 
-    public ResponseEntity<ZptutxptcOutputVO> syncCall(String header,
+    public ResponseEntity<ZptutxptcOutputVO> syncCall(CustomizeHeaderVO header,
                                                       ZptutxptcInputVO inputVO) {
         log.info("aaaaaaaaa");
         // 전문유효성체크 모듈 호출
-        JSONParser parser = new JSONParser();
-        Object obj = (Object) parser.parse(header);
+//        JSONParser parser = new JSONParser();
+//        Object obj = (Object) parser.parse(header);
 
-        log.info(header);
+
 //        OnmsgchkOutputVO onmsgchkOutputVO = onmsgchkService.syncCall(new OnmsgchkInputVO());
 
         // 회원 조회 모듈 호출

@@ -1,9 +1,12 @@
 package com.tpptu.domain;
 
-
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class ZptutxptcInputVO {
     private long grid_cnt1;
     private String mbrsh_pgm_id;

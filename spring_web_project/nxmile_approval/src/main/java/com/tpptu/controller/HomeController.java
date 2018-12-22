@@ -17,12 +17,19 @@ import org.springframework.web.bind.annotation.*;
 @AllArgsConstructor
 public class HomeController {
 
+    // json injection
+    // 공통 값들은 json이나 xml이나 리소스로 관리하여 불러옴
+    // requestheader 어노테이션 수정(토비 유튜브 react 1편, iterator)
+    //junit assert
+    // front controller pattern
+    // swagger
+
 //    @Setter(onMethod_={@Autowired})
     ZptutxptcService zptutxptcService;
 
 
     @PostMapping(value = "/zptutxptc", consumes = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<ZptutxptcOutputVO> zptutcptc(@RequestHeader("CustomizeHeader") String Header,
+    public ResponseEntity<ZptutxptcOutputVO> zptutcptc(@RequestHeader CustomizeHeaderVO Header,
                                                        @RequestBody ZptutxptcInputVO inputVO) {
 
         return zptutxptcService.syncCall(Header, inputVO);
