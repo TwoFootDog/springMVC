@@ -20,9 +20,9 @@ public class OnmsgchkInputVO {
     private String orgn_deal_dy;
     private String orgn_deal_aprv_no;
     private String orgn_deal_coopco_aprv_no;
-    private Double deal_amt_sum;
-    private Double deal_amt1;
-    private Double orgn_deal_amt;
+    private Long deal_amt_sum;
+    private Long deal_amt1;
+    private Long orgn_deal_amt;
     private String cncl_req_fg;
     private String aprv_no;
     private String ans_cd1;

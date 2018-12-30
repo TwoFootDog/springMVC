@@ -1,13 +1,10 @@
 package com.tpptu.service;
 
-import com.commons.domain.CustomizeHeaderVO;
-import com.google.gson.Gson;
 import com.tpcom_apr.domain.OnmsgchkInputVO;
 import com.tpcom_apr.domain.OnmsgchkOutputVO;
 import com.tpcom_apr.service.service_interface.OnmsgchkService;
 import com.tpptu.domain.ZptutxptcInputVO;
 import com.tpptu.domain.ZptutxptcOutputVO;
-import jdk.nashorn.internal.parser.JSONParser;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j;
 import org.springframework.http.HttpHeaders;
@@ -15,9 +12,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestBody;
 
-import java.util.Map;
+import javax.servlet.http.HttpServletRequest;
 
 @Service
 @Log4j
@@ -25,9 +21,27 @@ import java.util.Map;
 public class ZptutxptcService {
     OnmsgchkService onmsgchkService;
 
-    public ResponseEntity<ZptutxptcOutputVO> syncCall(CustomizeHeaderVO header,
-                                                      ZptutxptcInputVO inputVO) {
-        log.info("aaaaaaaaa");
+    public ResponseEntity<ZptutxptcOutputVO> syncCall(HttpServletRequest header,
+                                                      ZptutxptcInputVO zptutxptcInputVO) {
+//        log.info("header : " + header.getHeader("Content-Type"));
+        OnmsgchkInputVO onmsgchkInputVO = new OnmsgchkInputVO();
+        onmsgchkInputVO.setSvc_modu_id("ZPTUTXPTC0001");
+        onmsgchkInputVO.setMcht_no(zptutxptcInputVO.getMcht_no());
+        onmsgchkInputVO.setMcht_biz_no("");
+        onmsgchkInputVO.setDeal_dy(zptutxptcInputVO.getDeal_dy());
+        onmsgchkInputVO.setCrd_no(zptutxptcInputVO.getTrack_ii_data());
+        onmsgchkInputVO.setResd_no(zptutxptcInputVO.getResd_no());
+        onmsgchkInputVO.setOrgn_deal_dy(zptutxptcInputVO.getOrgn_deal_dy());
+        onmsgchkInputVO.setOrgn_deal_coopco_aprv_no(zptutxptcInputVO.getOrgn_deal_coopco_aprv_no());
+        onmsgchkInputVO.setCncl_req_fg(zptutxptcInputVO.getCash_arcpt_proc_fg());
+        onmsgchkInputVO.setDeal_amt_sum(0L);
+        onmsgchkInputVO.setDeal_amt1(0L);
+        onmsgchkInputVO.setOrgn_deal_amt(0L);
+
+        ResponseEntity<OnmsgchkOutputVO> onmsgchkOutputVO = onmsgchkService.syncCall(header, onmsgchkInputVO);
+
+
+
         // 전문유효성체크 모듈 호출
 //        JSONParser parser = new JSONParser();
 //        Object obj = (Object) parser.parse(header);

@@ -2,9 +2,13 @@ package com.tpcom_apr.service.service_interface;
 
 import com.tpcom_apr.domain.OnmsgchkInputVO;
 import com.tpcom_apr.domain.OnmsgchkOutputVO;
+import org.springframework.http.HttpRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;
 
+import javax.servlet.http.HttpServletRequest;
+
 public interface OnmsgchkService {
-    public ResponseEntity<OnmsgchkOutputVO> syncCall(@RequestBody OnmsgchkInputVO inputVO);
+    public ResponseEntity<OnmsgchkOutputVO> syncCall(HttpServletRequest header, OnmsgchkInputVO inputVO);
+    public void telgrmValidChk();
 }

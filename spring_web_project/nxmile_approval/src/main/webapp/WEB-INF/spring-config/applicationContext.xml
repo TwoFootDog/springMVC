@@ -3,16 +3,17 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
        xmlns:context="http://www.springframework.org/schema/context"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 
     <!-- HikariCP connection pool bean 셋팅-->
     <bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
         <!--<property name="driverClassName" value="org.mariadb.jdbc.Driver"></property>-->
         <!--<property name="jdbcUrl" value="jdbc:mariadb://127.0.0.1:3306/test"></property>-->
-        <property name="driverClassName" value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy"></property>
-        <property name="jdbcUrl" value="jdbc:log4jdbc:mariadb://127.0.0.1:3306/test"></property>
-        <property name="username" value="root"></property>
-        <property name="password" value="2815"></property>
+        <property name="driverClassName" value="${hikcariConfig.driverClassName}"></property>
+        <property name="jdbcUrl" value="${hikariConfig.jdbcUrl}"></property>
+        <property name="username" value="${hikariConfig.username}"></property>
+        <property name="password" value="${hikariConfig.password}"></property>
     </bean>
 
     <!-- 커넥션 pool을 사용할 dataSource bean 셋팅-->
@@ -32,5 +33,11 @@
     <!-- base-package에 정의된 package내 소스 중 @Component가 작성된 Class를 bean으로 인식-->
     <context:component-scan base-package="com.tpptu.service" />
     <context:component-scan base-package="com.tpcom_apr.service" />
+    <context:component-scan base-package="com.commons.aop" />
 
+    <!-- aop 적용-->
+    <aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+
+    <!-- property 적용-->
+    <context:property-placeholder location="classpath:config/database.properties" />
 </beans>

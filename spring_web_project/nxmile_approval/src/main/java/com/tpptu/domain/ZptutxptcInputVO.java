@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ZptutxptcInputVO {
-    private long grid_cnt1;
+    private Long grid_cnt1;
     private String mbrsh_pgm_id;
     private String mbrsh_svc_fg;
     private String ter_fg;
@@ -22,6 +22,17 @@ public class ZptutxptcInputVO {
     private String resd_no;
     private String orgn_deal_dy;
     private String orgn_deal_aprv_no;
-    private String orgn_deal_amt;
-
+    private String orgn_deal_coopco_aprv_no;
+    private String msg_1;
+    private String msg_2;
+    private String msg_3;
+    private String msg_4;
+    private String slp_cd;
+    private String deal_fg;
+    private String mix_sttl_yn;
+    private Long orgn_deal_amt_pnt;
+    private String cash_arcpt_proc_fg;
+    private String deal_caus_cd;
+    private String bat_file_nm;
+    private String web_svc_call_fg;
 }
