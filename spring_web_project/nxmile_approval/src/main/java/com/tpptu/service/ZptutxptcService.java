@@ -6,7 +6,9 @@ import com.tpcom_apr.service.service_interface.OnmsgchkService;
 import com.tpptu.domain.ZptutxptcInputVO;
 import com.tpptu.domain.ZptutxptcOutputVO;
 import lombok.AllArgsConstructor;
+import lombok.Setter;
 import lombok.extern.log4j.Log4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -17,14 +19,27 @@ import javax.servlet.http.HttpServletRequest;
 
 @Service
 @Log4j
-@AllArgsConstructor
+//@AllArgsConstructor
 public class ZptutxptcService {
-    OnmsgchkService onmsgchkService;
 
-    public ResponseEntity<ZptutxptcOutputVO> syncCall(HttpServletRequest header,
+    @Setter(onMethod_ = {@Autowired})
+    private OnmsgchkService onmsgchkService;
+
+    private HttpServletRequest request;
+    private OnmsgchkInputVO onmsgchkInputVO;
+
+    private ZptutxptcOutputVO outputVO;
+    private HttpHeaders ResponseHeaders;
+
+
+
+    public ResponseEntity<ZptutxptcOutputVO> syncCall(HttpServletRequest request,
                                                       ZptutxptcInputVO zptutxptcInputVO) {
 //        log.info("header : " + header.getHeader("Content-Type"));
-        OnmsgchkInputVO onmsgchkInputVO = new OnmsgchkInputVO();
+
+        this.request = request;
+
+        onmsgchkInputVO = new OnmsgchkInputVO();
         onmsgchkInputVO.setSvc_modu_id("ZPTUTXPTC0001");
         onmsgchkInputVO.setMcht_no(zptutxptcInputVO.getMcht_no());
         onmsgchkInputVO.setMcht_biz_no("");
@@ -38,7 +53,11 @@ public class ZptutxptcService {
         onmsgchkInputVO.setDeal_amt1(0L);
         onmsgchkInputVO.setOrgn_deal_amt(0L);
 
-        ResponseEntity<OnmsgchkOutputVO> onmsgchkOutputVO = onmsgchkService.syncCall(header, onmsgchkInputVO);
+
+//        log.info("header ans_cd : " + header.get("ans_cd"));
+//        log.info("header : " + header);
+
+//        ResponseEntity<OnmsgchkOutputVO> onmsgchkOutputVO = onmsgchkService.syncCall(header, onmsgchkInputVO);
 
 
 
@@ -58,8 +77,8 @@ public class ZptutxptcService {
         log.info("bbbbbbbbb");
 
         // 결과값 header setting
-        ZptutxptcOutputVO outputVO = new ZptutxptcOutputVO();
-        HttpHeaders ResponseHeaders = new HttpHeaders();
+        outputVO = new ZptutxptcOutputVO();
+        ResponseHeaders = new HttpHeaders();
         ResponseHeaders.setContentType(MediaType.APPLICATION_JSON);
         ResponseHeaders.set("svc_name", "zptutxptc0001");
         ResponseHeaders.set("ans_cd", "0000");

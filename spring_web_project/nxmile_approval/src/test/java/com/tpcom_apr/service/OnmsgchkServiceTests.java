@@ -27,10 +27,11 @@ public class OnmsgchkServiceTests {
     @Test
     public void testOnmsgchkService() {
         OnmsgchkInputVO onmsgchkInputVO = new OnmsgchkInputVO();
-        onmsgchkInputVO.setOrgan_cd("5004");
+        onmsgchkInputVO.setOrgan_cd("5104");
         onmsgchkInputVO.setTelgrm_no("K410");
         onmsgchkInputVO.setSvc_modu_id("ZPTUTXPTC0001");
         onmsgchkInputVO.setTelgrm_fg("ON");
+
         ResponseEntity<OnmsgchkOutputVO> OnmsgchkOutputVO = onmsgchkService.syncCall(httpRequest, onmsgchkInputVO);
         log.info("OnmsgchkOutputVO : " + OnmsgchkOutputVO);
     }

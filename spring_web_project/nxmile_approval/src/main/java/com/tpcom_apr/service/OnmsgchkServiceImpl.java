@@ -6,7 +6,6 @@ import com.tpcom_apr.domain.Rul_svcavl_con_tpcom_vs2001InputVO;
 import com.tpcom_apr.domain.Rul_svcavl_con_tpcom_vs2001OutputVO;
 import com.tpcom_apr.mapper.Rul_svcavl_conMapper;
 import com.tpcom_apr.service.service_interface.OnmsgchkService;
-import lombok.AllArgsConstructor;
 import lombok.Setter;
 import lombok.extern.log4j.Log4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +13,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.util.StringUtils;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -23,30 +22,27 @@ import javax.servlet.http.HttpServletRequest;
 //@AllArgsConstructor
 public class OnmsgchkServiceImpl implements OnmsgchkService {
     @Setter(onMethod_ = {@Autowired})
-    Rul_svcavl_conMapper rul_svcavl_conMapper;
+    private Rul_svcavl_conMapper rul_svcavl_conMapper;
+    private Rul_svcavl_con_tpcom_vs2001OutputVO rul_svcavl_con_tpcom_vs2001OutputVO;
 
-    HttpServletRequest header;
-    OnmsgchkInputVO inputVO;
-    OnmsgchkOutputVO outputVO;
-    Rul_svcavl_con_tpcom_vs2001OutputVO rul_svcavl_con_tpcom_vs2001OutputVO;
+    private HttpHeaders responseHeader;
+    private OnmsgchkOutputVO outputVO;
 
-    public ResponseEntity<OnmsgchkOutputVO> syncCall(HttpServletRequest requestHeader, OnmsgchkInputVO onmsgchkInputVO) {
-        this.header = requestHeader;
-        this.inputVO = onmsgchkInputVO;
-        HttpHeaders responseHeader = new HttpHeaders();
+
+    public ResponseEntity<OnmsgchkOutputVO> syncCall(HttpServletRequest request, OnmsgchkInputVO onmsgchkInputVO) {
+
+         responseHeader = new HttpHeaders();
 
              rul_svcavl_con_tpcom_vs2001OutputVO =
                     rul_svcavl_conMapper.rul_svcavl_con_tpcom_vs2001(
                             new Rul_svcavl_con_tpcom_vs2001InputVO(
-                                    inputVO.getOrgan_cd(),
-                                    inputVO.getTelgrm_no(),
-                                    inputVO.getSvc_modu_id(),
-                                    inputVO.getTelgrm_fg()));
+                                    onmsgchkInputVO.getOrgan_cd(),
+                                    onmsgchkInputVO.getTelgrm_no(),
+                                    onmsgchkInputVO.getSvc_modu_id(),
+                                    onmsgchkInputVO.getTelgrm_fg()));
 
-        log.info("rul_svcavl_con_tpcom_vs2001OutputVO : " + rul_svcavl_con_tpcom_vs2001OutputVO);
-        if (rul_svcavl_con_tpcom_vs2001OutputVO == null) {
+        if (StringUtils.isEmpty(rul_svcavl_con_tpcom_vs2001OutputVO)) {
             responseHeader.set("ans_cd", "7777");
-            log.info("null!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
         }else {
             responseHeader.set("ans_cd", "0000");
             outputVO = new OnmsgchkOutputVO(
@@ -60,16 +56,16 @@ public class OnmsgchkServiceImpl implements OnmsgchkService {
         return new ResponseEntity<OnmsgchkOutputVO>(outputVO, responseHeader, HttpStatus.OK);
     }
 
-    public void telgrmValidChk() {
-        if (header.getHeader("trc_no") == null ) {
+    public void telgrmValidChk(HttpServletRequest request, OnmsgchkInputVO onmsgchkInputVO) {
+        if (StringUtils.isEmpty(request.getHeader("trc_no"))) {
+            responseHeader.set("ans_cd", "7777");
+        }
+
+        if (StringUtils.isEmpty(onmsgchkInputVO.getDeal_dy())) {
 
         }
 
-        if (inputVO.getDeal_dy() == null ) {
-
-        }
-
-        if (inputVO.getCrd_no() == null  && inputVO.getResd_no() == null) {
+        if (StringUtils.isEmpty(onmsgchkInputVO.getCrd_no()) && StringUtils.isEmpty(onmsgchkInputVO.getResd_no())) {
 
         }
     }

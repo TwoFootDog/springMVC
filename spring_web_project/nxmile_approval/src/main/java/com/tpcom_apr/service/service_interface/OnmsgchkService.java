@@ -9,6 +9,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import javax.servlet.http.HttpServletRequest;
 
 public interface OnmsgchkService {
-    public ResponseEntity<OnmsgchkOutputVO> syncCall(HttpServletRequest header, OnmsgchkInputVO inputVO);
-    public void telgrmValidChk();
+    public ResponseEntity<OnmsgchkOutputVO> syncCall(HttpServletRequest request, OnmsgchkInputVO inputVO);
+    public void telgrmValidChk(HttpServletRequest request, OnmsgchkInputVO onmsgchkInputVO);
 }

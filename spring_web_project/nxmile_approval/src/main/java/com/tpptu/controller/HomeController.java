@@ -11,6 +11,7 @@ import lombok.Setter;
 import lombok.extern.log4j.Log4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
@@ -32,7 +33,7 @@ public class HomeController {
     // swagger
 
     @Setter(onMethod_ = {@Autowired})
-    ZptutxptcService zptutxptcService;
+    private ZptutxptcService zptutxptcService;
 
     @Value("${HomeController.zptutxptc.notes}")
     private String notes;
