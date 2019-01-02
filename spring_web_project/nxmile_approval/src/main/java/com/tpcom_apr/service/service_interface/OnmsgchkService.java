@@ -10,5 +10,5 @@ import javax.servlet.http.HttpServletRequest;
 
 public interface OnmsgchkService {
     public ResponseEntity<OnmsgchkOutputVO> syncCall(HttpServletRequest request, OnmsgchkInputVO inputVO);
-    public void telgrmValidChk(HttpServletRequest request, OnmsgchkInputVO onmsgchkInputVO);
+    public void commonInputDataValidChk(HttpServletRequest request, OnmsgchkInputVO onmsgchkInputVO);
 }
