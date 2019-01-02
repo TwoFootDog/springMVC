@@ -1,5 +1,6 @@
 package com.tpptu.service;
 
+import com.commons.exception.ValidException;
 import com.tpcom_apr.domain.OnmsgchkInputVO;
 import com.tpcom_apr.domain.OnmsgchkOutputVO;
 import com.tpcom_apr.service.service_interface.OnmsgchkService;
@@ -25,7 +26,6 @@ public class ZptutxptcService {
     @Setter(onMethod_ = {@Autowired})
     private OnmsgchkService onmsgchkService;
 
-    private HttpServletRequest request;
     private OnmsgchkInputVO onmsgchkInputVO;
 
     private ZptutxptcOutputVO outputVO;
@@ -35,12 +35,12 @@ public class ZptutxptcService {
 
     public ResponseEntity<ZptutxptcOutputVO> syncCall(HttpServletRequest request,
                                                       ZptutxptcInputVO zptutxptcInputVO) {
-//        log.info("header : " + header.getHeader("Content-Type"));
-
-        this.request = request;
 
         onmsgchkInputVO = new OnmsgchkInputVO();
         onmsgchkInputVO.setSvc_modu_id("ZPTUTXPTC0001");
+        onmsgchkInputVO.setTelgrm_no(request.getHeader("telgrm_no"));
+        onmsgchkInputVO.setOrgan_cd(request.getHeader("organ_cd"));
+        onmsgchkInputVO.setTrc_no(request.getHeader("trc_no"));
         onmsgchkInputVO.setMcht_no(zptutxptcInputVO.getMcht_no());
         onmsgchkInputVO.setMcht_biz_no("");
         onmsgchkInputVO.setDeal_dy(zptutxptcInputVO.getDeal_dy());
@@ -54,16 +54,8 @@ public class ZptutxptcService {
         onmsgchkInputVO.setOrgn_deal_amt(0L);
 
 
-//        log.info("header ans_cd : " + header.get("ans_cd"));
-//        log.info("header : " + header);
+        ResponseEntity<OnmsgchkOutputVO> onmsgchkOutputVO = onmsgchkService.syncCall(request, onmsgchkInputVO);
 
-//        ResponseEntity<OnmsgchkOutputVO> onmsgchkOutputVO = onmsgchkService.syncCall(header, onmsgchkInputVO);
-
-
-
-        // 전문유효성체크 모듈 호출
-//        JSONParser parser = new JSONParser();
-//        Object obj = (Object) parser.parse(header);
 
 
 //        OnmsgchkOutputVO onmsgchkOutputVO = onmsgchkService.syncCall(new OnmsgchkInputVO());
@@ -76,12 +68,12 @@ public class ZptutxptcService {
 
         log.info("bbbbbbbbb");
 
+
         // 결과값 header setting
         outputVO = new ZptutxptcOutputVO();
         ResponseHeaders = new HttpHeaders();
-        ResponseHeaders.setContentType(MediaType.APPLICATION_JSON);
-        ResponseHeaders.set("svc_name", "zptutxptc0001");
-        ResponseHeaders.set("ans_cd", "0000");
+        ResponseHeaders.setContentType(MediaType.APPLICATION_JSON_UTF8);
+        ResponseHeaders.add("ans_cd", "0000");
 
         // 결과값 body setting
         outputVO.setMbrsh_pgm_id("A");
@@ -89,6 +81,8 @@ public class ZptutxptcService {
         outputVO.setAprv_no("F88888888");
         outputVO.setMcht_no("123456789");
         outputVO.setCrd_no("2222222222222222");
+
+
 
         log.info("cccccccc");
 

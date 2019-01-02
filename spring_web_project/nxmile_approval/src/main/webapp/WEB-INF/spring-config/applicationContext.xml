@@ -33,10 +33,11 @@
     <!-- base-package에 정의된 package내 소스 중 @Component가 작성된 Class를 bean으로 인식-->
     <context:component-scan base-package="com.tpptu.service" />
     <context:component-scan base-package="com.tpcom_apr.service" />
-    <context:component-scan base-package="com.commons.aop" />
+    <!--<context:component-scan base-package="com.commons.aop" />-->
+    <context:component-scan base-package="com.commons.exception" />
 
     <!-- aop 적용-->
-    <aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+    <!--<aop:aspectj-autoproxy></aop:aspectj-autoproxy>-->
 
     <!-- property 적용-->
     <context:property-placeholder location="classpath:config/database.properties" />

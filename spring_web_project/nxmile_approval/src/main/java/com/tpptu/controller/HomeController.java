@@ -17,6 +17,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import javax.print.attribute.standard.Media;
 import javax.servlet.http.HttpServletRequest;
 
 @RestController
@@ -52,9 +53,12 @@ public class HomeController {
             @ApiResponse(code = 200, message = "OK"),
             @ApiResponse(code = 404, message = "No params")
     })
-    @PostMapping(value="/zptutxptc", consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(value="/zptutxptc",
+            consumes = MediaType.APPLICATION_JSON_VALUE,
+            produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_JSON_UTF8_VALUE})
     public ResponseEntity<ZptutxptcOutputVO> zptutcptc(HttpServletRequest Header,
                                                        @RequestBody ZptutxptcInputVO inputVO) {
+
         return zptutxptcService.syncCall(Header, inputVO);
     }
 
