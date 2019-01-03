@@ -47,6 +47,7 @@ public class ZptutxptcService {
         onmsgchkInputVO.setCrd_no(zptutxptcInputVO.getTrack_ii_data());
         onmsgchkInputVO.setResd_no(zptutxptcInputVO.getResd_no());
         onmsgchkInputVO.setOrgn_deal_dy(zptutxptcInputVO.getOrgn_deal_dy());
+        onmsgchkInputVO.setOrgn_deal_aprv_no(zptutxptcInputVO.getOrgn_deal_aprv_no());
         onmsgchkInputVO.setOrgn_deal_coopco_aprv_no(zptutxptcInputVO.getOrgn_deal_coopco_aprv_no());
         onmsgchkInputVO.setCncl_req_fg(zptutxptcInputVO.getCash_arcpt_proc_fg());
         onmsgchkInputVO.setDeal_amt_sum(0L);
@@ -58,11 +59,11 @@ public class ZptutxptcService {
 
 
 
-//        OnmsgchkOutputVO onmsgchkOutputVO = onmsgchkService.syncCall(new OnmsgchkInputVO());
+        // 원거래 조회 모듈 호출
+
 
         // 회원 조회 모듈 호출
 
-        // 원거래 조회 모듈 호출
 
         //거래내역 생성 모듈 호출
 

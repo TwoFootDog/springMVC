@@ -22,18 +22,20 @@ import javax.servlet.http.HttpServletRequest;
 @Log4j
 //@AllArgsConstructor
 public class OnmsgchkServiceImpl implements OnmsgchkService {
+
     @Setter(onMethod_ = {@Autowired})
-    private Rul_svcavl_conMapper rul_svcavl_conMapper;
-    private Rul_svcavl_con_tpcom_vs2001OutputVO rul_svcavl_con_tpcom_vs2001OutputVO;
+    private Rul_svcavl_conMapper rul_svcavl_conMapper;  // SQL 호출 서비스
+    private Rul_svcavl_con_tpcom_vs2001OutputVO rul_svcavl_con_tpcom_vs2001OutputVO;    // SQL 호출 결과값
 
-    private HttpHeaders responseHeader;
-    private OnmsgchkOutputVO outputVO;
+    private HttpHeaders responseHeader; // 응답 header
+    private OnmsgchkOutputVO outputVO;  // 응답 body
 
 
+    /* 온라인 전문 유효성 체크(BM_COM_ONMSGCHK) */
     public ResponseEntity<OnmsgchkOutputVO> syncCall(HttpServletRequest request, OnmsgchkInputVO inputVO) {
 
         /* 공통 입력값 유효성 체크 */
-//        commonInputDataValidChk(request, inputVO);
+        commonInputDataValidChk(request, inputVO);
 
         /* rul_svcavl_con_tpcom_vs2001(서비스모듈 유효성 확인조회 SQL 호출하여 결과값 셋팅 */
          rul_svcavl_con_tpcom_vs2001OutputVO =
@@ -61,8 +63,9 @@ public class OnmsgchkServiceImpl implements OnmsgchkService {
             throw new ValidException("9080", "시스템실 연락바람");
         }
 
+
         /* 취소전문이 아닌경우와 취소전문인 경우를 구분하여 필수값 체크 */
-        if (rul_svcavl_con_tpcom_vs2001OutputVO.getCncl_yn().equals("N")) {     // 취소 전문이 아닌 경우
+        if ("N".equals(rul_svcavl_con_tpcom_vs2001OutputVO.getCncl_yn())) {     // 취소 전문이 아닌 경우
             if (inputVO.getMcht_biz_no().length() != 10) {
                 throw new ValidException("3311", "사업자번호 미입력 또는 길이 오류 [" + inputVO.getMcht_biz_no() + "]");
             }
@@ -72,8 +75,8 @@ public class OnmsgchkServiceImpl implements OnmsgchkService {
             }
             if (StringUtils.isEmpty(inputVO.getOrgn_deal_aprv_no()) &&
                     StringUtils.isEmpty(inputVO.getOrgn_deal_coopco_aprv_no()) &&
-                    !inputVO.getAns_cd1().equals("60") &&
-                    !inputVO.getAns_cd1().equals("52")) {
+                    !"60".equals(inputVO.getAns_cd1()) &&
+                    !"52".equals(inputVO.getAns_cd1())) {
                 throw new ValidException("7746", "원거래승인번호/원거래제휴사승인번호 미입력");
             }
             if (StringUtils.isEmpty(inputVO.getCncl_req_fg())) {

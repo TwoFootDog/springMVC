@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tpcom_apr.mapper.Apr_dealtr_trnMapper">
+  <select id="apr_dealtr_trn_tpcom_vs2001" resultType="com.tpcom_apr.domain.Apr_dealtr_trn_tpcom_vs2001OutputVO">
+  </select>
+
+  <select id="apr_dealtr_trn_tpcom_vs2002" resultType="com.tpcom_apr.domain.Apr_dealtr_trn_tpcom_vs2002OutputVO">
+  </select>
+
+  <select id="apr_dealtr_trn_tpcom_vs2003" resultType="com.tpcom_apr.domain.Apr_dealtr_trn_tpcom_vs2003OutputVO">
+  </select>
+
+  <select id="apr_dealtr_trn_tpcom_vs2004" resultType="com.tpcom_apr.domain.Apr_dealtr_trn_tpcom_vs2004OutputVO">
+  </select>
+
+  <select id="apr_dealtr_trn_tpcom_vs2035" resultType="com.tpcom_apr.domain.Apr_dealtr_trn_tpcom_vs2035OutputVO">
+  </select>
+    
+</mapper>
