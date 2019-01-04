@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Apr_dealtr_trn_tpcom_vs2001InputVO {
     private String mbrsh_pgm_id;
-    private String orgn_Deal_dy;
+    private String orgn_deal_dy;
     private String crd_no;
     private String mcht_no;
     private String mix_sttl_yn;

@@ -87,6 +87,9 @@ public class OnmsgchkServiceImpl implements OnmsgchkService {
         return new ResponseEntity<OnmsgchkOutputVO>(outputVO, responseHeader, HttpStatus.OK);
     }
 
+
+
+
     /* 공통 입력값 유효성 체크*/
     public void commonInputDataValidChk(HttpServletRequest request, OnmsgchkInputVO inputVO) {
         if (StringUtils.isEmpty(request.getHeader("trc_no"))) {
