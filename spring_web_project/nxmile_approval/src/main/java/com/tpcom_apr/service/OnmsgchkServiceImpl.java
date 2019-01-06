@@ -73,10 +73,10 @@ public class OnmsgchkServiceImpl implements OnmsgchkService {
             if (StringUtils.isEmpty(inputVO.getOrgn_deal_dy())) {
                 throw new ValidException("7745", "원거래일자 미입력");
             }
-            if (StringUtils.isEmpty(inputVO.getOrgn_deal_aprv_no()) &&
-                    StringUtils.isEmpty(inputVO.getOrgn_deal_coopco_aprv_no()) &&
-                    !"60".equals(inputVO.getAns_cd1()) &&
-                    !"52".equals(inputVO.getAns_cd1())) {
+            if ((StringUtils.isEmpty(inputVO.getOrgn_deal_aprv_no()) && StringUtils.isEmpty(inputVO.getOrgn_deal_coopco_aprv_no())) &&
+                    ((StringUtils.isEmpty(inputVO.getAns_cd1()) || (!StringUtils.isEmpty(inputVO.getAns_cd1())) &&
+                            (!inputVO.getAns_cd1().equals("60") &&
+                             !inputVO.getAns_cd1().equals("52"))))) {
                 throw new ValidException("7746", "원거래승인번호/원거래제휴사승인번호 미입력");
             }
             if (StringUtils.isEmpty(inputVO.getCncl_req_fg())) {
