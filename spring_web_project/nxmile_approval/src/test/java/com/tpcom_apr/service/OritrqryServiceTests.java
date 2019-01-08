@@ -10,6 +10,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -21,14 +22,15 @@ import javax.servlet.http.HttpServletRequest;
 public class OritrqryServiceTests {
 
     @Setter(onMethod_ = {@Autowired})
-    OritrqryService oritrqryService;
+    private OritrqryService oritrqryService;
 
 
-    HttpServletRequest request;
+    private MockHttpServletRequest request;
 
     @Test
     public void oritrqryTest() {
 
+        request = new MockHttpServletRequest();
         OritrqryInputVO oritrqryInputVO =
                 new OritrqryInputVO("ZPTUTXPTC0001",
                         "9999999999",
