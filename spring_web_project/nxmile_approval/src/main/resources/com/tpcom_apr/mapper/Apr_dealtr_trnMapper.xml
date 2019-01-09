@@ -160,14 +160,14 @@
       mix_sttl_yn,
       mix_sttl_tot_amt
     FROM apr_dealtr_trn
-    WHERE MBRSH_PGM_ID ='A'
-      AND DEAL_DY = '20190103'
---     AND MBR_ID = (SELECT A.MBR_ID FROM CRD_MASTER_MST A WHERE A.MBRSH_PGM_ID = #{mbrsh_pgm_id} AND A.CRD_NO = #{crd_no})
---     AND MCHT_NO = #{mcht_no}
---     AND SLP_CD != '01'
---     AND IFNULL(COOPCO_APRV_NO, 'X') = IF(#{orgn_deal_coopco_aprv_no} = '', IFNULL(COOPCO_APRV_NO, 'X'), #{orgn_deal_coopco_aprv_no})
---     AND REP_APRV_NO = IFNULL(#{orgn_deal_aprv_no}, REP_APRV_NO)
---     AND DEAL_AMT = #{orgn_deal_amt}
+    WHERE MBRSH_PGM_ID = #{mbrsh_pgm_id}
+      AND DEAL_DY = #{orgn_deal_dy}
+      AND MBR_ID = (SELECT A.MBR_ID FROM CRD_MASTER_MST A WHERE A.MBRSH_PGM_ID = #{mbrsh_pgm_id} AND A.CRD_NO = #{crd_no})
+      AND MCHT_NO = #{mcht_no}
+      AND SLP_CD != '01'
+      AND IFNULL(COOPCO_APRV_NO, 'X') = IF(#{orgn_deal_coopco_aprv_no} = '', IFNULL(COOPCO_APRV_NO, 'X'), #{orgn_deal_coopco_aprv_no})
+      AND REP_APRV_NO = IFNULL(#{orgn_deal_aprv_no}, REP_APRV_NO)
+      AND DEAL_AMT = #{orgn_deal_amt}
     AND CS_SLP_CD = 'R'
     LIMIT 1
   </select>

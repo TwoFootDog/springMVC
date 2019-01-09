@@ -34,8 +34,10 @@ public class OnmsgchkServiceImpl implements OnmsgchkService {
     /* 온라인 전문 유효성 체크(BM_COM_ONMSGCHK) */
     public ResponseEntity<OnmsgchkOutputVO> syncCall(HttpServletRequest request, OnmsgchkInputVO inputVO) {
 
+        log.info("request : " + request.getHeader("trc_no"));
         /* 공통 입력값 유효성 체크 */
         commonInputDataValidChk(request, inputVO);
+
 
         /* rul_svcavl_con_tpcom_vs2001(서비스모듈 유효성 확인조회 SQL 호출하여 결과값 셋팅 */
          rul_svcavl_con_tpcom_vs2001OutputVO =
