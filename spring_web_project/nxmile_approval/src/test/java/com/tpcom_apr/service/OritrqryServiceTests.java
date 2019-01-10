@@ -43,7 +43,7 @@ public class OritrqryServiceTests {
                         10000L,
                         "",
                         "");
-        request.setAttribute("organ_cd", "5004");
+        request.addHeader("organ_cd", "5004");
         ResponseEntity<OritrqryOutputVO> oritrqryOutputVO = oritrqryService.syncCall(request, oritrqryInputVO);
     log.info("oritrqryOutputVO : " + oritrqryOutputVO);
     }

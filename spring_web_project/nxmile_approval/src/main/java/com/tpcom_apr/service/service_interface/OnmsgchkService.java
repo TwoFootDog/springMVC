@@ -7,8 +7,11 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.Map;
 
 public interface OnmsgchkService {
     public ResponseEntity<OnmsgchkOutputVO> syncCall(HttpServletRequest request, OnmsgchkInputVO inputVO);
-    public void commonInputDataValidChk(HttpServletRequest request, OnmsgchkInputVO onmsgchkInputVO);
+    public Map<String, String> commonInputDataValidChk(HttpServletRequest request, OnmsgchkInputVO onmsgchkInputVO);
+//    public void commonInputDataValidChk(HttpServletRequest request, OnmsgchkInputVO onmsgchkInputVO);
 }
+

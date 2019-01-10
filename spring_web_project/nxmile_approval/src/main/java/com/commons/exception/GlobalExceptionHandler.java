@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class GlobalExceptionHandler{
 
     @ExceptionHandler(value = ValidException.class)
-    public ResponseEntity<Object> handleValidException(ValidException e){
+    public ResponseEntity<?> handleValidException(ValidException e){
 
         HttpHeaders responseHeader = new HttpHeaders();
         responseHeader.add("ans_cd", e.getAns_cd());

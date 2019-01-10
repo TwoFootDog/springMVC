@@ -17,6 +17,8 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.Map;
 
+import static com.commons.exception.ErrorHandler.setError;
+
 @Service
 @Log4j
 public class OritrqryServiceImpl implements OritrqryService {
@@ -45,6 +47,7 @@ public class OritrqryServiceImpl implements OritrqryService {
         Map<String, String> orgnAprvNo = changeOrgnAprvNo(inputVO.getOrgn_deal_aprv_no(), inputVO.getOrgn_deal_coopco_aprv_no());
         orgn_deal_aprv_no = orgnAprvNo.get("orgn_deal_aprv_no");
         orgn_deal_coopco_aprv_no = orgnAprvNo.get("orgn_deal_coopco_aprv_no");
+        log.info("orgnAprvNo : " + orgn_deal_aprv_no + ", orgn_deal_coopco_aprv_no : " + orgn_deal_coopco_aprv_no);
 
         switch (sql_type) {
             case 11 :
@@ -149,86 +152,16 @@ public class OritrqryServiceImpl implements OritrqryService {
                                         orgn_deal_aprv_no,
                                         inputVO.getOrgn_deal_amt(),
                                         request.getHeader("organ_cd"), inputVO.getSvc_modu_id()));
-                if (!StringUtils.isEmpty(apr_dealtr_trn_tpcom_vs2001OutputVO)) {
+                if (!StringUtils.isEmpty(apr_dealtr_trn_tpcom_vs2002OutputVO)) {
                     responseHeader = new HttpHeaders();
                     responseHeader.add("ans_cd", "0000");
-                    outputVO = new OritrqryOutputVO(
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getMbrsh_pgm_id(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getAprv_dy(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getAprv_no(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getCrd_no(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getAprv_tm(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getDeal_dy(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getMcht_no(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getFam_rep_mbr_id(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getMbr_id(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getSlp_cd(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getDeal_fg(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getDeal_tm(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getPrz_cd(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getOilcls_cd(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getSale_qty(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getSale_prc(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getDeal_amt(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getDsc_amt(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getMcht_pnt(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getCur_pnt(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getAvl_pnt(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getPnt_knd_cd(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getAnnfee(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getMbrsh_svc_annfee(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getRefu_lmt_inc_amt(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getDeal_bef_cur_pnt(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getDeal_bef_avl_pnt(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getDeal_bef_annfee(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getDeal_bef_mbrsh_svc_annfee(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getCncl_typ(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getCs_slp_cd(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getMbrsh_svc_fg(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getDir_self_mng_fg(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getWrng_sale_lmt_exc_fg(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getIncom_organ_cd(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getDeal_fg(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getAns_cd(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getTelgrm_no(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getTrc_no(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getOrgn_aprv_dy(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getOrgn_aprv_no(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getOrgn_deal_dy(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getUsb_dy(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getRep_aprv_no(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getSttl_mcht_no(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getSttl_amt(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getSk_chrg_amt(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getContr_fg_cd(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getSvc_grp_no(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getCpn_prd_cd(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getCpn_prd_qty(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getDist_cust_cpn_mng_no(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getClltbrd_no(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getCoopco_cd(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getSttl_coopco_cd(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getMngco_chrg_sttl_mcht_no(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getCoop_crd_Cd(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getVat_incld_yn(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getFee_apl_bas_fg(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getFee_rt(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getFee_amt(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getCash_arcpt_issu_yn(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getChip_deal_yn(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getCoopco_aprv_no(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getCoopco_mbr_id(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getCoopco_mbr_ip_addr(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getBat_file_nm(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getTelgrm_fg(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getDeal_caus_cd(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getMix_sttl_yn(),
-                            apr_dealtr_trn_tpcom_vs2002OutputVO.getMix_sttl_tot_amt()
-                    );
+                    outputVO = new OritrqryOutputVO(apr_dealtr_trn_tpcom_vs2002OutputVO);
                 } else if (StringUtils.isEmpty(apr_dealtr_trn_tpcom_vs2002OutputVO)){
-                    throw new ValidException("7777", "데이터 미존재");
+//                    throw new ValidException("7777", "데이터 미존재");
+                    return (ResponseEntity<OritrqryOutputVO>) setError("7777","데이터 미존재");
+                } else {
+                    return (ResponseEntity<OritrqryOutputVO>) setError("9080","시스템실 연락바람");
                 }
-
                 log.info("사용 원거래 조회(일반)");
                 break;
             case 10 :
@@ -301,20 +234,22 @@ public class OritrqryServiceImpl implements OritrqryService {
     private Map<String, String> changeOrgnAprvNo(String orgn_deal_aprv_no, String orgn_deal_coopco_aprv_no) {
 
         Map<String, String> orgnAprvNo = new HashMap<>();
+        orgnAprvNo.put("orgn_deal_aprv_no", orgn_deal_aprv_no);
+        orgnAprvNo.put("orgn_deal_coopco_aprv_no", orgn_deal_coopco_aprv_no);
 
         if (!StringUtils.isEmpty(orgn_deal_coopco_aprv_no)) {
-            if (orgn_deal_coopco_aprv_no.substring(1, 2).equals("51") ||
-                    orgn_deal_coopco_aprv_no.substring(1, 2).equals("52") ||
-                    orgn_deal_coopco_aprv_no.substring(1, 2).equals("06") ||
-                    orgn_deal_coopco_aprv_no.substring(1, 2).equals("20") ||
-                    orgn_deal_coopco_aprv_no.substring(1, 2).equals("21") ||
-                    orgn_deal_coopco_aprv_no.substring(1, 2).equals("22") ||
-                    orgn_deal_coopco_aprv_no.substring(1, 2).equals("23") ||
-                    orgn_deal_coopco_aprv_no.substring(1, 2).equals("G1") ||
-                    orgn_deal_coopco_aprv_no.substring(1, 2).equals("G2") ||
-                    orgn_deal_coopco_aprv_no.substring(1, 2).equals("F8") ||
-                    orgn_deal_coopco_aprv_no.substring(1, 2).equals("69") ||
-                    orgn_deal_coopco_aprv_no.substring(1, 2).equals("25")) {
+            if (orgn_deal_coopco_aprv_no.substring(0, 2).equals("51") ||
+                    orgn_deal_coopco_aprv_no.substring(0, 2).equals("52") ||
+                    orgn_deal_coopco_aprv_no.substring(0, 2).equals("06") ||
+                    orgn_deal_coopco_aprv_no.substring(0, 2).equals("20") ||
+                    orgn_deal_coopco_aprv_no.substring(0, 2).equals("21") ||
+                    orgn_deal_coopco_aprv_no.substring(0, 2).equals("22") ||
+                    orgn_deal_coopco_aprv_no.substring(0, 2).equals("23") ||
+                    orgn_deal_coopco_aprv_no.substring(0, 2).equals("G1") ||
+                    orgn_deal_coopco_aprv_no.substring(0, 2).equals("G2") ||
+                    orgn_deal_coopco_aprv_no.substring(0, 2).equals("F8") ||
+                    orgn_deal_coopco_aprv_no.substring(0, 2).equals("69") ||
+                    orgn_deal_coopco_aprv_no.substring(0, 2).equals("25")) {
                 if (orgn_deal_coopco_aprv_no.length() == 9) {
                     orgnAprvNo.put("orgn_deal_aprv_no", orgn_deal_coopco_aprv_no);
                 } else {
@@ -324,18 +259,18 @@ public class OritrqryServiceImpl implements OritrqryService {
                 orgnAprvNo.put("orgn_deal_coopco_aprv_no", orgn_deal_coopco_aprv_no);
             }
         } else if ((!StringUtils.isEmpty(orgn_deal_aprv_no) && orgn_deal_aprv_no.length() == 9) &&
-                    (orgn_deal_aprv_no.substring(1, 2).equals("51") ||
-                    orgn_deal_aprv_no.substring(1, 2).equals("52") ||
-                    orgn_deal_aprv_no.substring(1, 2).equals("06") ||
-                    orgn_deal_aprv_no.substring(1, 2).equals("20") ||
-                    orgn_deal_aprv_no.substring(1, 2).equals("21") ||
-                    orgn_deal_aprv_no.substring(1, 2).equals("22") ||
-                    orgn_deal_aprv_no.substring(1, 2).equals("23") ||
-                    orgn_deal_aprv_no.substring(1, 2).equals("G1") ||
-                    orgn_deal_aprv_no.substring(1, 2).equals("G2") ||
-                    orgn_deal_aprv_no.substring(1, 2).equals("F8") ||
-                    orgn_deal_aprv_no.substring(1, 2).equals("69") ||
-                    orgn_deal_aprv_no.substring(1, 2).equals("25"))){
+                    (orgn_deal_aprv_no.substring(0, 2).equals("51") ||
+                    orgn_deal_aprv_no.substring(0, 2).equals("52") ||
+                    orgn_deal_aprv_no.substring(0, 2).equals("06") ||
+                    orgn_deal_aprv_no.substring(0, 2).equals("20") ||
+                    orgn_deal_aprv_no.substring(0, 2).equals("21") ||
+                    orgn_deal_aprv_no.substring(0, 2).equals("22") ||
+                    orgn_deal_aprv_no.substring(0, 2).equals("23") ||
+                    orgn_deal_aprv_no.substring(0, 2).equals("G1") ||
+                    orgn_deal_aprv_no.substring(0, 2).equals("G2") ||
+                    orgn_deal_aprv_no.substring(0, 2).equals("F8") ||
+                    orgn_deal_aprv_no.substring(0, 2).equals("69") ||
+                    orgn_deal_aprv_no.substring(0, 2).equals("25"))){
             orgnAprvNo.put("orgn_deal_aprv_no", orgn_deal_aprv_no);
         } else {
             orgnAprvNo.put("orgn_deal_coopco_aprv_no", orgn_deal_aprv_no);

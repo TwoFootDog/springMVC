@@ -13,8 +13,6 @@ import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import javax.servlet.http.HttpServletRequest;
-
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("file:src/main/webapp/WEB-INF/spring-config/applicationContext.xml")
 @Log4j
@@ -23,7 +21,7 @@ public class OnmsgchkServiceTests {
     @Setter(onMethod_ = {@Autowired})
     OnmsgchkService onmsgchkService;
 
-    private HttpServletRequest request;
+    private MockHttpServletRequest request;
 
     @Test
     public void testOnmsgchkService() {
@@ -32,40 +30,19 @@ public class OnmsgchkServiceTests {
         onmsgchkInputVO.setTelgrm_no("K410");
         onmsgchkInputVO.setSvc_modu_id("ZPTUTXPTC0001");
         onmsgchkInputVO.setTelgrm_fg("ON");
+        onmsgchkInputVO.setMcht_no("99999999");
+        onmsgchkInputVO.setDeal_dy("20190110");
+        onmsgchkInputVO.setCrd_no("2222222222222222");
 
         request = new MockHttpServletRequest();
-        request.setAttribute("trc_no", "11111111");
-        ResponseEntity<OnmsgchkOutputVO> OnmsgchkOutputVO = onmsgchkService.syncCall(request, onmsgchkInputVO);
-        log.info("OnmsgchkOutputVO : " + OnmsgchkOutputVO);
+        request.addHeader("trc_no", "11111111");
 
-//        String str = "    ";
-//        String str2 = "  a  ";
-//        String str3 = "";
-//        String str4 = null;
-//        log.info("str : [" + str.trim() + "]");
-//        log.info("str2 : [" + str2 + "]");
-//        log.info("str2 : [" + str2 + "]");
-//        log.info("str3 : [" + str3.trim() + "]");
-//
-//        log.info("str isempty : " + StringUtils.isEmpty(str));
-//        log.info("str.trim isempty : " + StringUtils.isEmpty(str.trim()));
-//        log.info("str2 isempty : " + StringUtils.isEmpty(str2));
-//        log.info("str3 isempty : " + StringUtils.isEmpty(str3));
-//
-//
-//        if (str.trim() == null) {
-//            log.info("str은 null입니다");
-//        }
-//        if(str3 == null) {
-//            log.info("str3은 null입니다");
-//        }
-//        if(str3.trim() == null) {
-//            log.info("str3.trim은 null입니다");
-//        }
-//
-//        if(!StringUtils.isEmpty(str4) && str4.trim() == null) {
-//            log.info("str4.trim은 null입니다");
-//        }
+        ResponseEntity<OnmsgchkOutputVO> onmsgchkOutputVO =
+            onmsgchkOutputVO = onmsgchkService.syncCall(request, onmsgchkInputVO);
+
+
+        log.info("OnmsgchkOutputVO : " + onmsgchkOutputVO);
+
     }
 
 }
