@@ -44,14 +44,17 @@ public class OritrqryServiceImpl implements OritrqryService {
 
         int sql_type = sqlTypeSetting(inputVO);
 
+
         Map<String, String> orgnAprvNo = changeOrgnAprvNo(inputVO.getOrgn_deal_aprv_no(), inputVO.getOrgn_deal_coopco_aprv_no());
         orgn_deal_aprv_no = orgnAprvNo.get("orgn_deal_aprv_no");
         orgn_deal_coopco_aprv_no = orgnAprvNo.get("orgn_deal_coopco_aprv_no");
         log.info("orgnAprvNo : " + orgn_deal_aprv_no + ", orgn_deal_coopco_aprv_no : " + orgn_deal_coopco_aprv_no);
 
+
         switch (sql_type) {
             case 11 :
                 // 일반적립취소
+                log.info("적립 원거래 조회(일반)");
                 apr_dealtr_trn_tpcom_vs2001OutputVO =
                         apr_dealtr_trnMapper.apr_dealtr_trn_tpcom_vs2001(
                                 new Apr_dealtr_trn_tpcom_vs2001InputVO(
@@ -64,83 +67,19 @@ public class OritrqryServiceImpl implements OritrqryService {
                                         inputVO.getOrgn_deal_amt(),
                                         orgn_deal_aprv_no,
                                         orgn_deal_coopco_aprv_no));
-                outputVO = new OritrqryOutputVO(
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getMbrsh_pgm_id(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getAprv_dy(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getAprv_no(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getCrd_no(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getAprv_tm(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getDeal_dy(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getMcht_no(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getFam_rep_mbr_id(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getMbr_id(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getSlp_cd(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getDeal_fg(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getDeal_tm(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getPrz_cd(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getOilcls_cd(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getSale_qty(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getSale_prc(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getDeal_amt(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getDsc_amt(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getMcht_pnt(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getCur_pnt(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getAvl_pnt(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getPnt_knd_cd(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getAnnfee(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getMbrsh_svc_annfee(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getRefu_lmt_inc_amt(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getDeal_bef_cur_pnt(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getDeal_bef_avl_pnt(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getDeal_bef_annfee(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getDeal_bef_mbrsh_svc_annfee(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getCncl_typ(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getCs_slp_cd(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getMbrsh_svc_fg(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getDir_self_mng_fg(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getWrng_sale_lmt_exc_fg(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getIncom_organ_cd(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getDeal_fg(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getAns_cd(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getTelgrm_no(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getTrc_no(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getOrgn_aprv_dy(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getOrgn_aprv_no(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getOrgn_deal_dy(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getUsb_dy(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getRep_aprv_no(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getSttl_mcht_no(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getSttl_amt(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getSk_chrg_amt(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getContr_fg_cd(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getSvc_grp_no(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getCpn_prd_cd(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getCpn_prd_qty(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getDist_cust_cpn_mng_no(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getClltbrd_no(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getCoopco_cd(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getSttl_coopco_cd(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getMngco_chrg_sttl_mcht_no(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getCoop_crd_Cd(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getVat_incld_yn(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getFee_apl_bas_fg(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getFee_rt(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getFee_amt(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getCash_arcpt_issu_yn(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getChip_deal_yn(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getCoopco_aprv_no(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getCoopco_mbr_id(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getCoopco_mbr_ip_addr(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getBat_file_nm(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getTelgrm_fg(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getDeal_caus_cd(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getMix_sttl_yn(),
-                        apr_dealtr_trn_tpcom_vs2001OutputVO.getMix_sttl_tot_amt()
-                        );
-                log.info("적립 원거래 조회(일반)");
+                if (!StringUtils.isEmpty(apr_dealtr_trn_tpcom_vs2001OutputVO)) {
+                    responseHeader = new HttpHeaders();
+                    responseHeader.add("ans_cd", "0000");
+                    outputVO = new OritrqryOutputVO(apr_dealtr_trn_tpcom_vs2001OutputVO);
+                } else if (StringUtils.isEmpty(apr_dealtr_trn_tpcom_vs2001OutputVO)) {
+                    return (ResponseEntity<OritrqryOutputVO>)setError("7777", "데이터 미존재");
+                } else {
+                    return (ResponseEntity<OritrqryOutputVO>)setError("9080", "시스템실 연락바람");
+                }
                 break;
             case 21 :
                 // 일반사용취소
+                log.info("사용 원거래 조회(일반)");
                 apr_dealtr_trn_tpcom_vs2002OutputVO =
                         apr_dealtr_trnMapper.apr_dealtr_trn_tpcom_vs2002(
                                 new Apr_dealtr_trn_tpcom_vs2002InputVO(
@@ -157,12 +96,11 @@ public class OritrqryServiceImpl implements OritrqryService {
                     responseHeader.add("ans_cd", "0000");
                     outputVO = new OritrqryOutputVO(apr_dealtr_trn_tpcom_vs2002OutputVO);
                 } else if (StringUtils.isEmpty(apr_dealtr_trn_tpcom_vs2002OutputVO)){
-//                    throw new ValidException("7777", "데이터 미존재");
-                    return (ResponseEntity<OritrqryOutputVO>) setError("7777","데이터 미존재");
+                    throw new ValidException("7777", "데이터 미존재");
+//                    return (ResponseEntity<OritrqryOutputVO>)setError("7777","데이터 미존재");
                 } else {
-                    return (ResponseEntity<OritrqryOutputVO>) setError("9080","시스템실 연락바람");
+                    return (ResponseEntity<OritrqryOutputVO>)setError("9080","시스템실 연락바람");
                 }
-                log.info("사용 원거래 조회(일반)");
                 break;
             case 10 :
                 // 망상적립취소
@@ -177,8 +115,10 @@ public class OritrqryServiceImpl implements OritrqryService {
                 log.info("사용 원거래 조회(망상재사용)");
                 break;
             default :
-                throw new ValidException("9080", "원거래조회 처리 유형 에러");
+//                throw new ValidException("9080", "원거래조회 처리 유형 에러");
+                return (ResponseEntity<OritrqryOutputVO>)setError("9080","원거래조회 처리 유형 에러");
         }
+
 
         return new ResponseEntity<OritrqryOutputVO>(outputVO, responseHeader, HttpStatus.OK);
     }
