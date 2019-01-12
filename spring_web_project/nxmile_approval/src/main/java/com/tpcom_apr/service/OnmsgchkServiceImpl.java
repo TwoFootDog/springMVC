@@ -74,11 +74,11 @@ public class OnmsgchkServiceImpl implements OnmsgchkService {
                     rul_svcavl_con_tpcom_vs2001OutputVO.getMsg_fg()
             );
         } else if (StringUtils.isEmpty(rul_svcavl_con_tpcom_vs2001OutputVO)){   // 쿼리 처리 결과 미 존재 시
-//            throw new ValidException("7777", "데이터 미 존재");
-            return (ResponseEntity<OnmsgchkOutputVO>) setError("7777", "데이터 미 존재");
+            throw new ValidException("7777", "데이터 미 존재");
+//            return (ResponseEntity<OnmsgchkOutputVO>) setError("7777", "데이터 미 존재");
         } else {
-//            throw new ValidException("9080", "시스템실 연락바람");
-            return (ResponseEntity<OnmsgchkOutputVO>) setError("9080", "시스템실 연락바람");
+            throw new ValidException("9080", "시스템실 연락바람");
+//            return (ResponseEntity<OnmsgchkOutputVO>) setError("9080", "시스템실 연락바람");
         }
 
 

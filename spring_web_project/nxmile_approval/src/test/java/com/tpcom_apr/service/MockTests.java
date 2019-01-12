@@ -54,4 +54,37 @@ public class MockTests {
         onmsgchkInputVO.setAns_cd1("0001");
         verify(onmsgchkInputVO).setAns_cd1(anyString());
     }
+
+    @Test
+    public void verfiyTest() {
+        MockitoAnnotations.initMocks(this);
+        String ans_cd = "1111";
+        onmsgchkInputVO.setAns_cd1(ans_cd);
+
+        // n번 호출했는지 체크
+        verify(onmsgchkInputVO, times(1)).setAns_cd1(anyString()); // success
+        verify(onmsgchkInputVO, times(1)).setAns_cd1(any(String.class)); // success
+//        verify(onmsgchkInputVO, times(2)).setAns_cd1(any(String.class)); // fail
+
+        // 호출 했는지 안했는지 체크
+//        verify(onmsgchkInputVO, never()).setAns_cd1(anyString()); // fail
+        verify(onmsgchkInputVO, never()).setAns_cd1(eq("1111")); // fail
+        verify(onmsgchkInputVO, never()).setAns_cd1(eq("0000")); // success
+        verify(onmsgchkInputVO, never()).getOrgn_deal_amt(); // success
+
+        // 최소한 한번 이상 호출했는지 체크
+        verify(onmsgchkInputVO, atLeastOnce()).setAns_cd1(anyString()); // success
+
+        // 2번 이하 호출했는지 체크
+        verify(onmsgchkInputVO, atMost(2)).setAns_cd1(any()); // success
+
+        // 2번 이상 호출했는지 체크
+//        verify(onmsgchkInputVO, atLeast(2)).setAns_cd1(any(String.class)); // fail
+
+        // 지정된 시간(millis) 안으로 메소드를 호출했는지 체크
+        verify(onmsgchkInputVO, timeout(100)).setAns_cd1(any(String.class)); // success
+
+        // 지정된 시간(millis) 안으로 1번 이상 메소드를 호출했는지 체크
+        verify(onmsgchkInputVO, timeout(100).atLeastOnce()).setAns_cd1(anyString()); // success
+    }
 }
