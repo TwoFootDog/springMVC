@@ -7,17 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5113db8d-b6a3-4ac0-b35e-eb1f3774eece" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/commons/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/commons/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/controller/HomeController2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/controller/HomeController2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/OnmsgchkServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/OnmsgchkServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/tpcom_apr/service/MockTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/tpcom_apr/service/MockTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/nxmile_approval-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/nxmile_approval-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/nxmile_approval-1.0-SNAPSHOT/WEB-INF/classes/com/commons/exception/GlobalExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/nxmile_approval-1.0-SNAPSHOT/WEB-INF/classes/com/commons/exception/GlobalExceptionHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/nxmile_approval-1.0-SNAPSHOT/WEB-INF/classes/com/tpcom_apr/domain/OritrqryOutputVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/nxmile_approval-1.0-SNAPSHOT/WEB-INF/classes/com/tpcom_apr/domain/OritrqryOutputVO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/nxmile_approval-1.0-SNAPSHOT/WEB-INF/classes/com/tpcom_apr/service/OnmsgchkServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/nxmile_approval-1.0-SNAPSHOT/WEB-INF/classes/com/tpcom_apr/service/OnmsgchkServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/nxmile_approval-1.0-SNAPSHOT/WEB-INF/classes/com/tpcom_apr/service/OritrqryServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/nxmile_approval-1.0-SNAPSHOT/WEB-INF/classes/com/tpcom_apr/service/OritrqryServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/nxmile_approval-1.0-SNAPSHOT/WEB-INF/classes/com/tpcom_apr/service/service_interface/OnmsgchkService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/nxmile_approval-1.0-SNAPSHOT/WEB-INF/classes/com/tpcom_apr/service/service_interface/OnmsgchkService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/tpcom_apr/service/MockTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/tpcom_apr/service/MockTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/service_interface/OnmsgchkService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/service_interface/OnmsgchkService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tpptu/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tpptu/controller/HomeController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -71,17 +64,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/tpcom_apr/service/MockTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-111">
-              <caret line="39" column="5" lean-forward="true" selection-start-line="32" selection-start-column="47" selection-end-line="39" selection-end-column="5" />
+            <state relative-caret-position="350">
+              <caret line="60" column="31" lean-forward="true" selection-start-line="60" selection-start-column="31" selection-end-line="60" selection-end-column="31" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/domain/OritrqryInputVO.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/tpcom_apr/service/MockMvcTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+            <state relative-caret-position="23">
+              <caret line="45" column="36" lean-forward="true" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -92,8 +85,50 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/OritrqryServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
+            <state relative-caret-position="1817">
               <caret line="96" column="88" selection-start-line="96" selection-start-column="52" selection-end-line="96" selection-end-column="88" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/service_interface/OnmsgchkService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="138">
+              <caret line="13" column="55" selection-start-line="13" selection-start-column="55" selection-end-line="13" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/domain/OnmsgchkInputVO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="356">
+              <caret line="29" column="31" lean-forward="true" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/OnmsgchkServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1693">
+              <caret line="43" column="71" lean-forward="true" selection-start-line="43" selection-start-column="71" selection-end-line="43" selection-end-column="71" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/tpcom_apr/service/OnmsgchkServiceTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="23">
+              <caret line="30" column="56" lean-forward="true" selection-start-line="30" selection-start-column="56" selection-end-line="30" selection-end-column="56" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -101,8 +136,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/tpptu/controller/HomeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="107">
-              <caret line="51" selection-start-line="51" selection-end-line="54" selection-end-column="6" />
+            <state relative-caret-position="-497">
+              <caret line="35" column="24" lean-forward="true" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -111,73 +146,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/domain/OritrqryOutputVO.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/controller/HomeController2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="159" column="14" selection-start-line="159" selection-start-column="8" selection-end-line="159" selection-end-column="14" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="253">
+              <caret line="20" column="56" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/OnmsgchkServiceImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-config/applicationContext.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="76" column="47" lean-forward="true" selection-start-line="76" selection-start-column="47" selection-end-line="76" selection-end-column="47" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/commons/exception/GlobalExceptionHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="11" selection-start-line="11" selection-end-line="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/domain/Rul_svcavl_con_tpcom_vs2001InputVO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/domain/Rul_svcavl_con_tpcom_vs2001OutputVO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/commons/exception/ValidException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="-123">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
             </state>
           </provider>
         </entry>
@@ -219,6 +200,7 @@
       <find>,</find>
       <find>apr.get*()</find>
       <find>coop</find>
+      <find>추적번호 미 유입</find>
     </findStrings>
     <replaceStrings>
       <replace>OnmsgchkInputVO</replace>
@@ -240,13 +222,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/tpptu/domain/ZptutxptcOutputVO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/commons/config/SwaggerConfig.java" />
         <option value="$PROJECT_DIR$/src/main/resources/swagger.documentation.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/config/documentation.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/OnmsgchkService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/service_interface/IOnmsgchkService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tpcom_apr/controller/HomeController2.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/commons/aop/HeaderCheckAspect.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/commons/domain/CustomizeHeaderVO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tpcom_apr/domain/OnmsgchkInputVO.java" />
@@ -279,7 +259,6 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/17767cd7-215e-4198-a9d5-1ffcf5e9857c/console.sql" />
         <option value="$PROJECT_DIR$/src/main/resources/com/tpcom_apr/mapper/Apr_dealtr_trnMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/commons/exception/ErrorHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/service_interface/OnmsgchkService.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/tpcom_apr/service/OnmsgchkServiceTests.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/17767cd7-215e-4198-a9d5-1ffcf5e9857c/console_2.sql" />
         <option value="$PROJECT_DIR$/src/main/java/com/tpcom_apr/domain/OritrqryOutputVO.java" />
@@ -288,8 +267,11 @@
         <option value="$PROJECT_DIR$/src/test/java/com/tpcom_apr/service/OritrqryServiceTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/tpcom_apr/service/MockTests.java" />
         <option value="$PROJECT_DIR$/src/main/resources/20190112" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tpptu/controller/HomeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/commons/exception/GlobalExceptionHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tpcom_apr/controller/HomeController2.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tpptu/controller/HomeController.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/tpcom_apr/service/MockMvcTests.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/service_interface/OnmsgchkService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/OnmsgchkServiceImpl.java" />
       </list>
     </option>
@@ -322,7 +304,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1" />
     <option name="y" value="1" />
     <option name="width" value="1022" />
@@ -336,6 +318,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -502,6 +486,16 @@
               <item name="nxmile_approval" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="tpptu" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nxmile_approval" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nxmile_approval" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -626,15 +620,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mariadb" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547262411380" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547399957381" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../jex01" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -674,7 +666,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.nxmile_tomcat_run">
+  <component name="RunManager" selected="JUnit.MockMvcTests">
     <configuration name="MockTests.mockTest" type="AndroidJUnit" temporary="true" nameIsGenerated="true">
       <module name="nxmile_approval" />
       <extension name="coverage">
@@ -687,6 +679,20 @@
       <option name="MAIN_CLASS_NAME" value="com.tpcom_apr.service.MockTests" />
       <option name="METHOD_NAME" value="mockTest" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MockMvcTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="nxmile_approval" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tpcom_apr.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.tpcom_apr.service" />
+      <option name="MAIN_CLASS_NAME" value="com.tpcom_apr.service.MockMvcTests" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -734,22 +740,6 @@
       <option name="PACKAGE_NAME" value="com.tpcom_apr.service" />
       <option name="MAIN_CLASS_NAME" value="com.tpcom_apr.service.MockTests" />
       <option name="METHOD_NAME" value="verfiyTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MockTests.whenTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="nxmile_approval" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.tpcom_apr.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.tpcom_apr.service" />
-      <option name="MAIN_CLASS_NAME" value="com.tpcom_apr.service.MockTests" />
-      <option name="METHOD_NAME" value="whenTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -829,11 +819,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MockMvcTests" />
+        <item itemvalue="Android JUnit.MockTests.mockTest" />
         <item itemvalue="JUnit.MockTests.verfiyTest" />
         <item itemvalue="JUnit.MockTests.doNothtingTest" />
         <item itemvalue="JUnit.MockTests.doThrowTest" />
-        <item itemvalue="JUnit.MockTests.whenTest" />
-        <item itemvalue="Android JUnit.MockTests.mockTest" />
       </list>
     </recent_temporary>
   </component>
@@ -884,43 +874,44 @@
       <workItem from="1547130417742" duration="4378000" />
       <workItem from="1547225774139" duration="2977000" />
       <workItem from="1547255588467" duration="4580000" />
+      <workItem from="1547364970254" duration="11088000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MockTests_verfiyTest - 2019.01.12 at 10h 21m 06s.xml">
-      <configuration name="MockTests.verfiyTest" configurationId="JUnit" />
+    <history-entry file="MockMvcTests - 2019.01.14 at 01h 23m 59s.xml">
+      <configuration name="MockMvcTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MockTests_verfiyTest - 2019.01.12 at 10h 21m 35s.xml">
-      <configuration name="MockTests.verfiyTest" configurationId="JUnit" />
+    <history-entry file="MockMvcTests - 2019.01.14 at 02h 02m 36s.xml">
+      <configuration name="MockMvcTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MockTests_verfiyTest - 2019.01.12 at 10h 24m 43s.xml">
-      <configuration name="MockTests.verfiyTest" configurationId="JUnit" />
+    <history-entry file="MockMvcTests - 2019.01.14 at 02h 05m 27s.xml">
+      <configuration name="MockMvcTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MockTests_verfiyTest - 2019.01.12 at 10h 25m 59s.xml">
-      <configuration name="MockTests.verfiyTest" configurationId="JUnit" />
+    <history-entry file="MockMvcTests - 2019.01.14 at 02h 08m 34s.xml">
+      <configuration name="MockMvcTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MockTests_verfiyTest - 2019.01.12 at 10h 26m 30s.xml">
-      <configuration name="MockTests.verfiyTest" configurationId="JUnit" />
+    <history-entry file="MockMvcTests - 2019.01.14 at 02h 10m 00s.xml">
+      <configuration name="MockMvcTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MockTests_verfiyTest - 2019.01.12 at 10h 27m 42s.xml">
-      <configuration name="MockTests.verfiyTest" configurationId="JUnit" />
+    <history-entry file="MockMvcTests - 2019.01.14 at 02h 10m 53s.xml">
+      <configuration name="MockMvcTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MockTests_verfiyTest - 2019.01.12 at 10h 28m 56s.xml">
-      <configuration name="MockTests.verfiyTest" configurationId="JUnit" />
+    <history-entry file="MockMvcTests - 2019.01.14 at 02h 13m 28s.xml">
+      <configuration name="MockMvcTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MockTests_verfiyTest - 2019.01.12 at 10h 30m 28s.xml">
-      <configuration name="MockTests.verfiyTest" configurationId="JUnit" />
+    <history-entry file="MockMvcTests - 2019.01.14 at 02h 14m 11s.xml">
+      <configuration name="MockMvcTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MockTests_verfiyTest - 2019.01.12 at 10h 34m 31s.xml">
-      <configuration name="MockTests.verfiyTest" configurationId="JUnit" />
+    <history-entry file="MockMvcTests - 2019.01.14 at 02h 15m 06s.xml">
+      <configuration name="MockMvcTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MockTests_verfiyTest - 2019.01.12 at 10h 34m 51s.xml">
-      <configuration name="MockTests.verfiyTest" configurationId="JUnit" />
+    <history-entry file="MockMvcTests - 2019.01.14 at 02h 17m 59s.xml">
+      <configuration name="MockMvcTests" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="231699000" />
+    <option name="totallyTimeSpent" value="242787000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -932,10 +923,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="1" width="1022" height="726" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49916804" visible="true" weight="0.4989605" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49916804" visible="true" weight="0.26119402" />
       <window_info id="Structure" order="1" sideWeight="0.5005574" side_tool="true" weight="0.25053304" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -945,18 +936,18 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32924107" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.4814815" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.4810268" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3979933" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32998884" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32998884" />
       <window_info anchor="bottom" id="Spring" order="8" weight="0.32998884" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32924107" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="CheckStyle" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.32107022" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.3203125" />
       <window_info anchor="bottom" id="Java Enterprise" order="14" />
       <window_info anchor="bottom" id="Database Changes" order="15" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="16" weight="0.32998884" />
@@ -965,7 +956,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.3253638" />
+      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.16684435" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Key Promoter X" order="6" />
@@ -978,44 +969,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/mapper/Rul_svcavl_conMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/domain/Apr_dealtr_trn_tpcom_vs2003InputVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.1.2.RELEASE/spring-core-5.1.2.RELEASE-sources.jar!/org/springframework/util/StringUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="87" column="26" selection-start-line="87" selection-start-column="26" selection-end-line="87" selection-end-column="26" />
-          <folding>
-            <element signature="e#3042#3043#0" expanded="true" />
-            <element signature="e#3087#3088#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tpptu/domain/ZptutxptcOutputVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tpptu/domain/ZptutxptcInputVO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
@@ -1085,31 +1038,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-config/dispatcher-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-config/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="29" column="59" lean-forward="true" selection-start-line="29" selection-start-column="59" selection-end-line="29" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/commons/domain/CustomizeHeaderVO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/service_interface/OnmsgchkService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
@@ -1136,13 +1068,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tpptu/service/ZptutxptcService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="41" column="67" selection-start-line="41" selection-start-column="67" selection-end-line="41" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/tpptu/service/ZptutxptuServiceTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="32">
@@ -1154,16 +1079,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
           <caret line="35" column="32" selection-start-line="35" selection-start-column="32" selection-end-line="36" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/tpcom_apr/service/OnmsgchkServiceTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="32" column="47" lean-forward="true" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1222,16 +1137,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/tpcom_apr/service/OritrqryServiceTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1035">
-          <caret line="71" column="27" selection-start-line="70" selection-start-column="36" selection-end-line="71" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/domain/Apr_dealtr_trn_tpcom_vs2001OutputVO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -1249,20 +1154,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/domain/OnmsgchkInputVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="9" column="28" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/20190112">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="4" column="36" lean-forward="true" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/20190112" />
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
@@ -1277,63 +1169,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/commons/exception/ValidException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tpptu/controller/HomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="51" selection-start-line="51" selection-end-line="54" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/commons/exception/GlobalExceptionHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" selection-start-line="11" selection-end-line="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/tpcom_apr/service/MockTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-111">
-          <caret line="39" column="5" lean-forward="true" selection-start-line="32" selection-start-column="47" selection-end-line="39" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/OnmsgchkServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="76" column="47" lean-forward="true" selection-start-line="76" selection-start-column="47" selection-end-line="76" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/OritrqryServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="96" column="88" selection-start-line="96" selection-start-column="52" selection-end-line="96" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/domain/OritrqryInputVO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
+        <state relative-caret-position="414">
           <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1343,8 +1181,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/domain/OritrqryOutputVO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
+        <state relative-caret-position="3611">
           <caret line="159" column="14" selection-start-line="159" selection-start-column="8" selection-end-line="159" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/commons/exception/GlobalExceptionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="11" selection-start-line="11" selection-end-line="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1353,8 +1201,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/domain/Rul_svcavl_con_tpcom_vs2001OutputVO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
+        <state relative-caret-position="161">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/commons/exception/ValidException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1363,8 +1221,128 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/domain/Rul_svcavl_con_tpcom_vs2001InputVO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
+        <state relative-caret-position="345">
           <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-test/5.1.2.RELEASE/spring-test-5.1.2.RELEASE-sources.jar!/org/springframework/test/context/web/WebAppConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="56" column="69" lean-forward="true" selection-start-line="56" selection-start-column="69" selection-end-line="56" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-config/dispatcher-servlet.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/tpcom_apr/service/OritrqryServiceTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="71" column="27" selection-start-line="70" selection-start-column="36" selection-end-line="71" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tpptu/service/ZptutxptcService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="40" column="65" selection-start-line="40" selection-start-column="56" selection-end-line="40" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/controller/HomeController2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="20" column="56" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-config/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-123">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.2.RELEASE/spring-beans-5.1.2.RELEASE-sources.jar!/org/springframework/beans/factory/annotation/AutowiredAnnotationBeanPostProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="373" selection-start-line="373" selection-end-line="373" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/tpcom_apr/service/OnmsgchkServiceTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="30" column="56" lean-forward="true" selection-start-line="30" selection-start-column="56" selection-end-line="30" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/tpcom_apr/service/MockTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="60" column="31" lean-forward="true" selection-start-line="60" selection-start-column="31" selection-end-line="60" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tpptu/controller/HomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-497">
+          <caret line="35" column="24" lean-forward="true" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/tpcom_apr/service/MockMvcTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="45" column="36" lean-forward="true" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/domain/OnmsgchkInputVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="29" column="31" lean-forward="true" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/OritrqryServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1817">
+          <caret line="96" column="88" selection-start-line="96" selection-start-column="52" selection-end-line="96" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/service_interface/OnmsgchkService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="13" column="55" selection-start-line="13" selection-start-column="55" selection-end-line="13" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/OnmsgchkServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1693">
+          <caret line="43" column="71" lean-forward="true" selection-start-line="43" selection-start-column="71" selection-end-line="43" selection-end-column="71" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

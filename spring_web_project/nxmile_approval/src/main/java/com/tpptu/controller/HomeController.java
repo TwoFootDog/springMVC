@@ -5,25 +5,21 @@ import com.tpptu.domain.ZptutxptcInputVO;
 import com.tpptu.domain.ZptutxptcOutputVO;
 import com.tpptu.service.ZptutxptcService;
 import io.swagger.annotations.*;
-
-
 import lombok.Setter;
 import lombok.extern.log4j.Log4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import javax.print.attribute.standard.Media;
 import javax.servlet.http.HttpServletRequest;
 
 @RestController
 //@AllArgsConstructor
 @Log4j
-@Api(value = "${HomeController.value}", description = "${HomeController.description}") // Controller에 대한 Swagger 설명
+@Api(value = "HomeController", description = "this is HomeController") // Controller에 대한 Swagger 설명
 public class HomeController {
 
     // json injection
@@ -35,9 +31,6 @@ public class HomeController {
 
     @Setter(onMethod_ = {@Autowired})
     private ZptutxptcService zptutxptcService;
-
-    @Value("${HomeController.zptutxptc.notes}")
-    private String notes;
 
     @ApiOperation(  // API에 대한 Swagger 설명
             value="서비스",
@@ -67,6 +60,7 @@ public class HomeController {
             @ApiImplicitParam(name = "param1", value = "파라미터1", required = true, dataType = "String", paramType = "query"),
             @ApiImplicitParam(name = "param2", value = "파마미터2", required = false, dataType = "int", paramType = "query")
     })
+
     @GetMapping(value = "/home/{area}")
     public String home(@PathVariable String area, @RequestParam String param1, @RequestParam int param2) {
         return "home";

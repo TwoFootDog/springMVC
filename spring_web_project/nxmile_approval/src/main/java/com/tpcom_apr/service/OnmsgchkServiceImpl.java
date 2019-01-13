@@ -41,7 +41,7 @@ public class OnmsgchkServiceImpl implements OnmsgchkService {
     /* 온라인 전문 유효성 체크(BM_COM_ONMSGCHK) */
     public ResponseEntity<OnmsgchkOutputVO> syncCall(HttpServletRequest request, OnmsgchkInputVO inputVO) {
 
-        Map<String, String> errInfo = commonInputDataValidChk(request, inputVO);
+        Map<String, String> errInfo = commonInputDataValidChk(inputVO);
         if (!errInfo.isEmpty()) {
             return (ResponseEntity<OnmsgchkOutputVO>) setError(errInfo.get("errCode"), errInfo.get("errMsg"));
         }
@@ -115,11 +115,11 @@ public class OnmsgchkServiceImpl implements OnmsgchkService {
 
 
     /* 공통 입력값 유효성 체크*/
-    public Map<String, String> commonInputDataValidChk(HttpServletRequest request, OnmsgchkInputVO inputVO) {
+    public Map<String, String> commonInputDataValidChk(OnmsgchkInputVO inputVO) {
 
         Map<String, String> err = new HashMap<>();
 
-        if (StringUtils.isEmpty(request.getHeader("trc_no"))) {
+        if (StringUtils.isEmpty(inputVO.getTrc_no())) {
             err.put("errCode", "7777");
             err.put("errMsg", "추적번호 미 유입");
             return err;
