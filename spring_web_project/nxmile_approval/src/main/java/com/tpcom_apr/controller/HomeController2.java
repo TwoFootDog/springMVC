@@ -20,7 +20,7 @@ public class HomeController2 {
     @PostMapping(value = "/onmsgchk",
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<OnmsgchkOutputVO> home2(HttpServletRequest header, @RequestBody OnmsgchkInputVO inputVO) {
+    public ResponseEntity<OnmsgchkOutputVO> onmsgchk(HttpServletRequest header, @RequestBody OnmsgchkInputVO inputVO) {
         return onmsgchkService.syncCall(header, inputVO);
     }
 }

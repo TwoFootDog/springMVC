@@ -17,8 +17,6 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.Map;
 
-import static com.commons.exception.ErrorHandler.setError;
-
 @Service
 @Log4j
 public class OritrqryServiceImpl implements OritrqryService {
@@ -72,9 +70,9 @@ public class OritrqryServiceImpl implements OritrqryService {
                     responseHeader.add("ans_cd", "0000");
                     outputVO = new OritrqryOutputVO(apr_dealtr_trn_tpcom_vs2001OutputVO);
                 } else if (StringUtils.isEmpty(apr_dealtr_trn_tpcom_vs2001OutputVO)) {
-                    return (ResponseEntity<OritrqryOutputVO>)setError("7777", "데이터 미존재");
+                    throw new ValidException("7777", "데이터 미존재");
                 } else {
-                    return (ResponseEntity<OritrqryOutputVO>)setError("9080", "시스템실 연락바람");
+                    throw new ValidException("9080", "시스템실 연락바람");
                 }
                 break;
             case 21 :
@@ -97,9 +95,8 @@ public class OritrqryServiceImpl implements OritrqryService {
                     outputVO = new OritrqryOutputVO(apr_dealtr_trn_tpcom_vs2002OutputVO);
                 } else if (StringUtils.isEmpty(apr_dealtr_trn_tpcom_vs2002OutputVO)){
                     throw new ValidException("7777", "데이터 미존재");
-//                    return (ResponseEntity<OritrqryOutputVO>)setError("7777","데이터 미존재");
                 } else {
-                    return (ResponseEntity<OritrqryOutputVO>)setError("9080","시스템실 연락바람");
+                    throw new ValidException("9080", "시스템실 연락바람");
                 }
                 break;
             case 10 :
@@ -115,11 +112,8 @@ public class OritrqryServiceImpl implements OritrqryService {
                 log.info("사용 원거래 조회(망상재사용)");
                 break;
             default :
-//                throw new ValidException("9080", "원거래조회 처리 유형 에러");
-                return (ResponseEntity<OritrqryOutputVO>)setError("9080","원거래조회 처리 유형 에러");
+                throw new ValidException("9080", "원거래조회 처리 유형 에러");
         }
-
-
         return new ResponseEntity<OritrqryOutputVO>(outputVO, responseHeader, HttpStatus.OK);
     }
 
@@ -215,7 +209,6 @@ public class OritrqryServiceImpl implements OritrqryService {
         } else {
             orgnAprvNo.put("orgn_deal_coopco_aprv_no", orgn_deal_aprv_no);
         }
-
         return orgnAprvNo;
     }
 
