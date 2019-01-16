@@ -12,5 +12,6 @@ import java.util.Map;
 public interface OnmsgchkService {
     public ResponseEntity<OnmsgchkOutputVO> syncCall(HttpServletRequest request, OnmsgchkInputVO inputVO);
     public void commonInputDataValidChk(OnmsgchkInputVO onmsgchkInputVO);
+    public void testFunction();
 }
 

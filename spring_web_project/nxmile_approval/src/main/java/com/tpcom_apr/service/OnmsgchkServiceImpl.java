@@ -34,6 +34,7 @@ public class OnmsgchkServiceImpl implements OnmsgchkService {
     /* 온라인 전문 유효성 체크(BM_COM_ONMSGCHK) */
     public ResponseEntity<OnmsgchkOutputVO> syncCall(HttpServletRequest request, OnmsgchkInputVO inputVO) {
 
+        testFunction();
         commonInputDataValidChk(inputVO);
 
         /* rul_svcavl_con_tpcom_vs2001(서비스모듈 유효성 확인조회 SQL 호출하여 결과값 셋팅 */
@@ -84,6 +85,10 @@ public class OnmsgchkServiceImpl implements OnmsgchkService {
             }
         }
         return new ResponseEntity<OnmsgchkOutputVO>(outputVO, responseHeader, HttpStatus.OK);
+    }
+
+    public void testFunction() {
+        log.info("aaaaaa");
     }
 
 
