@@ -4,8 +4,6 @@ package com.tpcom_apr.service;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.tpcom_apr.controller.HomeController2;
 import com.tpcom_apr.domain.OnmsgchkInputVO;
-import com.tpcom_apr.domain.OnmsgchkOutputVO;
-import com.tpcom_apr.service.service_interface.OnmsgchkService;
 import lombok.extern.log4j.Log4j;
 import org.junit.Before;
 import org.junit.Test;
@@ -15,10 +13,7 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.mockito.Spy;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
-import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
@@ -26,10 +21,6 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
-import static org.mockito.Matchers.any;
-import static org.mockito.Matchers.anyObject;
-import static org.mockito.Mockito.*;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -44,7 +35,7 @@ public class MockMvcTests {
     private MockMvc mockMvc;    // controller에 request를 수행해주는 mock 객체
     ObjectMapper mapper; // 객체를 json 형식으로 변경 시 사용
 
-    @Spy
+    @Mock
     OnmsgchkServiceImpl onmsgchkService;
 
     @InjectMocks
@@ -72,14 +63,6 @@ public class MockMvcTests {
                 .andExpect(status().isOk())                 // 상태값은 OK가 나오면 정상처리
                 .andDo(print());                            // 처리 내용을 출력
     }
-//
-//    @Test
-//    public void homeTests() throws Exception {
-//        log.info(mockMvc.perform(get("/")).
-//                andExpect(status().isOk()).
-//                andDo(print()).
-//                andReturn());
-//    }
 
 
 }

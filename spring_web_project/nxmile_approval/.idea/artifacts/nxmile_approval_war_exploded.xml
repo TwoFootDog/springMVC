@@ -29,6 +29,10 @@
           <element id="library" level="project" name="Maven: com.zaxxer:HikariCP:3.2.0" />
           <element id="library" level="project" name="Maven: org.springframework:spring-test:5.1.2.RELEASE" />
           <element id="library" level="project" name="Maven: org.bgee.log4jdbc-log4j2:log4jdbc-log4j2-jdbc4:1.16" />
+          <element id="library" level="project" name="Maven: com.jayway.jsonpath:json-path:2.4.0" />
+          <element id="library" level="project" name="Maven: net.minidev:json-smart:2.3" />
+          <element id="library" level="project" name="Maven: net.minidev:accessors-smart:1.2" />
+          <element id="library" level="project" name="Maven: org.ow2.asm:asm:5.0.4" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.9.7" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.9.0" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.9.7" />
