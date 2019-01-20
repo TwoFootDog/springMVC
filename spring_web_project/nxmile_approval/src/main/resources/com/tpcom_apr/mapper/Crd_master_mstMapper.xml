@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tpcom_apr.mapper.Crd_master_mstMapper">
+    <select id="crd_master_mst_tpcom_vs2005" resultType="com.tpcom_apr.domain.Crd_master_mst_tpcom_vs2005OutputVO">
+
+
+    </select>
+
+</mapper>
