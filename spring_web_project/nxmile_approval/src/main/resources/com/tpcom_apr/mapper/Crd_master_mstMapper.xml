@@ -4,8 +4,24 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.tpcom_apr.mapper.Crd_master_mstMapper">
     <select id="crd_master_mst_tpcom_vs2005" resultType="com.tpcom_apr.domain.Crd_master_mst_tpcom_vs2005OutputVO">
-
-
+        SELECT
+            MBR_ID,
+            COOPCO_CD,
+            COOP_CRD_CD,
+            ISSU_FG,
+            ISSU_DY,
+            CRD_STS,
+            CO_REP_CRD_YN,
+            FIR_MCHT_SALE_DY,
+            LAST_MCHT_SALE_DY,
+            FIR_CPN_SAV_DY,
+            ONLY_COOPCO_CD,
+            ONLY_DY,
+            CS_DY,
+            CS_COOPCO_CD
+        FROM crd_master_mst
+        WHERE MBRSH_PGM_ID = #{mbrsh_pgm_id}
+          AND CRD_NO = #{crd_no}
     </select>
 
 </mapper>
