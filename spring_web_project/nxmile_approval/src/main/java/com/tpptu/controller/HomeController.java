@@ -61,7 +61,8 @@ public class HomeController {
             @ApiImplicitParam(name = "param2", value = "파마미터2", required = false, dataType = "int", paramType = "query")
     })
 
-    @GetMapping(value = "/home/{area}")
+
+   @GetMapping(value = "/home/{area}")
     public String home(@PathVariable String area, @RequestParam String param1, @RequestParam int param2) {
         return "home";
     }

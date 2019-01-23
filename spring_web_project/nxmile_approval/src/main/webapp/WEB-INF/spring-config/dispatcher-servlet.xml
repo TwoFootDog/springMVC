@@ -16,6 +16,10 @@
     <context:component-scan base-package="com.tpptu.controller" />
     <context:component-scan base-package="com.tpcom_apr.controller" />
 
+    <!-- blog 용-->
+    <context:component-scan base-package="com.test.controller" />
+
+
     <!-- swagger -->
     <bean id="swagger2Config" class="com.commons.config.SwaggerConfig"></bean>
     <mvc:resources location="classpath:/META-INF/resources/" mapping="swagger-ui.html"></mvc:resources>
