@@ -5,6 +5,7 @@ import com.test.service.TestService;
 import lombok.Setter;
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +17,7 @@ import static org.junit.Assert.*;
 
 @RunWith(SpringJUnit4ClassRunner.class) // SpringJunit4ClassRunner.class는 spring-test에서 제공하는 단위테스르를 위한 클래스 러너
 @ContextConfiguration("file:src/main/webapp/WEB-INF/spring-config/applicationContext.xml") // 테스트 시 참조할 설정파일
-public class ModuleTests {
+public class JUnitTests {
 
     @Setter(onMethod_ = {@Autowired})
     private TestService testService;    // 테스트 대상 Service
@@ -60,5 +61,10 @@ public class ModuleTests {
     @Test(timeout=1000)                                 // Test timeout을 1000밀리초로 설정. 1000밀리초 이상 지연될 경우 에러
     public void sleepTest() throws Exception{
         sleep(10000);
+    }
+    @Test
+    @Ignore         // 테스트를 skip하는 어노테이션
+    public void ignoreTest() {
+        assertTrue(1==2);
     }
 }

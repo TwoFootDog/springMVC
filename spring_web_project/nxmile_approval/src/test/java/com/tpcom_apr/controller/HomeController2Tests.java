@@ -3,20 +3,14 @@ package com.tpcom_apr.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.tpcom_apr.domain.OnmsgchkInputVO;
-import com.tpcom_apr.domain.Rul_svcavl_con_tpcom_vs2001InputVO;
-import com.tpcom_apr.domain.Rul_svcavl_con_tpcom_vs2001OutputVO;
 import com.tpcom_apr.mapper.Rul_svcavl_conMapper;
 import com.tpcom_apr.service.OnmsgchkServiceImpl;
-import com.tpcom_apr.service.service_interface.OnmsgchkService;
 import lombok.Setter;
 import lombok.extern.log4j.Log4j;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.mockito.Spy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.ContextConfiguration;
@@ -26,9 +20,6 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
-import static org.mockito.Matchers.any;
-import static org.mockito.Matchers.anyObject;
-import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
@@ -63,7 +54,7 @@ public class HomeController2Tests {
     public void testOnmsgchkControllerOK() throws Exception {
 
         OnmsgchkInputVO inputVO = getOnmsgchkInputVO("0000");   // 테스트 입력값 객체 생성
-        mockMvc.perform(post("/onmsgchk")                    // Controller의 /onmsgchk URI를 Post방식으로 호출
+        mockMvc.perform(post("/onmsgchk")                  // Controller의 /onmsgchk URI를 Post방식으로 호출
                 .contentType(MediaType.APPLICATION_JSON_UTF8_VALUE)     // contentType은 json 형식
                 .content(mapper.writeValueAsString(inputVO)))           // 객체를 json로 변경. content에는 post의 body가 들어감.
                 .andExpect(status().isOk())                             // 상태값은 OK가 나오면 정상처리

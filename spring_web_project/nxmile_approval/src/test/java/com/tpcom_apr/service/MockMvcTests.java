@@ -11,7 +11,6 @@ import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.mockito.Spy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.ContextConfiguration;
@@ -59,7 +58,7 @@ public class MockMvcTests {
                                 "K410",
                                 "5004",
                                 "9999999999",
-                                "89000000", "","20190115","1111111111111111","","20190101","G88888888","",10000L,10000L,10000L,"Y","","","ON",""))))
+                                "89000000", "", "20190115", "1111111111111111", "", "20190101", "G88888888", "", 10000L, 10000L, 10000L, "Y", "", "", "ON", ""))))
                 .andExpect(status().isOk())                 // 상태값은 OK가 나오면 정상처리
                 .andDo(print());                            // 처리 내용을 출력
     }
