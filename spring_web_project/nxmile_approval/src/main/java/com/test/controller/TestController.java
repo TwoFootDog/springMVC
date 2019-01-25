@@ -3,6 +3,7 @@ package com.test.controller;
 
 import com.test.domain.BoardVO;
 import com.test.service.TestService;
+import com.test.service.TestService2;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -15,10 +16,12 @@ public class TestController {
 
     @Setter(onMethod_ = {@Autowired})
     private TestService testService;
+    @Setter(onMethod_ = {@Autowired})
+    private TestService2 testService2;
 
     @GetMapping(value = "/board", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public BoardVO getBoard(@RequestParam Long bno) {
-        return testService.getBoardInfo(bno);
+        return testService2.getBoardInfo(bno);
     }
 
     @GetMapping(value = "/test")
