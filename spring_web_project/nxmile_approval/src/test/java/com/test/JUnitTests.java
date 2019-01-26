@@ -19,6 +19,7 @@ import static org.junit.Assert.*;
 @ContextConfiguration("file:src/main/webapp/WEB-INF/spring-config/applicationContext.xml") // 테스트 시 참조할 설정파일
 public class JUnitTests {
 
+    // test visualization 있나?
     @Setter(onMethod_ = {@Autowired})
     private TestService testService;    // 테스트 대상 Service
 

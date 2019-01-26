@@ -28,16 +28,18 @@ import static org.mockito.Mockito.*;
 @Log4j
 public class MockitoTests {
 
-    @Mock
-    TestDao dao;
-    @Spy           // @Spy는 InjectMocks와 동시 사용 가능
-    @InjectMocks
-    TestService2 service;
+//    @Mock
+//    TestDao dao;
+//    @Spy           // @Spy는 InjectMocks와 동시 사용 가능
+//    @InjectMocks
+//    TestService2 service;
+//    @Mock
+//    TestService2 service;
 
-    @Before
-    public void setUp() {
-        MockitoAnnotations.initMocks(this);     // Mock으로 지정된 객체 생성
-    }
+//    @Before
+//    public void setUp() {
+//        MockitoAnnotations.initMocks(this);     // Mock으로 지정된 객체 생성
+//    }
 
 
     @Test
@@ -61,9 +63,9 @@ public class MockitoTests {
 
     @Test
     public void testDaoSpy2() {
-//        TestService2 service = spy(TestService2.class);     // spy 객체 생성
-//        TestDao dao = mock(TestDao.class);                  // mock 객체 생성
-//        service.setDao(dao);                                // mock 객체를 spy 객체에 주입
+        TestService2 service = spy(TestService2.class);     // spy 객체 생성
+        TestDao dao = mock(TestDao.class);                  // mock 객체 생성
+        service.setDao(dao);                                // mock 객체를 spy 객체에 주입
 
         when(dao.getBoardInfo(10L)).thenReturn(new BoardVO(1L, "title1", "content1", "writer1", new Date(), new Date()));   // 결과값 지정(stub)
         BoardVO boardVO = service.getBoardInfo(10L);    // 서비스의 getBoardInfo() 메소드 호출

@@ -8,16 +8,10 @@
   <component name="ChangeListManager">
     <list default="true" id="5113db8d-b6a3-4ac0-b35e-eb1f3774eece" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/test/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/test/controller/TestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/test/dao/TestDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/test/dao/TestDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/test/service/TestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/test/service/TestService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/test/MockitoDaoTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/test/MockitoTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/test/MockitoServiceTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/test/controller/TestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/test/controller/TestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/test/dao/TestDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/test/dao/TestDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/test/service/TestService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/test/service/TestService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/test/MockitoDaoTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/test/MockitoServiceTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/test/service/TestService2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/test/service/TestService2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/test/JUnitTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/test/JUnitTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/test/MockitoTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/test/MockitoTests.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -78,11 +72,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/test/MockitoTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="15" column="71" lean-forward="true" selection-start-line="15" selection-start-column="71" selection-end-line="15" selection-end-column="71" />
+            <state relative-caret-position="126">
+              <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
               <folding>
-                <element signature="e#943#944#0" expanded="true" />
-                <element signature="e#1017#1018#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -91,8 +84,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/test/JUnitTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="28" column="10" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
+            <state relative-caret-position="323">
+              <caret line="21" column="29" lean-forward="true" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2211#2212#0" expanded="true" />
@@ -103,27 +96,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/test/controller/TestController.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/test/MockMvcTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
+            <state relative-caret-position="409">
+              <caret line="42" column="62" selection-start-line="42" selection-start-column="62" selection-end-line="42" selection-end-column="62" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#671#672#0" expanded="true" />
-                <element signature="e#723#724#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/tpcom_apr/service/MockTests.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="16">
-              <caret line="39" column="5" lean-forward="true" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+        <entry file="das://17767cd7-215e-4198-a9d5-1ffcf5e9857c/schema/test/table/tbl_reply">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -131,8 +119,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/test/service/TestService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            <state relative-caret-position="324">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -143,16 +131,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/test/service/TestService2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="18" column="12" lean-forward="true" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+            <state relative-caret-position="231">
+              <caret line="22" column="21" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#823#824#0" expanded="true" />
                 <element signature="e#857#858#0" expanded="true" />
-                <element signature="e#890#891#0" expanded="true" />
-                <element signature="e#465#466#0" expanded="true" />
-                <element signature="e#546#547#0" expanded="true" />
-                <element signature="e#580#581#0" expanded="true" />
-                <element signature="e#660#661#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -161,7 +145,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/com/test/mapper/TestMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
+            <state relative-caret-position="288">
               <caret line="16" column="9" lean-forward="true" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
             </state>
           </provider>
@@ -170,8 +154,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/test/dao/TestDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+            <state relative-caret-position="288">
+              <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -182,20 +166,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/test/mapper/TestMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
+            <state relative-caret-position="72">
               <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/test/domain/BoardVO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -298,7 +270,6 @@
         <option value="$PROJECT_DIR$/src/test/java/com/test/ModuleTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/test/ControllerTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/tpcom_apr/service/MockMvcTests.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/test/JUnitTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/test/MockMvcTests.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/test/domain/BoardVO.java" />
         <option value="$PROJECT_DIR$/src/main/resources/com/test/mapper/TestMapper.xml" />
@@ -309,9 +280,10 @@
         <option value="$PROJECT_DIR$/src/test/java/com/test/MockitoServiceTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/test/MockitoDaoTests.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/test/mapper/TestMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/test/service/TestService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/test/controller/TestController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/test/dao/TestDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/test/service/TestService.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/test/JUnitTests.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/test/service/TestService2.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/test/MockitoTests.java" />
       </list>
@@ -359,7 +331,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -411,7 +382,37 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nxmile_approval" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nxmile_approval" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nxmile_approval" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nxmile_approval" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nxmile_approval" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nxmile_approval" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="nxmile_approval" type="b2602c69:ProjectViewProjectNode" />
@@ -481,21 +482,22 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mariadb" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548411913714" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548471109117" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../jex01" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ex03" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.15594542" />
-    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -528,8 +530,38 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.MockitoTests">
-    <configuration name="MockitoTests.testDao" type="AndroidJUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.MockitoTests.testDao">
+    <configuration name="JUnitTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="nxmile_approval" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.test" />
+      <option name="MAIN_CLASS_NAME" value="com.test.JUnitTests" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MockMvcTests.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="nxmile_approval" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.test" />
+      <option name="MAIN_CLASS_NAME" value="com.test.MockMvcTests" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MockitoTests.testDao" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="nxmile_approval" />
       <extension name="coverage">
         <pattern>
@@ -545,7 +577,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MockitoTests.testService" type="AndroidJUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MockitoTests.testDaoSpy2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="nxmile_approval" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.test" />
+      <option name="MAIN_CLASS_NAME" value="com.test.MockitoTests" />
+      <option name="METHOD_NAME" value="testDaoSpy2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MockitoTests.testService" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="nxmile_approval" />
       <extension name="coverage">
         <pattern>
@@ -557,48 +605,6 @@
       <option name="MAIN_CLASS_NAME" value="com.test.MockitoTests" />
       <option name="METHOD_NAME" value="testService" />
       <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MockMvcTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="nxmile_approval" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.test" />
-      <option name="MAIN_CLASS_NAME" value="com.test.MockMvcTests" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MockitoServiceTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="nxmile_approval" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.test" />
-      <option name="MAIN_CLASS_NAME" value="com.test.MockitoServiceTests" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MockitoTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="nxmile_approval" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.test" />
-      <option name="MAIN_CLASS_NAME" value="com.test.MockitoTests" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -677,11 +683,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MockitoTests" />
-        <item itemvalue="Android JUnit.MockitoTests.testService" />
-        <item itemvalue="JUnit.MockitoServiceTests" />
-        <item itemvalue="Android JUnit.MockitoTests.testDao" />
-        <item itemvalue="JUnit.MockMvcTests" />
+        <item itemvalue="JUnit.MockitoTests.testDao" />
+        <item itemvalue="JUnit.MockitoTests.testDaoSpy2" />
+        <item itemvalue="JUnit.MockitoTests.testService" />
+        <item itemvalue="JUnit.MockMvcTests.test" />
+        <item itemvalue="JUnit.JUnitTests" />
       </list>
     </recent_temporary>
   </component>
@@ -743,43 +749,44 @@
       <workItem from="1548216535720" duration="9985000" />
       <workItem from="1548291613337" duration="13773000" />
       <workItem from="1548376961048" duration="18842000" />
+      <workItem from="1548467111510" duration="2982000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MockitoTests - 2019.01.25 at 17h 19m 39s.xml">
-      <configuration name="MockitoTests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MockitoTests - 2019.01.25 at 17h 20m 37s.xml">
-      <configuration name="MockitoTests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MockitoTests - 2019.01.25 at 17h 32m 11s.xml">
-      <configuration name="MockitoTests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MockitoTests - 2019.01.25 at 17h 33m 28s.xml">
-      <configuration name="MockitoTests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MockitoTests - 2019.01.25 at 17h 33m 44s.xml">
-      <configuration name="MockitoTests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MockitoTests - 2019.01.25 at 17h 34m 35s.xml">
-      <configuration name="MockitoTests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MockitoTests - 2019.01.25 at 17h 45m 05s.xml">
-      <configuration name="MockitoTests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MockitoTests - 2019.01.25 at 17h 48m 32s.xml">
-      <configuration name="MockitoTests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MockitoTests - 2019.01.25 at 19h 20m 06s.xml">
-      <configuration name="MockitoTests" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="MockitoTests - 2019.01.25 at 19h 23m 21s.xml">
       <configuration name="MockitoTests" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="JUnitTests_ignoreTest - 2019.01.26 at 11h 25m 27s.xml">
+      <configuration name="JUnitTests.ignoreTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JUnitTests_sleepTest - 2019.01.26 at 11h 25m 38s.xml">
+      <configuration name="JUnitTests.sleepTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JUnitTests - 2019.01.26 at 11h 25m 58s.xml">
+      <configuration name="JUnitTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MockMvcTests_test - 2019.01.26 at 11h 28m 23s.xml">
+      <configuration name="MockMvcTests.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MockitoTests_testService - 2019.01.26 at 11h 35m 27s.xml">
+      <configuration name="MockitoTests.testService" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MockitoTests_testDao - 2019.01.26 at 11h 41m 37s.xml">
+      <configuration name="MockitoTests.testDao" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MockitoTests_testDao - 2019.01.26 at 11h 44m 44s.xml">
+      <configuration name="MockitoTests.testDao" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MockitoTests_testDaoSpy2 - 2019.01.26 at 11h 46m 14s.xml">
+      <configuration name="MockitoTests.testDaoSpy2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MockitoTests_testDao - 2019.01.26 at 11h 51m 57s.xml">
+      <configuration name="MockitoTests.testDao" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="324353000" />
+    <option name="totallyTimeSpent" value="327335000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -794,7 +801,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49916804" visible="true" weight="0.17857143" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49916804" visible="true" weight="0.18017058" />
       <window_info id="Structure" order="1" sideWeight="0.5005574" side_tool="true" weight="0.25053304" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -804,7 +811,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32887402" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.4292085" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3924192" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3979933" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -837,27 +844,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-test/5.1.2.RELEASE/spring-test-5.1.2.RELEASE-sources.jar!/org/springframework/test/context/web/WebAppConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="56" column="69" lean-forward="true" selection-start-line="56" selection-start-column="69" selection-end-line="56" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.2.RELEASE/spring-beans-5.1.2.RELEASE-sources.jar!/org/springframework/beans/factory/annotation/AutowiredAnnotationBeanPostProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="373" selection-start-line="373" selection-end-line="373" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/domain/OnmsgchkInputVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/commons/exception/ErrorHandler.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/service_interface/OritrqryService.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1049,30 +1035,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/test/MockMvcTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="592">
-          <caret line="37" column="9" lean-forward="true" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://17767cd7-215e-4198-a9d5-1ffcf5e9857c/schema/test/table/tbl_board">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://17767cd7-215e-4198-a9d5-1ffcf5e9857c/schema/test/table/tbl_reply">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/mapper/Apr_dealtr_trnMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
@@ -1128,54 +1090,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/test/JUnitTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="28" column="10" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2211#2212#0" expanded="true" />
-            <element signature="e#2243#2244#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/test/MockitoServiceTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="35" column="20" lean-forward="true" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/test/MockitoServiceTests.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/test/controller/TestController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
+        <state relative-caret-position="160">
           <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#671#672#0" expanded="true" />
-            <element signature="e#723#724#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/tpcom_apr/service/MockTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="39" column="5" lean-forward="true" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/service/TestService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1184,8 +1103,78 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/test/domain/BoardVO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
+        <state relative-caret-position="112">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://17767cd7-215e-4198-a9d5-1ffcf5e9857c/schema/test/table/tbl_board">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://17767cd7-215e-4198-a9d5-1ffcf5e9857c/schema/test/table/tbl_board.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/tpcom_apr/service/MockTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://17767cd7-215e-4198-a9d5-1ffcf5e9857c/schema/test/table/seq_board">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://17767cd7-215e-4198-a9d5-1ffcf5e9857c/schema/test/table/tbl_reply">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/service/TestService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/test/JUnitTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="21" column="29" lean-forward="true" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2211#2212#0" expanded="true" />
+            <element signature="e#2243#2244#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/test/MockMvcTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="42" column="62" selection-start-line="42" selection-start-column="62" selection-end-line="42" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1194,22 +1183,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/test/mapper/TestMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
+        <state relative-caret-position="72">
           <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/com/test/mapper/TestMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
+        <state relative-caret-position="288">
           <caret line="16" column="9" lean-forward="true" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/test/dao/TestDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+        <state relative-caret-position="288">
+          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1218,27 +1207,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/test/service/TestService2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="18" column="12" lean-forward="true" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+        <state relative-caret-position="231">
+          <caret line="22" column="21" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#823#824#0" expanded="true" />
             <element signature="e#857#858#0" expanded="true" />
-            <element signature="e#890#891#0" expanded="true" />
-            <element signature="e#465#466#0" expanded="true" />
-            <element signature="e#546#547#0" expanded="true" />
-            <element signature="e#580#581#0" expanded="true" />
-            <element signature="e#660#661#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mockito/mockito-all/1.10.19/mockito-all-1.10.19.jar!/org/mockito/Mockito.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="73" lean-forward="true" selection-start-line="73" selection-end-line="73" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/test/MockitoTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="15" column="71" lean-forward="true" selection-start-line="15" selection-start-column="71" selection-end-line="15" selection-end-column="71" />
+        <state relative-caret-position="126">
+          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
           <folding>
-            <element signature="e#943#944#0" expanded="true" />
-            <element signature="e#1017#1018#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

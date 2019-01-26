@@ -19,6 +19,7 @@ public class TestService2 {
     int age;
 
     public BoardVO getBoardInfo(Long bno) {
+
         serviceBefore();
         boardVO = dao.getBoardInfo(bno);
         if (!StringUtils.isEmpty(boardVO)) {
