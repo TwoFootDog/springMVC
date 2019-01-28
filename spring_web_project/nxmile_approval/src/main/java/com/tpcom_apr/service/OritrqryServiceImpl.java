@@ -70,6 +70,7 @@ public class OritrqryServiceImpl implements OritrqryService {
                     responseHeader.add("ans_cd", "0000");
                     outputVO = new OritrqryOutputVO(apr_dealtr_trn_tpcom_vs2001OutputVO);
                 } else if (StringUtils.isEmpty(apr_dealtr_trn_tpcom_vs2001OutputVO)) {
+
                     throw new ValidException("7777", "데이터 미존재");
                 } else {
                     throw new ValidException("9080", "시스템실 연락바람");
@@ -118,8 +119,7 @@ public class OritrqryServiceImpl implements OritrqryService {
     }
 
 
-
-    private int sqlTypeSetting(OritrqryInputVO inputVO) {
+    public int sqlTypeSetting(OritrqryInputVO inputVO) {
         int caller_type;
         int cancel_type;
         int sql_type;
@@ -165,7 +165,7 @@ public class OritrqryServiceImpl implements OritrqryService {
     }
 
 
-    private Map<String, String> changeOrgnAprvNo(String orgn_deal_aprv_no, String orgn_deal_coopco_aprv_no) {
+    public Map<String, String> changeOrgnAprvNo(String orgn_deal_aprv_no, String orgn_deal_coopco_aprv_no) {
 
         Map<String, String> orgnAprvNo = new HashMap<>();
         orgnAprvNo.put("orgn_deal_aprv_no", orgn_deal_aprv_no);

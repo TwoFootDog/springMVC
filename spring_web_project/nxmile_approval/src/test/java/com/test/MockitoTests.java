@@ -38,7 +38,7 @@ public class MockitoTests {
 
 //    @Before
 //    public void setUp() {
-//        MockitoAnnotations.initMocks(this);     // Mock으로 지정된 객체 생성
+//        MockitoAnnotations.initMocks(this);     // @Mock, @Spy 어노테이션이 있는 객체를 mock객체로 생성
 //    }
 
 
@@ -73,6 +73,9 @@ public class MockitoTests {
         verify(service).serviceBefore();                     // 서비스의 실제 메소드인 serviceBefore() 가 정상 호출되었는지 검증
         verify(dao).getBoardInfo(10L);                  // mock객체 dao의 메소드인 getBoardInfo()가 정상 호출되었는지 검증
     }
+
+
+
 
 
     @Test

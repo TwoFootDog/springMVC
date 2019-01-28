@@ -42,7 +42,4 @@ public class TestService2 {
         log.info("====================serviceBefore====================");
     }
 
-    public void serviceAfter() {
-        log.info("====================serviceAfter====================");
-    }
 }
