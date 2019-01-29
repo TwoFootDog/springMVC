@@ -48,11 +48,12 @@ public class OnmsgchkServiceImpl implements OnmsgchkService {
         /* rul_svcavl_con_tpcom_vs2001 결과값 존재 시 OnmsgchkOutputVO(온라인 전문 유효성 체크) output 값 셋팅. 미 존재 시 7777 에러 발생 */
         if (!StringUtils.isEmpty(rul_svcavl_con_tpcom_vs2001OutputVO)) {
             responseHeader = new HttpHeaders();
-            responseHeader.add("ans_cd", "0000");
+            responseHeader.add("ans_cd1", "00");
+            responseHeader.add("ans_cd2", "00");
             outputVO = new OnmsgchkOutputVO(
                     rul_svcavl_con_tpcom_vs2001OutputVO.getMbrsh_pgm_id(),
                     rul_svcavl_con_tpcom_vs2001OutputVO.getTelgrm_typ(),
-                    "0000",
+                    "00",
                     rul_svcavl_con_tpcom_vs2001OutputVO.getMsg_fg()
             );
         } else if (StringUtils.isEmpty(rul_svcavl_con_tpcom_vs2001OutputVO)) {   // 쿼리 처리 결과 미 존재 시

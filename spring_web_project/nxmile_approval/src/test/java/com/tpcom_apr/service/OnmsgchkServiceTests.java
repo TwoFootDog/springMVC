@@ -153,7 +153,7 @@ public class OnmsgchkServiceTests {
         try{
             ResponseEntity<OnmsgchkOutputVO> output = service.syncCall(request, inputVO);
         } catch (ValidException e) {
-            if(e.getAns_cd().equals("7745")) {
+            if (e.getAns_cd().equals("7745")) {
                 log.info("에러코드 :  " + e.getAns_cd() + ". 에러 검증 완료");
             } else {
                 throw new ValidException(e.getAns_cd(), e.getAns_msg());

@@ -1,10 +1,7 @@
 package com.tpcom_apr.mapper;
 
 
-import com.tpcom_apr.domain.Apr_dealtr_trn_tpcom_vs2001InputVO;
-import com.tpcom_apr.domain.Apr_dealtr_trn_tpcom_vs2001OutputVO;
-import com.tpcom_apr.domain.Apr_dealtr_trn_tpcom_vs2002InputVO;
-import com.tpcom_apr.domain.Apr_dealtr_trn_tpcom_vs2002OutputVO;
+import com.tpcom_apr.domain.*;
 import lombok.Setter;
 import lombok.extern.log4j.Log4j;
 import org.junit.Test;
@@ -37,5 +34,13 @@ public class Apr_dealtr_trnMapperTests {
                         )
                 );
 
+    }
+
+    @Test
+    public void apr_dealtr_trn_tpcom_vf2001Tests() {
+        Apr_dealtr_trn_tpcom_vf2001OutputVO outputVO =
+                apr_dealtr_trnMapper.apr_dealtr_trn_tpcom_vf2001(
+                        new Apr_dealtr_trn_tpcom_vf2001InputVO("A","F88405584","20190103","11","0360184577")
+                );
     }
 }

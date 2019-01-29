@@ -48,7 +48,6 @@ public class OritrqryServiceImpl implements OritrqryService {
         orgn_deal_coopco_aprv_no = orgnAprvNo.get("orgn_deal_coopco_aprv_no");
         log.info("orgnAprvNo : " + orgn_deal_aprv_no + ", orgn_deal_coopco_aprv_no : " + orgn_deal_coopco_aprv_no);
 
-
         switch (sql_type) {
             case 11 :
                 // 일반적립취소
@@ -123,6 +122,7 @@ public class OritrqryServiceImpl implements OritrqryService {
         int caller_type;
         int cancel_type;
         int sql_type;
+
 
         if ((!StringUtils.isEmpty(inputVO.getSvc_modu_id())) &&
                 (inputVO.getSvc_modu_id().equals("ZPTOTXPTC0001") ||

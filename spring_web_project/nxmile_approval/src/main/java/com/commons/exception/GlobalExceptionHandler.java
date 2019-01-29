@@ -18,7 +18,8 @@ public class GlobalExceptionHandler{
     public ResponseEntity<?> handleValidException(ValidException e){
 
         HttpHeaders responseHeader = new HttpHeaders();
-        responseHeader.add("ans_cd", e.getAns_cd());
+        responseHeader.add("ans_cd1", e.getAns_cd().substring(0,2));
+        responseHeader.add("ans_cd2", e.getAns_cd().substring(2,4));
 
 
         log.error("business error occur. ans_cd : " + e.getAns_cd() + ", error message : " + e.getAns_msg());

@@ -10,7 +10,6 @@ import lombok.extern.log4j.Log4j;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.MockitoAnnotations;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.ContextConfiguration;
@@ -35,15 +34,10 @@ public class HomeController2Tests {
 
     @Autowired
     private WebApplicationContext context; // MockMvc 객체 생성을 위한 context
-    @Setter(onMethod_ = {@Autowired})
-    private Rul_svcavl_conMapper rul_svcavl_conMapper;
-    @Autowired
-    private OnmsgchkServiceImpl onmsgchkService;
 
 
     @Before
     public void setUp() {
-        MockitoAnnotations.initMocks(this);
         this.mockMvc = MockMvcBuilders.webAppContextSetup(this.context).alwaysDo(print()).build(); // test를 위한 MockMvc 객체 생성.  MockMvc로 테스트 시 print() 출력
 //        this.mockMvc = MockMvcBuilders.standaloneSetup(homeController2).build();
         mapper = new ObjectMapper();
@@ -58,10 +52,11 @@ public class HomeController2Tests {
                 .contentType(MediaType.APPLICATION_JSON_UTF8_VALUE)     // contentType은 json 형식
                 .content(mapper.writeValueAsString(inputVO)))           // 객체를 json로 변경. content에는 post의 body가 들어감.
                 .andExpect(status().isOk())                             // 상태값은 OK가 나오면 정상처리
-                .andExpect(header().string("ans_cd", "0000"))
+                .andExpect(header().string("ans_cd1","00"))
+                .andExpect(header().string("ans_cd2","00"))
                 .andExpect(jsonPath("$.mbrsh_pgm_id").value("A"))
                 .andExpect(jsonPath("$.telgrm_typ").isNotEmpty())
-                .andExpect(jsonPath("$.ans_cd").value("0000"))
+                .andExpect(jsonPath("$.ans_cd").value("00"))
                 .andExpect(jsonPath("$.msg_fg").isNotEmpty());
 //                .andDo(print());                              // 처리 내용을 출력
     }
@@ -74,7 +69,9 @@ public class HomeController2Tests {
                 .contentType(MediaType.APPLICATION_JSON_UTF8_VALUE)
                 .content(mapper.writeValueAsString(inputVO)))
                 .andExpect(status().isOk())
-                .andExpect(header().string("ans_cd", "7777"));
+                .andExpect(header().string("ans_cd1", "77"))
+                .andExpect(header().string("ans_cd2", "77"));
+
     }
 
 
