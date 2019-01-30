@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.tpcom_apr.mapper.Apr_dealtr_trnMapper">
-    <select id="apr_dealtr_trn_tpcom_vs2001" resultType="com.tpcom_apr.domain.Apr_dealtr_trn_tpcom_vs2001OutputVO">
+    <select id="apr_dealtr_trn_tpcom_vs2001" resultType="com.tpcom_apr.domain.sql.Apr_dealtr_trn_tpcom_vs2001OutputVO">
     SELECT
       mbrsh_pgm_id,
       aprv_dy,
@@ -87,7 +87,7 @@
     LIMIT 1
   </select>
 
-    <select id="apr_dealtr_trn_tpcom_vs2002" resultType="com.tpcom_apr.domain.Apr_dealtr_trn_tpcom_vs2002OutputVO">
+    <select id="apr_dealtr_trn_tpcom_vs2002" resultType="com.tpcom_apr.domain.sql.Apr_dealtr_trn_tpcom_vs2002OutputVO">
     SELECT
       mbrsh_pgm_id,
       aprv_dy,
@@ -172,17 +172,17 @@
     LIMIT 1
   </select>
 
-    <select id="apr_dealtr_trn_tpcom_vs2003" resultType="com.tpcom_apr.domain.Apr_dealtr_trn_tpcom_vs2003OutputVO">
+    <select id="apr_dealtr_trn_tpcom_vs2003" resultType="com.tpcom_apr.domain.sql.Apr_dealtr_trn_tpcom_vs2003OutputVO">
     </select>
 
-    <select id="apr_dealtr_trn_tpcom_vs2004" resultType="com.tpcom_apr.domain.Apr_dealtr_trn_tpcom_vs2004OutputVO">
+    <select id="apr_dealtr_trn_tpcom_vs2004" resultType="com.tpcom_apr.domain.sql.Apr_dealtr_trn_tpcom_vs2004OutputVO">
     </select>
 
-    <select id="apr_dealtr_trn_tpcom_vs2035" resultType="com.tpcom_apr.domain.Apr_dealtr_trn_tpcom_vs2035OutputVO">
+    <select id="apr_dealtr_trn_tpcom_vs2035" resultType="com.tpcom_apr.domain.sql.Apr_dealtr_trn_tpcom_vs2035OutputVO">
     </select>
 
 
-    <select id="apr_dealtr_trn_tpcom_vf2001" resultType="com.tpcom_apr.domain.Apr_dealtr_trn_tpcom_vf2001OutputVO">
+    <select id="apr_dealtr_trn_tpcom_vf2001" resultType="com.tpcom_apr.domain.sql.Apr_dealtr_trn_tpcom_vf2001OutputVO">
     SELECT mbrsh_pgm_id,
            aprv_dy,
            aprv_no,

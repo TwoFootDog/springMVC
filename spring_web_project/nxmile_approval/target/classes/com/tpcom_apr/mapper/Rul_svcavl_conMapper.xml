@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.tpcom_apr.mapper.Rul_svcavl_conMapper">
-  <select id="rul_svcavl_con_tpcom_vs2001" resultType="com.tpcom_apr.domain.Rul_svcavl_con_tpcom_vs2001OutputVO">
+  <select id="rul_svcavl_con_tpcom_vs2001" resultType="com.tpcom_apr.domain.sql.Rul_svcavl_con_tpcom_vs2001OutputVO">
     SELECT
       IFNULL(mbrsh_pgm_id, ' ') mbrsh_pgm_id,
       IFNULL(telgrm_typ, ' ') telgrm_typ,

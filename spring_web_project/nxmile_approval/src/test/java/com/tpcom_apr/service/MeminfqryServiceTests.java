@@ -1,10 +1,10 @@
 package com.tpcom_apr.service;
 
 
-import com.tpcom_apr.domain.Crd_master_mst_tpcom_vs2005InputVO;
-import com.tpcom_apr.domain.Crd_master_mst_tpcom_vs2005OutputVO;
-import com.tpcom_apr.domain.MeminfqryInputVO;
-import com.tpcom_apr.domain.MeminfqryOutputVO;
+import com.commons.exception.ValidException;
+import com.tpcom_apr.domain.sql.Crd_master_mst_tpcom_vs2005OutputVO;
+import com.tpcom_apr.domain.service.MeminfqryInputVO;
+import com.tpcom_apr.domain.service.MeminfqryOutputVO;
 import com.tpcom_apr.mapper.Crd_master_mstMapper;
 import com.tpcom_apr.service.service_interface.MeminfqryService;
 import lombok.extern.log4j.Log4j;
@@ -41,20 +41,45 @@ public class MeminfqryServiceTests {
         /* Mock Object 선언 */
         MockHttpServletRequest request = new MockHttpServletRequest();
         MeminfqryService service = spy(MeminfqryServiceImpl.class);
-        MeminfqryInputVO inputVO = mock(MeminfqryInputVO.class);
+        MeminfqryInputVO input = mock(MeminfqryInputVO.class);
         Crd_master_mstMapper mapper = mock(Crd_master_mstMapper.class);
         ((MeminfqryServiceImpl) service).setCrd_master_mstMapper(mapper);
 
         /* Stub 선언 */
-        when(mapper.crd_master_mst_tpcom_vs_2005(any()))
+        when(mapper.crd_master_mst_tpcom_vs2005(any()))
                 .thenReturn(new Crd_master_mst_tpcom_vs2005OutputVO(
                         "111111111","O11111","","","","","","","","",
-                        "","","","","","","","","","",
-                        "","","","","","","","",""));
+                        "","","",""));
 
         /* 검증 */
-        ResponseEntity<MeminfqryOutputVO> outputVO = service.syncCall(request, inputVO);
+        ResponseEntity<MeminfqryOutputVO> output = service.syncCall(request, input);
         verify(service).syncCall(any(), any());
-        verify(mapper).crd_master_mst_tpcom_vs_2005(any());
+        verify(mapper).crd_master_mst_tpcom_vs2005(any());
+    }
+
+    @Test
+    public void testMeminfqryServiceDataNotFound() {
+        /* Mock Object 선언 */
+        MockHttpServletRequest request = new MockHttpServletRequest();
+        MeminfqryService service = spy(MeminfqryServiceImpl.class);
+        MeminfqryInputVO input = mock(MeminfqryInputVO.class);
+        Crd_master_mstMapper mapper = mock(Crd_master_mstMapper.class);
+        ((MeminfqryServiceImpl) service).setCrd_master_mstMapper(mapper);
+
+        /* Stub 선언*/
+        when(input.getMbrsh_pgm_id()).thenReturn("A");
+        when(input.getCrd_no()).thenReturn("1111111111111111");
+        when(mapper.crd_master_mst_tpcom_vs2005(any())).thenReturn(null);
+
+        /* 검증 */
+        try {
+            ResponseEntity<MeminfqryOutputVO> output = service.syncCall(request, input);
+        } catch (ValidException e) {
+            if (e.getAns_cd().equals("8811")) {
+                log.info("에러코드 : " + e.getAns_cd() + ". 에러 검증 완료");
+            }else {
+                throw new ValidException(e.getAns_cd(), e.getAns_msg());
+            }
+        }
     }
 }

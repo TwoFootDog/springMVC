@@ -54,16 +54,16 @@ public class HomeControllerTests {
         headers.add("data_size", "600");
         headers.add("ans_cd1", "");
         headers.add("ans_cd2", "");
-        headers.add("fillter", "");
+        headers.add("filler", "");
         mockMvc.perform(post("/zptutxptc")
                 .contentType(MediaType.APPLICATION_JSON_UTF8_VALUE)
                 .headers(headers)
                 .content(objectMapper.writeValueAsString(inputVO)))
                 .andExpect(status().isOk())
-        .andDo(print());
-//                .andExpect(header().string("ans_cd1", "00"))
-//                .andExpect(header().string("ans_cd2", "00"))
-//                .andExpect(jsonPath("$.mbrsh_pgm_id").value("A"));
+                .andExpect(header().string("ans_cd1", "00"))
+                .andExpect(header().string("ans_cd2", "00"))
+                .andExpect(jsonPath("$.mbrsh_pgm_id").value("A"))
+                .andDo(print());
 
     }
 

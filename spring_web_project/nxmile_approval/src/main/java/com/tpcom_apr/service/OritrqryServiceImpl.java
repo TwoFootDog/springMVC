@@ -1,7 +1,9 @@
 package com.tpcom_apr.service;
 
 import com.commons.exception.ValidException;
-import com.tpcom_apr.domain.*;
+import com.tpcom_apr.domain.service.OritrqryInputVO;
+import com.tpcom_apr.domain.service.OritrqryOutputVO;
+import com.tpcom_apr.domain.sql.*;
 import com.tpcom_apr.mapper.Apr_dealtr_trnMapper;
 import com.tpcom_apr.service.service_interface.OritrqryService;
 import lombok.Setter;
@@ -66,7 +68,8 @@ public class OritrqryServiceImpl implements OritrqryService {
                                         orgn_deal_coopco_aprv_no));
                 if (!StringUtils.isEmpty(apr_dealtr_trn_tpcom_vs2001OutputVO)) {
                     responseHeader = new HttpHeaders();
-                    responseHeader.add("ans_cd", "0000");
+                    responseHeader.add("ans_cd1", "00");
+                    responseHeader.add("ans_cd2", "00");
                     outputVO = new OritrqryOutputVO(apr_dealtr_trn_tpcom_vs2001OutputVO);
                 } else if (StringUtils.isEmpty(apr_dealtr_trn_tpcom_vs2001OutputVO)) {
 
@@ -91,7 +94,8 @@ public class OritrqryServiceImpl implements OritrqryService {
                                         request.getHeader("organ_cd"), inputVO.getSvc_modu_id()));
                 if (!StringUtils.isEmpty(apr_dealtr_trn_tpcom_vs2002OutputVO)) {
                     responseHeader = new HttpHeaders();
-                    responseHeader.add("ans_cd", "0000");
+                    responseHeader.add("ans_cd1", "00");
+                    responseHeader.add("ans_cd2", "00");
                     outputVO = new OritrqryOutputVO(apr_dealtr_trn_tpcom_vs2002OutputVO);
                 } else if (StringUtils.isEmpty(apr_dealtr_trn_tpcom_vs2002OutputVO)){
                     throw new ValidException("7777", "데이터 미존재");

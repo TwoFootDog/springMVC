@@ -2,10 +2,7 @@ package com.tpcom_apr.controller;
 
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.tpcom_apr.domain.OnmsgchkInputVO;
-import com.tpcom_apr.mapper.Rul_svcavl_conMapper;
-import com.tpcom_apr.service.OnmsgchkServiceImpl;
-import lombok.Setter;
+import com.tpcom_apr.domain.service.OnmsgchkInputVO;
 import lombok.extern.log4j.Log4j;
 import org.junit.Before;
 import org.junit.Test;

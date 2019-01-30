@@ -1,7 +1,7 @@
 package com.tpcom_apr.mapper;
 
 
-import com.tpcom_apr.domain.*;
+import com.tpcom_apr.domain.sql.*;
 
 public interface Apr_dealtr_trnMapper {
     public Apr_dealtr_trn_tpcom_vs2001OutputVO apr_dealtr_trn_tpcom_vs2001(Apr_dealtr_trn_tpcom_vs2001InputVO inputVO);

@@ -1,7 +1,7 @@
 package com.tpcom_apr.mapper;
 
 
-import com.tpcom_apr.domain.*;
+import com.tpcom_apr.domain.sql.*;
 import lombok.Setter;
 import lombok.extern.log4j.Log4j;
 import org.junit.Test;

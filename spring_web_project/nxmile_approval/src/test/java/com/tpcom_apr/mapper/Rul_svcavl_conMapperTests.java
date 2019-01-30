@@ -1,7 +1,7 @@
 package com.tpcom_apr.mapper;
 
-import com.tpcom_apr.domain.Rul_svcavl_con_tpcom_vs2001InputVO;
-import com.tpcom_apr.domain.Rul_svcavl_con_tpcom_vs2001OutputVO;
+import com.tpcom_apr.domain.sql.Rul_svcavl_con_tpcom_vs2001InputVO;
+import com.tpcom_apr.domain.sql.Rul_svcavl_con_tpcom_vs2001OutputVO;
 import lombok.Setter;
 import lombok.extern.java.Log;
 import org.junit.Test;

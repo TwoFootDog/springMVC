@@ -1,10 +1,10 @@
 package com.tpcom_apr.service;
 
 import com.commons.exception.ValidException;
-import com.tpcom_apr.domain.OnmsgchkInputVO;
-import com.tpcom_apr.domain.OnmsgchkOutputVO;
-import com.tpcom_apr.domain.Rul_svcavl_con_tpcom_vs2001InputVO;
-import com.tpcom_apr.domain.Rul_svcavl_con_tpcom_vs2001OutputVO;
+import com.tpcom_apr.domain.service.OnmsgchkInputVO;
+import com.tpcom_apr.domain.service.OnmsgchkOutputVO;
+import com.tpcom_apr.domain.sql.Rul_svcavl_con_tpcom_vs2001InputVO;
+import com.tpcom_apr.domain.sql.Rul_svcavl_con_tpcom_vs2001OutputVO;
 import com.tpcom_apr.mapper.Rul_svcavl_conMapper;
 import com.tpcom_apr.service.service_interface.OnmsgchkService;
 import lombok.Setter;

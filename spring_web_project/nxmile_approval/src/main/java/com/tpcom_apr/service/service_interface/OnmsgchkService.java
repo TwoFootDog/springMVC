@@ -1,13 +1,10 @@
 package com.tpcom_apr.service.service_interface;
 
-import com.tpcom_apr.domain.OnmsgchkInputVO;
-import com.tpcom_apr.domain.OnmsgchkOutputVO;
-import org.springframework.http.HttpRequest;
+import com.tpcom_apr.domain.service.OnmsgchkInputVO;
+import com.tpcom_apr.domain.service.OnmsgchkOutputVO;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RequestBody;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.Map;
 
 public interface OnmsgchkService {
     public ResponseEntity<OnmsgchkOutputVO> syncCall(HttpServletRequest request, OnmsgchkInputVO inputVO);
