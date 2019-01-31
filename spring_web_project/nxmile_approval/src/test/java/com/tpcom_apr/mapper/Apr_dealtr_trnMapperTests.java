@@ -10,6 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import java.util.List;
+
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("file:src/main/webapp/WEB-INF/spring-config/applicationContext.xml")
 @Log4j
@@ -38,7 +40,7 @@ public class Apr_dealtr_trnMapperTests {
 
     @Test
     public void apr_dealtr_trn_tpcom_vf2001Tests() {
-        Apr_dealtr_trn_tpcom_vf2001OutputVO outputVO =
+        List<Apr_dealtr_trn_tpcom_vf2001OutputVO> outputVO =
                 apr_dealtr_trnMapper.apr_dealtr_trn_tpcom_vf2001(
                         new Apr_dealtr_trn_tpcom_vf2001InputVO("A","F88405584","20190103","11","0360184577")
                 );

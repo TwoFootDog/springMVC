@@ -267,7 +267,7 @@
       AND APRV_DY =      #{orgn_aprv_dy}
       AND SLP_CD =       #{slp_cd}
       AND TRC_NO =       #{trc_no}
-    ORDER BY 3
+    ORDER BY 3 DESC
   </select>
 
 </mapper>

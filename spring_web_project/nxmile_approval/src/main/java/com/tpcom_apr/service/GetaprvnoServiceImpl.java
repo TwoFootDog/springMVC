@@ -1,7 +1,6 @@
 package com.tpcom_apr.service;
 
 import com.commons.exception.ValidException;
-import com.ctc.wstx.util.StringUtil;
 import com.tpcom_apr.domain.service.GetaprvnoInputVO;
 import com.tpcom_apr.domain.service.GetaprvnoOutputVO;
 import com.tpcom_apr.domain.sql.Aprv_dy_tm_tpcom_vs2001OutputVO;

@@ -1,7 +1,9 @@
 package com.tpptu.service;
 
+import com.commons.exception.ValidException;
 import com.tpcom_apr.domain.service.*;
 import com.tpcom_apr.domain.sql.Apr_dealtr_trn_tpcom_vf2001InputVO;
+import com.tpcom_apr.domain.sql.Apr_dealtr_trn_tpcom_vf2001OutputVO;
 import com.tpcom_apr.mapper.Apr_dealtr_trnMapper;
 import com.tpcom_apr.service.service_interface.GetaprvnoService;
 import com.tpcom_apr.service.service_interface.MeminfqryService;
@@ -21,6 +23,8 @@ import org.springframework.util.StringUtils;
 
 import javax.servlet.http.HttpServletRequest;
 import java.text.SimpleDateFormat;
+import java.util.Iterator;
+import java.util.List;
 
 @Service
 @Log4j
@@ -38,12 +42,13 @@ public class ZptutxptcService {
     @Setter(onMethod_ = {@Autowired})
     private Apr_dealtr_trnMapper apr_dealtr_trnMapper;  // 거래내역조회 관련 SQL
 
-    /* 호출 서비스 입력전문 */
+    /* 호출 서비스 입출력전문 */
     private OnmsgchkInputVO onmsgchkInputVO;
     private GetaprvnoInputVO getaprvnoInputVO;
     private OritrqryInputVO oritrqryInputVO;
     private MeminfqryInputVO meminfqryInputVO;
     private Apr_dealtr_trn_tpcom_vf2001InputVO apr_dealtr_trn_tpcom_vf2001InputVO;
+    private List<Apr_dealtr_trn_tpcom_vf2001OutputVO> apr_dealtr_trn_tpcom_vf2001OutputVO;
 
     /* 출력값 */
     private HttpHeaders responseHeaders;
@@ -109,11 +114,23 @@ public class ZptutxptcService {
 
         /* 취소대상 거래내역 조회 */
         apr_dealtr_trn_tpcom_vf2001InputVO = new Apr_dealtr_trn_tpcom_vf2001InputVO();
-        apr_dealtr_trn_tpcom_vf2001InputVO.setMbrsh_pgm_id(inputVO.getMbrsh_pgm_id());
+        apr_dealtr_trn_tpcom_vf2001InputVO.setMbrsh_pgm_id(oritrqryOutputVO.getBody().getMbrsh_pgm_id());
         apr_dealtr_trn_tpcom_vf2001InputVO.setRep_aprv_no(oritrqryOutputVO.getBody().getRep_aprv_no());
-        apr_dealtr_trn_tpcom_vf2001InputVO.setOrgn_aprv_dy(oritrqryOutputVO.getBody().getOrgn_aprv_dy());
-        apr_dealtr_trn_tpcom_vf2001InputVO.setTrc_no(request.getHeader("trc_no"));
-        if (!StringUtils.isEmpty(inputVO.getSlp_cd()))
+        apr_dealtr_trn_tpcom_vf2001InputVO.setOrgn_aprv_dy(oritrqryOutputVO.getBody().getAprv_dy());
+        apr_dealtr_trn_tpcom_vf2001InputVO.setTrc_no(oritrqryOutputVO.getBody().getTrc_no());
+        if (!StringUtils.isEmpty(inputVO.getSlp_cd()) && inputVO.getSlp_cd().equals("42")) {
+            apr_dealtr_trn_tpcom_vf2001InputVO.setSlp_cd("41");
+        } else if (!StringUtils.isEmpty(inputVO.getSlp_cd()) && inputVO.getSlp_cd().equals("22")) {
+            apr_dealtr_trn_tpcom_vf2001InputVO.setSlp_cd("11");
+        } else {
+            throw new ValidException("4468", "취소대상 거래내역 조회 전표 에러");
+        }
+        apr_dealtr_trn_tpcom_vf2001OutputVO =
+                apr_dealtr_trnMapper.apr_dealtr_trn_tpcom_vf2001(apr_dealtr_trn_tpcom_vf2001InputVO);
+        Iterator iterator = apr_dealtr_trn_tpcom_vf2001OutputVO.iterator();
+        while(iterator.hasNext()) {
+            log.info("거래 : " + iterator.next());
+        }
 
 
         /* 포인트 갱신 */
