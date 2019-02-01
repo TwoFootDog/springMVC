@@ -35,7 +35,7 @@ public class GetaprvnoServiceTests {
     }
 
     @Test
-    public void testGetaprvnoServiceInnerMethodCallOk() {
+    public void testGetaprvnoServiceMapperCallOk() {
         /* Mock Object 선언 */
         MockHttpServletRequest request = new MockHttpServletRequest();
         GetaprvnoService service = spy(GetaprvnoServiceImpl.class);

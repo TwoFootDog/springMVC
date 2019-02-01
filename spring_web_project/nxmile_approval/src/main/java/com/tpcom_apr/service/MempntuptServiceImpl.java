@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletRequest;
 
 @Service
 @Log4j
-public class MempntupServiceImpl implements MempntuptService {
+public class MempntuptServiceImpl implements MempntuptService {
 
     @Setter(onMethod_ = {@Autowired})
     Mbr_mempnt_trnMapper mbr_mempnt_trnMapper;

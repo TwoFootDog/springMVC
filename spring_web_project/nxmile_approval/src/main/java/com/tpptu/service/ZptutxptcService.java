@@ -127,9 +127,9 @@ public class ZptutxptcService {
         }
         apr_dealtr_trn_tpcom_vf2001OutputVO =
                 apr_dealtr_trnMapper.apr_dealtr_trn_tpcom_vf2001(apr_dealtr_trn_tpcom_vf2001InputVO);
-        Iterator iterator = apr_dealtr_trn_tpcom_vf2001OutputVO.iterator();
+        Iterator<Integer> iterator = apr_dealtr_trn_tpcom_vf2001OutputVO.iterator();
         while(iterator.hasNext()) {
-            log.info("거래 : " + iterator.next());
+            apr_dealtr_trn_tpcom_vf2001OutputVO.get(iterator.next());
         }
 
 

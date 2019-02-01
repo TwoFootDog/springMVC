@@ -37,7 +37,7 @@ public class MeminfqryServiceTests {
     }
 
     @Test
-    public void testMeminfqryServiceInnterMethodCallOk() {
+    public void testMeminfqryServiceMapperCallOk() {
         /* Mock Object 선언 */
         MockHttpServletRequest request = new MockHttpServletRequest();
         MeminfqryService service = spy(MeminfqryServiceImpl.class);
