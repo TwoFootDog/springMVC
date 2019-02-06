@@ -37,6 +37,7 @@ public class MempntuptServiceImpl implements MempntuptService {
                         inputVO.getMbr_id(),
                         inputVO.getPnt_knd_cd()));
         if (result == 0) {
+
             throw new ValidException("9080", "포인트 변경 에러");
         } else {
             outputVO = new MempntuptOutputVO(1L);

@@ -5,10 +5,7 @@ import com.tpcom_apr.domain.service.*;
 import com.tpcom_apr.domain.sql.Apr_dealtr_trn_tpcom_vf2001InputVO;
 import com.tpcom_apr.domain.sql.Apr_dealtr_trn_tpcom_vf2001OutputVO;
 import com.tpcom_apr.mapper.Apr_dealtr_trnMapper;
-import com.tpcom_apr.service.service_interface.GetaprvnoService;
-import com.tpcom_apr.service.service_interface.MeminfqryService;
-import com.tpcom_apr.service.service_interface.OnmsgchkService;
-import com.tpcom_apr.service.service_interface.OritrqryService;
+import com.tpcom_apr.service.service_interface.*;
 import com.tpptu.domain.ZptutxptcInputVO;
 import com.tpptu.domain.ZptutxptcOutputVO;
 import lombok.Setter;
@@ -41,6 +38,8 @@ public class ZptutxptcService {
     private MeminfqryService meminfqryService;  // 포인트 조회
     @Setter(onMethod_ = {@Autowired})
     private Apr_dealtr_trnMapper apr_dealtr_trnMapper;  // 거래내역조회 관련 SQL
+    @Setter(onMethod_ = {@Autowired})
+    private MempntuptService mempntuptService;
 
     /* 호출 서비스 입출력전문 */
     private OnmsgchkInputVO onmsgchkInputVO;
@@ -49,6 +48,7 @@ public class ZptutxptcService {
     private MeminfqryInputVO meminfqryInputVO;
     private Apr_dealtr_trn_tpcom_vf2001InputVO apr_dealtr_trn_tpcom_vf2001InputVO;
     private List<Apr_dealtr_trn_tpcom_vf2001OutputVO> apr_dealtr_trn_tpcom_vf2001OutputVO;
+    private MempntuptInputVO mempntuptInputVO;
 
     /* 출력값 */
     private HttpHeaders responseHeaders;
@@ -110,7 +110,7 @@ public class ZptutxptcService {
         meminfqryInputVO.setMbrsh_pgm_id(inputVO.getMbrsh_pgm_id());
         meminfqryInputVO.setCrd_no(inputVO.getTrack_ii_data());
         meminfqryInputVO.setAprv_no("");
-        ResponseEntity<MeminfqryOutputVO> meminfqryOutputVo = meminfqryService.syncCall(request, meminfqryInputVO);
+        ResponseEntity<MeminfqryOutputVO> meminfqryOutputVO = meminfqryService.syncCall(request, meminfqryInputVO);
 
         /* 취소대상 거래내역 조회 */
         apr_dealtr_trn_tpcom_vf2001InputVO = new Apr_dealtr_trn_tpcom_vf2001InputVO();
@@ -127,16 +127,27 @@ public class ZptutxptcService {
         }
         apr_dealtr_trn_tpcom_vf2001OutputVO =
                 apr_dealtr_trnMapper.apr_dealtr_trn_tpcom_vf2001(apr_dealtr_trn_tpcom_vf2001InputVO);
-        Iterator<Integer> iterator = apr_dealtr_trn_tpcom_vf2001OutputVO.iterator();
-        while(iterator.hasNext()) {
-            apr_dealtr_trn_tpcom_vf2001OutputVO.get(iterator.next());
+        for (Apr_dealtr_trn_tpcom_vf2001OutputVO aprOutputVO : apr_dealtr_trn_tpcom_vf2001OutputVO) {
+
+            /* 포인트 갱신 */
+            mempntuptInputVO = new MempntuptInputVO();
+            mempntuptInputVO.setMbrsh_pgm_id(aprOutputVO.getMbrsh_pgm_id());
+            mempntuptInputVO.setMbr_id(aprOutputVO.getMbr_id());
+            mempntuptInputVO.setPnt_knd_cd(aprOutputVO.getPnt_knd_cd());
+            mempntuptInputVO.setOrgan_cd(request.getHeader("organ_cd"));
+            mempntuptInputVO.setCur_pnt(0L);
+            mempntuptInputVO.setAvl_pnt(0L);
+            ResponseEntity<MempntuptOutputVO> mempntuptOutputVO = mempntuptService.syncCall(request, mempntuptInputVO);
+
+            /* 취소 거래내역 생성 */
+
         }
 
 
-        /* 포인트 갱신 */
 
 
-        /* 거래내역 생성 모듈 호출 */
+
+
 
 
 
