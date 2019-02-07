@@ -45,4 +45,17 @@ public class Apr_dealtr_trnMapperTests {
                         new Apr_dealtr_trn_tpcom_vf2001InputVO("A","F88405584","20190103","11","0360184577")
                 );
     }
+
+    @Test
+    public void apr_dealtr_trn_tpcom_ei2001Tests() {
+        int result =
+                apr_dealtr_trnMapper.apr_dealtr_trn_tpcom_ei2001(
+                        new Apr_dealtr_trn_tpcom_ei2001InputVO(
+                                "A","20190207","F88888888","1111111111111111","111111","20190207","99999999","","","","","","","",0D,0D,
+                                "",0L,0L,0L,0L,0L,0L,"",0L,0L,0L,0L,0L,0L,0L,"",
+                                "","","","","","","","","","","","","","","",0L,
+                                0L,"","","",0L,"","","","","","","","",0D,0L,0D,
+                                "","","","","","","","","","","","","","","","",""));
+        log.info("=========result : " + result);
+    }
 }

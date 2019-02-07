@@ -8,6 +8,7 @@ import io.swagger.annotations.*;
 import lombok.Setter;
 import lombok.extern.log4j.Log4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
@@ -32,7 +33,7 @@ public class HomeController {
     private ZptutxptcService zptutxptcService;
 
     @ApiOperation(  // API에 대한 Swagger 설명
-            value="서비스",
+            value = "서비스",
             notes = "서비스입니다.",
             httpMethod = "POST",
             consumes = "application/json",
@@ -45,13 +46,18 @@ public class HomeController {
             @ApiResponse(code = 200, message = "OK"),
             @ApiResponse(code = 404, message = "No params")
     })
-    @PostMapping(value="/zptutxptc",
+    @PostMapping(value = "/zptutxptc",
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_JSON_UTF8_VALUE})
-    public ResponseEntity<ZptutxptcOutputVO> zptutcptc(HttpServletRequest Header,
+    public ResponseEntity<ZptutxptcOutputVO> zptutcptc(@RequestHeader HttpHeaders Header,
                                                        @RequestBody ZptutxptcInputVO inputVO) {
 
-        return zptutxptcService.syncCall(Header, inputVO);
+
+        ResponseEntity<ZptutxptcOutputVO> out = zptutxptcService.syncCall(Header, inputVO);
+
+        log.info("controller--------------------");
+        return out;
+
     }
 
     @ApiImplicitParams({
@@ -61,7 +67,7 @@ public class HomeController {
     })
 
 
-   @GetMapping(value = "/home/{area}")
+    @GetMapping(value = "/home/{area}")
     public String home(@PathVariable String area, @RequestParam String param1, @RequestParam int param2) {
         return "home";
     }

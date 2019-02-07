@@ -41,4 +41,11 @@
 
     <!-- property 적용-->
     <context:property-placeholder location="classpath:config/database.properties" />
+
+
+    <!-- blog test용-->
+    <context:component-scan base-package="com.test.service" />
+    <context:component-scan base-package="com.test.dao" />
+    <mybatis-spring:scan base-package="com.test.mapper" />
+
 </beans>

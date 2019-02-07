@@ -10,6 +10,7 @@ import com.tpcom_apr.service.service_interface.MeminfqryService;
 import lombok.extern.log4j.Log4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.test.context.ContextConfiguration;
@@ -26,11 +27,11 @@ public class MeminfqryServiceTests {
     @Test
     public void testMeminfqryServiceSynccallOk() {
         /* Mock Object 선언 */
-        MockHttpServletRequest request = new MockHttpServletRequest();
+        HttpHeaders headers = mock(HttpHeaders.class);
         MeminfqryService service = mock(MeminfqryServiceImpl.class);
 
         /* Stub 선언 */
-        ResponseEntity<MeminfqryOutputVO> output = service.syncCall(request, new MeminfqryInputVO());
+        ResponseEntity<MeminfqryOutputVO> output = service.syncCall(headers, new MeminfqryInputVO());
 
         /* 검증 */
         verify(service).syncCall(any(), any());
@@ -39,7 +40,7 @@ public class MeminfqryServiceTests {
     @Test
     public void testMeminfqryServiceMapperCallOk() {
         /* Mock Object 선언 */
-        MockHttpServletRequest request = new MockHttpServletRequest();
+        HttpHeaders headers = mock(HttpHeaders.class);
         MeminfqryService service = spy(MeminfqryServiceImpl.class);
         MeminfqryInputVO input = mock(MeminfqryInputVO.class);
         Crd_master_mstMapper mapper = mock(Crd_master_mstMapper.class);
@@ -52,7 +53,7 @@ public class MeminfqryServiceTests {
                         "","","",""));
 
         /* 검증 */
-        ResponseEntity<MeminfqryOutputVO> output = service.syncCall(request, input);
+        ResponseEntity<MeminfqryOutputVO> output = service.syncCall(headers, input);
         verify(service).syncCall(any(), any());
         verify(mapper).crd_master_mst_tpcom_vs2005(any());
     }
@@ -60,7 +61,7 @@ public class MeminfqryServiceTests {
     @Test
     public void testMeminfqryServiceDataNotFound() {
         /* Mock Object 선언 */
-        MockHttpServletRequest request = new MockHttpServletRequest();
+        HttpHeaders headers = mock(HttpHeaders.class);
         MeminfqryService service = spy(MeminfqryServiceImpl.class);
         MeminfqryInputVO input = mock(MeminfqryInputVO.class);
         Crd_master_mstMapper mapper = mock(Crd_master_mstMapper.class);
@@ -73,12 +74,12 @@ public class MeminfqryServiceTests {
 
         /* 검증 */
         try {
-            ResponseEntity<MeminfqryOutputVO> output = service.syncCall(request, input);
+            ResponseEntity<MeminfqryOutputVO> output = service.syncCall(headers, input);
         } catch (ValidException e) {
             if (e.getAns_cd().equals("8811")) {
                 log.info("에러코드 : " + e.getAns_cd() + ". 에러 검증 완료");
             }else {
-                throw new ValidException(e.getAns_cd(), e.getAns_msg());
+                throw new ValidException(headers, e.getAns_cd(), e.getAns_msg());
             }
         }
     }

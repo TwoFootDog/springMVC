@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.tpcom_apr.mapper.Apr_dealtr_trnMapper">
-  <select id="apr_dealtr_trn_tpcom_vs2001" resultType="com.tpcom_apr.domain.Apr_dealtr_trn_tpcom_vs2001OutputVO">
+    <select id="apr_dealtr_trn_tpcom_vs2001" parameterType="com.tpcom_apr.domain.sql.Apr_dealtr_trn_tpcom_vs2001InputVO" resultType="com.tpcom_apr.domain.sql.Apr_dealtr_trn_tpcom_vs2001OutputVO">
     SELECT
       mbrsh_pgm_id,
       aprv_dy,
@@ -87,7 +87,7 @@
     LIMIT 1
   </select>
 
-  <select id="apr_dealtr_trn_tpcom_vs2002" resultType="com.tpcom_apr.domain.Apr_dealtr_trn_tpcom_vs2002OutputVO">
+    <select id="apr_dealtr_trn_tpcom_vs2002" parameterType="com.tpcom_apr.domain.sql.Apr_dealtr_trn_tpcom_vs2002InputVO" resultType="com.tpcom_apr.domain.sql.Apr_dealtr_trn_tpcom_vs2002OutputVO">
     SELECT
       mbrsh_pgm_id,
       aprv_dy,
@@ -172,13 +172,194 @@
     LIMIT 1
   </select>
 
-  <select id="apr_dealtr_trn_tpcom_vs2003" resultType="com.tpcom_apr.domain.Apr_dealtr_trn_tpcom_vs2003OutputVO">
+    <select id="apr_dealtr_trn_tpcom_vs2003" resultType="com.tpcom_apr.domain.sql.Apr_dealtr_trn_tpcom_vs2003OutputVO">
+    </select>
+
+    <select id="apr_dealtr_trn_tpcom_vs2004" resultType="com.tpcom_apr.domain.sql.Apr_dealtr_trn_tpcom_vs2004OutputVO">
+    </select>
+
+    <select id="apr_dealtr_trn_tpcom_vs2035" resultType="com.tpcom_apr.domain.sql.Apr_dealtr_trn_tpcom_vs2035OutputVO">
+    </select>
+
+
+    <select id="apr_dealtr_trn_tpcom_vf2001" parameterType="com.tpcom_apr.domain.sql.Apr_dealtr_trn_tpcom_vf2001InputVO" resultType="com.tpcom_apr.domain.sql.Apr_dealtr_trn_tpcom_vf2001OutputVO">
+    SELECT mbrsh_pgm_id,
+           aprv_dy,
+           aprv_no,
+           crd_no,
+           aprv_tm,
+           deal_dy,
+           mcht_no,
+           fam_rep_mbr_id,
+           mbr_id,
+           slp_cd,
+           deal_fg,
+           deal_tm,
+           prz_cd,
+           oilcls_cd,
+           sale_qty,
+           sale_prc,
+           mix_sttl_yn,
+           mix_sttl_tot_amt,
+           deal_amt,
+           dsc_amt,
+           mcht_pnt,
+           cur_pnt,
+           avl_pnt,
+           pnt_knd_cd,
+           annfee,
+           mbrsh_svc_annfee,
+           refu_lmt_inc_amt,
+           deal_bef_cur_pnt,
+           deal_bef_avl_pnt,
+           deal_bef_annfee,
+           deal_bef_mbrsh_svc_annfee,
+           cncl_typ,
+           cs_slp_cd,
+           mbrsh_svc_fg,
+           dir_self_mng_fg,
+           wrng_sale_lmt_exc_fg,
+           incom_organ_cd,
+           ter_fg,
+           ans_cd,
+           telgrm_no,
+           trc_no,
+           orgn_aprv_dy,
+           orgn_aprv_no,
+           orgn_Deal_dy,
+           usb_dy,
+           rep_aprv_no,
+           sttl_mcht_no,
+           sttl_amt,
+           sk_chrg_amt,
+           contr_fg_cd,
+           svc_grp_no,
+           cpn_prd_cd,
+           cpn_prd_qty,
+           dist_cust_cpn_mng_no,
+           clltbrd_no,
+           coopco_cd,
+           sttl_coopco_cd,
+           mngco_chrg_sttl_mcht_no,
+           coop_crd_cd,
+           vat_incld_yn,
+           fee_apl_bas_fg,
+           fee_rt,
+           fee_amt,
+           apl_rt,
+           cash_arcpt_issu_yn,
+           chip_deal_yn,
+           coopco_aprv_no,
+           coopco_mbr_id,
+           coopco_mbr_ip_addr,
+           bat_file_nm,
+           telgrm_fg,
+           deal_caus_cd,
+           qry_blk_yn,
+           qry_mcht_no,
+           regr_id,
+           updr_id,
+           hyb_contr_id,
+           incom_crd_no
+    FROM apr_dealtr_trn
+    WHERE MBRSH_PGM_ID = #{mbrsh_pgm_id}
+      AND REP_APRV_NO =  #{rep_aprv_no}
+      AND APRV_DY =      #{orgn_aprv_dy}
+      AND SLP_CD =       #{slp_cd}
+      AND TRC_NO =       #{trc_no}
+    ORDER BY 3 DESC
   </select>
 
-  <select id="apr_dealtr_trn_tpcom_vs2004" resultType="com.tpcom_apr.domain.Apr_dealtr_trn_tpcom_vs2004OutputVO">
-  </select>
-
-  <select id="apr_dealtr_trn_tpcom_vs2035" resultType="com.tpcom_apr.domain.Apr_dealtr_trn_tpcom_vs2035OutputVO">
-  </select>
+    <insert id="apr_dealtr_trn_tpcom_ei2001" parameterType="com.tpcom_apr.domain.sql.Apr_dealtr_trn_tpcom_ei2001InputVO">
+    INSERT
+    INTO APR_DEALTR_TRN
+    (MBRSH_PGM_ID, APRV_DY, APRV_NO, CRD_NO, APRV_TM, DEAL_DY, MCHT_NO, FAM_REP_MBR_ID, MBR_ID, SLP_CD, DEAL_FG, DEAL_TM, PRZ_CD, OILCLS_CD, SALE_QTY, SALE_PRC, MIX_STTL_YN, MIX_STTL_TOT_AMT, DEAL_AMT, DSC_AMT, MCHT_PNT, CUR_PNT, AVL_PNT, PNT_KND_CD, ANNFEE, MBRSH_SVC_ANNFEE, REFU_LMT_INC_AMT, DEAL_BEF_CUR_PNT, DEAL_BEF_AVL_PNT, DEAL_BEF_ANNFEE, DEAL_BEF_MBRSH_SVC_ANNFEE, CNCL_TYP, CS_SLP_CD, MBRSH_SVC_FG, DIR_SELF_MNG_FG, WRNG_SALE_LMT_EXC_FG, INCOM_ORGAN_CD, TER_FG, ANS_CD, TELGRM_NO, TRC_NO, ORGN_APRV_DY, ORGN_APRV_NO, ORGN_DEAL_DY, USB_DY, REP_APRV_NO, STTL_MCHT_NO, STTL_AMT, SK_CHRG_AMT, CONTR_FG_CD, SVC_GRP_NO, CPN_PRD_CD, CPN_PRD_QTY, DIST_CUST_CPN_MNG_NO, CLLTBRD_NO, COOPCO_CD, STTL_COOPCO_CD, MNGCO_CHRG_STTL_MCHT_NO, COOP_CRD_CD, VAT_INCLD_YN, FEE_APL_BAS_FG, FEE_RT, FEE_AMT, APL_RT, CASH_ARCPT_ISSU_YN, CHIP_DEAL_YN, COOPCO_APRV_NO, COOPCO_MBR_ID, COOPCO_MBR_IP_ADDR, BAT_FILE_NM, TELGRM_FG, DEAL_CAUS_CD, QRY_BLK_YN, QRY_MCHT_NO, REGR_ID, REG_DT, UPDR_ID, UPD_DT, ADD_PNT_CD, REAL_COL_MCHT_NO, HYB_CONTR_ID, DEAL_KND_CD, INCOM_CRD_NO)
+    VALUES
+    (
+     #{mbrsh_pgm_id},
+     #{aprv_dy},
+     #{aprv_no},
+     #{crd_no},
+     #{aprv_tm},
+     #{deal_dy},
+     #{mcht_no},
+     #{fam_rep_mbr_id},
+     #{mbr_id},
+     #{slp_cd},
+     #{deal_fg},
+     #{deal_tm},
+     #{prz_cd},
+     #{oilcls_cd},
+     #{sale_qty},
+     #{sale_prc},
+     #{mix_sttl_yn},
+     #{mix_sttl_tot_amt},
+     #{deal_amt},
+     #{dsc_amt},
+     #{mcht_pnt},
+     #{cur_pnt},
+     #{avl_pnt},
+     #{pnt_knd_cd},
+     #{annfee},
+     #{mbrsh_svc_annfee},
+     #{refu_lmt_inc_amt},
+     #{deal_bef_cur_pnt},
+     #{deal_bef_avl_pnt},
+     #{deal_bef_annfee},
+     #{deal_bef_mbrsh_svc_annfee},
+     #{cncl_typ},
+     #{cs_slp_cd},
+     #{mbrsh_svc_fg},
+     #{dir_self_mng_fg},
+     #{wrng_sale_lmt_exc_fg},
+     #{incom_organ_cd},
+     #{ter_fg},
+     #{ans_cd},
+     #{telgrm_no},
+     #{trc_no},
+     #{orgn_aprv_dy},
+     #{orgn_aprv_no},
+     #{orgn_deal_dy},
+     #{usb_dy},
+     #{rep_aprv_no},
+     #{sttl_mcht_no},
+     #{sttl_amt},
+     #{sk_chrg_amt},
+     #{contr_fg_cd},
+     #{svc_grp_no},
+     #{cpn_prd_cd},
+     #{cpn_prd_qty},
+     #{dist_cust_cpn_mng_no},
+     #{clltbrd_no},
+     #{coopco_cd},
+     #{sttl_coopco_cd},
+     #{mngco_chrg_sttl_mcht_no},
+     #{coop_crd_cd},
+     #{vat_incld_yn},
+     #{fee_apl_bas_fg},
+     #{fee_rt},
+     #{fee_amt},
+     #{apl_rt},
+     #{cash_arcpt_issu_yn},
+     #{chip_deal_yn},
+     #{coopco_aprv_no},
+     #{coopco_mbr_id},
+     #{coopco_mbr_ip_addr},
+     #{bat_file_nm},
+     #{telgrm_fg},
+     #{deal_caus_cd},
+     #{qry_blk_yn},
+     #{qry_mcht_no},
+     #{regr_id},
+     SYSDATE(),
+     #{updr_id},
+     SYSDATE(),
+     #{add_pnt_cd},
+     #{real_col_mcht_no},
+     #{hyb_contr_id},
+     #{deal_knd_cd},
+     #{incom_crd_no}
+    )
+    </insert>
 
 </mapper>

@@ -22,6 +22,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.text.SimpleDateFormat;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 
 @Service
 @Log4j
@@ -57,15 +58,16 @@ public class ZptutxptcService {
 
 
 
-    public ResponseEntity<ZptutxptcOutputVO> syncCall(HttpServletRequest request,
+    public ResponseEntity<ZptutxptcOutputVO> syncCall(HttpHeaders requestHeader,
                                                       ZptutxptcInputVO inputVO) {
 
+        Map<String, String> header = requestHeader.toSingleValueMap();
         /* 전문 유효성 체크 */
         onmsgchkInputVO = new OnmsgchkInputVO();
         onmsgchkInputVO.setSvc_modu_id("ZPTUTXPTC0001");
-        onmsgchkInputVO.setTelgrm_no(request.getHeader("telgrm_no"));
-        onmsgchkInputVO.setOrgan_cd(request.getHeader("organ_cd"));
-        onmsgchkInputVO.setTrc_no(request.getHeader("trc_no"));
+        onmsgchkInputVO.setTelgrm_no(header.get("telgrm_no"));
+        onmsgchkInputVO.setOrgan_cd(header.get("organ_cd"));
+        onmsgchkInputVO.setTrc_no(header.get("trc_no"));
         onmsgchkInputVO.setMcht_no(inputVO.getMcht_no());
         onmsgchkInputVO.setMcht_biz_no("");
         onmsgchkInputVO.setDeal_dy(inputVO.getDeal_dy());
@@ -78,7 +80,7 @@ public class ZptutxptcService {
         onmsgchkInputVO.setDeal_amt_sum(0L);
         onmsgchkInputVO.setDeal_amt1(0L);
         onmsgchkInputVO.setOrgn_deal_amt(0L);
-        ResponseEntity<OnmsgchkOutputVO> onmsgchkOutputVO = onmsgchkService.syncCall(request, onmsgchkInputVO);
+        ResponseEntity<OnmsgchkOutputVO> onmsgchkOutputVO = onmsgchkService.syncCall(requestHeader, onmsgchkInputVO);
 
 
         /* 승인번호 채번 */
@@ -86,14 +88,14 @@ public class ZptutxptcService {
         getaprvnoInputVO.setMbrsh_pgm_id(inputVO.getMbrsh_pgm_id());
         getaprvnoInputVO.setSvc_modu_id("ZPTUTXPTC0001");
         getaprvnoInputVO.setMcht_no(inputVO.getMcht_no());
-        getaprvnoInputVO.setTelgrm_fg(request.getHeader("telgrm_fg"));
-        ResponseEntity<GetaprvnoOutputVO> getaprvnoOutputVO = getaprvnoService.syncCall(request, getaprvnoInputVO);
+        getaprvnoInputVO.setTelgrm_fg(header.get("telgrm_fg"));
+        ResponseEntity<GetaprvnoOutputVO> getaprvnoOutputVO = getaprvnoService.syncCall(requestHeader, getaprvnoInputVO);
 
 
         /* 원거래 조회 */
         oritrqryInputVO = new OritrqryInputVO();
         oritrqryInputVO.setSvc_modu_id("ZPTUTXPTC0001");
-        oritrqryInputVO.setTrc_no(request.getHeader("trc_no"));
+        oritrqryInputVO.setTrc_no(header.get("trc_no"));
         oritrqryInputVO.setMbrsh_pgm_id(inputVO.getMbrsh_pgm_id());
         oritrqryInputVO.setMcht_no(inputVO.getMcht_no());
         oritrqryInputVO.setCrd_no(inputVO.getTrack_ii_data());
@@ -101,8 +103,8 @@ public class ZptutxptcService {
         oritrqryInputVO.setOrgn_deal_aprv_no(inputVO.getOrgn_deal_aprv_no());
         oritrqryInputVO.setOrgn_deal_coopco_aprv_no(inputVO.getOrgn_deal_coopco_aprv_no());
         oritrqryInputVO.setOrgn_deal_amt(inputVO.getOrgn_deal_amt_pnt());
-        oritrqryInputVO.setAns_cd(request.getHeader("ans_cd1"));
-        ResponseEntity<OritrqryOutputVO> oritrqryOutputVO = oritrqryService.syncCall(request, oritrqryInputVO);
+        oritrqryInputVO.setAns_cd(header.get("ans_cd1"));
+        ResponseEntity<OritrqryOutputVO> oritrqryOutputVO = oritrqryService.syncCall(requestHeader, oritrqryInputVO);
 
 
         /* 회원 조회 */
@@ -110,7 +112,7 @@ public class ZptutxptcService {
         meminfqryInputVO.setMbrsh_pgm_id(inputVO.getMbrsh_pgm_id());
         meminfqryInputVO.setCrd_no(inputVO.getTrack_ii_data());
         meminfqryInputVO.setAprv_no("");
-        ResponseEntity<MeminfqryOutputVO> meminfqryOutputVO = meminfqryService.syncCall(request, meminfqryInputVO);
+        ResponseEntity<MeminfqryOutputVO> meminfqryOutputVO = meminfqryService.syncCall(requestHeader, meminfqryInputVO);
 
         /* 취소대상 거래내역 조회 */
         apr_dealtr_trn_tpcom_vf2001InputVO = new Apr_dealtr_trn_tpcom_vf2001InputVO();
@@ -123,7 +125,7 @@ public class ZptutxptcService {
         } else if (!StringUtils.isEmpty(inputVO.getSlp_cd()) && inputVO.getSlp_cd().equals("22")) {
             apr_dealtr_trn_tpcom_vf2001InputVO.setSlp_cd("11");
         } else {
-            throw new ValidException("4468", "취소대상 거래내역 조회 전표 에러");
+            throw new ValidException(requestHeader, "4468", "취소대상 거래내역 조회 전표 에러");
         }
         apr_dealtr_trn_tpcom_vf2001OutputVO =
                 apr_dealtr_trnMapper.apr_dealtr_trn_tpcom_vf2001(apr_dealtr_trn_tpcom_vf2001InputVO);
@@ -134,44 +136,36 @@ public class ZptutxptcService {
             mempntuptInputVO.setMbrsh_pgm_id(aprOutputVO.getMbrsh_pgm_id());
             mempntuptInputVO.setMbr_id(aprOutputVO.getMbr_id());
             mempntuptInputVO.setPnt_knd_cd(aprOutputVO.getPnt_knd_cd());
-            mempntuptInputVO.setOrgan_cd(request.getHeader("organ_cd"));
+            mempntuptInputVO.setOrgan_cd(header.get("organ_cd"));
             mempntuptInputVO.setCur_pnt(0L);
             mempntuptInputVO.setAvl_pnt(0L);
-            ResponseEntity<MempntuptOutputVO> mempntuptOutputVO = mempntuptService.syncCall(request, mempntuptInputVO);
+            ResponseEntity<MempntuptOutputVO> mempntuptOutputVO = mempntuptService.syncCall(requestHeader, mempntuptInputVO);
 
             /* 취소 거래내역 생성 */
 
         }
 
-
-
-
-
-
-
-
-
         // 결과값 header setting
-        outputVO = new ZptutxptcOutputVO();
         responseHeaders = new HttpHeaders();
         responseHeaders.setContentType(MediaType.APPLICATION_JSON_UTF8);
-        responseHeaders.add("telgrm_no", request.getHeader("telgrm_no"));
-        responseHeaders.add("organ_cd", request.getHeader("organ_cd"));
+        responseHeaders.add("telgrm_no", header.get("telgrm_no").substring(0,3).concat("1"));
+        responseHeaders.add("organ_cd", header.get("organ_cd"));
         responseHeaders.add("send_dy", new SimpleDateFormat("yyyyMMdd").format(System.currentTimeMillis()));
         responseHeaders.add("send_tm", new SimpleDateFormat("HHmmss").format(System.currentTimeMillis()));
-        responseHeaders.add("trc_no", request.getHeader("trc_no"));
-        responseHeaders.add("telgrm_fg", request.getHeader("telgrm_fg"));
-        responseHeaders.add("data_size", request.getHeader("data_size"));
+        responseHeaders.add("trc_no", header.get("trc_no"));
+        responseHeaders.add("telgrm_fg", header.get("telgrm_fg"));
+        responseHeaders.add("data_size", header.get("data_size"));
         responseHeaders.add("ans_cd1", "00");
         responseHeaders.add("ans_cd2", "00");
         responseHeaders.add("filler", "");
 
-        // 결과값 body setting
+        outputVO = new ZptutxptcOutputVO();
         outputVO.setMbrsh_pgm_id("A");
         outputVO.setAprv_dy("20181219");
         outputVO.setAprv_no("F88888888");
         outputVO.setMcht_no("123456789");
         outputVO.setCrd_no("2222222222222222");
+        log.info("zptutxptc ok--------------------");
 
 
         return new ResponseEntity<ZptutxptcOutputVO>(outputVO, responseHeaders, HttpStatus.OK);

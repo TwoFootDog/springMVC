@@ -26,10 +26,10 @@ public class MeminfqryServiceImpl implements MeminfqryService {
     private Crd_master_mstMapper crd_master_mstMapper;
     private Crd_master_mst_tpcom_vs2005OutputVO crd_master_mst_tpcom_vs2005OutputVO;
 
-    private HttpHeaders responseHeader;
+    private HttpHeaders responseHeaders;
     private MeminfqryOutputVO outputVO;
 
-    public ResponseEntity<MeminfqryOutputVO> syncCall(HttpServletRequest request, MeminfqryInputVO inputVO) {
+    public ResponseEntity<MeminfqryOutputVO> syncCall(HttpHeaders requestHeaders, MeminfqryInputVO inputVO) {
 
         crd_master_mst_tpcom_vs2005OutputVO =
                 crd_master_mstMapper.crd_master_mst_tpcom_vs2005(
@@ -37,16 +37,14 @@ public class MeminfqryServiceImpl implements MeminfqryService {
                                 inputVO.getMbrsh_pgm_id(),
                                 inputVO.getCrd_no()));
         if (!StringUtils.isEmpty(crd_master_mst_tpcom_vs2005OutputVO)) {
-            responseHeader = new HttpHeaders();
-            responseHeader.add("ans_cd1", "00");
-            responseHeader.add("ans_cd2", "00");
             outputVO = new MeminfqryOutputVO(crd_master_mst_tpcom_vs2005OutputVO);
         } else if(StringUtils.isEmpty(crd_master_mst_tpcom_vs2005OutputVO)) {
-            throw new ValidException("8811", "데이터 미존재");
+            throw new ValidException(requestHeaders, "8811", "데이터 미존재");
         } else {
-            throw new ValidException("9080", "시스템실 연락바람");
+            throw new ValidException(requestHeaders, "9080", "시스템실 연락바람");
         }
 
-        return new ResponseEntity<MeminfqryOutputVO>(outputVO, responseHeader, HttpStatus.OK);
+        responseHeaders = new HttpHeaders();
+        return new ResponseEntity<MeminfqryOutputVO>(outputVO, responseHeaders, HttpStatus.OK);
     }
 }

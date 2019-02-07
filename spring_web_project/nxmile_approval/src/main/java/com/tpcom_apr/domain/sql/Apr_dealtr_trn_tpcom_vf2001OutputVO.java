@@ -51,7 +51,7 @@ public class Apr_dealtr_trn_tpcom_vf2001OutputVO {
     private String trc_no;
     private String orgn_aprv_dy;
     private String orgn_aprv_no;
-    private String orgn_Deal_dy;
+    private String orgn_deal_dy;
     private String usb_dy;
     private String rep_aprv_no;
     private String sttl_mcht_no;

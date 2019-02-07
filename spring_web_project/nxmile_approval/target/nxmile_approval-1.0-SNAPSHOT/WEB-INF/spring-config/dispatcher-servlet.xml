@@ -22,4 +22,8 @@
     <mvc:resources location="classpath:/META-INF/resources/webjars/"  mapping="/webjars/**"></mvc:resources>
     <context:property-placeholder location="classpath:config/documentation.properties" />
 
+
+    <!-- blog test용-->
+    <context:component-scan base-package="com.test.controller" />
+
 </beans>

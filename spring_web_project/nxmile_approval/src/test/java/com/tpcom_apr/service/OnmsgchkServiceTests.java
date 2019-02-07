@@ -11,6 +11,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.MockitoAnnotations;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.test.context.ContextConfiguration;
@@ -34,15 +35,15 @@ public class OnmsgchkServiceTests {
     @Test   // 서비스 synCall 정상 호출여부 검증
     public void testOnmsgchkServiceOkSynccallOK() {
         OnmsgchkService service = mock(OnmsgchkService.class);
-        MockHttpServletRequest request = new MockHttpServletRequest();
-        ResponseEntity<OnmsgchkOutputVO> output = service.syncCall(request, new OnmsgchkInputVO());
+        HttpHeaders headers = mock(HttpHeaders.class);
+        ResponseEntity<OnmsgchkOutputVO> output = service.syncCall(headers, new OnmsgchkInputVO());
         verify(service).syncCall(any(), any());
     }
 
     @Test   // 서비스 내 commonInputValidChk 및 rul_svcavl_con_tpcom_vs2001 정상 호출여부 검증
     public void testOnmsgchkServiceInnerMethodCallOK() {
         /* Mock, Spy Object 선언*/
-        MockHttpServletRequest request = new MockHttpServletRequest();
+        HttpHeaders headers = mock(HttpHeaders.class);
         OnmsgchkService service = spy(OnmsgchkServiceImpl.class);
         OnmsgchkInputVO input = mock(OnmsgchkInputVO.class);
         Rul_svcavl_conMapper mapper = mock(Rul_svcavl_conMapper.class);
@@ -59,9 +60,9 @@ public class OnmsgchkServiceTests {
                         "A","ON","N","1","N"));
 
         /* 서비스 호출 및 검증*/
-        ResponseEntity<OnmsgchkOutputVO> output = service.syncCall(request, input);
+        ResponseEntity<OnmsgchkOutputVO> output = service.syncCall(headers, input);
         verify(service).syncCall(any(), any());
-        verify(service).commonInputDataValidChk(any());
+        verify(service).commonInputDataValidChk(any(), any());
         verify(mapper).rul_svcavl_con_tpcom_vs2001(any());
     }
 
@@ -69,7 +70,7 @@ public class OnmsgchkServiceTests {
     @Test   // 추적번호 미 유입시 7777 에러
     public void testOnmsgchkServiceErrorTrcNoNotInput() {
         /* Mock, Spy Object 선언*/
-        MockHttpServletRequest request = new MockHttpServletRequest();
+        HttpHeaders headers = mock(HttpHeaders.class);
         OnmsgchkService service = spy(OnmsgchkServiceImpl.class);
         OnmsgchkInputVO input = mock(OnmsgchkInputVO.class);
         Rul_svcavl_conMapper mapper = mock(Rul_svcavl_conMapper.class);
@@ -87,12 +88,12 @@ public class OnmsgchkServiceTests {
 
         /* 서비스 호출 및 검증*/
         try{
-            ResponseEntity<OnmsgchkOutputVO> output = service.syncCall(request, input);
+            ResponseEntity<OnmsgchkOutputVO> output = service.syncCall(headers, input);
         } catch (ValidException e) {
             if(e.getAns_cd().equals("7777")) {
                 log.info("에러코드 :  " + e.getAns_cd() + ". 에러 검증 완료");
             } else {
-                throw new ValidException(e.getAns_cd(), e.getAns_msg());
+                throw new ValidException(headers, e.getAns_cd(), e.getAns_msg());
             }
         }
     }
@@ -100,7 +101,7 @@ public class OnmsgchkServiceTests {
     @Test   // 가맹점번호 미 유입시 7730 에러
     public void testOnmsgchkServiceErrorMchtNoNotInput() {
         /* Mock, Spy Object 선언*/
-        MockHttpServletRequest request = new MockHttpServletRequest();
+        HttpHeaders headers = mock(HttpHeaders.class);
         OnmsgchkService service = spy(OnmsgchkServiceImpl.class);
         OnmsgchkInputVO input = mock(OnmsgchkInputVO.class);
         Rul_svcavl_conMapper mapper = mock(Rul_svcavl_conMapper.class);
@@ -118,12 +119,12 @@ public class OnmsgchkServiceTests {
 
         /* 서비스 호출 및 검증*/
         try{
-            ResponseEntity<OnmsgchkOutputVO> output = service.syncCall(request, input);
+            ResponseEntity<OnmsgchkOutputVO> output = service.syncCall(headers, input);
         } catch (ValidException e) {
             if (e.getAns_cd().equals("7730")) {
                 log.info("에러코드 :  " + e.getAns_cd() + ". 에러 검증 완료");
             } else {
-                throw new ValidException(e.getAns_cd(), e.getAns_msg());
+                throw new ValidException(headers, e.getAns_cd(), e.getAns_msg());
             }
         }
     }
@@ -131,7 +132,7 @@ public class OnmsgchkServiceTests {
     @Test   // 월거래일자 미 유입시 7745 에러
     public void testOnmsgchkServiceErrorOrgnDealDyNotInput() {
         /* Mock, Spy Object 선언*/
-        MockHttpServletRequest request = new MockHttpServletRequest();
+        HttpHeaders headers = mock(HttpHeaders.class);
         OnmsgchkService service = spy(OnmsgchkServiceImpl.class);
         OnmsgchkInputVO input = mock(OnmsgchkInputVO.class);
         Rul_svcavl_conMapper mapper = mock(Rul_svcavl_conMapper.class);
@@ -149,12 +150,12 @@ public class OnmsgchkServiceTests {
 
         /* 서비스 호출 및 검증*/
         try{
-            ResponseEntity<OnmsgchkOutputVO> output = service.syncCall(request, input);
+            ResponseEntity<OnmsgchkOutputVO> output = service.syncCall(headers, input);
         } catch (ValidException e) {
             if (e.getAns_cd().equals("7745")) {
                 log.info("에러코드 :  " + e.getAns_cd() + ". 에러 검증 완료");
             } else {
-                throw new ValidException(e.getAns_cd(), e.getAns_msg());
+                throw new ValidException(headers, e.getAns_cd(), e.getAns_msg());
             }
         }
     }

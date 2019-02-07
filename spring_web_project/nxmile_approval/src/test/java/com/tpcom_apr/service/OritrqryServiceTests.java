@@ -11,6 +11,7 @@ import lombok.extern.log4j.Log4j;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.test.context.ContextConfiguration;
@@ -31,11 +32,11 @@ public class OritrqryServiceTests {
     @Test
     public void testOritrqryServiceSyncCallOk() {
         /* Mock Object 선언 */
-        MockHttpServletRequest request = new MockHttpServletRequest();
+        HttpHeaders headers = mock(HttpHeaders.class);
         OritrqryService service = mock(OritrqryServiceImpl.class);
 
         /* 검증 */
-        ResponseEntity<OritrqryOutputVO> output = service.syncCall(request, new OritrqryInputVO());
+        ResponseEntity<OritrqryOutputVO> output = service.syncCall(headers, new OritrqryInputVO());
         verify(service).syncCall(any(), any());
 
     }
@@ -43,7 +44,7 @@ public class OritrqryServiceTests {
     @Test
     public void testOritrqryServiceInnerMethodCallOk() {
         /* Mock Object 선언 */
-        MockHttpServletRequest request = new MockHttpServletRequest();
+        HttpHeaders headers = mock(HttpHeaders.class);
         OritrqryService service = spy(OritrqryServiceImpl.class);
         OritrqryInputVO input = mock(OritrqryInputVO.class);
         Apr_dealtr_trnMapper mapper = mock(Apr_dealtr_trnMapper.class);
@@ -62,16 +63,16 @@ public class OritrqryServiceTests {
                         ,"","","","","","","","",0D,0L
                         ,"","","","","","","","","",0L));
         /* 검증 */
-        ResponseEntity<OritrqryOutputVO> output = service.syncCall(request, input);
+        ResponseEntity<OritrqryOutputVO> output = service.syncCall(headers, input);
         verify(service).changeOrgnAprvNo(any(), any());
-        verify(service).sqlTypeSetting(any());
+        verify(service).sqlTypeSetting(any(), any());
         verify(mapper).apr_dealtr_trn_tpcom_vs2002(any());
     }
 
     @Test
     public void testOritrqryServiceDataNotFoundError() {
         /* Mock Object 선언 */
-        MockHttpServletRequest request = new MockHttpServletRequest();
+        HttpHeaders headers = mock(HttpHeaders.class);
         OritrqryService service = spy(OritrqryServiceImpl.class);
         OritrqryInputVO input = mock(OritrqryInputVO.class);
         Apr_dealtr_trnMapper mapper = mock(Apr_dealtr_trnMapper.class);
@@ -84,17 +85,17 @@ public class OritrqryServiceTests {
                 .thenReturn(null);
         /* 검증 */
         try {
-            ResponseEntity<OritrqryOutputVO> output = service.syncCall(request, input);
+            ResponseEntity<OritrqryOutputVO> output = service.syncCall(headers, input);
         } catch (ValidException e) {
             if (e.getAns_cd().equals("7777")) {
                log.info("에러코드 : " + e.getAns_cd() + ". 에러 검증 완료");
             } else {
-                throw new ValidException(e.getAns_cd(), e.getAns_msg());
+                throw new ValidException(headers, e.getAns_cd(), e.getAns_msg());
             }
         }
 
         verify(service).changeOrgnAprvNo(any(), any());
-        verify(service).sqlTypeSetting(any());
+        verify(service).sqlTypeSetting(any(), any());
         verify(mapper).apr_dealtr_trn_tpcom_vs2002(any());
     }
 

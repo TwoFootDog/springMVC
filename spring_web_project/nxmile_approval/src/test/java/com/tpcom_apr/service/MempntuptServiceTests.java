@@ -10,6 +10,7 @@ import lombok.extern.log4j.Log4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.test.context.ContextConfiguration;
@@ -26,11 +27,11 @@ public class MempntuptServiceTests {
     @Test
     public void testMempntuptServiceSyncCallOk() {
         /* Mock object 선언 */
-        MockHttpServletRequest request = new MockHttpServletRequest();
+        HttpHeaders headers = mock(HttpHeaders.class);
         MempntuptService service = mock(MempntuptServiceImpl.class);
 
         /* 서비스 호출*/
-        ResponseEntity<MempntuptOutputVO> output = service.syncCall(request, new MempntuptInputVO());
+        ResponseEntity<MempntuptOutputVO> output = service.syncCall(headers, new MempntuptInputVO());
 
         /* 정상 호출여부 검증 */
         verify(service).syncCall(any(), any());
@@ -39,7 +40,7 @@ public class MempntuptServiceTests {
     @Test
     public void testMempntuptServiceMapperCallOk() {
         /* Mock object 선언 */
-        MockHttpServletRequest request = new MockHttpServletRequest();
+        HttpHeaders headers = mock(HttpHeaders.class);
         MempntuptService service = spy(MempntuptServiceImpl.class);
         MempntuptInputVO inputVO = mock(MempntuptInputVO.class);
         Mbr_mempnt_trnMapper mapper = mock(Mbr_mempnt_trnMapper.class);
@@ -55,7 +56,7 @@ public class MempntuptServiceTests {
         when(mapper.mbr_mempnt_trn_tpcom_ei2001(any())).thenReturn(1);
 
         /* 서비스 호출 */
-        ResponseEntity<MempntuptOutputVO> output = service.syncCall(request, inputVO);
+        ResponseEntity<MempntuptOutputVO> output = service.syncCall(headers, inputVO);
 
         /* 정상 호출여부 검증 */
         verify(service).syncCall(any(), any());
@@ -65,7 +66,7 @@ public class MempntuptServiceTests {
     @Test
     public void testMempntuptServiceMapperCall9080() {
         /* Mock object 선언 */
-        MockHttpServletRequest request = new MockHttpServletRequest();
+        HttpHeaders headers = mock(HttpHeaders.class);
         MempntuptService service = spy(MempntuptServiceImpl.class);
         MempntuptInputVO inputVO = mock(MempntuptInputVO.class);
         Mbr_mempnt_trnMapper mapper = mock(Mbr_mempnt_trnMapper.class);
@@ -82,12 +83,12 @@ public class MempntuptServiceTests {
 
         /* 서비스 호출 */
         try {
-            ResponseEntity<MempntuptOutputVO> output = service.syncCall(request, inputVO);
+            ResponseEntity<MempntuptOutputVO> output = service.syncCall(headers, inputVO);
         } catch (ValidException e) {
             if (e.getAns_cd().equals("9080")) {
                 log.info("에러코드 : " + e.getAns_cd() + ". 에러 검증 완료");
             }else {
-                throw new ValidException(e.getAns_cd(), e.getAns_msg());
+                throw new ValidException(headers, e.getAns_cd(), e.getAns_msg());
             }
         }
 

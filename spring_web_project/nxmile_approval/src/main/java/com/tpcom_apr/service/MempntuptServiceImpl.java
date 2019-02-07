@@ -24,9 +24,9 @@ public class MempntuptServiceImpl implements MempntuptService {
     Mbr_mempnt_trnMapper mbr_mempnt_trnMapper;
 
     private MempntuptOutputVO outputVO;
-    private HttpHeaders responseHeader;
+    private HttpHeaders responseHeaders;
 
-    public ResponseEntity<MempntuptOutputVO> syncCall(HttpServletRequest request, MempntuptInputVO inputVO) {
+    public ResponseEntity<MempntuptOutputVO> syncCall(HttpHeaders requestHeaders, MempntuptInputVO inputVO) {
 
         int result = mbr_mempnt_trnMapper.mbr_mempnt_trn_tpcom_ei2001(
                 new Mbr_mempnt_trn_tpcom_ei2001InputVO(
@@ -36,13 +36,13 @@ public class MempntuptServiceImpl implements MempntuptService {
                         inputVO.getMbrsh_pgm_id(),
                         inputVO.getMbr_id(),
                         inputVO.getPnt_knd_cd()));
-        if (result == 0) {
-
-            throw new ValidException("9080", "포인트 변경 에러");
+        if (result > 0) {
+            outputVO = new MempntuptOutputVO(result);
         } else {
-            outputVO = new MempntuptOutputVO(1L);
+            throw new ValidException(requestHeaders, "9080", "포인트 변경 에러");
         }
 
-        return new ResponseEntity<MempntuptOutputVO>(outputVO, responseHeader, HttpStatus.OK);
+        responseHeaders = new HttpHeaders();
+        return new ResponseEntity<MempntuptOutputVO>(outputVO, responseHeaders, HttpStatus.OK);
     }
 }

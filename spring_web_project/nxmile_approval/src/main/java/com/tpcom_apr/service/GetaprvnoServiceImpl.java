@@ -31,12 +31,11 @@ public class GetaprvnoServiceImpl implements GetaprvnoService {
     Aprv_no_ocboff_tpcom_vs_2001OutputVO aprv_no_ocboff_tpcom_vs_2001OutputVO;
 
     /* 결과값 */
-    HttpHeaders responseHeader;
+    HttpHeaders responseHeaders;
     GetaprvnoOutputVO outputVO;
 
-    public ResponseEntity<GetaprvnoOutputVO> syncCall(HttpServletRequest request, GetaprvnoInputVO inputVO) {
+    public ResponseEntity<GetaprvnoOutputVO> syncCall(HttpHeaders requestHeaders, GetaprvnoInputVO inputVO) {
 
-        responseHeader = new HttpHeaders();
         outputVO = new GetaprvnoOutputVO();
 
         /* 승인일자, 승인시간 조회 */
@@ -45,19 +44,18 @@ public class GetaprvnoServiceImpl implements GetaprvnoService {
             outputVO.setAprv_dy(aprv_dy_tm_tpcom_vs2001OutputVO.getAprv_dy());
             outputVO.setAprv_tm(aprv_dy_tm_tpcom_vs2001OutputVO.getAprv_tm());
         } else {
-            throw new ValidException("9080", "승인일시 조회 오류");
+            throw new ValidException(requestHeaders, "9080", "승인일시 조회 오류");
         }
 
         /* 승인번호 조회*/
         aprv_no_ocboff_tpcom_vs_2001OutputVO = aprv_no_dy_tmMapper.aprv_no_ocboff_tpcom_vs2001();
         if (!StringUtils.isEmpty(aprv_no_ocboff_tpcom_vs_2001OutputVO)) {
-            responseHeader.add("ans_cd1", "00");
-            responseHeader.add("ans_cd2", "00");
             outputVO.setAprv_no(aprv_no_ocboff_tpcom_vs_2001OutputVO.getAprv_no());
         } else {
-            throw new ValidException("9080", "승인번호 조회 오류");
+            throw new ValidException(requestHeaders, "9080", "승인번호 조회 오류");
         }
 
-        return new ResponseEntity<GetaprvnoOutputVO>(outputVO, responseHeader, HttpStatus.OK);
+        responseHeaders = new HttpHeaders();
+        return new ResponseEntity<GetaprvnoOutputVO>(outputVO, responseHeaders, HttpStatus.OK);
     }
 }

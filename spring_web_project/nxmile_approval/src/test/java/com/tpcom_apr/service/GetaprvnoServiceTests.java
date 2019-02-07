@@ -9,6 +9,7 @@ import com.tpcom_apr.mapper.Aprv_no_dy_tmMapper;
 import com.tpcom_apr.service.service_interface.GetaprvnoService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.test.context.ContextConfiguration;
@@ -24,11 +25,11 @@ public class GetaprvnoServiceTests {
     @Test
     public void testGetaprvnoServiceSyncCallOk() {
         /* Mock Object 선언 */
-        MockHttpServletRequest request = new MockHttpServletRequest();
+        HttpHeaders headers = mock(HttpHeaders.class);
         GetaprvnoService service = mock(GetaprvnoServiceImpl.class);
 
         /* 서비스 호출 */
-        ResponseEntity<GetaprvnoOutputVO> output = service.syncCall(request, new GetaprvnoInputVO());
+        ResponseEntity<GetaprvnoOutputVO> output = service.syncCall(headers, new GetaprvnoInputVO());
 
         /* 검증 */
         verify(service).syncCall(any(), any());
@@ -37,7 +38,7 @@ public class GetaprvnoServiceTests {
     @Test
     public void testGetaprvnoServiceMapperCallOk() {
         /* Mock Object 선언 */
-        MockHttpServletRequest request = new MockHttpServletRequest();
+        HttpHeaders headers = mock(HttpHeaders.class);
         GetaprvnoService service = spy(GetaprvnoServiceImpl.class);
         GetaprvnoInputVO input = mock(GetaprvnoInputVO.class);
         Aprv_no_dy_tmMapper mapper = mock(Aprv_no_dy_tmMapper.class);
@@ -48,7 +49,7 @@ public class GetaprvnoServiceTests {
         when(mapper.aprv_no_ocboff_tpcom_vs2001()).thenReturn(new Aprv_no_ocboff_tpcom_vs_2001OutputVO("F88888888"));
 
         /* 서비스 호출 */
-        ResponseEntity<GetaprvnoOutputVO> output = service.syncCall(request, input);
+        ResponseEntity<GetaprvnoOutputVO> output = service.syncCall(headers, input);
 
         /* 검증 */
         verify(service).syncCall(any(), any());

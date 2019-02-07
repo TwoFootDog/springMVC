@@ -8,5 +8,5 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class MempntuptOutputVO {
-    private Long result_flag;
+    private int result_flag;
 }

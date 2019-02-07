@@ -32,18 +32,18 @@ public class OritrqryServiceImpl implements OritrqryService {
     private Apr_dealtr_trn_tpcom_vs2004OutputVO apr_dealtr_trn_tpcom_vs2004OutputVO;
     private Apr_dealtr_trn_tpcom_vs2035OutputVO apr_dealtr_trn_tpcom_vs2035OutputVO;
 
-    private HttpHeaders responseHeader;
+    private HttpHeaders responseHeaders;
     private OritrqryOutputVO outputVO;
 
 
     @Override
-    public ResponseEntity<OritrqryOutputVO> syncCall(HttpServletRequest request, OritrqryInputVO inputVO) {
+    public ResponseEntity<OritrqryOutputVO> syncCall(HttpHeaders requestHeaders, OritrqryInputVO inputVO) {
 
         String orgn_deal_aprv_no;
         String orgn_deal_coopco_aprv_no;
+        Map<String, String> header = requestHeaders.toSingleValueMap();
 
-        int sql_type = sqlTypeSetting(inputVO);
-
+        int sql_type = sqlTypeSetting(requestHeaders, inputVO);
 
         Map<String, String> orgnAprvNo = changeOrgnAprvNo(inputVO.getOrgn_deal_aprv_no(), inputVO.getOrgn_deal_coopco_aprv_no());
         orgn_deal_aprv_no = orgnAprvNo.get("orgn_deal_aprv_no");
@@ -67,15 +67,11 @@ public class OritrqryServiceImpl implements OritrqryService {
                                         orgn_deal_aprv_no,
                                         orgn_deal_coopco_aprv_no));
                 if (!StringUtils.isEmpty(apr_dealtr_trn_tpcom_vs2001OutputVO)) {
-                    responseHeader = new HttpHeaders();
-                    responseHeader.add("ans_cd1", "00");
-                    responseHeader.add("ans_cd2", "00");
                     outputVO = new OritrqryOutputVO(apr_dealtr_trn_tpcom_vs2001OutputVO);
                 } else if (StringUtils.isEmpty(apr_dealtr_trn_tpcom_vs2001OutputVO)) {
-
-                    throw new ValidException("7777", "데이터 미존재");
+                    throw new ValidException(requestHeaders, "7777", "취소 원거래 미존재(적립취소)");
                 } else {
-                    throw new ValidException("9080", "시스템실 연락바람");
+                    throw new ValidException(requestHeaders, "9080", "시스템실 연락바람");
                 }
                 break;
             case 21 :
@@ -91,16 +87,13 @@ public class OritrqryServiceImpl implements OritrqryService {
                                         orgn_deal_coopco_aprv_no,
                                         orgn_deal_aprv_no,
                                         inputVO.getOrgn_deal_amt(),
-                                        request.getHeader("organ_cd"), inputVO.getSvc_modu_id()));
+                                        header.get("organ_cd"), inputVO.getSvc_modu_id()));
                 if (!StringUtils.isEmpty(apr_dealtr_trn_tpcom_vs2002OutputVO)) {
-                    responseHeader = new HttpHeaders();
-                    responseHeader.add("ans_cd1", "00");
-                    responseHeader.add("ans_cd2", "00");
                     outputVO = new OritrqryOutputVO(apr_dealtr_trn_tpcom_vs2002OutputVO);
                 } else if (StringUtils.isEmpty(apr_dealtr_trn_tpcom_vs2002OutputVO)){
-                    throw new ValidException("7777", "데이터 미존재");
+                    throw new ValidException(requestHeaders, "7777", "취소 원거래 미존재(사용취소)");
                 } else {
-                    throw new ValidException("9080", "시스템실 연락바람");
+                    throw new ValidException(requestHeaders, "9080", "시스템실 연락바람");
                 }
                 break;
             case 10 :
@@ -116,17 +109,17 @@ public class OritrqryServiceImpl implements OritrqryService {
                 log.info("사용 원거래 조회(망상재사용)");
                 break;
             default :
-                throw new ValidException("9080", "원거래조회 처리 유형 에러");
+                throw new ValidException(requestHeaders, "9080", "원거래조회 처리 유형 에러");
         }
-        return new ResponseEntity<OritrqryOutputVO>(outputVO, responseHeader, HttpStatus.OK);
+        responseHeaders = new HttpHeaders();
+        return new ResponseEntity<OritrqryOutputVO>(outputVO, responseHeaders, HttpStatus.OK);
     }
 
 
-    public int sqlTypeSetting(OritrqryInputVO inputVO) {
+    public int sqlTypeSetting(HttpHeaders requestHeaders, OritrqryInputVO inputVO) {
         int caller_type;
         int cancel_type;
         int sql_type;
-
 
         if ((!StringUtils.isEmpty(inputVO.getSvc_modu_id())) &&
                 (inputVO.getSvc_modu_id().equals("ZPTOTXPTC0001") ||
@@ -146,7 +139,7 @@ public class OritrqryServiceImpl implements OritrqryService {
             caller_type = 2;    // 사용성 서비스 취소
             log.info("input svc_modu_id : [" + inputVO.getSvc_modu_id() + "]");
         } else {
-            throw new ValidException("9080", "요청 서비스ID로는 처리할 수 없습니다.");
+            throw new ValidException(requestHeaders, "9080", "요청 서비스ID로는 처리할 수 없습니다.");
         }
 
         if ((!StringUtils.isEmpty(inputVO.getAns_cd())) &&

@@ -1697,7 +1697,7 @@
       <DataType>varchar(10)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="412" parent="328" name="RERG_ID">
+    <column id="412" parent="328" name="REGR_ID">
       <Position>75</Position>
       <DataType>varchar(8)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
