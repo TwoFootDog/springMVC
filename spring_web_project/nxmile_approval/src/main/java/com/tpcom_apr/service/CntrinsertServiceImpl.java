@@ -4,6 +4,7 @@ import com.commons.exception.ValidException;
 import com.tpcom_apr.domain.service.CntrinsertInputVO;
 import com.tpcom_apr.domain.service.CntrinsertOutputVO;
 import com.tpcom_apr.domain.sql.Apr_dealtr_trn_tpcom_ei2001InputVO;
+import com.tpcom_apr.domain.sql.Apr_dealtr_trn_tpcom_eu2001InputVO;
 import com.tpcom_apr.mapper.Apr_dealtr_trnMapper;
 import com.tpcom_apr.service.service_interface.CntrinsertService;
 import lombok.Setter;
@@ -13,9 +14,14 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.StringUtils;
+
+import java.util.Map;
 
 @Service
 @Log4j
+@Transactional
 public class CntrinsertServiceImpl implements CntrinsertService {
 
     @Setter(onMethod_ = {@Autowired})
@@ -24,16 +30,46 @@ public class CntrinsertServiceImpl implements CntrinsertService {
     HttpHeaders responseHeaders;
     CntrinsertOutputVO outputVO;
 
-
     public ResponseEntity<CntrinsertOutputVO> syncCall(HttpHeaders requestHeaders, CntrinsertInputVO inputVO) {
 
-        int result = apr_dealtr_trnMapper.apr_dealtr_trn_tpcom_ei2001(
-                        new Apr_dealtr_trn_tpcom_ei2001InputVO(inputVO));
+        Map<String, String> header = requestHeaders.toSingleValueMap();
 
-        if (result > 0) {
-            outputVO = new CntrinsertOutputVO(result);
+        try {
+            int result = apr_dealtr_trnMapper.apr_dealtr_trn_tpcom_ei2001(
+                    new Apr_dealtr_trn_tpcom_ei2001InputVO(inputVO));
+            if (result <= 0) {
+                throw new ValidException(requestHeaders, "9080", "취소 거래내역 생성 에러");
+            }
+        } catch (Exception e) {
+            throw new ValidException(requestHeaders, "9080", "취소 거래내역 생성 에러. 상세 : " + e.getCause());
+        }
+
+        String cnclTyp;
+        if (!StringUtils.isEmpty(inputVO.getAns_cd()) && inputVO.getAns_cd().equals("60")) {
+            cnclTyp = "2";
         } else {
-            throw new ValidException(requestHeaders, "9080", "취소 거래내역 생성 에러");
+            cnclTyp = "1";
+        }
+        try {
+            int result = apr_dealtr_trnMapper.apr_dealtr_trn_tpcom_eu2001(
+                    new Apr_dealtr_trn_tpcom_eu2001InputVO(
+                            cnclTyp,
+                            inputVO.getAns_cd(),
+                            inputVO.getAprv_dy(),
+                            inputVO.getAprv_no(),
+                            inputVO.getDeal_dy(),
+                            header.get("organ_cd"),
+                            inputVO.getMbrsh_pgm_id(),
+                            inputVO.getOrgn_aprv_dy(),
+                            inputVO.getOrgn_aprv_no(),
+                            inputVO.getCrd_no()));
+            if (result > 0 ) {
+                outputVO = new CntrinsertOutputVO(result);
+            } else {
+                throw new ValidException(requestHeaders, "9080", "원거래내역 갱신 에러");
+            }
+        } catch (Exception e) {
+            throw new ValidException(requestHeaders, "9080", "원거래내역 갱신 에러. 상세 : " + e.getCause());
         }
 
         responseHeaders = new HttpHeaders();

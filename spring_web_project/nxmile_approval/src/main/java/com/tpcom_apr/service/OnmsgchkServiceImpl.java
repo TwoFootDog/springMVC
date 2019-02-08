@@ -59,7 +59,6 @@ public class OnmsgchkServiceImpl implements OnmsgchkService {
                     "00",
                     rul_svcavl_con_tpcom_vs2001OutputVO.getMsg_fg()
             );
-            log.info("onmsgchkservice ok--------------------");
         } else if (StringUtils.isEmpty(rul_svcavl_con_tpcom_vs2001OutputVO)) {   // 쿼리 처리 결과 미 존재 시
             throw new ValidException(requestHeaders, "7777", "전문 유효성 데이터 미 존재");
         } else {

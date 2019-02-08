@@ -13,4 +13,6 @@ public interface Apr_dealtr_trnMapper {
     public Apr_dealtr_trn_tpcom_vs2035OutputVO apr_dealtr_trn_tpcom_vs2035(Apr_dealtr_trn_tpcom_vs2035InputVO inputVO);
     public List<Apr_dealtr_trn_tpcom_vf2001OutputVO> apr_dealtr_trn_tpcom_vf2001(Apr_dealtr_trn_tpcom_vf2001InputVO inputVO);
     public int apr_dealtr_trn_tpcom_ei2001(Apr_dealtr_trn_tpcom_ei2001InputVO inputVO);
+    public int apr_dealtr_trn_tpcom_eu2001(Apr_dealtr_trn_tpcom_eu2001InputVO inputVO);
+
 }

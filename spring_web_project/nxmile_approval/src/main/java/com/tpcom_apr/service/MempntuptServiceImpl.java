@@ -13,11 +13,11 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-
-import javax.servlet.http.HttpServletRequest;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @Log4j
+@Transactional
 public class MempntuptServiceImpl implements MempntuptService {
 
     @Setter(onMethod_ = {@Autowired})
@@ -28,18 +28,22 @@ public class MempntuptServiceImpl implements MempntuptService {
 
     public ResponseEntity<MempntuptOutputVO> syncCall(HttpHeaders requestHeaders, MempntuptInputVO inputVO) {
 
-        int result = mbr_mempnt_trnMapper.mbr_mempnt_trn_tpcom_ei2001(
-                new Mbr_mempnt_trn_tpcom_ei2001InputVO(
-                        inputVO.getCur_pnt(),
-                        inputVO.getAvl_pnt(),
-                        inputVO.getOrgan_cd(),
-                        inputVO.getMbrsh_pgm_id(),
-                        inputVO.getMbr_id(),
-                        inputVO.getPnt_knd_cd()));
-        if (result > 0) {
-            outputVO = new MempntuptOutputVO(result);
-        } else {
-            throw new ValidException(requestHeaders, "9080", "포인트 변경 에러");
+        try {
+            int result = mbr_mempnt_trnMapper.mbr_mempnt_trn_tpcom_ei2001(
+                    new Mbr_mempnt_trn_tpcom_ei2001InputVO(
+                            inputVO.getCur_pnt(),
+                            inputVO.getAvl_pnt(),
+                            inputVO.getOrgan_cd(),
+                            inputVO.getMbrsh_pgm_id(),
+                            inputVO.getMbr_id(),
+                            inputVO.getPnt_knd_cd()));
+            if (result > 0) {
+                outputVO = new MempntuptOutputVO(result);
+            } else {
+                throw new ValidException(requestHeaders, "9080", "포인트 변경 에러");
+            }
+        } catch (Exception e) {
+            throw new ValidException(requestHeaders, "9080", "포인트 변경 에러. 상세 : " + e.getCause());
         }
 
         responseHeaders = new HttpHeaders();

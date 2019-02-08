@@ -51,12 +51,7 @@ public class HomeController {
             produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_JSON_UTF8_VALUE})
     public ResponseEntity<ZptutxptcOutputVO> zptutcptc(@RequestHeader HttpHeaders Header,
                                                        @RequestBody ZptutxptcInputVO inputVO) {
-
-
-        ResponseEntity<ZptutxptcOutputVO> out = zptutxptcService.syncCall(Header, inputVO);
-
-        log.info("controller--------------------");
-        return out;
+        return zptutxptcService.syncCall(Header, inputVO);
 
     }
 

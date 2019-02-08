@@ -361,5 +361,22 @@
      #{incom_crd_no}
     )
     </insert>
+    
+    <update id="apr_dealtr_trn_tpcom_eu2001" parameterType="com.tpcom_apr.domain.sql.Apr_dealtr_trn_tpcom_eu2001InputVO">
+    UPDATE
+      APR_DEALTR_TRN
+    SET CNCL_TYP = #{cncl_typ},
+      ANS_CD = IF(#{ans_cd} = '60', '60', ANS_CD),
+      ORGN_APRV_DY = #{aprv_dy},
+      ORGN_APRV_NO = #{aprv_no},
+      ORGN_DEAL_DY = #{deal_dy},
+      UPDR_ID = #{updr_id},
+      UPD_DT = sysdate()
+    WHERE MBRSH_PGM_ID = #{mbrsh_pgm_id}
+    AND APRV_DY = #{orgn_aprv_dy}
+    AND APRV_NO = #{orgn_aprv_no}
+    AND CRD_NO = #{crd_no}
+    AND IFNULL(CNCL_TYP, 'N') = 'N'
+    </update>
 
 </mapper>

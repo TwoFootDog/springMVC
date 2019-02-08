@@ -6,10 +6,13 @@ import com.tpcom_apr.domain.service.MempntuptOutputVO;
 import com.tpcom_apr.domain.sql.Mbr_mempnt_trn_tpcom_ei2001InputVO;
 import com.tpcom_apr.mapper.Mbr_mempnt_trnMapper;
 import com.tpcom_apr.service.service_interface.MempntuptService;
+import lombok.Setter;
 import lombok.extern.log4j.Log4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.mock.web.MockHttpServletRequest;
@@ -88,12 +91,48 @@ public class MempntuptServiceTests {
             if (e.getAns_cd().equals("9080")) {
                 log.info("에러코드 : " + e.getAns_cd() + ". 에러 검증 완료");
             }else {
-                throw new ValidException(headers, e.getAns_cd(), e.getAns_msg());
+                throw new ValidException(headers,
+                        e.getAns_cd(), e.getAns_msg());
             }
         }
 
         /* 정상 호출여부 검증 */
         verify(service).syncCall(any(), any());
         verify(mapper).mbr_mempnt_trn_tpcom_ei2001(any());
+    }
+
+
+    // 테이블 삭제 후 테스트 해야함
+    @Autowired
+    ApplicationContext ctx;
+    @Test
+    public void testMempntuptServiceTableNotFoundException() {
+
+        HttpHeaders headers = mock(HttpHeaders.class);
+        MempntuptService service = spy(MempntuptServiceImpl.class);
+        Mbr_mempnt_trnMapper mapper = ctx.getBean(Mbr_mempnt_trnMapper.class);
+
+        ((MempntuptServiceImpl) service).setMbr_mempnt_trnMapper(mapper);
+        MempntuptInputVO inputVO = mock(MempntuptInputVO.class);
+
+        /* stub 선언*/
+        when(inputVO.getCur_pnt()).thenReturn(0L);
+        when(inputVO.getAvl_pnt()).thenReturn(0L);
+        when(inputVO.getOrgan_cd()).thenReturn("950S");
+        when(inputVO.getMbrsh_pgm_id()).thenReturn("A");
+        when(inputVO.getMbr_id()).thenReturn("222222222");
+        when(inputVO.getPnt_knd_cd()).thenReturn("O11");
+
+        /* 서비스 호출 */
+        try {
+            ResponseEntity<MempntuptOutputVO> output = service.syncCall(headers, inputVO);
+        } catch (ValidException e) {
+            if (e.getAns_cd().equals("9080")) {
+                log.info("에러코드 : " + e.getAns_cd() + ". 에러 검증 완료");
+            }else {
+                throw new ValidException(headers,
+                        e.getAns_cd(), e.getAns_msg());
+            }
+        }
     }
 }

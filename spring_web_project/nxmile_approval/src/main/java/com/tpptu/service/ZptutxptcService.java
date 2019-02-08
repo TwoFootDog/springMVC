@@ -16,6 +16,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 
 import javax.servlet.http.HttpServletRequest;
@@ -26,6 +27,7 @@ import java.util.Map;
 
 @Service
 @Log4j
+@Transactional
 public class ZptutxptcService {
 
     /* 호출 서비스 */
@@ -40,7 +42,9 @@ public class ZptutxptcService {
     @Setter(onMethod_ = {@Autowired})
     private Apr_dealtr_trnMapper apr_dealtr_trnMapper;  // 거래내역조회 관련 SQL
     @Setter(onMethod_ = {@Autowired})
-    private MempntuptService mempntuptService;
+    private MempntuptService mempntuptService;  // 포인트 갱신
+    @Setter(onMethod_ = {@Autowired})
+    private CntrinsertService cntrinsertService;    // 취소거래내역생성 및 원거래갱신
 
     /* 호출 서비스 입출력전문 */
     private OnmsgchkInputVO onmsgchkInputVO;
@@ -50,6 +54,7 @@ public class ZptutxptcService {
     private Apr_dealtr_trn_tpcom_vf2001InputVO apr_dealtr_trn_tpcom_vf2001InputVO;
     private List<Apr_dealtr_trn_tpcom_vf2001OutputVO> apr_dealtr_trn_tpcom_vf2001OutputVO;
     private MempntuptInputVO mempntuptInputVO;
+    private CntrinsertInputVO cntrinsertInputVO;
 
     /* 출력값 */
     private HttpHeaders responseHeaders;
@@ -129,19 +134,30 @@ public class ZptutxptcService {
         }
         apr_dealtr_trn_tpcom_vf2001OutputVO =
                 apr_dealtr_trnMapper.apr_dealtr_trn_tpcom_vf2001(apr_dealtr_trn_tpcom_vf2001InputVO);
-        for (Apr_dealtr_trn_tpcom_vf2001OutputVO aprOutputVO : apr_dealtr_trn_tpcom_vf2001OutputVO) {
+        for (Apr_dealtr_trn_tpcom_vf2001OutputVO orgnDealtrOutputVO : apr_dealtr_trn_tpcom_vf2001OutputVO) {
 
             /* 포인트 갱신 */
             mempntuptInputVO = new MempntuptInputVO();
-            mempntuptInputVO.setMbrsh_pgm_id(aprOutputVO.getMbrsh_pgm_id());
-            mempntuptInputVO.setMbr_id(aprOutputVO.getMbr_id());
-            mempntuptInputVO.setPnt_knd_cd(aprOutputVO.getPnt_knd_cd());
+            mempntuptInputVO.setMbrsh_pgm_id(orgnDealtrOutputVO.getMbrsh_pgm_id());
+            mempntuptInputVO.setMbr_id(orgnDealtrOutputVO.getMbr_id());
+            mempntuptInputVO.setPnt_knd_cd(orgnDealtrOutputVO.getPnt_knd_cd());
             mempntuptInputVO.setOrgan_cd(header.get("organ_cd"));
             mempntuptInputVO.setCur_pnt(0L);
             mempntuptInputVO.setAvl_pnt(0L);
             ResponseEntity<MempntuptOutputVO> mempntuptOutputVO = mempntuptService.syncCall(requestHeader, mempntuptInputVO);
 
-            /* 취소 거래내역 생성 */
+
+            /* 취소거래내역 생성 및 원거래 갱신 */
+            cntrinsertInputVO = new CntrinsertInputVO();
+            cntrinsertInputVO.setMbrsh_pgm_id(orgnDealtrOutputVO.getMbrsh_pgm_id());
+            cntrinsertInputVO.setAprv_dy(getaprvnoOutputVO.getBody().getAprv_dy());
+            cntrinsertInputVO.setAprv_no(getaprvnoOutputVO.getBody().getAprv_no());
+            cntrinsertInputVO.setCrd_no(orgnDealtrOutputVO.getCrd_no());
+            cntrinsertInputVO.setAprv_tm(getaprvnoOutputVO.getBody().getAprv_tm());
+            cntrinsertInputVO.setDeal_dy(inputVO.getDeal_dy());
+            cntrinsertInputVO.setMcht_no(inputVO.getMcht_no());
+            cntrinsertInputVO.setIncom_crd_no(orgnDealtrOutputVO.getIncom_crd_no());
+
 
         }
 
@@ -165,7 +181,6 @@ public class ZptutxptcService {
         outputVO.setAprv_no("F88888888");
         outputVO.setMcht_no("123456789");
         outputVO.setCrd_no("2222222222222222");
-        log.info("zptutxptc ok--------------------");
 
 
         return new ResponseEntity<ZptutxptcOutputVO>(outputVO, responseHeaders, HttpStatus.OK);
