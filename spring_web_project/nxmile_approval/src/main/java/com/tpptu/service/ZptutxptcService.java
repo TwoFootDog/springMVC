@@ -135,7 +135,6 @@ public class ZptutxptcService {
         apr_dealtr_trn_tpcom_vf2001OutputVO =
                 apr_dealtr_trnMapper.apr_dealtr_trn_tpcom_vf2001(apr_dealtr_trn_tpcom_vf2001InputVO);
         for (Apr_dealtr_trn_tpcom_vf2001OutputVO orgnDealtrOutputVO : apr_dealtr_trn_tpcom_vf2001OutputVO) {
-
             /* 포인트 갱신 */
             mempntuptInputVO = new MempntuptInputVO();
             mempntuptInputVO.setMbrsh_pgm_id(orgnDealtrOutputVO.getMbrsh_pgm_id());
@@ -145,7 +144,6 @@ public class ZptutxptcService {
             mempntuptInputVO.setCur_pnt(0L);
             mempntuptInputVO.setAvl_pnt(0L);
             ResponseEntity<MempntuptOutputVO> mempntuptOutputVO = mempntuptService.syncCall(requestHeader, mempntuptInputVO);
-
 
             /* 취소거래내역 생성 및 원거래 갱신 */
             cntrinsertInputVO = new CntrinsertInputVO();
@@ -157,6 +155,70 @@ public class ZptutxptcService {
             cntrinsertInputVO.setDeal_dy(inputVO.getDeal_dy());
             cntrinsertInputVO.setMcht_no(inputVO.getMcht_no());
             cntrinsertInputVO.setIncom_crd_no(orgnDealtrOutputVO.getIncom_crd_no());
+            cntrinsertInputVO.setMbr_id(orgnDealtrOutputVO.getMbr_id());
+            cntrinsertInputVO.setSlp_cd(inputVO.getSlp_cd());
+            cntrinsertInputVO.setDeal_fg(inputVO.getDeal_fg());
+            cntrinsertInputVO.setDeal_tm(inputVO.getDeal_tm());
+            cntrinsertInputVO.setMix_sttl_yn(inputVO.getMix_sttl_yn());
+            cntrinsertInputVO.setMix_sttl_tot_amt(orgnDealtrOutputVO.getMix_sttl_tot_amt());
+            cntrinsertInputVO.setSale_qty(orgnDealtrOutputVO.getSale_qty());
+            cntrinsertInputVO.setDeal_amt(orgnDealtrOutputVO.getDeal_amt());
+            cntrinsertInputVO.setDsc_amt(orgnDealtrOutputVO.getDsc_amt());
+            cntrinsertInputVO.setMcht_pnt(orgnDealtrOutputVO.getMcht_pnt());
+            cntrinsertInputVO.setCur_pnt(orgnDealtrOutputVO.getCur_pnt());
+            cntrinsertInputVO.setAvl_pnt(orgnDealtrOutputVO.getAvl_pnt());
+            cntrinsertInputVO.setPnt_knd_cd(orgnDealtrOutputVO.getPnt_knd_cd());
+            cntrinsertInputVO.setAnnfee(orgnDealtrOutputVO.getAnnfee());
+            cntrinsertInputVO.setMbrsh_svc_annfee(orgnDealtrOutputVO.getMbrsh_svc_annfee());
+            cntrinsertInputVO.setRefu_lmt_inc_amt(orgnDealtrOutputVO.getRefu_lmt_inc_amt());
+            cntrinsertInputVO.setCs_slp_cd(orgnDealtrOutputVO.getCs_slp_cd());
+            cntrinsertInputVO.setMbrsh_svc_fg(orgnDealtrOutputVO.getMbrsh_svc_fg());
+            cntrinsertInputVO.setDir_self_mng_fg(orgnDealtrOutputVO.getDir_self_mng_fg());
+            cntrinsertInputVO.setIncom_organ_cd(orgnDealtrOutputVO.getIncom_organ_cd());
+            cntrinsertInputVO.setTer_fg(inputVO.getTer_fg());
+            cntrinsertInputVO.setTelgrm_no(header.get("telgrm_no"));
+            cntrinsertInputVO.setTrc_no(header.get("trc_no"));
+            cntrinsertInputVO.setOrgn_aprv_dy(orgnDealtrOutputVO.getOrgn_aprv_dy());
+            cntrinsertInputVO.setOrgn_aprv_no(orgnDealtrOutputVO.getOrgn_aprv_no());
+            cntrinsertInputVO.setOrgn_deal_dy(orgnDealtrOutputVO.getOrgn_deal_dy());
+            cntrinsertInputVO.setRep_aprv_no(getaprvnoOutputVO.getBody().getRep_aprv_no());
+            cntrinsertInputVO.setSttl_mcht_no(orgnDealtrOutputVO.getSttl_mcht_no());
+            cntrinsertInputVO.setSttl_amt(orgnDealtrOutputVO.getSttl_amt());
+            cntrinsertInputVO.setSk_chrg_amt(orgnDealtrOutputVO.getSk_chrg_amt());
+            cntrinsertInputVO.setContr_fg_cd(orgnDealtrOutputVO.getContr_fg_cd());
+            cntrinsertInputVO.setSvc_grp_no(orgnDealtrOutputVO.getSvc_grp_no());
+            cntrinsertInputVO.setCpn_prd_cd(orgnDealtrOutputVO.getCpn_prd_cd());
+            cntrinsertInputVO.setCpn_prd_qty(orgnDealtrOutputVO.getCpn_prd_qty());
+            cntrinsertInputVO.setDist_cust_cpn_mng_no(orgnDealtrOutputVO.getDist_cust_cpn_mng_no();
+            cntrinsertInputVO.setClltbrd_no(orgnDealtrOutputVO.getClltbrd_no();
+            cntrinsertInputVO.setCoopco_cd(orgnDealtrOutputVO.getCoopco_cd());
+            cntrinsertInputVO.setSttl_coopco_cd(orgnDealtrOutputVO.getSttl_coopco_cd());
+            cntrinsertInputVO.setMngco_chrg_sttl_mcht_no(orgnDealtrOutputVO.getMngco_chrg_sttl_mcht_no());
+            cntrinsertInputVO.setCoop_crd_cd(orgnDealtrOutputVO.getCoop_crd_cd());
+            cntrinsertInputVO.setVat_incld_yn(orgnDealtrOutputVO.getVat_incld_yn());
+            cntrinsertInputVO.setFee_apl_bas_fg(orgnDealtrOutputVO.getFee_apl_bas_fg());
+            cntrinsertInputVO.setFee_rt(orgnDealtrOutputVO.getFee_rt());
+            cntrinsertInputVO.setFee_amt(orgnDealtrOutputVO.getFee_amt());
+            cntrinsertInputVO.setApl_rt(orgnDealtrOutputVO.getApl_rt());
+            cntrinsertInputVO.setCash_arcpt_issu_yn(orgnDealtrOutputVO.getCash_arcpt_issu_yn());
+            cntrinsertInputVO.setChip_deal_yn(orgnDealtrOutputVO.getChip_deal_yn());
+            cntrinsertInputVO.setCoopco_aprv_no(orgnDealtrOutputVO.getCoopco_aprv_no());
+            cntrinsertInputVO.setCoopco_mbr_id(inputVO.getCoopco_mbr_id());
+            cntrinsertInputVO.setCoopco_mbr_ip_addr(inputVO.getCoopco_mbr_ip_addr());
+            cntrinsertInputVO.setBat_file_nm(inputVO.getBat_file_nm());
+            cntrinsertInputVO.setTelgrm_fg(header.get("telgrm_fg"));
+            cntrinsertInputVO.setDeal_caus_cd(inputVO.getDeal_caus_cd());
+            cntrinsertInputVO.setSvc_modu_id("ZPTUTXPTC0001");
+            cntrinsertInputVO.setHyb_contr_id(orgnDealtrOutputVO.getHyb_contr_id());
+            if (!StringUtils.isEmpty(header.get("ans_cd")) &&
+                    (!header.get("ans_cd").equals("30") &&
+                            !header.get("ans_cd").equals("50") &&
+                            !header.get("ans_cd").equals("60"))) {
+                cntrinsertInputVO.setAns_cd("00");
+            } else {
+                cntrinsertInputVO.setAns_cd(header.get("ans_cd"));
+            }
+            ResponseEntity<CntrinsertOutputVO> cntrinsertOutputVO = cntrinsertService.syncCall(requestHeader, cntrinsertInputVO);
 
 
         }

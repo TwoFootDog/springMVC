@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CntrinsertInputVO {
+    private String svc_modu_id;
     private String mbrsh_pgm_id;
     private String aprv_dy;
     private String aprv_no;

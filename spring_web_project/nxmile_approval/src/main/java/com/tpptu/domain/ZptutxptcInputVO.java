@@ -20,6 +20,9 @@ public class ZptutxptcInputVO {
     private String deal_tm;
     private String track_ii_data;
     private String resd_no;
+    private String coopco_mbr_id;
+    private String coopco_mbr_ip_addr;
+    private String coopco_aprv_no;
     private String orgn_deal_dy;
     private String orgn_deal_aprv_no;
     private String orgn_deal_coopco_aprv_no;
