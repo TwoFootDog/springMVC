@@ -135,7 +135,7 @@ public class ZptutxptcService {
         apr_dealtr_trn_tpcom_vf2001OutputVO =
                 apr_dealtr_trnMapper.apr_dealtr_trn_tpcom_vf2001(apr_dealtr_trn_tpcom_vf2001InputVO);
         for (Apr_dealtr_trn_tpcom_vf2001OutputVO orgnDealtrOutputVO : apr_dealtr_trn_tpcom_vf2001OutputVO) {
-            /* 포인트 갱신 */
+            /* 포인트 갱신(Async 처리로 재개발) c*/
             mempntuptInputVO = new MempntuptInputVO();
             mempntuptInputVO.setMbrsh_pgm_id(orgnDealtrOutputVO.getMbrsh_pgm_id());
             mempntuptInputVO.setMbr_id(orgnDealtrOutputVO.getMbr_id());
@@ -189,8 +189,8 @@ public class ZptutxptcService {
             cntrinsertInputVO.setSvc_grp_no(orgnDealtrOutputVO.getSvc_grp_no());
             cntrinsertInputVO.setCpn_prd_cd(orgnDealtrOutputVO.getCpn_prd_cd());
             cntrinsertInputVO.setCpn_prd_qty(orgnDealtrOutputVO.getCpn_prd_qty());
-            cntrinsertInputVO.setDist_cust_cpn_mng_no(orgnDealtrOutputVO.getDist_cust_cpn_mng_no();
-            cntrinsertInputVO.setClltbrd_no(orgnDealtrOutputVO.getClltbrd_no();
+            cntrinsertInputVO.setDist_cust_cpn_mng_no(orgnDealtrOutputVO.getDist_cust_cpn_mng_no());
+            cntrinsertInputVO.setClltbrd_no(orgnDealtrOutputVO.getClltbrd_no());
             cntrinsertInputVO.setCoopco_cd(orgnDealtrOutputVO.getCoopco_cd());
             cntrinsertInputVO.setSttl_coopco_cd(orgnDealtrOutputVO.getSttl_coopco_cd());
             cntrinsertInputVO.setMngco_chrg_sttl_mcht_no(orgnDealtrOutputVO.getMngco_chrg_sttl_mcht_no());

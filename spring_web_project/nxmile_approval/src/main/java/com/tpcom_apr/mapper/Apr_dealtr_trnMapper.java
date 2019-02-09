@@ -16,3 +16,4 @@ public interface Apr_dealtr_trnMapper {
     public int apr_dealtr_trn_tpcom_eu2001(Apr_dealtr_trn_tpcom_eu2001InputVO inputVO);
 
 }
+
