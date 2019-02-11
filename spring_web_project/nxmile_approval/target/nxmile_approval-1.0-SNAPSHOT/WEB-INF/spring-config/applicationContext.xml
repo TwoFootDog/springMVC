@@ -3,8 +3,8 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
        xmlns:context="http://www.springframework.org/schema/context"
-       xmlns:aop="http://www.springframework.org/schema/aop"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+       xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
 
     <!-- HikariCP connection pool bean 셋팅-->
     <bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
@@ -33,11 +33,17 @@
     <!-- base-package에 정의된 package내 소스 중 @Component가 작성된 Class를 bean으로 인식-->
     <context:component-scan base-package="com.tpptu.service" />
     <context:component-scan base-package="com.tpcom_apr.service" />
-    <!--<context:component-scan base-package="com.commons.aop" />-->
+    <context:component-scan base-package="com.commons.aop" />
     <context:component-scan base-package="com.commons.exception" />
 
+    <!-- 트랜잭션 매니저 -->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+    <tx:annotation-driven/>
+
     <!-- aop 적용-->
-    <!--<aop:aspectj-autoproxy></aop:aspectj-autoproxy>-->
+    <aop:aspectj-autoproxy></aop:aspectj-autoproxy>
 
     <!-- property 적용-->
     <context:property-placeholder location="classpath:config/database.properties" />

@@ -51,6 +51,7 @@ public class GetaprvnoServiceImpl implements GetaprvnoService {
         aprv_no_ocboff_tpcom_vs_2001OutputVO = aprv_no_dy_tmMapper.aprv_no_ocboff_tpcom_vs2001();
         if (!StringUtils.isEmpty(aprv_no_ocboff_tpcom_vs_2001OutputVO)) {
             outputVO.setAprv_no(aprv_no_ocboff_tpcom_vs_2001OutputVO.getAprv_no());
+            outputVO.setRep_aprv_no(aprv_no_ocboff_tpcom_vs_2001OutputVO.getAprv_no());
         } else {
             throw new ValidException(requestHeaders, "9080", "승인번호 조회 오류");
         }

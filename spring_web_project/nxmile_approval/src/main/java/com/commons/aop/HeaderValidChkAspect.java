@@ -7,6 +7,8 @@ import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpServletRequest;
@@ -18,22 +20,25 @@ import java.util.Enumeration;
 public class HeaderValidChkAspect {
 
     @Pointcut("execution(* com.*.service.Z*.*(..)) && args(request, object)")
-    private void publicTarget(HttpServletRequest request, Object object) {
+    private void publicTarget(HttpHeaders request, Object object) {
     }
     @Around("publicTarget(request, object)")
-    public Object headerValidCheck(ProceedingJoinPoint joinPoint, HttpServletRequest request, Object object) {
+    public Object headerValidCheck(ProceedingJoinPoint joinPoint, HttpHeaders request, Object object) throws Throwable {
         Object result = null;
-        log.info("header1111 : " + request.getHeader("Content-Type"));
 
-//            log.info(headerVO);
-//        Enumeration<String> headerNames = request.getHeaderNames();
-//        while(headerNames.hasMoreElements()) {
-//
-//        }
         try {
             result = joinPoint.proceed(new Object[] {request, object});
-        } catch (Throwable e) {
-            e.printStackTrace();
+
+            log.info("aop result =============================> " + request);
+        } catch (Exception e) {
+//            e.printStackTrace();
+//            ResponseEntity<?> result1 = (ResponseEntity<?>)result;
+////            log.info("aop result =============================> " + result1);
+////            log.info("aop request =============================> " + request);
+            log.info("error message====================>" + e.getMessage());
+            log.info("error stack====================>" + e.getStackTrace());
+
+
         }
 
         return result;

@@ -141,8 +141,8 @@ public class ZptutxptcService {
             mempntuptInputVO.setMbr_id(orgnDealtrOutputVO.getMbr_id());
             mempntuptInputVO.setPnt_knd_cd(orgnDealtrOutputVO.getPnt_knd_cd());
             mempntuptInputVO.setOrgan_cd(header.get("organ_cd"));
-            mempntuptInputVO.setCur_pnt(0L);
-            mempntuptInputVO.setAvl_pnt(0L);
+            mempntuptInputVO.setCur_pnt(orgnDealtrOutputVO.getCur_pnt());
+            mempntuptInputVO.setAvl_pnt(orgnDealtrOutputVO.getAvl_pnt());
             ResponseEntity<MempntuptOutputVO> mempntuptOutputVO = mempntuptService.syncCall(requestHeader, mempntuptInputVO);
 
             /* 취소거래내역 생성 및 원거래 갱신 */
@@ -171,6 +171,11 @@ public class ZptutxptcService {
             cntrinsertInputVO.setAnnfee(orgnDealtrOutputVO.getAnnfee());
             cntrinsertInputVO.setMbrsh_svc_annfee(orgnDealtrOutputVO.getMbrsh_svc_annfee());
             cntrinsertInputVO.setRefu_lmt_inc_amt(orgnDealtrOutputVO.getRefu_lmt_inc_amt());
+            cntrinsertInputVO.setDeal_bef_cur_pnt(0L);
+            cntrinsertInputVO.setDeal_bef_avl_pnt(0L);
+            cntrinsertInputVO.setDeal_bef_annfee(0L);
+            cntrinsertInputVO.setDeal_bef_mbrsh_svc_annfee(0L);
+            cntrinsertInputVO.setCncl_typ("C");
             cntrinsertInputVO.setCs_slp_cd(orgnDealtrOutputVO.getCs_slp_cd());
             cntrinsertInputVO.setMbrsh_svc_fg(orgnDealtrOutputVO.getMbrsh_svc_fg());
             cntrinsertInputVO.setDir_self_mng_fg(orgnDealtrOutputVO.getDir_self_mng_fg());
@@ -178,9 +183,9 @@ public class ZptutxptcService {
             cntrinsertInputVO.setTer_fg(inputVO.getTer_fg());
             cntrinsertInputVO.setTelgrm_no(header.get("telgrm_no"));
             cntrinsertInputVO.setTrc_no(header.get("trc_no"));
-            cntrinsertInputVO.setOrgn_aprv_dy(orgnDealtrOutputVO.getOrgn_aprv_dy());
-            cntrinsertInputVO.setOrgn_aprv_no(orgnDealtrOutputVO.getOrgn_aprv_no());
-            cntrinsertInputVO.setOrgn_deal_dy(orgnDealtrOutputVO.getOrgn_deal_dy());
+            cntrinsertInputVO.setOrgn_aprv_dy(orgnDealtrOutputVO.getAprv_dy());
+            cntrinsertInputVO.setOrgn_aprv_no(orgnDealtrOutputVO.getAprv_no());
+            cntrinsertInputVO.setOrgn_deal_dy(orgnDealtrOutputVO.getDeal_dy());
             cntrinsertInputVO.setRep_aprv_no(getaprvnoOutputVO.getBody().getRep_aprv_no());
             cntrinsertInputVO.setSttl_mcht_no(orgnDealtrOutputVO.getSttl_mcht_no());
             cntrinsertInputVO.setSttl_amt(orgnDealtrOutputVO.getSttl_amt());

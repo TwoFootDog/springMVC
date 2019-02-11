@@ -166,12 +166,17 @@ public class Apr_dealtr_trn_tpcom_ei2001InputVO {
         this.deal_caus_cd                =    inputVO.getDeal_caus_cd()                   ;
         this.qry_blk_yn                  =    inputVO.getQry_blk_yn()                     ;
         this.qry_mcht_no                 =    inputVO.getQry_mcht_no()                    ;
-        this.regr_id                     =    inputVO.getRegr_id()                        ;
-        this.updr_id                     =    inputVO.getUpdr_id()                        ;
+        this.regr_id                     =    getRegr_id(inputVO.getSvc_modu_id())        ;
+        this.updr_id                     =    getRegr_id(inputVO.getSvc_modu_id())        ;
         this.add_pnt_cd                  =    inputVO.getAdd_pnt_cd()                     ;
         this.real_col_mcht_no            =    inputVO.getReal_col_mcht_no()               ;
         this.hyb_contr_id                =    inputVO.getHyb_contr_id()                   ;
         this.deal_knd_cd                 =    inputVO.getDeal_knd_cd()                    ;
         this.incom_crd_no                =    inputVO.getIncom_crd_no()                   ;
+    }
+
+    public String getRegr_id(String svcModuId) {
+        String regrId = "_";
+        return regrId.concat(svcModuId.substring(0,4)).concat(svcModuId.substring(6,9));
     }
 }
