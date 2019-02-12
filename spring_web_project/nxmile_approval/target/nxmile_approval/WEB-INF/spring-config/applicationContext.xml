@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+    <!-- HikariCP connection pool bean 셋팅-->
+    <bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
+        <!--<property name="driverClassName" value="org.mariadb.jdbc.Driver"></property>-->
+        <!--<property name="jdbcUrl" value="jdbc:mariadb://127.0.0.1:3306/test"></property>-->
+        <property name="driverClassName" value="${hikcariConfig.driverClassName}"></property>
+        <property name="jdbcUrl" value="${hikariConfig.jdbcUrl}"></property>
+        <property name="username" value="${hikariConfig.username}"></property>
+        <property name="password" value="${hikariConfig.password}"></property>
+    </bean>
+
+    <!-- 커넥션 pool을 사용할 dataSource bean 셋팅-->
+    <bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
+        <constructor-arg ref="hikariConfig"></constructor-arg>
+    </bean>
+
+    <!-- DB connection 및 SQL전달/리턴을 위한 SQLSession을 만들어내는 SQLSessionFactory bean 셋팅-->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"></property>
+    </bean>
+
+    <!-- base-package 에 정의된 package 내 클래스 및 xml을 SQL 처리를 위한 mapper로 인식-->
+    <mybatis-spring:scan base-package="com.tpptu.mapper" />
+    <mybatis-spring:scan base-package="com.tpcom_apr.mapper" />
+
+    <!-- base-package에 정의된 package내 소스 중 @Component가 작성된 Class를 bean으로 인식-->
+    <context:component-scan base-package="com.tpptu.service" />
+    <context:component-scan base-package="com.tpcom_apr.service" />
+    <context:component-scan base-package="com.commons.aop" />
+    <context:component-scan base-package="com.commons.exception" />
+
+    <!-- 트랜잭션 매니저 -->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+    <tx:annotation-driven/>
+
+    <!-- aop 적용-->
+    <aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+
+    <!-- property 적용-->
+    <context:property-placeholder location="classpath:config/database.properties" />
+
+
+    <!-- blog test용-->
+    <context:component-scan base-package="com.test.service" />
+    <context:component-scan base-package="com.test.dao" />
+    <mybatis-spring:scan base-package="com.test.mapper" />
+
+</beans>

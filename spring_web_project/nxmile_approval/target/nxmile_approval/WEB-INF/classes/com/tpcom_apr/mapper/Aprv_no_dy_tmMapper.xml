@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tpcom_apr.mapper.Aprv_no_dy_tmMapper">
+    <select id="aprv_dy_tm_tpcom_vs2001" resultType="com.tpcom_apr.domain.sql.Aprv_dy_tm_tpcom_vs2001OutputVO">
+    SELECT DATE_FORMAT(SYSDATE(), '%Y%m%d') aprv_dy,
+           DATE_FORMAT(SYSDATE(), '%H%i%s') aprv_tm
+    FROM DUAL;
+    </select>
+
+    <select id="aprv_no_ocboff_tpcom_vs2001" resultType="com.tpcom_apr.domain.sql.Aprv_no_ocboff_tpcom_vs_2001OutputVO">
+    SELECT CONVERT(NEXTVAL(aprv_no_ocboff_seq), CHAR) aprv_no FROM DUAL;
+    </select>
+
+</mapper>
