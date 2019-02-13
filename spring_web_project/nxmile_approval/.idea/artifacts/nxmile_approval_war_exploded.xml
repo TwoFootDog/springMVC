@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="nxmile_approval:war exploded">
-    <output-path>$PROJECT_DIR$/target/nxmile_approval</output-path>
+    <output-path>$PROJECT_DIR$/target/project1</output-path>
     <properties id="maven-jee-properties">
       <options>
         <exploded>true</exploded>
@@ -68,7 +68,7 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/target/nxmile_approval/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/target/project1/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="nxmile_approval/web/Web" />
     </root>

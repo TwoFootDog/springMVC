@@ -135,7 +135,7 @@ public class ZptutxptcService {
         apr_dealtr_trn_tpcom_vf2001OutputVO =
                 apr_dealtr_trnMapper.apr_dealtr_trn_tpcom_vf2001(apr_dealtr_trn_tpcom_vf2001InputVO);
         for (Apr_dealtr_trn_tpcom_vf2001OutputVO orgnDealtrOutputVO : apr_dealtr_trn_tpcom_vf2001OutputVO) {
-            /* 포인트 갱신(Async 처리로 재개발) c*/
+            /* 포인트 갱신(Async 처리로 재개발) 필요 */
             mempntuptInputVO = new MempntuptInputVO();
             mempntuptInputVO.setMbrsh_pgm_id(orgnDealtrOutputVO.getMbrsh_pgm_id());
             mempntuptInputVO.setMbr_id(orgnDealtrOutputVO.getMbr_id());
@@ -145,7 +145,7 @@ public class ZptutxptcService {
             mempntuptInputVO.setAvl_pnt(orgnDealtrOutputVO.getAvl_pnt());
             ResponseEntity<MempntuptOutputVO> mempntuptOutputVO = mempntuptService.syncCall(requestHeader, mempntuptInputVO);
 
-            /* 취소거래내역 생성 및 원거래 갱신 */
+            /* 취소거래내역 생성 및 원거래 갱신  */
             cntrinsertInputVO = new CntrinsertInputVO();
             cntrinsertInputVO.setMbrsh_pgm_id(orgnDealtrOutputVO.getMbrsh_pgm_id());
             cntrinsertInputVO.setAprv_dy(getaprvnoOutputVO.getBody().getAprv_dy());

@@ -158,6 +158,7 @@
             <version>${org.aspectj-version}</version>
         </dependency>
 
+
         <!-- Logging -->
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -240,7 +241,7 @@
         </dependency>
     </dependencies>
     <build>
-        <finalName>nxmile_approval</finalName>
+        <finalName>project1</finalName>
         <plugins>
             <!-- 배포 -->
             <plugin>
@@ -250,7 +251,7 @@
                 <configuration>
                     <url>http://localhost:8080/manager/text</url>
                     <server>TomcatServer</server>
-                    <path>/${project.build.finalName}</path>
+                    <path>/</path>
                     <username>admin</username>
                     <password>admin</password>
                 </configuration>
