@@ -241,7 +241,7 @@
         </dependency>
     </dependencies>
     <build>
-        <finalName>project1</finalName>
+        <finalName>nxmile_approval</finalName>
         <plugins>
             <!-- 배포 -->
             <plugin>
@@ -249,9 +249,10 @@
                 <artifactId>tomcat7-maven-plugin</artifactId>
                 <version>2.2</version>
                 <configuration>
-                    <url>http://localhost:8080/manager/text</url>
+                    <url>http://198.13.47.188:18080/manager/text</url>
+                    <!--<url>http://localhost:8080/manager/text</url>-->
                     <server>TomcatServer</server>
-                    <path>/</path>
+                    <path>/${project.build.finalName}</path>
                     <username>admin</username>
                     <password>admin</password>
                 </configuration>

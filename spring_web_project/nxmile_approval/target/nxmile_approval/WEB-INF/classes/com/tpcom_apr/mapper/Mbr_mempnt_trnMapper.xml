@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tpcom_apr.mapper.Mbr_mempnt_trnMapper">
+    <insert id="mbr_mempnt_trn_tpcom_ei2001">
+      INSERT INTO MBR_MEMPNT_TRN
+      VALUES (#{mbrsh_pgm_id}, #{mbr_id}, #{pnt_knd_cd}, #{cur_pnt}, #{avl_pnt}, #{organ_cd}, sysdate(), #{organ_cd}, sysdate())
+      ON DUPLICATE KEY UPDATE avl_pnt = avl_pnt + #{avl_pnt}, updr_id = #{organ_cd}, upd_dt = sysdate()
+    </insert>
+
+</mapper>
