@@ -17,6 +17,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 
+import java.text.SimpleDateFormat;
 import java.util.Map;
 
 @Service
@@ -72,6 +73,8 @@ public class CntrinsertServiceImpl implements CntrinsertService {
             throw new ValidException(requestHeaders, "9080", "원거래내역 갱신 에러. 상세 : " + e.getCause());
         }
 
+
+        log.info("거래내역은 금방 갱신되지유?????" + new SimpleDateFormat("yyyy/MM/dd/ HH:mm:ss").format(System.currentTimeMillis()));
         responseHeaders = new HttpHeaders();
         return new ResponseEntity<CntrinsertOutputVO>(outputVO, responseHeaders, HttpStatus.OK);
     }

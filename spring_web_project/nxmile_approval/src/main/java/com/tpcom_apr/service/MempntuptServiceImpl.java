@@ -12,12 +12,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.text.SimpleDateFormat;
+
+import static java.lang.Thread.sleep;
+
 
 @Service
 @Log4j
 @Transactional
+@Async
 public class MempntuptServiceImpl implements MempntuptService {
 
     @Setter(onMethod_ = {@Autowired})
@@ -28,6 +35,12 @@ public class MempntuptServiceImpl implements MempntuptService {
 
     public ResponseEntity<MempntuptOutputVO> syncCall(HttpHeaders requestHeaders, MempntuptInputVO inputVO) {
 
+        try {
+            sleep(10000);
+            log.info("포인트 업데이트는 좀 늦게 되지유????" + new SimpleDateFormat("yyyy/MM/dd/ HH:mm:ss").format(System.currentTimeMillis()));
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         try {
             int result = mbr_mempnt_trnMapper.mbr_mempnt_trn_tpcom_ei2001(
                     new Mbr_mempnt_trn_tpcom_ei2001InputVO(

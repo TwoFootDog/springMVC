@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.test.mapper.TestMapper">
+  <select id="getBoard" resultType="com.test.domain.BoardVO">
+    select
+    bno,
+    title,
+    content,
+    writer,
+    registDate,
+    updateDate
+    FROM tbl_board
+    WHERE BNO = #{bno}
+  </select>
+</mapper>
