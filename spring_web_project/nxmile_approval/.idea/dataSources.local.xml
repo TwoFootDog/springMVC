@@ -12,7 +12,7 @@
       <introspection-schemas>*:@</introspection-schemas>
     </data-source>
     <data-source name="teamApps" uuid="04662c46-b597-468b-8ba7-e3c69b20f98c">
-      <database-info product="MySQL" version="10.0.36-MariaDB-0ubuntu0.16.04.1" jdbc-version="4.2" driver-name="MariaDB connector/J" driver-version="2.2.1" dbms="MYSQL" exact-version="10.0.36" exact-driver-version="2.2">
+      <database-info product="MySQL" version="10.0.36-MariaDB-0ubuntu0.16.04.1" jdbc-version="4.2" driver-name="MariaDB connector/J" driver-version="2.2.1" dbms="MYSQL" exact-version="10.0.36">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>
       </database-info>

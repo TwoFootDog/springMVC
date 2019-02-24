@@ -249,12 +249,11 @@
                 <artifactId>tomcat7-maven-plugin</artifactId>
                 <version>2.2</version>
                 <configuration>
-                    <url>http://198.13.47.188:18080/manager/text</url>
-                    <!--<url>http://localhost:8080/manager/text</url>-->
+                    <url>${tomcat_manager_url}</url>
                     <server>TomcatServer</server>
                     <path>/${project.build.finalName}</path>
-                    <username>admin</username>
-                    <password>admin</password>
+                    <username>${tomcat_manager_username}</username>
+                    <password>${tomcat_manager_password}</password>
                 </configuration>
             </plugin>
             <plugin>
@@ -293,5 +292,45 @@
                 </configuration>
             </plugin>
         </plugins>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+            <resource>
+                <directory>src/main/resources-${env}</directory>
+            </resource>
+        </resources>
     </build>
+    <profiles>
+        <profile>
+            <id>local</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <env>local</env>
+                <tomcat_manager_url>http://localhost:8080/manager/text</tomcat_manager_url>
+                <tomcat_manager_username>admin</tomcat_manager_username>
+                <tomcat_manager_password>admin</tomcat_manager_password>
+            </properties>
+        </profile>
+        <profile>
+            <id>dev</id>
+            <properties>
+                <env>dev</env>
+                <tomcat_manager_url>http://198.13.47.188:18080/manager/text</tomcat_manager_url>
+                <tomcat_manager_username>admin</tomcat_manager_username>
+                <tomcat_manager_password>admin</tomcat_manager_password>
+            </properties>
+        </profile>
+        <profile>
+            <id>release</id>
+            <properties>
+                <env>release</env>
+                <tomcat_manager_url>http://198.13.47.188:18080/manager/text</tomcat_manager_url>
+                <tomcat_manager_username>admin</tomcat_manager_username>
+                <tomcat_manager_password>admin</tomcat_manager_password>
+            </properties>
+        </profile>
+    </profiles>
 </project>
