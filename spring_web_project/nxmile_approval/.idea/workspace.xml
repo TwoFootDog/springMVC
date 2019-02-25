@@ -7,25 +7,145 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5113db8d-b6a3-4ac0-b35e-eb1f3774eece" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/nxmile_approval_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/nxmile_approval_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nxmile_approval.iml" beforeDir="false" afterPath="$PROJECT_DIR$/nxmile_approval.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/20190112" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config/database.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-config/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-config/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/20190112" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/config/database.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/database.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sql" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/nxmile_approval.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/nxmile_approval.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/nxmile_approval/WEB-INF/classes/com/commons/aop/HeaderValidChkAspect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/nxmile_approval/WEB-INF/classes/com/commons/aop/HeaderValidChkAspect.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/nxmile_approval/WEB-INF/classes/com/tpcom_apr/service/CntrinsertServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/nxmile_approval/WEB-INF/classes/com/tpcom_apr/service/CntrinsertServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/nxmile_approval/WEB-INF/classes/com/tpcom_apr/service/MempntuptServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/nxmile_approval/WEB-INF/classes/com/tpcom_apr/service/MempntuptServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/nxmile_approval/WEB-INF/classes/config/database.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/nxmile_approval/WEB-INF/classes/config/database.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/nxmile_approval/WEB-INF/spring-config/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/nxmile_approval/WEB-INF/spring-config/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/nxmile_approval/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/nxmile_approval/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/20190112" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/commons/aop/HeaderValidChkAspect.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/commons/config/SwaggerConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/commons/domain/CustomizeHeaderVO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/commons/exception/GlobalExceptionHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/commons/exception/ValidException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/test/controller/TestController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/test/dao/TestDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/test/domain/BoardVO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/test/mapper/TestMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/test/mapper/TestMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/test/service/TestService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/test/service/TestService2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpcom_apr/controller/HomeController2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpcom_apr/domain/service/CntrinsertInputVO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpcom_apr/domain/service/CntrinsertOutputVO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpcom_apr/domain/service/GetaprvnoInputVO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpcom_apr/domain/service/GetaprvnoOutputVO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpcom_apr/domain/service/MeminfqryInputVO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpcom_apr/domain/service/MeminfqryOutputVO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpcom_apr/domain/service/MempntuptInputVO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpcom_apr/domain/service/MempntuptOutputVO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpcom_apr/domain/service/OnmsgchkInputVO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpcom_apr/domain/service/OnmsgchkOutputVO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpcom_apr/domain/service/OritrqryInputVO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpcom_apr/domain/service/OritrqryOutputVO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpcom_apr/domain/sql/Apr_dealtr_trn_tpcom_ei2001InputVO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpcom_apr/domain/sql/Apr_dealtr_trn_tpcom_eu2001InputVO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpcom_apr/domain/sql/Apr_dealtr_trn_tpcom_vf2001InputVO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpcom_apr/domain/sql/Apr_dealtr_trn_tpcom_vf2001OutputVO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpcom_apr/domain/sql/Apr_dealtr_trn_tpcom_vs2001InputVO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpcom_apr/domain/sql/Apr_dealtr_trn_tpcom_vs2001OutputVO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpcom_apr/domain/sql/Apr_dealtr_trn_tpcom_vs2002InputVO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpcom_apr/domain/sql/Apr_dealtr_trn_tpcom_vs2002OutputVO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpcom_apr/domain/sql/Apr_dealtr_trn_tpcom_vs2003InputVO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpcom_apr/domain/sql/Apr_dealtr_trn_tpcom_vs2003OutputVO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpcom_apr/domain/sql/Apr_dealtr_trn_tpcom_vs2004InputVO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpcom_apr/domain/sql/Apr_dealtr_trn_tpcom_vs2004OutputVO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpcom_apr/domain/sql/Apr_dealtr_trn_tpcom_vs2035InputVO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpcom_apr/domain/sql/Apr_dealtr_trn_tpcom_vs2035OutputVO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpcom_apr/domain/sql/Aprv_dy_tm_tpcom_vs2001OutputVO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpcom_apr/domain/sql/Aprv_no_ocboff_tpcom_vs_2001OutputVO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpcom_apr/domain/sql/Crd_master_mst_tpcom_vs2005InputVO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpcom_apr/domain/sql/Crd_master_mst_tpcom_vs2005OutputVO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpcom_apr/domain/sql/Mbr_mempnt_trn_tpcom_ei2001InputVO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpcom_apr/domain/sql/Rul_svcavl_con_tpcom_vs2001InputVO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpcom_apr/domain/sql/Rul_svcavl_con_tpcom_vs2001OutputVO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpcom_apr/mapper/Apr_dealtr_trnMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpcom_apr/mapper/Apr_dealtr_trnMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpcom_apr/mapper/Aprv_no_dy_tmMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpcom_apr/mapper/Aprv_no_dy_tmMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpcom_apr/mapper/Crd_master_mstMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpcom_apr/mapper/Crd_master_mstMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpcom_apr/mapper/Mbr_mempnt_trnMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpcom_apr/mapper/Mbr_mempnt_trnMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpcom_apr/mapper/Rul_svcavl_conMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpcom_apr/mapper/Rul_svcavl_conMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpcom_apr/service/CntrinsertServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpcom_apr/service/GetaprvnoServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpcom_apr/service/MeminfqryServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpcom_apr/service/MempntuptServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpcom_apr/service/OnmsgchkServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpcom_apr/service/OritrqryServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpcom_apr/service/service_interface/CntrinsertService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpcom_apr/service/service_interface/GetaprvnoService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpcom_apr/service/service_interface/MeminfqryService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpcom_apr/service/service_interface/MempntuptService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpcom_apr/service/service_interface/OnmsgchkService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpcom_apr/service/service_interface/OritrqryService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpptu/controller/HomeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpptu/domain/ZptutxptcInputVO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpptu/domain/ZptutxptcOutputVO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpptu/mapper/TimeMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpptu/mapper/TimeMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/com/tpptu/service/ZptutxptcService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/config/database.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/config/documentation.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/log4j.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/log4jdbc.log4j2.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/classes/sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/lib/HikariCP-3.2.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/lib/accessors-smart-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/lib/asm-5.0.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/lib/aspectjrt-1.9.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/lib/aspectjweaver-1.9.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/lib/byte-buddy-1.8.12.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/lib/classmate-1.4.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/lib/gson-2.8.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/lib/guava-20.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/lib/jackson-annotations-2.9.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/lib/jackson-core-2.9.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/lib/jackson-databind-2.9.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/lib/jackson-dataformat-xml-2.9.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/lib/jackson-module-jaxb-annotations-2.9.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/lib/javax.inject-1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/lib/jcl-over-slf4j-1.7.25.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/lib/json-path-2.4.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/lib/json-smart-2.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/lib/jstl-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/lib/log4j-1.2.17.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/lib/log4jdbc-log4j2-jdbc4-1.16.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/lib/mapstruct-1.2.0.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/lib/mariadb-java-client-2.3.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/lib/mybatis-3.4.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/lib/mybatis-spring-1.3.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/lib/slf4j-api-1.7.25.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/lib/slf4j-log4j12-1.7.25.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/lib/spring-aop-5.1.2.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/lib/spring-beans-5.1.2.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/lib/spring-context-5.1.2.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/lib/spring-core-5.1.2.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/lib/spring-expression-5.1.2.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/lib/spring-jcl-5.1.2.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/lib/spring-jdbc-5.1.2.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/lib/spring-plugin-core-1.2.0.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/lib/spring-plugin-metadata-1.2.0.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/lib/spring-test-5.1.2.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/lib/spring-tx-5.1.2.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/lib/spring-web-5.1.2.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/lib/spring-webmvc-5.1.2.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/lib/springfox-core-2.9.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/lib/springfox-schema-2.9.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/lib/springfox-spi-2.9.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/lib/springfox-spring-web-2.9.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/lib/springfox-swagger-common-2.9.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/lib/springfox-swagger-ui-2.9.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/lib/springfox-swagger2-2.9.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/lib/stax2-api-3.1.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/lib/swagger-annotations-1.5.20.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/lib/swagger-models-1.5.20.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/lib/woodstox-core-5.0.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/spring-config/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/spring-config/dispatcher-servlet.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/views/home.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project1/WEB-INF/web.xml" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -88,7 +208,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/log4jdbc.log4j2.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
+            <state relative-caret-position="36">
               <caret line="2" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
@@ -105,28 +225,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources-dev/config/database.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="67" selection-start-column="67" selection-end-column="67" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources-local/config/database.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-config/dispatcher-servlet.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="16" column="70" lean-forward="true" selection-start-line="16" selection-start-column="70" selection-end-line="16" selection-end-column="70" />
+            <state relative-caret-position="288">
+              <caret line="16" column="70" selection-start-line="16" selection-start-column="70" selection-end-line="16" selection-end-column="70" />
             </state>
           </provider>
         </entry>
@@ -134,14 +236,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-config/applicationContext.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
+            <state relative-caret-position="288">
               <caret line="16" column="78" selection-start-line="16" selection-start-column="78" selection-end-line="16" selection-end-column="78" />
-              <folding>
-                <element signature="e#1451#1485#0" expanded="true" />
-                <element signature="e#1537#1562#0" expanded="true" />
-                <element signature="e#1464#1490#0" expanded="true" />
-                <element signature="e#1694#1720#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -149,7 +245,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
+            <state relative-caret-position="198">
               <caret line="11" column="15" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
             </state>
           </provider>
@@ -158,8 +254,26 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="308" column="25" lean-forward="true" selection-start-line="308" selection-start-column="25" selection-end-line="308" selection-end-column="25" />
+            <state relative-caret-position="324">
+              <caret line="240" column="21" lean-forward="true" selection-start-line="240" selection-start-column="21" selection-end-line="240" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources-dev/config/database.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="3" column="30" lean-forward="true" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources-local/config/database.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="3" column="26" lean-forward="true" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -231,6 +345,9 @@
       <replace>responseHeaders</replace>
       <replace>HttpHeaders headers = mock(HttpHeaders.class);</replace>
     </replaceStrings>
+    <dirStrings>
+      <dir>C:\workspace\java\test\spring5_study\spring_web_project\nxmile_approval</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -334,7 +451,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -401,6 +518,21 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources-local" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nxmile_approval" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nxmile_approval" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources-release" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nxmile_approval" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nxmile_approval" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources-release" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -478,14 +610,14 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mariadb" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551028775748" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551073156548" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../ex03" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -774,6 +906,7 @@
       <workItem from="1550798361758" duration="8929000" />
       <workItem from="1550886505338" duration="658000" />
       <workItem from="1551019000930" duration="3522000" />
+      <workItem from="1551059640991" duration="6413000" />
     </task>
     <servers />
   </component>
@@ -810,7 +943,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="495671000" />
+    <option name="totallyTimeSpent" value="502084000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -825,7 +958,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49916804" visible="true" weight="0.25266525" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49916804" visible="true" weight="0.2553305" />
       <window_info id="Structure" order="1" sideWeight="0.5005574" side_tool="true" weight="0.25053304" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -835,18 +968,18 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32887402" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.4497768" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.24414715" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3979933" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32998884" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32998884" />
       <window_info anchor="bottom" id="Spring" order="8" weight="0.32998884" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.328125" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3277592" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="CheckStyle" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.31808037" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.31772575" />
       <window_info anchor="bottom" id="Java Enterprise" order="14" />
       <window_info anchor="bottom" id="Database Changes" order="15" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="16" weight="0.32998884" />
@@ -1149,60 +1282,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources-release/config/database.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="67" selection-start-column="67" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/log4jdbc.log4j2.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources-local/config/database.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources-dev/config/database.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="67" selection-start-column="67" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/config/documentation.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="15" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-config/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="16" column="78" selection-start-line="16" selection-start-column="78" selection-end-line="16" selection-end-column="78" />
-          <folding>
-            <element signature="e#1451#1485#0" expanded="true" />
-            <element signature="e#1537#1562#0" expanded="true" />
-            <element signature="e#1464#1490#0" expanded="true" />
-            <element signature="e#1694#1720#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources-release/config/database.properties" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/config/database.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
@@ -1210,17 +1290,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/log4jdbc.log4j2.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/config/documentation.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-config/dispatcher-servlet.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="16" column="70" lean-forward="true" selection-start-line="16" selection-start-column="70" selection-end-line="16" selection-end-column="70" />
+        <state relative-caret-position="288">
+          <caret line="16" column="70" selection-start-line="16" selection-start-column="70" selection-end-line="16" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-config/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="78" selection-start-line="16" selection-start-column="78" selection-end-line="16" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="15" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources-local/config/database.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="26" lean-forward="true" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources-dev/config/database.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="30" lean-forward="true" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="308" column="25" lean-forward="true" selection-start-line="308" selection-start-column="25" selection-end-line="308" selection-end-column="25" />
+        <state relative-caret-position="324">
+          <caret line="240" column="21" lean-forward="true" selection-start-line="240" selection-start-column="21" selection-end-line="240" selection-end-column="21" />
         </state>
       </provider>
     </entry>
