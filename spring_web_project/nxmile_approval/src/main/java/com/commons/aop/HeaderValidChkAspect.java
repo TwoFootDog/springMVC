@@ -37,7 +37,7 @@ public class HeaderValidChkAspect {
 ////            log.info("aop request =============================> " + request);
             log.info("error message====================>" + e.getMessage());
             log.info("error stack====================>" + e.getStackTrace());
-            log.info("nn   ");
+            log.info("ooo   ");
 
 
         }
