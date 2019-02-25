@@ -526,7 +526,7 @@
     <property name="DatabaseDriversLRU" value="mariadb" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551074062916" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551081416052" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../ex03" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -815,7 +815,7 @@
       <workItem from="1550798361758" duration="8929000" />
       <workItem from="1550886505338" duration="658000" />
       <workItem from="1551019000930" duration="3522000" />
-      <workItem from="1551059640991" duration="7645000" />
+      <workItem from="1551059640991" duration="8916000" />
     </task>
     <servers />
   </component>
@@ -852,7 +852,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="503316000" />
+    <option name="totallyTimeSpent" value="504587000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -865,9 +865,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49916804" visible="true" weight="0.2553305" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49916804" visible="true" weight="0.2553305" />
       <window_info id="Structure" order="1" sideWeight="0.5005574" side_tool="true" weight="0.25053304" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -884,7 +883,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32998884" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32998884" />
       <window_info anchor="bottom" id="Spring" order="8" weight="0.32998884" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3277592" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3277592" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="CheckStyle" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
