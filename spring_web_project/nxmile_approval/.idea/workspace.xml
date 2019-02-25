@@ -7,7 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5113db8d-b6a3-4ac0-b35e-eb1f3774eece" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/commons/aop/HeaderValidChkAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/commons/aop/HeaderValidChkAspect.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -127,7 +126,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/commons/aop/HeaderValidChkAspect.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="438">
-              <caret line="39" column="25" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
+              <caret line="39" column="28" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -817,7 +816,7 @@
       <workItem from="1550886505338" duration="658000" />
       <workItem from="1551019000930" duration="3522000" />
       <workItem from="1551059640991" duration="9766000" />
-      <workItem from="1551082787904" duration="695000" />
+      <workItem from="1551082787904" duration="971000" />
     </task>
     <servers />
   </component>
@@ -854,7 +853,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="506132000" />
+    <option name="totallyTimeSpent" value="506408000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1238,7 +1237,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/commons/aop/HeaderValidChkAspect.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="438">
-          <caret line="39" column="25" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
+          <caret line="39" column="28" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
         </state>
       </provider>
     </entry>
