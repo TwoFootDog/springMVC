@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class CustomizeHeaderVO {
     private String telgrm_no;
-    private String orogan_cd;
+    private String organ_cd;
     private String send_dy;
     private String send_tm;
     private String trc_no;

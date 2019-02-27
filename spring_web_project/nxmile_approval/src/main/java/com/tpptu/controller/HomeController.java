@@ -2,7 +2,9 @@ package com.tpptu.controller;
 
 
 import com.tpptu.domain.ZptutxptcInputVO;
+import com.tpptu.domain.ZptutxptcInputWrapperVO;
 import com.tpptu.domain.ZptutxptcOutputVO;
+import com.tpptu.domain.ZptutxptcOutputWrapperVO;
 import com.tpptu.service.ZptutxptcService;
 import io.swagger.annotations.*;
 import lombok.Setter;
@@ -49,11 +51,15 @@ public class HomeController {
     @PostMapping(value = "/zptutxptc",
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_JSON_UTF8_VALUE})
-    public ResponseEntity<ZptutxptcOutputVO> zptutcptc(@RequestHeader HttpHeaders Header,
-                                                       @RequestBody ZptutxptcInputVO inputVO) {
-        return zptutxptcService.syncCall(Header, inputVO);
+    public ZptutxptcOutputWrapperVO zptutcptc(@RequestBody ZptutxptcInputWrapperVO inputVO) {
+        return zptutxptcService.syncCall(inputVO);
 
     }
+//    public ResponseEntity<ZptutxptcOutputVO> zptutcptc(@RequestHeader HttpHeaders Header,
+//                                                       @RequestBody ZptutxptcInputVO inputVO) {
+//        return zptutxptcService.syncCall(Header, inputVO);
+//
+//    }
 
     @ApiImplicitParams({
             @ApiImplicitParam(name = "area", value = "지역", required = true, dataType = "String", paramType = "path"),
