@@ -13,6 +13,5 @@ import java.util.List;
 public class ZptutxptcInputWrapperVO {
     private CustomizeHeaderVO header;
     private List<ZptutxptcInputVO> body;
-    private int totalCnt;
-    private boolean isSuccess;
+    private int totalBodyCnt;
 }

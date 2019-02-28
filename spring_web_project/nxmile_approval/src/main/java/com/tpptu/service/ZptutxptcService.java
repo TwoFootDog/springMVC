@@ -1,5 +1,6 @@
 package com.tpptu.service;
 
+import com.commons.domain.CustomizeHeaderVO;
 import com.commons.exception.ValidException;
 import com.tpcom_apr.domain.service.*;
 import com.tpcom_apr.domain.sql.Apr_dealtr_trn_tpcom_vf2001InputVO;
@@ -23,9 +24,7 @@ import org.springframework.util.StringUtils;
 
 import javax.servlet.http.HttpServletRequest;
 import java.text.SimpleDateFormat;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Service
 @Log4j
@@ -59,18 +58,42 @@ public class ZptutxptcService {
     private CntrinsertInputVO cntrinsertInputVO;
 
     /* 출력값 */
-    private HttpHeaders responseHeaders;
     private ZptutxptcOutputVO outputVO;
+    private ZptutxptcOutputWrapperVO outputWrapperVO;
 
 public ZptutxptcOutputWrapperVO syncCall(ZptutxptcInputWrapperVO inputWrapperVO) {
 
-//    int i = 0;
-//    for(ZptutxptcInputVO inputVO : inputWrapperVO.getBody()) {
-//        log.info(i + "번째 데이터 : " + inputVO);
-//        i++;
-//    }
+    int i = 0;
+    for(ZptutxptcInputVO inputVO : inputWrapperVO.getBody()) {
+        log.info(i + "번째 데이터 : " + inputVO);
+        i++;
+    }
 
-    return new ZptutxptcOutputWrapperVO();
+    outputWrapperVO = new ZptutxptcOutputWrapperVO();
+    outputWrapperVO.setHeader(
+            new CustomizeHeaderVO(
+                    inputWrapperVO.getHeader().getTelgrm_no().substring(0,3).concat("1"),
+                    inputWrapperVO.getHeader().getOrgan_cd(),
+                    new SimpleDateFormat("yyyyMMdd").format(new Date()),
+                    new SimpleDateFormat("HHmmss").format(new Date()),
+                    inputWrapperVO.getHeader().getTrc_no(),
+                    inputWrapperVO.getHeader().getTelgrm_fg(),
+                    "0000",
+                    ""));
+
+    List<ZptutxptcOutputVO> outputVOList = new ArrayList<ZptutxptcOutputVO>();
+    outputVO = new ZptutxptcOutputVO();
+    outputVO.setMbrsh_pgm_id("A");
+    outputVO.setAprv_no("F88888888");
+    outputVO.setAprv_dy("20190228");
+    outputVO.setCrd_no("1111111111111111");
+    outputVO.setMcht_no("22222222");
+    outputVO.setMbr_id("333333333");
+    outputVOList.add(outputVO);
+
+    outputWrapperVO.setBody(outputVOList);
+    outputWrapperVO.setTotalBodyCnt(1);
+    return outputWrapperVO;
 }
 
 
