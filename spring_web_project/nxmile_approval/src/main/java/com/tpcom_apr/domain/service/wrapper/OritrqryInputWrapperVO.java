@@ -1,17 +1,15 @@
-package com.tpptu.domain;
+package com.tpcom_apr.domain.service.wrapper;
 
 import com.commons.domain.CustomizeHeaderVO;
+import com.tpcom_apr.domain.service.OritrqryInputVO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class ZptutxptcInputWrapperVO {
+public class OritrqryInputWrapperVO {
     private CustomizeHeaderVO header;
-    private List<ZptutxptcInputVO> body;
-    private int totalBodyCnt;
+    private OritrqryInputVO body;
 }

@@ -10,7 +10,7 @@ import org.springframework.http.HttpHeaders;
 @NoArgsConstructor
 @Data
 public class ValidException extends RuntimeException{
-    private HttpHeaders requestHeaders;
+//    private HttpHeaders requestHeaders;
     private String ans_cd;
     private String ans_msg;
 }

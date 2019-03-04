@@ -1,22 +1,16 @@
 package com.tpptu.controller;
 
 
-import com.tpptu.domain.ZptutxptcInputVO;
-import com.tpptu.domain.ZptutxptcInputWrapperVO;
-import com.tpptu.domain.ZptutxptcOutputVO;
-import com.tpptu.domain.ZptutxptcOutputWrapperVO;
+import com.tpptu.domain.wrapper.ZptutxptcInputWrapperVO;
+import com.tpptu.domain.wrapper.ZptutxptcOutputWrapperVO;
 import com.tpptu.service.ZptutxptcService;
 import io.swagger.annotations.*;
 import lombok.Setter;
 import lombok.extern.log4j.Log4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-
-import javax.servlet.http.HttpServletRequest;
 
 @RestController
 //@AllArgsConstructor

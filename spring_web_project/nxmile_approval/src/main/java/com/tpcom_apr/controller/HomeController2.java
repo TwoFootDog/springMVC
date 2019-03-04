@@ -2,6 +2,8 @@ package com.tpcom_apr.controller;
 
 import com.tpcom_apr.domain.service.OnmsgchkInputVO;
 import com.tpcom_apr.domain.service.OnmsgchkOutputVO;
+import com.tpcom_apr.domain.service.wrapper.OnmsgchkInputWrapperVO;
+import com.tpcom_apr.domain.service.wrapper.OnmsgchkOutputWrapperVO;
 import com.tpcom_apr.service.service_interface.OnmsgchkService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpHeaders;
@@ -20,7 +22,7 @@ public class HomeController2 {
     @PostMapping(value = "/onmsgchk",
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<OnmsgchkOutputVO> onmsgchk(HttpHeaders header, @RequestBody OnmsgchkInputVO inputVO) {
-        return onmsgchkService.syncCall(header, inputVO);
+    public OnmsgchkOutputWrapperVO onmsgchk(@RequestBody OnmsgchkInputWrapperVO inputWrapperVO) {
+        return onmsgchkService.syncCall(inputWrapperVO);
     }
 }

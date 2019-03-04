@@ -1,17 +1,15 @@
-package com.tpptu.domain;
+package com.tpcom_apr.domain.service.wrapper;
 
 import com.commons.domain.CustomizeHeaderVO;
+import com.tpcom_apr.domain.service.CntrinsertOutputVO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class ZptutxptcOutputWrapperVO {
+public class CntrinsertOutputWrapperVO {
     private CustomizeHeaderVO header;
-    private List<ZptutxptcOutputVO> body;
-    private int totalBodyCnt;
+    private CntrinsertOutputVO body;
 }

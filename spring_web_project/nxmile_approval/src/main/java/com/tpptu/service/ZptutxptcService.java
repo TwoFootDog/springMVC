@@ -1,28 +1,21 @@
 package com.tpptu.service;
 
 import com.commons.domain.CustomizeHeaderVO;
-import com.commons.exception.ValidException;
 import com.tpcom_apr.domain.service.*;
 import com.tpcom_apr.domain.sql.Apr_dealtr_trn_tpcom_vf2001InputVO;
 import com.tpcom_apr.domain.sql.Apr_dealtr_trn_tpcom_vf2001OutputVO;
 import com.tpcom_apr.mapper.Apr_dealtr_trnMapper;
 import com.tpcom_apr.service.service_interface.*;
 import com.tpptu.domain.ZptutxptcInputVO;
-import com.tpptu.domain.ZptutxptcInputWrapperVO;
+import com.tpptu.domain.wrapper.ZptutxptcInputWrapperVO;
 import com.tpptu.domain.ZptutxptcOutputVO;
-import com.tpptu.domain.ZptutxptcOutputWrapperVO;
+import com.tpptu.domain.wrapper.ZptutxptcOutputWrapperVO;
 import lombok.Setter;
 import lombok.extern.log4j.Log4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.util.StringUtils;
 
-import javax.servlet.http.HttpServletRequest;
 import java.text.SimpleDateFormat;
 import java.util.*;
 

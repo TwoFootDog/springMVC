@@ -1,8 +1,11 @@
 package com.tpcom_apr.service;
 
+import com.commons.domain.CustomizeHeaderVO;
 import com.commons.exception.ValidException;
 import com.tpcom_apr.domain.service.OritrqryInputVO;
 import com.tpcom_apr.domain.service.OritrqryOutputVO;
+import com.tpcom_apr.domain.service.wrapper.OritrqryInputWrapperVO;
+import com.tpcom_apr.domain.service.wrapper.OritrqryOutputWrapperVO;
 import com.tpcom_apr.domain.sql.*;
 import com.tpcom_apr.mapper.Apr_dealtr_trnMapper;
 import com.tpcom_apr.service.service_interface.OritrqryService;
@@ -10,12 +13,11 @@ import lombok.Setter;
 import lombok.extern.log4j.Log4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
-import javax.servlet.http.HttpServletRequest;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -32,18 +34,22 @@ public class OritrqryServiceImpl implements OritrqryService {
     private Apr_dealtr_trn_tpcom_vs2004OutputVO apr_dealtr_trn_tpcom_vs2004OutputVO;
     private Apr_dealtr_trn_tpcom_vs2035OutputVO apr_dealtr_trn_tpcom_vs2035OutputVO;
 
-    private HttpHeaders responseHeaders;
+
+    private CustomizeHeaderVO header;
+    private OritrqryInputVO inputVO;
     private OritrqryOutputVO outputVO;
+    private OritrqryOutputWrapperVO outputWrapperVO;
 
 
     @Override
-    public ResponseEntity<OritrqryOutputVO> syncCall(HttpHeaders requestHeaders, OritrqryInputVO inputVO) {
+    public OritrqryOutputWrapperVO syncCall(OritrqryInputWrapperVO inputWrapperVO) {
 
+        header = inputWrapperVO.getHeader();    // 요청 header
+        inputVO = inputWrapperVO.getBody();     // 요청 body
         String orgn_deal_aprv_no;
         String orgn_deal_coopco_aprv_no;
-        Map<String, String> header = requestHeaders.toSingleValueMap();
 
-        int sql_type = sqlTypeSetting(requestHeaders, inputVO);
+        int sql_type = sqlTypeSetting(inputVO);
 
         Map<String, String> orgnAprvNo = changeOrgnAprvNo(inputVO.getOrgn_deal_aprv_no(), inputVO.getOrgn_deal_coopco_aprv_no());
         orgn_deal_aprv_no = orgnAprvNo.get("orgn_deal_aprv_no");
@@ -69,9 +75,9 @@ public class OritrqryServiceImpl implements OritrqryService {
                 if (!StringUtils.isEmpty(apr_dealtr_trn_tpcom_vs2001OutputVO)) {
                     outputVO = new OritrqryOutputVO(apr_dealtr_trn_tpcom_vs2001OutputVO);
                 } else if (StringUtils.isEmpty(apr_dealtr_trn_tpcom_vs2001OutputVO)) {
-                    throw new ValidException(requestHeaders, "7777", "취소 원거래 미존재(적립취소)");
+                    throw new ValidException("7777", "취소 원거래 미존재(적립취소)");
                 } else {
-                    throw new ValidException(requestHeaders, "9080", "시스템실 연락바람");
+                    throw new ValidException("9080", "시스템실 연락바람");
                 }
                 break;
             case 21 :
@@ -87,13 +93,26 @@ public class OritrqryServiceImpl implements OritrqryService {
                                         orgn_deal_coopco_aprv_no,
                                         orgn_deal_aprv_no,
                                         inputVO.getOrgn_deal_amt(),
-                                        header.get("organ_cd"), inputVO.getSvc_modu_id()));
+                                        header.getOrgan_cd(),
+                                        inputVO.getSvc_modu_id()));
                 if (!StringUtils.isEmpty(apr_dealtr_trn_tpcom_vs2002OutputVO)) {
+                    outputWrapperVO = new OritrqryOutputWrapperVO();
+                    outputWrapperVO.setHeader(
+                            new CustomizeHeaderVO(
+                                    inputWrapperVO.getHeader().getTelgrm_no().substring(0, 3).concat("1"),
+                                    inputWrapperVO.getHeader().getOrgan_cd(),
+                                    new SimpleDateFormat("yyyyMMdd").format(new Date()),
+                                    new SimpleDateFormat("HHmmss").format(new Date()),
+                                    inputWrapperVO.getHeader().getTrc_no(),
+                                    inputWrapperVO.getHeader().getTelgrm_fg(),
+                                    "0000",
+                                    ""));
                     outputVO = new OritrqryOutputVO(apr_dealtr_trn_tpcom_vs2002OutputVO);
+                    outputWrapperVO.setBody(outputVO);
                 } else if (StringUtils.isEmpty(apr_dealtr_trn_tpcom_vs2002OutputVO)){
-                    throw new ValidException(requestHeaders, "7777", "취소 원거래 미존재(사용취소)");
+                    throw new ValidException("7777", "취소 원거래 미존재(사용취소)");
                 } else {
-                    throw new ValidException(requestHeaders, "9080", "시스템실 연락바람");
+                    throw new ValidException("9080", "시스템실 연락바람");
                 }
                 break;
             case 10 :
@@ -109,14 +128,14 @@ public class OritrqryServiceImpl implements OritrqryService {
                 log.info("사용 원거래 조회(망상재사용)");
                 break;
             default :
-                throw new ValidException(requestHeaders, "9080", "원거래조회 처리 유형 에러");
+                throw new ValidException("9080", "원거래조회 처리 유형 에러");
         }
-        responseHeaders = new HttpHeaders();
-        return new ResponseEntity<OritrqryOutputVO>(outputVO, responseHeaders, HttpStatus.OK);
+
+        return outputWrapperVO;
     }
 
 
-    public int sqlTypeSetting(HttpHeaders requestHeaders, OritrqryInputVO inputVO) {
+    public int sqlTypeSetting(OritrqryInputVO inputVO) {
         int caller_type;
         int cancel_type;
         int sql_type;
@@ -139,7 +158,7 @@ public class OritrqryServiceImpl implements OritrqryService {
             caller_type = 2;    // 사용성 서비스 취소
             log.info("input svc_modu_id : [" + inputVO.getSvc_modu_id() + "]");
         } else {
-            throw new ValidException(requestHeaders, "9080", "요청 서비스ID로는 처리할 수 없습니다.");
+            throw new ValidException("9080", "요청 서비스ID로는 처리할 수 없습니다.");
         }
 
         if ((!StringUtils.isEmpty(inputVO.getAns_cd())) &&
