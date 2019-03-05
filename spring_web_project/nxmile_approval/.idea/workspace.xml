@@ -8,56 +8,9 @@
   <component name="ChangeListManager">
     <list default="true" id="5113db8d-b6a3-4ac0-b35e-eb1f3774eece" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/commons/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/commons/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/commons/exception/ValidException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/commons/exception/ValidException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/controller/HomeController2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/controller/HomeController2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/CntrinsertServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/CntrinsertServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/GetaprvnoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/GetaprvnoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/MeminfqryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/MeminfqryServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/MempntuptServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/MempntuptServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/OnmsgchkServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/OnmsgchkServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/OritrqryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/OritrqryServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/service_interface/CntrinsertService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/service_interface/CntrinsertService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/service_interface/GetaprvnoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/service_interface/GetaprvnoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/service_interface/MeminfqryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/service_interface/MeminfqryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/service_interface/MempntuptService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/service_interface/MempntuptService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/service_interface/OnmsgchkService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/service_interface/OnmsgchkService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/service_interface/OritrqryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/service_interface/OritrqryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tpptu/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tpptu/controller/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tpptu/domain/ZptutxptcInputWrapperVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tpptu/domain/wrapper/ZptutxptcInputWrapperVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tpptu/domain/ZptutxptcOutputWrapperVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tpptu/domain/wrapper/ZptutxptcOutputWrapperVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tpptu/service/ZptutxptcService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tpptu/service/ZptutxptcService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/tpcom_apr/service/CntrinsertServiceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/tpcom_apr/service/CntrinsertServiceTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/tpcom_apr/service/GetaprvnoServiceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/tpcom_apr/service/GetaprvnoServiceTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/tpcom_apr/service/MeminfqryServiceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/tpcom_apr/service/MeminfqryServiceTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/tpcom_apr/service/MempntuptServiceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/tpcom_apr/service/MempntuptServiceTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/tpcom_apr/service/OnmsgchkServiceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/tpcom_apr/service/OnmsgchkServiceTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/tpcom_apr/service/OritrqryServiceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/tpcom_apr/service/OritrqryServiceTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/commons/exception/GlobalExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/commons/exception/GlobalExceptionHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/commons/exception/ValidException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/commons/exception/ValidException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tpcom_apr/controller/HomeController2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tpcom_apr/controller/HomeController2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tpcom_apr/service/CntrinsertServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tpcom_apr/service/CntrinsertServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tpcom_apr/service/GetaprvnoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tpcom_apr/service/GetaprvnoServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tpcom_apr/service/MeminfqryServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tpcom_apr/service/MeminfqryServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tpcom_apr/service/MempntuptServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tpcom_apr/service/MempntuptServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tpcom_apr/service/OnmsgchkServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tpcom_apr/service/OnmsgchkServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tpcom_apr/service/OritrqryServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tpcom_apr/service/OritrqryServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tpcom_apr/service/service_interface/CntrinsertService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tpcom_apr/service/service_interface/CntrinsertService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tpcom_apr/service/service_interface/GetaprvnoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tpcom_apr/service/service_interface/GetaprvnoService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tpcom_apr/service/service_interface/MeminfqryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tpcom_apr/service/service_interface/MeminfqryService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tpcom_apr/service/service_interface/MempntuptService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tpcom_apr/service/service_interface/MempntuptService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tpcom_apr/service/service_interface/OnmsgchkService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tpcom_apr/service/service_interface/OnmsgchkService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tpcom_apr/service/service_interface/OritrqryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tpcom_apr/service/service_interface/OritrqryService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tpptu/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tpptu/controller/HomeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tpptu/domain/ZptutxptcInputWrapperVO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tpptu/domain/ZptutxptcOutputWrapperVO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tpptu/service/ZptutxptcService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tpptu/service/ZptutxptcService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/tpcom_apr/service/CntrinsertServiceTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/tpcom_apr/service/CntrinsertServiceTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/tpcom_apr/service/GetaprvnoServiceTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/tpcom_apr/service/GetaprvnoServiceTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/tpcom_apr/service/MeminfqryServiceTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/tpcom_apr/service/MeminfqryServiceTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/tpcom_apr/service/MempntuptServiceTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/tpcom_apr/service/MempntuptServiceTests.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/tpcom_apr/service/OnmsgchkServiceTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/tpcom_apr/service/OnmsgchkServiceTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/tpcom_apr/service/OritrqryServiceTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/tpcom_apr/service/OritrqryServiceTests.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -126,27 +79,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/tpcom_apr/service/CntrinsertServiceTests.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="503">
-              <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/tpcom_apr/mapper/Apr_dealtr_trnMapperTests.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="50" column="20" lean-forward="true" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/tpptu/service/ZptutxptuServiceTests.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="36">
@@ -158,8 +90,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/CntrinsertServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="55" column="26" lean-forward="true" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
+            <state relative-caret-position="666">
+              <caret line="55" column="26" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -176,11 +108,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/tpcom_apr/service/OritrqryServiceTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="742">
-              <caret line="98" column="11" lean-forward="true" selection-start-line="98" selection-start-column="11" selection-end-line="98" selection-end-column="11" />
+            <state relative-caret-position="306">
+              <caret line="51" column="54" lean-forward="true" selection-start-line="51" selection-start-column="54" selection-end-line="51" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -188,8 +120,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/tpcom_apr/service/OnmsgchkServiceTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="160" column="7" selection-start-line="34" selection-start-column="6" selection-end-line="160" selection-end-column="7" />
+            <state relative-caret-position="216">
+              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/OnmsgchkServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="65" selection-start-line="65" selection-end-line="65" />
             </state>
           </provider>
         </entry>
@@ -197,17 +138,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/tpcom_apr/service/GetaprvnoServiceTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="48" column="136" lean-forward="true" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="136" />
+            <state relative-caret-position="478">
+              <caret line="48" column="136" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="136" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/tpcom_apr/service/MeminfqryServiceTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="214">
+              <caret line="63" selection-start-line="63" selection-end-line="63" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/tpcom_apr/service/MempntuptServiceTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-181">
-              <caret line="76" column="84" selection-start-line="76" selection-start-column="84" selection-end-line="76" selection-end-column="84" />
+            <state relative-caret-position="1494">
+              <caret line="106" selection-start-line="106" selection-end-line="106" />
             </state>
           </provider>
         </entry>
@@ -215,7 +165,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/MempntuptServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="686">
+            <state relative-caret-position="1044">
               <caret line="81" selection-start-line="81" selection-end-line="81" />
             </state>
           </provider>
@@ -340,8 +290,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/MeminfqryServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/GetaprvnoServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tpcom_apr/controller/HomeController2.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/tpcom_apr/service/OnmsgchkServiceTests.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/tpcom_apr/service/OritrqryServiceTests.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-config/applicationContext.xml" />
         <option value="$PROJECT_DIR$/src/test/java/com/tpcom_apr/service/GetaprvnoServiceTests.java" />
@@ -350,6 +298,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/CntrinsertServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/tpcom_apr/service/MempntuptServiceTests.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/MempntuptServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/tpcom_apr/service/OnmsgchkServiceTests.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/tpcom_apr/service/OritrqryServiceTests.java" />
       </list>
     </option>
   </component>
@@ -395,6 +345,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -771,14 +722,13 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mariadb" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551691640706" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551763690674" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../ex03" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -823,24 +773,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.MempntuptServiceTests.testMempntuptServiceMapperCallOk">
-    <configuration name="Apr_dealtr_trnMapperTests.apr_dealtr_trn_tpcom_vf2001Tests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="nxmile_approval" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.tpcom_apr.mapper.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.tpcom_apr.mapper" />
-      <option name="MAIN_CLASS_NAME" value="com.tpcom_apr.mapper.Apr_dealtr_trnMapperTests" />
-      <option name="METHOD_NAME" value="apr_dealtr_trn_tpcom_vf2001Tests" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CntrinsertServiceTests.testCntrinsertServiceMapperCallOK" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.OnmsgchkServiceTests.testOnmsgchkServiceErrorOrgnDealDyNotInput">
+    <configuration name="OnmsgchkServiceTests.testOnmsgchkServiceErrorMchtNoNotInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="nxmile_approval" />
       <extension name="coverage">
         <pattern>
@@ -849,14 +783,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.tpcom_apr.service" />
-      <option name="MAIN_CLASS_NAME" value="com.tpcom_apr.service.CntrinsertServiceTests" />
-      <option name="METHOD_NAME" value="testCntrinsertServiceMapperCallOK" />
+      <option name="MAIN_CLASS_NAME" value="com.tpcom_apr.service.OnmsgchkServiceTests" />
+      <option name="METHOD_NAME" value="testOnmsgchkServiceErrorMchtNoNotInput" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MeminfqryServiceTests.testMeminfqryServiceDataNotFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OnmsgchkServiceTests.testOnmsgchkServiceErrorOrgnDealDyNotInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="nxmile_approval" />
       <extension name="coverage">
         <pattern>
@@ -865,14 +799,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.tpcom_apr.service" />
-      <option name="MAIN_CLASS_NAME" value="com.tpcom_apr.service.MeminfqryServiceTests" />
-      <option name="METHOD_NAME" value="testMeminfqryServiceDataNotFound" />
+      <option name="MAIN_CLASS_NAME" value="com.tpcom_apr.service.OnmsgchkServiceTests" />
+      <option name="METHOD_NAME" value="testOnmsgchkServiceErrorOrgnDealDyNotInput" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MempntuptServiceTests.testMempntuptServiceMapperCallOk" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OnmsgchkServiceTests.testOnmsgchkServiceErrorTrcNoNotInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="nxmile_approval" />
       <extension name="coverage">
         <pattern>
@@ -881,14 +815,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.tpcom_apr.service" />
-      <option name="MAIN_CLASS_NAME" value="com.tpcom_apr.service.MempntuptServiceTests" />
-      <option name="METHOD_NAME" value="testMempntuptServiceMapperCallOk" />
+      <option name="MAIN_CLASS_NAME" value="com.tpcom_apr.service.OnmsgchkServiceTests" />
+      <option name="METHOD_NAME" value="testOnmsgchkServiceErrorTrcNoNotInput" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MempntuptServiceTests.testMempntuptServiceSyncCallOk" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OnmsgchkServiceTests.testOnmsgchkServiceInnerMethodCallOK" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="nxmile_approval" />
       <extension name="coverage">
         <pattern>
@@ -897,8 +831,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.tpcom_apr.service" />
-      <option name="MAIN_CLASS_NAME" value="com.tpcom_apr.service.MempntuptServiceTests" />
-      <option name="METHOD_NAME" value="testMempntuptServiceSyncCallOk" />
+      <option name="MAIN_CLASS_NAME" value="com.tpcom_apr.service.OnmsgchkServiceTests" />
+      <option name="METHOD_NAME" value="testOnmsgchkServiceInnerMethodCallOK" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OnmsgchkServiceTests.testOnmsgchkServiceOkSynccallOK" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="nxmile_approval" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tpcom_apr.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.tpcom_apr.service" />
+      <option name="MAIN_CLASS_NAME" value="com.tpcom_apr.service.OnmsgchkServiceTests" />
+      <option name="METHOD_NAME" value="testOnmsgchkServiceOkSynccallOK" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -978,11 +928,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MempntuptServiceTests.testMempntuptServiceMapperCallOk" />
-        <item itemvalue="JUnit.Apr_dealtr_trnMapperTests.apr_dealtr_trn_tpcom_vf2001Tests" />
-        <item itemvalue="JUnit.MempntuptServiceTests.testMempntuptServiceSyncCallOk" />
-        <item itemvalue="JUnit.CntrinsertServiceTests.testCntrinsertServiceMapperCallOK" />
-        <item itemvalue="JUnit.MeminfqryServiceTests.testMeminfqryServiceDataNotFound" />
+        <item itemvalue="JUnit.OnmsgchkServiceTests.testOnmsgchkServiceErrorOrgnDealDyNotInput" />
+        <item itemvalue="JUnit.OnmsgchkServiceTests.testOnmsgchkServiceErrorMchtNoNotInput" />
+        <item itemvalue="JUnit.OnmsgchkServiceTests.testOnmsgchkServiceErrorTrcNoNotInput" />
+        <item itemvalue="JUnit.OnmsgchkServiceTests.testOnmsgchkServiceInnerMethodCallOK" />
+        <item itemvalue="JUnit.OnmsgchkServiceTests.testOnmsgchkServiceOkSynccallOK" />
       </list>
     </recent_temporary>
   </component>
@@ -1073,43 +1023,44 @@
       <workItem from="1551232094841" duration="6947000" />
       <workItem from="1551314510089" duration="7145000" />
       <workItem from="1551663602368" duration="18277000" />
+      <workItem from="1551746234074" duration="3597000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MeminfqryServiceTests_testMeminfqryServiceMapperCallOk - 2019.03.04 at 18h 04m 09s.xml">
-      <configuration name="MeminfqryServiceTests.testMeminfqryServiceMapperCallOk" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MeminfqryServiceTests_testMeminfqryServiceDataNotFound - 2019.03.04 at 18h 06m 42s.xml">
-      <configuration name="MeminfqryServiceTests.testMeminfqryServiceDataNotFound" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MeminfqryServiceTests_testMeminfqryServiceDataNotFound - 2019.03.04 at 18h 07m 58s.xml">
-      <configuration name="MeminfqryServiceTests.testMeminfqryServiceDataNotFound" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CntrinsertServiceTests_testCntrinsertServiceMapperCallOK - 2019.03.04 at 18h 08m 52s.xml">
-      <configuration name="CntrinsertServiceTests.testCntrinsertServiceMapperCallOK" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MempntuptServiceTests_testMempntuptServiceSyncCallOk - 2019.03.04 at 18h 18m 11s.xml">
-      <configuration name="MempntuptServiceTests.testMempntuptServiceSyncCallOk" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MempntuptServiceTests_testMempntuptServiceMapperCallOk - 2019.03.04 at 18h 18m 30s.xml">
-      <configuration name="MempntuptServiceTests.testMempntuptServiceMapperCallOk" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MempntuptServiceTests_testMempntuptServiceMapperCallOk - 2019.03.04 at 18h 19m 21s.xml">
-      <configuration name="MempntuptServiceTests.testMempntuptServiceMapperCallOk" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Apr_dealtr_trnMapperTests_apr_dealtr_trn_tpcom_vf2001Tests - 2019.03.04 at 18h 21m 16s.xml">
-      <configuration name="Apr_dealtr_trnMapperTests.apr_dealtr_trn_tpcom_vf2001Tests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MempntuptServiceTests_testMempntuptServiceMapperCallOk - 2019.03.04 at 18h 22m 29s.xml">
-      <configuration name="MempntuptServiceTests.testMempntuptServiceMapperCallOk" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="MempntuptServiceTests_testMempntuptServiceMapperCallOk - 2019.03.04 at 18h 26m 58s.xml">
       <configuration name="MempntuptServiceTests.testMempntuptServiceMapperCallOk" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="OnmsgchkServiceTests_testOnmsgchkServiceOkSynccallOK - 2019.03.05 at 10h 01m 47s.xml">
+      <configuration name="OnmsgchkServiceTests.testOnmsgchkServiceOkSynccallOK" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OnmsgchkServiceTests_testOnmsgchkServiceOkSynccallOK - 2019.03.05 at 10h 02m 05s.xml">
+      <configuration name="OnmsgchkServiceTests.testOnmsgchkServiceOkSynccallOK" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OnmsgchkServiceTests_testOnmsgchkServiceInnerMethodCallOK - 2019.03.05 at 10h 02m 19s.xml">
+      <configuration name="OnmsgchkServiceTests.testOnmsgchkServiceInnerMethodCallOK" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OnmsgchkServiceTests_testOnmsgchkServiceInnerMethodCallOK - 2019.03.05 at 10h 56m 26s.xml">
+      <configuration name="OnmsgchkServiceTests.testOnmsgchkServiceInnerMethodCallOK" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OnmsgchkServiceTests_testOnmsgchkServiceInnerMethodCallOK - 2019.03.05 at 10h 58m 44s.xml">
+      <configuration name="OnmsgchkServiceTests.testOnmsgchkServiceInnerMethodCallOK" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OnmsgchkServiceTests_testOnmsgchkServiceErrorTrcNoNotInput - 2019.03.05 at 10h 58m 57s.xml">
+      <configuration name="OnmsgchkServiceTests.testOnmsgchkServiceErrorTrcNoNotInput" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OnmsgchkServiceTests_testOnmsgchkServiceErrorMchtNoNotInput - 2019.03.05 at 11h 00m 00s.xml">
+      <configuration name="OnmsgchkServiceTests.testOnmsgchkServiceErrorMchtNoNotInput" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OnmsgchkServiceTests_testOnmsgchkServiceErrorOrgnDealDyNotInput - 2019.03.05 at 11h 00m 09s.xml">
+      <configuration name="OnmsgchkServiceTests.testOnmsgchkServiceErrorOrgnDealDyNotInput" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OnmsgchkServiceTests_testOnmsgchkServiceErrorOrgnDealDyNotInput - 2019.03.05 at 11h 02m 26s.xml">
+      <configuration name="OnmsgchkServiceTests.testOnmsgchkServiceErrorOrgnDealDyNotInput" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="540048000" />
+    <option name="totallyTimeSpent" value="543645000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1124,7 +1075,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49916804" visible="true" weight="0.2260128" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49916804" visible="true" weight="0.22814499" />
       <window_info id="Structure" order="1" sideWeight="0.5005574" side_tool="true" weight="0.25053304" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1288,13 +1239,6 @@
             <element signature="e#1473#1499#0" expanded="true" />
             <element signature="e#1552#1578#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/OnmsgchkServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="72" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -1485,34 +1429,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/tpcom_apr/service/MeminfqryServiceTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/tpcom_apr/service/GetaprvnoServiceTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="48" column="136" lean-forward="true" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="136" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/tpcom_apr/service/CntrinsertServiceTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
-          <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/CntrinsertServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="55" column="26" lean-forward="true" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
+        <state relative-caret-position="918">
+          <caret line="66" selection-start-line="66" selection-end-line="66" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1521,8 +1441,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/tpcom_apr/mapper/Apr_dealtr_trnMapperTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="50" column="20" lean-forward="true" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
+        <state relative-caret-position="738">
+          <caret line="50" column="20" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -1533,6 +1453,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/CntrinsertServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="666">
+          <caret line="55" column="26" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/tpptu/controller/HomeControllerTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -1540,31 +1470,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/tpcom_apr/service/OritrqryServiceTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="742">
-          <caret line="98" column="11" lean-forward="true" selection-start-line="98" selection-start-column="11" selection-end-line="98" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/tpcom_apr/service/OnmsgchkServiceTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="160" column="7" selection-start-line="34" selection-start-column="6" selection-end-line="160" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/MempntuptServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="686">
+        <state relative-caret-position="1044">
           <caret line="81" selection-start-line="81" selection-end-line="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/tpcom_apr/service/GetaprvnoServiceTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="478">
+          <caret line="48" column="136" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="136" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/tpcom_apr/service/MeminfqryServiceTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="63" selection-start-line="63" selection-end-line="63" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/tpcom_apr/service/MempntuptServiceTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-181">
-          <caret line="76" column="84" selection-start-line="76" selection-start-column="84" selection-end-line="76" selection-end-column="84" />
+        <state relative-caret-position="1494">
+          <caret line="106" selection-start-line="106" selection-end-line="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/OnmsgchkServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/tpcom_apr/service/OnmsgchkServiceTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/tpcom_apr/service/OritrqryServiceTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="51" column="54" lean-forward="true" selection-start-line="51" selection-start-column="54" selection-end-line="51" selection-end-column="54" />
         </state>
       </provider>
     </entry>
