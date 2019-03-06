@@ -70,7 +70,8 @@ public class GetaprvnoServiceImpl implements GetaprvnoService {
                         new SimpleDateFormat("HHmmss").format(new Date()),
                         inputWrapperVO.getHeader().getTrc_no(),
                         inputWrapperVO.getHeader().getTelgrm_fg(),
-                        "0000",
+                        "00",
+                        "00",
                         ""));
         outputWrapperVO.setBody(outputVO);
 

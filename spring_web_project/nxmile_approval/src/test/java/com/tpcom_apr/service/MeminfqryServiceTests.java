@@ -50,7 +50,7 @@ public class MeminfqryServiceTests {
 
         /* Stub 선언 */
         when(inputWrapperVO.getBody()).thenReturn(inputVO);
-        when(inputWrapperVO.getHeader()).thenReturn(new CustomizeHeaderVO("K411","5004","20190301","000000","1111111111","ON","00",""));
+        when(inputWrapperVO.getHeader()).thenReturn(new CustomizeHeaderVO("K411","5004","20190301","000000","1111111111","ON","00","00",""));
         when(mapper.crd_master_mst_tpcom_vs2005(any()))
                 .thenReturn(new Crd_master_mst_tpcom_vs2005OutputVO(
                         "111111111","O11111","","","","","","","","",

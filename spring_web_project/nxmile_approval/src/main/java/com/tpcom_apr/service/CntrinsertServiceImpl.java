@@ -2,6 +2,7 @@ package com.tpcom_apr.service;
 
 import com.commons.domain.CustomizeHeaderVO;
 import com.commons.exception.ValidException;
+import com.commons.service.CommonFunction;
 import com.tpcom_apr.domain.service.CntrinsertInputVO;
 import com.tpcom_apr.domain.service.CntrinsertOutputVO;
 import com.tpcom_apr.domain.service.wrapper.CntrinsertInputWrapperVO;
@@ -15,7 +16,6 @@ import lombok.extern.log4j.Log4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.util.StringUtils;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -39,25 +39,23 @@ public class CntrinsertServiceImpl implements CntrinsertService {
         header = inputWrapperVO.getHeader();
         inputVO = inputWrapperVO.getBody();
 
-        try {
-            int result = apr_dealtr_trnMapper.apr_dealtr_trn_tpcom_ei2001(
+//        try {
+            int result1 = apr_dealtr_trnMapper.apr_dealtr_trn_tpcom_ei2001(
                     new Apr_dealtr_trn_tpcom_ei2001InputVO(inputVO));
-            if (result <= 0) {
+            if (result1 <= 0) {
                 throw new ValidException("9080", "취소 거래내역 생성 에러");
             }
-        } catch (Exception e) {
-//            log.info("error message----------------------------");
-//            e.getStackTrace();
-            throw new ValidException("9080", "취소 거래내역 생성 에러. 상세 : " + e.getCause());
-        }
+//        } catch (Exception e) {
+//            throw new ValidException("9080", "취소 거래내역 생성 에러. 상세 : " + e.getCause());
+//        }
 
         String cnclTyp;
-        if (!StringUtils.isEmpty(inputVO.getAns_cd()) && inputVO.getAns_cd().equals("60")) {
+        if (CommonFunction.isStringEquals(inputVO.getAns_cd(), "60")) {
             cnclTyp = "2";
         } else {
             cnclTyp = "1";
         }
-        try {
+//        try {
             int result = apr_dealtr_trnMapper.apr_dealtr_trn_tpcom_eu2001(
                     new Apr_dealtr_trn_tpcom_eu2001InputVO(
                             cnclTyp,
@@ -71,7 +69,6 @@ public class CntrinsertServiceImpl implements CntrinsertService {
                             inputVO.getOrgn_aprv_no(),
                             inputVO.getCrd_no()));
             if (result > 0) {
-
                 outputWrapperVO = new CntrinsertOutputWrapperVO();
                 outputWrapperVO.setHeader(
                         new CustomizeHeaderVO(
@@ -81,7 +78,8 @@ public class CntrinsertServiceImpl implements CntrinsertService {
                                 new SimpleDateFormat("HHmmss").format(new Date()),
                                 inputWrapperVO.getHeader().getTrc_no(),
                                 inputWrapperVO.getHeader().getTelgrm_fg(),
-                                "0000",
+                                "00",
+                                "00",
                                 ""));
 
                 outputVO = new CntrinsertOutputVO(result);
@@ -89,9 +87,9 @@ public class CntrinsertServiceImpl implements CntrinsertService {
             } else {
                 throw new ValidException("9080", "원거래내역 갱신 에러");
             }
-        } catch (Exception e) {
-            throw new ValidException("9080", "원거래내역 갱신 에러. 상세 : " + e.getCause());
-        }
+//        } catch (Exception e) {
+//            throw new ValidException("9080", "원거래내역 갱신 에러. 상세 : " + e.getCause());
+//        }
 
 
         log.info("거래내역은 금방 갱신되지유?????" + new SimpleDateFormat("yyyy/MM/dd/ HH:mm:ss").format(System.currentTimeMillis()));

@@ -1,6 +1,7 @@
 package com.tpcom_apr.service;
 
 
+import com.commons.domain.CustomizeHeaderVO;
 import com.commons.exception.ValidException;
 import com.tpcom_apr.domain.service.wrapper.OritrqryInputWrapperVO;
 import com.tpcom_apr.domain.service.wrapper.OritrqryOutputWrapperVO;
@@ -33,7 +34,6 @@ public class OritrqryServiceTests {
     }
 
     @Test
-    @Ignore
     public void testOritrqryServiceSyncCallOk() {
         /* Mock Object 선언 */
         HttpHeaders headers = mock(HttpHeaders.class);
@@ -42,20 +42,22 @@ public class OritrqryServiceTests {
         /* 검증 */
         OritrqryOutputWrapperVO output = service.syncCall(new OritrqryInputWrapperVO());
         verify(service).syncCall(any());
-
     }
 
     @Test
-    @Ignore
     public void testOritrqryServiceInnerMethodCallOk() {
         /* Mock Object 선언 */
-        HttpHeaders headers = mock(HttpHeaders.class);
+        CustomizeHeaderVO header = mock(CustomizeHeaderVO.class);
         OritrqryService service = spy(OritrqryServiceImpl.class);
+        OritrqryInputWrapperVO inputWrapperVO = mock(OritrqryInputWrapperVO.class);
         OritrqryInputVO input = mock(OritrqryInputVO.class);
         Apr_dealtr_trnMapper mapper = mock(Apr_dealtr_trnMapper.class);
         ((OritrqryServiceImpl) service).setApr_dealtr_trnMapper(mapper);
 
         /* Stub 선언 */
+        when(inputWrapperVO.getHeader()).thenReturn(header);
+        when(inputWrapperVO.getBody()).thenReturn(input);
+        when(inputWrapperVO.getHeader().getTelgrm_no()).thenReturn("K410");
         when(input.getSvc_modu_id()).thenReturn("ZPTUTXPTC0001");
         when(input.getAns_cd()).thenReturn("");
         when(mapper.apr_dealtr_trn_tpcom_vs2002(any()))
@@ -68,40 +70,42 @@ public class OritrqryServiceTests {
                         ,"","","","","","","","",0D,0L
                         ,"","","","","","","","","",0L));
         /* 검증 */
-        ResponseEntity<OritrqryOutputVO> output = service.syncCall(headers, input);
+        OritrqryOutputWrapperVO output = service.syncCall(inputWrapperVO);
         verify(service).changeOrgnAprvNo(any(), any());
-        verify(service).sqlTypeSetting(any(), any());
+        verify(service).sqlTypeSetting(any());
         verify(mapper).apr_dealtr_trn_tpcom_vs2002(any());
     }
 
     @Test
-    @Ignore
     public void testOritrqryServiceDataNotFoundError() {
         /* Mock Object 선언 */
-        HttpHeaders headers = mock(HttpHeaders.class);
+        CustomizeHeaderVO header = mock(CustomizeHeaderVO.class);
         OritrqryService service = spy(OritrqryServiceImpl.class);
+        OritrqryInputWrapperVO inputWrapperVO = mock(OritrqryInputWrapperVO.class);
         OritrqryInputVO input = mock(OritrqryInputVO.class);
         Apr_dealtr_trnMapper mapper = mock(Apr_dealtr_trnMapper.class);
         ((OritrqryServiceImpl) service).setApr_dealtr_trnMapper(mapper);
 
         /* Stub 선언 */
+        when(inputWrapperVO.getHeader()).thenReturn(header);
+        when(inputWrapperVO.getBody()).thenReturn(input);
         when(input.getSvc_modu_id()).thenReturn("ZPTUTXPTC0001");
         when(input.getAns_cd()).thenReturn("");
         when(mapper.apr_dealtr_trn_tpcom_vs2002(any()))
                 .thenReturn(null);
         /* 검증 */
         try {
-            ResponseEntity<OritrqryOutputVO> output = service.syncCall(headers, input);
+            OritrqryOutputWrapperVO output = service.syncCall(inputWrapperVO);
         } catch (ValidException e) {
             if (e.getAns_cd().equals("7777")) {
                log.info("에러코드 : " + e.getAns_cd() + ". 에러 검증 완료");
             } else {
-                throw new ValidException(headers, e.getAns_cd(), e.getAns_msg());
+                throw new ValidException(e.getAns_cd(), e.getAns_msg());
             }
         }
 
         verify(service).changeOrgnAprvNo(any(), any());
-        verify(service).sqlTypeSetting(any(), any());
+        verify(service).sqlTypeSetting(any());
         verify(mapper).apr_dealtr_trn_tpcom_vs2002(any());
     }
 

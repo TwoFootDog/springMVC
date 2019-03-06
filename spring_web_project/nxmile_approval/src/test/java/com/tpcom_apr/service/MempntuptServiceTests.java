@@ -1,5 +1,6 @@
 package com.tpcom_apr.service;
 
+import com.commons.domain.CustomizeHeaderVO;
 import com.commons.exception.ValidException;
 import com.tpcom_apr.domain.service.MempntuptInputVO;
 import com.tpcom_apr.domain.service.MempntuptOutputVO;
@@ -47,13 +48,16 @@ public class MempntuptServiceTests {
     public void testMempntuptServiceMapperCallOk() {
         /* Mock object 선언 */
         MempntuptService service = spy(MempntuptServiceImpl.class);
+        CustomizeHeaderVO header = mock(CustomizeHeaderVO.class);
         MempntuptInputWrapperVO inputWrapperVO = mock(MempntuptInputWrapperVO.class);
         MempntuptInputVO inputVO = mock(MempntuptInputVO.class);
         Mbr_mempnt_trnMapper mapper = mock(Mbr_mempnt_trnMapper.class);
         ((MempntuptServiceImpl) service).setMbr_mempnt_trnMapper(mapper);
 
         /* stub 선언*/
+        when(inputWrapperVO.getHeader()).thenReturn(header);
         when(inputWrapperVO.getBody()).thenReturn(inputVO);
+        when(header.getTelgrm_no()).thenReturn("K410");
         when(inputVO.getCur_pnt()).thenReturn(0L);
         when(inputVO.getAvl_pnt()).thenReturn(0L);
         when(inputVO.getOrgan_cd()).thenReturn("950S");

@@ -14,6 +14,9 @@ public class CustomizeHeaderVO {
     private String send_tm;
     private String trc_no;
     private String telgrm_fg;
-    private String ans_cd;
+    private String ans_cd1;
+    private String ans_cd2;
     private String message;
+
+
 }

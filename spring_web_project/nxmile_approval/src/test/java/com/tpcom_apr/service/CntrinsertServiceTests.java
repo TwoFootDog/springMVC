@@ -1,5 +1,6 @@
 package com.tpcom_apr.service;
 
+import com.commons.domain.CustomizeHeaderVO;
 import com.commons.exception.ValidException;
 import com.tpcom_apr.domain.service.CntrinsertInputVO;
 import com.tpcom_apr.domain.service.wrapper.CntrinsertInputWrapperVO;
@@ -40,14 +41,18 @@ public class CntrinsertServiceTests {
     public void testCntrinsertServiceMapperCallOK() {
         /* Mock Object 선언 */
         CntrinsertService service = spy(CntrinsertServiceImpl.class);
+        CustomizeHeaderVO header = mock(CustomizeHeaderVO.class);
         CntrinsertInputWrapperVO inputWrapperVO = mock(CntrinsertInputWrapperVO.class);
         CntrinsertInputVO inputVO = mock(CntrinsertInputVO.class);
         Apr_dealtr_trnMapper mapper = mock(Apr_dealtr_trnMapper.class);
         ((CntrinsertServiceImpl) service).setApr_dealtr_trnMapper(mapper);
 
         /* Stub 선언 */
-//        when(inputWrapperVO.getBody()).thenReturn(inputVO);
+        when(inputWrapperVO.getHeader()).thenReturn(header);
+        when(inputWrapperVO.getBody()).thenReturn(inputVO);
+        when(inputWrapperVO.getHeader().getTelgrm_no()).thenReturn("K410");
         when(mapper.apr_dealtr_trn_tpcom_ei2001(any())).thenReturn(1);
+        when(mapper.apr_dealtr_trn_tpcom_eu2001(any())).thenReturn(1);
 
 
         /* 서비스 호출 */

@@ -46,7 +46,7 @@ public class GetaprvnoServiceTests {
         ((GetaprvnoServiceImpl) service).setAprv_no_dy_tmMapper(mapper);
 
         /* stub 설정*/
-        when(inputWrapperVO.getHeader()).thenReturn(new CustomizeHeaderVO("K411","5004","20190301","000000","1111111111","ON","00",""));
+        when(inputWrapperVO.getHeader()).thenReturn(new CustomizeHeaderVO("K411","5004","20190301","000000","1111111111","ON","00","00",""));
         when(mapper.aprv_dy_tm_tpcom_vs2001()).thenReturn(new Aprv_dy_tm_tpcom_vs2001OutputVO("20190130","170000"));
         when(mapper.aprv_no_ocboff_tpcom_vs2001()).thenReturn(new Aprv_no_ocboff_tpcom_vs_2001OutputVO("F88888888"));
 

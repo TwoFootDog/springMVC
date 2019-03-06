@@ -4,6 +4,7 @@ import com.tpcom_apr.domain.service.CntrinsertInputVO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.util.StringUtils;
 
 @Data
 @AllArgsConstructor
@@ -177,6 +178,9 @@ public class Apr_dealtr_trn_tpcom_ei2001InputVO {
 
     public String getRegr_id(String svcModuId) {
         String regrId = "_";
+        if (StringUtils.isEmpty(svcModuId)) {
+            svcModuId = "svcModuIdisEmpty";
+        }
         return regrId.concat(svcModuId.substring(0,4)).concat(svcModuId.substring(6,9));
     }
 }

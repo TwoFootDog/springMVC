@@ -2,6 +2,7 @@ package com.tpcom_apr.service;
 
 import com.commons.domain.CustomizeHeaderVO;
 import com.commons.exception.ValidException;
+import com.commons.service.CommonFunction;
 import com.tpcom_apr.domain.service.OnmsgchkInputVO;
 import com.tpcom_apr.domain.service.OnmsgchkOutputVO;
 import com.tpcom_apr.domain.service.wrapper.OnmsgchkInputWrapperVO;
@@ -40,7 +41,6 @@ public class OnmsgchkServiceImpl implements OnmsgchkService {
 
 
 
-
     /* 온라인 전문 유효성 체크(BM_COM_ONMSGCHK) */
     public OnmsgchkOutputWrapperVO syncCall(OnmsgchkInputWrapperVO inputWrapperVO) {
 
@@ -57,7 +57,6 @@ public class OnmsgchkServiceImpl implements OnmsgchkService {
                                 inputVO.getSvc_modu_id(),
                                 inputVO.getTelgrm_fg()));
 
-
         /* rul_svcavl_con_tpcom_vs2001 결과값 존재 시 OnmsgchkOutputVO(온라인 전문 유효성 체크) output 값 셋팅. 미 존재 시 7777 에러 발생 */
         if (!StringUtils.isEmpty(rul_svcavl_con_tpcom_vs2001OutputVO)) {
             outputWrapperVO = new OnmsgchkOutputWrapperVO();
@@ -69,7 +68,8 @@ public class OnmsgchkServiceImpl implements OnmsgchkService {
                             new SimpleDateFormat("HHmmss").format(new Date()),
                             inputWrapperVO.getHeader().getTrc_no(),
                             inputWrapperVO.getHeader().getTelgrm_fg(),
-                            "0000",
+                            "00",
+                            "00",
                             ""));
             outputVO = new OnmsgchkOutputVO(
                     rul_svcavl_con_tpcom_vs2001OutputVO.getMbrsh_pgm_id(),
@@ -86,19 +86,18 @@ public class OnmsgchkServiceImpl implements OnmsgchkService {
 
 
         /* 취소전문이 아닌경우와 취소전문인 경우를 구분하여 필수값 체크 */
-        if (!StringUtils.isEmpty(rul_svcavl_con_tpcom_vs2001OutputVO.getCncl_yn()) &&
-                rul_svcavl_con_tpcom_vs2001OutputVO.getCncl_yn().equals("N")) {     // 취소 전문이 아닌 경우
-            if (inputVO.getMcht_biz_no().length() != 10) {
+        if (CommonFunction.isStringEquals(rul_svcavl_con_tpcom_vs2001OutputVO.getCncl_yn(), "N")) {     // 취소 전문이 아닌 경우
+            if (!CommonFunction.isStringLengthEquals(inputVO.getMcht_biz_no(), 10)) {
                 throw new ValidException("3311", "사업자번호 미입력 또는 길이 오류 [" + inputVO.getMcht_biz_no() + "]");
             }
         } else {    // 취소 전문인 경우
             if (StringUtils.isEmpty(inputVO.getOrgn_deal_dy())) {
                 throw new ValidException("7745", "원거래일자 미입력");
             }
-            if ((StringUtils.isEmpty(inputVO.getOrgn_deal_aprv_no()) && StringUtils.isEmpty(inputVO.getOrgn_deal_coopco_aprv_no())) &&
-                    ((StringUtils.isEmpty(inputVO.getAns_cd1()) || (!StringUtils.isEmpty(inputVO.getAns_cd1())) &&
-                            (!inputVO.getAns_cd1().equals("60") &&
-                                    !inputVO.getAns_cd1().equals("52"))))) {
+            if ((StringUtils.isEmpty(inputVO.getOrgn_deal_aprv_no())
+                    && StringUtils.isEmpty(inputVO.getOrgn_deal_coopco_aprv_no())) &&
+                    CommonFunction.isAllStringNotEquals(inputVO.getAns_cd1(), "60", "52")
+                ) {
                 throw new ValidException("7746", "원거래승인번호/원거래제휴사승인번호 미입력");
             }
             if (StringUtils.isEmpty(inputVO.getCncl_req_fg())) {

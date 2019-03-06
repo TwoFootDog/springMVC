@@ -56,7 +56,8 @@ public class MeminfqryServiceImpl implements MeminfqryService {
                             new SimpleDateFormat("HHmmss").format(new Date()),
                             inputWrapperVO.getHeader().getTrc_no(),
                             inputWrapperVO.getHeader().getTelgrm_fg(),
-                            "0000",
+                            "00",
+                            "00",
                             ""));
             outputVO = new MeminfqryOutputVO(crd_master_mst_tpcom_vs2005OutputVO);
             outputWrapperVO.setBody(outputVO);

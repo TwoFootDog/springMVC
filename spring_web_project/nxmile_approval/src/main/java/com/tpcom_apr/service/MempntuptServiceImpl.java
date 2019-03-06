@@ -28,8 +28,8 @@ import static java.lang.Thread.sleep;
 
 @Service
 @Log4j
-//@Transactional
-//@Async
+@Transactional
+@Async
 public class MempntuptServiceImpl implements MempntuptService {
 
     @Setter(onMethod_ = {@Autowired})
@@ -46,12 +46,12 @@ public class MempntuptServiceImpl implements MempntuptService {
 
         header = inputWrapperVO.getHeader();
         inputVO = inputWrapperVO.getBody();
-//        try {
-//            sleep(10000);
+        try {
+            sleep(4000);
             log.info("포인트 업데이트는 좀 늦게 되지유????" + new SimpleDateFormat("yyyy/MM/dd/ HH:mm:ss").format(System.currentTimeMillis()));
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         try {
             int result = mbr_mempnt_trnMapper.mbr_mempnt_trn_tpcom_ei2001(
                     new Mbr_mempnt_trn_tpcom_ei2001InputVO(
@@ -71,7 +71,8 @@ public class MempntuptServiceImpl implements MempntuptService {
                                 new SimpleDateFormat("HHmmss").format(new Date()),
                                 inputWrapperVO.getHeader().getTrc_no(),
                                 inputWrapperVO.getHeader().getTelgrm_fg(),
-                                "0000",
+                                "00",
+                                "00",
                                 ""));
                 outputVO = new MempntuptOutputVO(result);
                 outputWrapperVO.setBody(outputVO);
