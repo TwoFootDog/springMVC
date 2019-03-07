@@ -1,45 +1,44 @@
 package com.commons.aop;
 
 import com.commons.domain.CustomizeHeaderVO;
+import com.commons.exception.ValidException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.tpptu.domain.ZptutxptcOutputVO;
+import lombok.Setter;
 import lombok.extern.log4j.Log4j;
+import net.minidev.json.JSONObject;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.ResponseEntity;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import javax.servlet.http.HttpServletRequest;
-import java.util.Enumeration;
+
 
 @Aspect
 @Log4j
 @Component
 public class HeaderValidChkAspect {
 
-    @Pointcut("execution(* com.*.service.Z*.*(..)) && args(request, object)")
-    private void publicTarget(HttpHeaders request, Object object) {
+    @Setter(onMethod_ = {@Autowired})
+    private CustomizeHeaderVO header;
+
+    @Pointcut("execution(* com.*.service.Z*.*(..))")
+    private void publicTarget() {
     }
-    @Around("publicTarget(request, object)")
-    public Object headerValidCheck(ProceedingJoinPoint joinPoint, HttpHeaders request, Object object) throws Throwable {
+    @Around("publicTarget()")
+    public Object headerValidCheck(ProceedingJoinPoint joinPoint) throws Throwable {
         Object result = null;
 
         try {
-            result = joinPoint.proceed(new Object[] {request, object});
+            result = joinPoint.proceed();
 
-            log.info("aop result =============================> " + request);
+        } catch (ValidException e) {
+            throw new ValidException(e.getAns_cd(), e.getAns_msg());
         } catch (Exception e) {
-//            e.printStackTrace();
-//            ResponseEntity<?> result1 = (ResponseEntity<?>)result;
-////            log.info("aop result =============================> " + result1);
-////            log.info("aop request =============================> " + request);
-            log.info("error message====================>" + e.getMessage());
-            log.info("error stack====================>" + e.getStackTrace());
-            log.info("qq   ");
-
-
+            e.getStackTrace();
+            throw new ValidException("9999", "시스템실 연락바람");
         }
 
         return result;

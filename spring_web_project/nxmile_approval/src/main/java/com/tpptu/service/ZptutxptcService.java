@@ -18,7 +18,9 @@ import lombok.extern.log4j.Log4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.servlet.support.RequestContext;
 
+import javax.inject.Inject;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
@@ -53,6 +55,8 @@ public class ZptutxptcService {
     private CntrinsertInputWrapperVO cntrinsertInputWrapperVO;
 
     /* 서비스 입력 custom header*/
+    /* header를 bean으로 등록한 이유는 ExceptionHandeler에서 header를 사용하기 위함 */
+    @Setter(onMethod_ = {@Autowired})
     private CustomizeHeaderVO header;
 
     /* 서비스 입력전문(body)*/
@@ -73,7 +77,9 @@ public class ZptutxptcService {
     public ZptutxptcOutputWrapperVO syncCall(ZptutxptcInputWrapperVO inputWrapperVO) {
 
         int bodyCount = 0;
-        header = inputWrapperVO.getHeader();
+
+        header.set(inputWrapperVO.getHeader()); // 해더 셋팅
+
         outputWrapperVO = new ZptutxptcOutputWrapperVO();   // 사용취소 출력객체 생성
 
         for (ZptutxptcInputVO inputVO : inputWrapperVO.getBody()) {
