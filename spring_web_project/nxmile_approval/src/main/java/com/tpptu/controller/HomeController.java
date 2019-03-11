@@ -12,6 +12,9 @@ import org.springframework.http.MediaType;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.ServletRequest;
+import javax.servlet.http.HttpServletRequest;
+
 @RestController
 //@AllArgsConstructor
 @Log4j
@@ -45,7 +48,9 @@ public class HomeController {
     @PostMapping(value = "/zptutxptc",
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_JSON_UTF8_VALUE})
-    public ZptutxptcOutputWrapperVO zptutcptc(@RequestBody ZptutxptcInputWrapperVO inputVO) {
+    public ZptutxptcOutputWrapperVO zptutcptc(@RequestBody ZptutxptcInputWrapperVO inputVO, ServletRequest servletRequest, HttpServletRequest httpServletRequest) {
+        log.info("controller httpservletrequest------------------------------------" + httpServletRequest.getAttribute("header"));
+        log.info("controller servletrequest------------------------------------" + servletRequest.getAttribute("header"));
         return zptutxptcService.syncCall(inputVO);
 
     }

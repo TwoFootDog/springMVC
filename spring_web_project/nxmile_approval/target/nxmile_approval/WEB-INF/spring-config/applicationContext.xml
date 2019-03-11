@@ -5,7 +5,10 @@
        xmlns:context="http://www.springframework.org/schema/context"
        xmlns:tx="http://www.springframework.org/schema/tx"
        xmlns:task="http://www.springframework.org/schema/task" xmlns:aop="http://www.springframework.org/schema/aop"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd   http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+       xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd   http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd http://www.springframework.org/schema/data/mongo http://www.springframework.org/schema/data/mongo/spring-mongo.xsd http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
     <!-- HikariCP connection pool bean 셋팅-->
     <bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
@@ -36,6 +39,7 @@
     <context:component-scan base-package="com.tpcom_apr.service" />
     <context:component-scan base-package="com.commons.aop" />
     <context:component-scan base-package="com.commons.exception" />
+    <context:component-scan base-package="com.commons.dao" />
 
     <!-- 요청 해더를 bean으로 등록-->
     <bean id="requestHeader" class="com.commons.domain.CustomizeHeaderVO"/>
@@ -52,14 +56,29 @@
     <!-- property 적용-->
     <context:property-placeholder location="classpath:config/database.properties" />
 
+    <!-- -Async 처리 -->
+    <task:executor id="asyncExecutor" pool-size="100-1000" queue-capacity="1000" rejection-policy="ABORT" />
+    <task:annotation-driven executor="asyncExecutor"/>
+
+
+    <!-- mongoDB 관련 bean 추가 -->
+    <mongo:mongo-client id="mongoClient" host="localhost" port="27017" />
+    <mongo:db-factory id="mongoDbFactory" dbname="test_db" mongo-ref="mongoClient"/>
+    <bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
+        <constructor-arg name="mongoDbFactory" ref="mongoDbFactory" />
+    </bean>
 
     <!-- blog test용-->
     <context:component-scan base-package="com.test.service" />
     <context:component-scan base-package="com.test.dao" />
     <mybatis-spring:scan base-package="com.test.mapper" />
 
-    <!-- -Async 처리 -->
-    <task:executor id="asyncExecutor" pool-size="100-1000" queue-capacity="1000" rejection-policy="ABORT" />
-    <task:annotation-driven executor="asyncExecutor"/>
+
+    <mvc:annotation-driven>
+        <mvc:message-converters>
+            <bean class="com.commons.util.CustomJsonHttpMessageConverter" />
+        </mvc:message-converters>
+    </mvc:annotation-driven>
+
 
 </beans>

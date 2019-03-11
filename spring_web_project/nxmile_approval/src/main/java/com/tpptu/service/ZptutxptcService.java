@@ -10,19 +10,19 @@ import com.tpcom_apr.domain.sql.Apr_dealtr_trn_tpcom_vf2001OutputVO;
 import com.tpcom_apr.mapper.Apr_dealtr_trnMapper;
 import com.tpcom_apr.service.service_interface.*;
 import com.tpptu.domain.ZptutxptcInputVO;
-import com.tpptu.domain.wrapper.ZptutxptcInputWrapperVO;
 import com.tpptu.domain.ZptutxptcOutputVO;
+import com.tpptu.domain.wrapper.ZptutxptcInputWrapperVO;
 import com.tpptu.domain.wrapper.ZptutxptcOutputWrapperVO;
 import lombok.Setter;
 import lombok.extern.log4j.Log4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.servlet.support.RequestContext;
 
-import javax.inject.Inject;
 import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 @Service
 @Log4j
@@ -296,22 +296,6 @@ public class ZptutxptcService {
         outputWrapperVO.setTotalBodyCnt(bodyCount);
 
         return outputWrapperVO;
-
-//    List<ZptutxptcOutputVO> outputVOList = new ArrayList<ZptutxptcOutputVO>();
-//    outputVO =new
-//
-//    ZptutxptcOutputVO();
-//    outputVO.setMbrsh_pgm_id("A");
-//    outputVO.setAprv_no("F88888888");
-//    outputVO.setAprv_dy("20190228");
-//    outputVO.setCrd_no("1111111111111111");
-//    outputVO.setMcht_no("22222222");
-//    outputVO.setMbr_id("333333333");
-//    outputVOList.add(outputVO);
-//
-//    outputWrapperVO.setBody(outputVOList);
-//    outputWrapperVO.setTotalBodyCnt(1);
-//    return outputWrapperVO;
 }
 
 
