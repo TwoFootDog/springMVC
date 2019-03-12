@@ -1,4 +1,4 @@
-package com.tpcom_apr.service.service_interface;
+package com.tpcom_apr.service.serviceInterface;
 
 import com.tpcom_apr.domain.service.wrapper.CntrinsertInputWrapperVO;
 import com.tpcom_apr.domain.service.wrapper.CntrinsertOutputWrapperVO;

@@ -1,7 +1,6 @@
 package com.commons.aop;
 
-import com.commons.dao.MongoDBDaoImpl;
-import com.commons.domain.CustomizeHeaderVO;
+import com.commons.dao.daoInterface.MongoDBDao;
 import com.commons.exception.ValidException;
 import lombok.Setter;
 import lombok.extern.log4j.Log4j;
@@ -12,24 +11,19 @@ import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-
-
 @Aspect
 @Log4j
 @Component
-public class HeaderValidChkAspect {
+public class InsertDataAspect {
 
     @Setter(onMethod_ = {@Autowired})
-    private CustomizeHeaderVO header;
-
-    @Setter(onMethod_ = {@Autowired})
-    private MongoDBDaoImpl mongoDBDao;
+    private MongoDBDao mongoDBDao;
 
     @Pointcut("execution(* com.*.service.Z*.*(..)) && args(object)")
     private void publicTarget(Object object) {
     }
     @Around("publicTarget(input)")
-    public Object headerValidCheck(ProceedingJoinPoint joinPoint, Object input) throws Throwable {
+    public Object InsertData(ProceedingJoinPoint joinPoint, Object input) throws Throwable {
         Object result = null;
 
         try {

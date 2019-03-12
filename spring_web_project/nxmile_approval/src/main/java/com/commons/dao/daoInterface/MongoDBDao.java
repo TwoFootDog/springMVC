@@ -1,4 +1,4 @@
-package com.commons.dao.inserface;
+package com.commons.dao.daoInterface;
 
 public interface MongoDBDao {
     public void inputDataInsert(Object input);

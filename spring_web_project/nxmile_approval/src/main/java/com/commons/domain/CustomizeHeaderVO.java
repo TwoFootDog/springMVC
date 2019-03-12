@@ -17,16 +17,4 @@ public class CustomizeHeaderVO {
     private String ans_cd1;
     private String ans_cd2;
     private String message;
-
-    public void set(CustomizeHeaderVO header) {
-        this.telgrm_no = header.getTelgrm_no();
-        this.organ_cd = header.getOrgan_cd();
-        this.send_dy = header.getSend_dy();
-        this.send_tm = header.getSend_tm();
-        this.trc_no = header.getTrc_no();
-        this.telgrm_fg = header.getTelgrm_fg();
-        this.ans_cd1 = header.getAns_cd1();
-        this.ans_cd2 = header.getAns_cd2();
-        this.message = header.getMessage();
-    }
 }

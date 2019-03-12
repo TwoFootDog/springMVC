@@ -1,6 +1,6 @@
 package com.commons.dao;
 
-import com.commons.dao.inserface.MongoDBDao;
+import com.commons.dao.daoInterface.MongoDBDao;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
@@ -29,5 +29,4 @@ public class MongoDBDaoImpl implements MongoDBDao {
         outputDataMap.put("outputData", output);
         mongoTemplate.insert(outputDataMap, "output_data");
     }
-
 }

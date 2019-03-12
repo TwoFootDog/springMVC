@@ -10,7 +10,7 @@ import com.tpcom_apr.domain.service.wrapper.CntrinsertOutputWrapperVO;
 import com.tpcom_apr.domain.sql.Apr_dealtr_trn_tpcom_ei2001InputVO;
 import com.tpcom_apr.domain.sql.Apr_dealtr_trn_tpcom_eu2001InputVO;
 import com.tpcom_apr.mapper.Apr_dealtr_trnMapper;
-import com.tpcom_apr.service.service_interface.CntrinsertService;
+import com.tpcom_apr.service.serviceInterface.CntrinsertService;
 import lombok.Setter;
 import lombok.extern.log4j.Log4j;
 import org.springframework.beans.factory.annotation.Autowired;

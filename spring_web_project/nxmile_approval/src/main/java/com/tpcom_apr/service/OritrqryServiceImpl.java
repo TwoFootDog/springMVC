@@ -9,11 +9,10 @@ import com.tpcom_apr.domain.service.wrapper.OritrqryInputWrapperVO;
 import com.tpcom_apr.domain.service.wrapper.OritrqryOutputWrapperVO;
 import com.tpcom_apr.domain.sql.*;
 import com.tpcom_apr.mapper.Apr_dealtr_trnMapper;
-import com.tpcom_apr.service.service_interface.OritrqryService;
+import com.tpcom_apr.service.serviceInterface.OritrqryService;
 import lombok.Setter;
 import lombok.extern.log4j.Log4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 

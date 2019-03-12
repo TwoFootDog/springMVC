@@ -2,25 +2,19 @@ package com.tpcom_apr.service;
 
 import com.commons.domain.CustomizeHeaderVO;
 import com.commons.exception.ValidException;
-import com.tpcom_apr.domain.service.GetaprvnoInputVO;
 import com.tpcom_apr.domain.service.GetaprvnoOutputVO;
 import com.tpcom_apr.domain.service.wrapper.GetaprvnoInputWrapperVO;
 import com.tpcom_apr.domain.service.wrapper.GetaprvnoOutputWrapperVO;
-import com.tpcom_apr.domain.service.wrapper.MeminfqryOutputWrapperVO;
 import com.tpcom_apr.domain.sql.Aprv_dy_tm_tpcom_vs2001OutputVO;
 import com.tpcom_apr.domain.sql.Aprv_no_ocboff_tpcom_vs_2001OutputVO;
 import com.tpcom_apr.mapper.Aprv_no_dy_tmMapper;
-import com.tpcom_apr.service.service_interface.GetaprvnoService;
+import com.tpcom_apr.service.serviceInterface.GetaprvnoService;
 import lombok.Setter;
 import lombok.extern.log4j.Log4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
-import javax.servlet.http.HttpServletRequest;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 

@@ -4,17 +4,15 @@ package com.tpcom_apr.service;
 import com.commons.domain.CustomizeHeaderVO;
 import com.commons.exception.ValidException;
 import com.tpcom_apr.domain.service.MeminfqryInputVO;
-import com.tpcom_apr.domain.service.MeminfqryOutputVO;
 import com.tpcom_apr.domain.service.wrapper.MeminfqryInputWrapperVO;
 import com.tpcom_apr.domain.service.wrapper.MeminfqryOutputWrapperVO;
 import com.tpcom_apr.domain.sql.Crd_master_mst_tpcom_vs2005OutputVO;
 import com.tpcom_apr.mapper.Crd_master_mstMapper;
-import com.tpcom_apr.service.service_interface.MeminfqryService;
+import com.tpcom_apr.service.serviceInterface.MeminfqryService;
 import lombok.extern.log4j.Log4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.http.HttpHeaders;
-import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 

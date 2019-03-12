@@ -2,19 +2,14 @@ package com.tpcom_apr.service;
 
 
 import com.commons.domain.CustomizeHeaderVO;
-import com.tpcom_apr.domain.service.GetaprvnoInputVO;
-import com.tpcom_apr.domain.service.GetaprvnoOutputVO;
 import com.tpcom_apr.domain.service.wrapper.GetaprvnoInputWrapperVO;
 import com.tpcom_apr.domain.service.wrapper.GetaprvnoOutputWrapperVO;
 import com.tpcom_apr.domain.sql.Aprv_dy_tm_tpcom_vs2001OutputVO;
 import com.tpcom_apr.domain.sql.Aprv_no_ocboff_tpcom_vs_2001OutputVO;
 import com.tpcom_apr.mapper.Aprv_no_dy_tmMapper;
-import com.tpcom_apr.service.service_interface.GetaprvnoService;
+import com.tpcom_apr.service.serviceInterface.GetaprvnoService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.ResponseEntity;
-import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 

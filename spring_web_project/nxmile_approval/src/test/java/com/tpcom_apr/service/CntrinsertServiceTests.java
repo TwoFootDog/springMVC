@@ -6,7 +6,7 @@ import com.tpcom_apr.domain.service.CntrinsertInputVO;
 import com.tpcom_apr.domain.service.wrapper.CntrinsertInputWrapperVO;
 import com.tpcom_apr.domain.service.wrapper.CntrinsertOutputWrapperVO;
 import com.tpcom_apr.mapper.Apr_dealtr_trnMapper;
-import com.tpcom_apr.service.service_interface.CntrinsertService;
+import com.tpcom_apr.service.serviceInterface.CntrinsertService;
 import lombok.extern.log4j.Log4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -7,17 +7,13 @@ import com.tpcom_apr.domain.service.wrapper.OritrqryInputWrapperVO;
 import com.tpcom_apr.domain.service.wrapper.OritrqryOutputWrapperVO;
 import com.tpcom_apr.domain.sql.Apr_dealtr_trn_tpcom_vs2002OutputVO;
 import com.tpcom_apr.domain.service.OritrqryInputVO;
-import com.tpcom_apr.domain.service.OritrqryOutputVO;
 import com.tpcom_apr.mapper.Apr_dealtr_trnMapper;
-import com.tpcom_apr.service.service_interface.OritrqryService;
+import com.tpcom_apr.service.serviceInterface.OritrqryService;
 import lombok.extern.log4j.Log4j;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.http.HttpHeaders;
-import org.springframework.http.ResponseEntity;
-import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 

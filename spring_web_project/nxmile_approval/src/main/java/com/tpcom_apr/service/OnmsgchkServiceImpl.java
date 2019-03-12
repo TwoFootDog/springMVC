@@ -10,21 +10,15 @@ import com.tpcom_apr.domain.service.wrapper.OnmsgchkOutputWrapperVO;
 import com.tpcom_apr.domain.sql.Rul_svcavl_con_tpcom_vs2001InputVO;
 import com.tpcom_apr.domain.sql.Rul_svcavl_con_tpcom_vs2001OutputVO;
 import com.tpcom_apr.mapper.Rul_svcavl_conMapper;
-import com.tpcom_apr.service.service_interface.OnmsgchkService;
+import com.tpcom_apr.service.serviceInterface.OnmsgchkService;
 import lombok.Setter;
 import lombok.extern.log4j.Log4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
-import javax.servlet.http.HttpServletRequest;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Map;
 
 @Service
 @Log4j

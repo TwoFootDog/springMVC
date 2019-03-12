@@ -1,11 +1,8 @@
-package com.tpcom_apr.service.service_interface;
+package com.tpcom_apr.service.serviceInterface;
 
 import com.tpcom_apr.domain.service.OritrqryInputVO;
-import com.tpcom_apr.domain.service.OritrqryOutputVO;
 import com.tpcom_apr.domain.service.wrapper.OritrqryInputWrapperVO;
 import com.tpcom_apr.domain.service.wrapper.OritrqryOutputWrapperVO;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.ResponseEntity;
 
 import java.util.Map;
 

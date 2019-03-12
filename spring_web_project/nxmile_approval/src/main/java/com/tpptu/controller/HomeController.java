@@ -1,19 +1,28 @@
 package com.tpptu.controller;
 
 
+import com.commons.domain.CustomizeHeaderVO;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.common.base.Utf8;
+import com.google.gson.Gson;
 import com.tpptu.domain.wrapper.ZptutxptcInputWrapperVO;
 import com.tpptu.domain.wrapper.ZptutxptcOutputWrapperVO;
 import com.tpptu.service.ZptutxptcService;
 import io.swagger.annotations.*;
 import lombok.Setter;
 import lombok.extern.log4j.Log4j;
+
+
+import org.apache.commons.io.IOUtils;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServletRequest;
+import java.io.BufferedReader;
+import java.io.IOException;
 
 @RestController
 //@AllArgsConstructor
@@ -48,17 +57,14 @@ public class HomeController {
     @PostMapping(value = "/zptutxptc",
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_JSON_UTF8_VALUE})
-    public ZptutxptcOutputWrapperVO zptutcptc(@RequestBody ZptutxptcInputWrapperVO inputVO, ServletRequest servletRequest, HttpServletRequest httpServletRequest) {
-        log.info("controller httpservletrequest------------------------------------" + httpServletRequest.getAttribute("header"));
-        log.info("controller servletrequest------------------------------------" + servletRequest.getAttribute("header"));
+    public ZptutxptcOutputWrapperVO zptutcptc(@RequestBody ZptutxptcInputWrapperVO inputVO, HttpServletRequest httpServletRequest) {
         return zptutxptcService.syncCall(inputVO);
 
+
     }
-//    public ResponseEntity<ZptutxptcOutputVO> zptutcptc(@RequestHeader HttpHeaders Header,
-//                                                       @RequestBody ZptutxptcInputVO inputVO) {
-//        return zptutxptcService.syncCall(Header, inputVO);
-//
-//    }
+
+
+
 
     @ApiImplicitParams({
             @ApiImplicitParam(name = "area", value = "지역", required = true, dataType = "String", paramType = "path"),

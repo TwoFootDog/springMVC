@@ -61,6 +61,10 @@
           <element id="library" level="project" name="Maven: org.mongodb:mongo-java-driver:3.10.1" />
           <element id="library" level="project" name="Maven: org.springframework.data:spring-data-mongodb:2.1.5.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.data:spring-data-commons:2.1.5.RELEASE" />
+          <element id="library" level="project" name="Maven: org.json:json:20180813" />
+          <element id="library" level="project" name="Maven: commons-io:commons-io:2.6" />
+          <element id="library" level="project" name="Maven: org.apache.commons:commons-lang3:3.0" />
+          <element id="library" level="project" name="Maven: commons-codec:commons-codec:1.4" />
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.25" />
           <element id="library" level="project" name="Maven: org.slf4j:jcl-over-slf4j:1.7.25" />
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-log4j12:1.7.25" />

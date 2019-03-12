@@ -1,17 +1,11 @@
 package com.tpcom_apr.controller;
 
-import com.tpcom_apr.domain.service.OnmsgchkInputVO;
-import com.tpcom_apr.domain.service.OnmsgchkOutputVO;
 import com.tpcom_apr.domain.service.wrapper.OnmsgchkInputWrapperVO;
 import com.tpcom_apr.domain.service.wrapper.OnmsgchkOutputWrapperVO;
-import com.tpcom_apr.service.service_interface.OnmsgchkService;
+import com.tpcom_apr.service.serviceInterface.OnmsgchkService;
 import lombok.AllArgsConstructor;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import javax.servlet.http.HttpServletRequest;
 
 @RestController
 @AllArgsConstructor

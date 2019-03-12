@@ -8,7 +8,7 @@ import com.tpcom_apr.domain.service.wrapper.*;
 import com.tpcom_apr.domain.sql.Apr_dealtr_trn_tpcom_vf2001InputVO;
 import com.tpcom_apr.domain.sql.Apr_dealtr_trn_tpcom_vf2001OutputVO;
 import com.tpcom_apr.mapper.Apr_dealtr_trnMapper;
-import com.tpcom_apr.service.service_interface.*;
+import com.tpcom_apr.service.serviceInterface.*;
 import com.tpptu.domain.ZptutxptcInputVO;
 import com.tpptu.domain.ZptutxptcOutputVO;
 import com.tpptu.domain.wrapper.ZptutxptcInputWrapperVO;
@@ -55,8 +55,6 @@ public class ZptutxptcService {
     private CntrinsertInputWrapperVO cntrinsertInputWrapperVO;
 
     /* 서비스 입력 custom header*/
-    /* header를 bean으로 등록한 이유는 ExceptionHandeler에서 header를 사용하기 위함 */
-    @Setter(onMethod_ = {@Autowired})
     private CustomizeHeaderVO header;
 
     /* 서비스 입력전문(body)*/
@@ -78,8 +76,7 @@ public class ZptutxptcService {
 
         int bodyCount = 0;
 
-        header.set(inputWrapperVO.getHeader()); // 해더 셋팅
-
+        header = inputWrapperVO.getHeader(); // header 셋팅
         outputWrapperVO = new ZptutxptcOutputWrapperVO();   // 사용취소 출력객체 생성
 
         for (ZptutxptcInputVO inputVO : inputWrapperVO.getBody()) {
@@ -142,7 +139,7 @@ public class ZptutxptcService {
             oritrqryInputWrapperVO = new OritrqryInputWrapperVO();
             oritrqryInputWrapperVO.setHeader(header);
             oritrqryInputWrapperVO.setBody(oritrqryInputVO);
-            OritrqryOutputWrapperVO oritrqryOutputVO = oritrqryService.syncCall(oritrqryInputWrapperVO);
+            OritrqryOutputWrapperVO oritrqryOutputWrapperVO = oritrqryService.syncCall(oritrqryInputWrapperVO);
 
 
 
@@ -159,10 +156,10 @@ public class ZptutxptcService {
 
             /* 취소대상 거래내역 조회 */
             apr_dealtr_trn_tpcom_vf2001InputVO = new Apr_dealtr_trn_tpcom_vf2001InputVO();
-            apr_dealtr_trn_tpcom_vf2001InputVO.setMbrsh_pgm_id(oritrqryOutputVO.getBody().getMbrsh_pgm_id());
-            apr_dealtr_trn_tpcom_vf2001InputVO.setRep_aprv_no(oritrqryOutputVO.getBody().getRep_aprv_no());
-            apr_dealtr_trn_tpcom_vf2001InputVO.setOrgn_aprv_dy(oritrqryOutputVO.getBody().getAprv_dy());
-            apr_dealtr_trn_tpcom_vf2001InputVO.setTrc_no(oritrqryOutputVO.getBody().getTrc_no());
+            apr_dealtr_trn_tpcom_vf2001InputVO.setMbrsh_pgm_id(oritrqryOutputWrapperVO.getBody().getMbrsh_pgm_id());
+            apr_dealtr_trn_tpcom_vf2001InputVO.setRep_aprv_no(oritrqryOutputWrapperVO.getBody().getRep_aprv_no());
+            apr_dealtr_trn_tpcom_vf2001InputVO.setOrgn_aprv_dy(oritrqryOutputWrapperVO.getBody().getAprv_dy());
+            apr_dealtr_trn_tpcom_vf2001InputVO.setTrc_no(oritrqryOutputWrapperVO.getBody().getTrc_no());
             if (CommonFunction.isStringEquals(inputVO.getSlp_cd(), "42")) {
                 apr_dealtr_trn_tpcom_vf2001InputVO.setSlp_cd("41");
             } else if (CommonFunction.isStringEquals(inputVO.getSlp_cd(), "22")) {
@@ -269,18 +266,21 @@ public class ZptutxptcService {
                 CntrinsertOutputWrapperVO cntrinsertOutputWrapperVO = cntrinsertService.syncCall(cntrinsertInputWrapperVO);
             }
 
+            // 결과값 body 셋팅
             outputVO = new ZptutxptcOutputVO();
-            outputVO.setMbrsh_pgm_id("A");
-            outputVO.setAprv_dy("20181219");
-            outputVO.setAprv_no("F88888888");
-            outputVO.setMcht_no("123456789");
-            outputVO.setCrd_no("2222222222222222");
+            outputVO.setMbrsh_pgm_id(oritrqryOutputWrapperVO.getBody().getMbrsh_pgm_id());
+            outputVO.setAprv_dy(getaprvnoOutputWrapperVO.getBody().getAprv_dy());
+            outputVO.setAprv_no(getaprvnoOutputWrapperVO.getBody().getAprv_no());
+            outputVO.setMcht_no(oritrqryOutputWrapperVO.getBody().getMcht_no());
+            outputVO.setCrd_no(oritrqryOutputWrapperVO.getBody().getCrd_no());
+            outputVO.setMbr_id(oritrqryOutputWrapperVO.getBody().getMbr_id());
 
+            // 결과값 body를 List에 저장
             outputVOList = new ArrayList<ZptutxptcOutputVO>();
             outputVOList.add(outputVO);
         }
 
-        // 결과값 header setting
+        // 결과값 header 셋팅
         outputWrapperVO.setHeader(
                 new CustomizeHeaderVO(
                         inputWrapperVO.getHeader().getTelgrm_no().substring(0, 3).concat("1"),
@@ -292,6 +292,7 @@ public class ZptutxptcService {
                         "00",
                         "00",
                         ""));
+        // 결과값 body 및 cnt 셋팅
         outputWrapperVO.setBody(outputVOList);
         outputWrapperVO.setTotalBodyCnt(bodyCount);
 
