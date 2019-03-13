@@ -34,7 +34,7 @@
     <!-- request body를 받기 위해 추가 start-->
     <filter>
         <filter-name>requestFilter</filter-name>
-        <filter-class>com.commons.util.RequestFilter</filter-class>
+        <filter-class>com.commons.utils.RequestFilter</filter-class>
     </filter>
     <filter-mapping>
         <filter-name>requestFilter</filter-name>

@@ -58,9 +58,8 @@ public class HomeController {
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_JSON_UTF8_VALUE})
     public ZptutxptcOutputWrapperVO zptutcptc(@RequestBody ZptutxptcInputWrapperVO inputVO, HttpServletRequest httpServletRequest) {
+        log.info("-------------------controller입니다------------------------");
         return zptutxptcService.syncCall(inputVO);
-
-
     }
 
 

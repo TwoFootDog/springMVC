@@ -27,6 +27,7 @@ public class InsertDataAspect {
         Object result = null;
 
         try {
+            log.info("-------------------AOP입니다------------------------");
             mongoDBDao.inputDataInsert(input);      // 입력 data를 mongodb에 저장
             result = joinPoint.proceed();           // 메인 서비스 호출
             mongoDBDao.outputDataInsert(result);    // 입력 data를 mongodb에 저장
