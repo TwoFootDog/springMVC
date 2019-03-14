@@ -33,6 +33,7 @@ public class GetaprvnoServiceImpl implements GetaprvnoService {
     private GetaprvnoOutputVO outputVO;
     private GetaprvnoOutputWrapperVO outputWrapperVO;
 
+    @Override
     public GetaprvnoOutputWrapperVO syncCall(GetaprvnoInputWrapperVO inputWrapperVO) {
 
         outputVO = new GetaprvnoOutputVO();

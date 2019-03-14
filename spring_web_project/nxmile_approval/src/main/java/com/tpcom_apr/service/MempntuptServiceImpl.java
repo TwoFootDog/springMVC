@@ -37,7 +37,7 @@ public class MempntuptServiceImpl implements MempntuptService {
     private MempntuptOutputWrapperVO outputWrapperVO;   // 응답 header + body
 
 
-
+    @Override
     public MempntuptOutputWrapperVO syncCall(MempntuptInputWrapperVO inputWrapperVO) {
 
         header = inputWrapperVO.getHeader();

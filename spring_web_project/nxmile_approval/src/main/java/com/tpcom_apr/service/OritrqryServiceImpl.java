@@ -135,7 +135,7 @@ public class OritrqryServiceImpl implements OritrqryService {
         return outputWrapperVO;
     }
 
-
+    @Override
     public int sqlTypeSetting(OritrqryInputVO inputVO) {
         int caller_type;
         int cancel_type;

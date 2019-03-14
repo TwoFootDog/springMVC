@@ -2,6 +2,8 @@ package com.commons.dao;
 
 import com.commons.dao.daoInterface.MongoDBDao;
 import lombok.Setter;
+import org.apache.ibatis.session.SqlSession;
+import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Repository;
@@ -16,6 +18,8 @@ public class MongoDBDaoImpl implements MongoDBDao {
     @Setter(onMethod_ = {@Autowired})
     private MongoTemplate mongoTemplate;
 
+
+    @Override
     public void inputDataInsert(Object input) {
         Map<String, Object> inputDataMap = new HashMap<String, Object>();
         inputDataMap.put("timestamp", new SimpleDateFormat("yyyyMMddHHmmss").format(new Date()));
@@ -23,6 +27,7 @@ public class MongoDBDaoImpl implements MongoDBDao {
         mongoTemplate.insert(inputDataMap, "input_data");
     }
 
+    @Override
     public void outputDataInsert(Object output) {
         Map<String, Object> outputDataMap = new HashMap<String, Object>();
         outputDataMap.put("timestamp", new SimpleDateFormat("yyyyMMddHHmmss").format(new Date()));

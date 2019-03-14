@@ -34,20 +34,21 @@ public class CntrinsertServiceImpl implements CntrinsertService {
     private CntrinsertOutputWrapperVO outputWrapperVO;  // 응답 header + body
 
 
+    @Override
     public CntrinsertOutputWrapperVO syncCall(CntrinsertInputWrapperVO inputWrapperVO) {
 
         header = inputWrapperVO.getHeader();
         inputVO = inputWrapperVO.getBody();
 
-//        try {
+        try {
             int result1 = apr_dealtr_trnMapper.apr_dealtr_trn_tpcom_ei2001(
                     new Apr_dealtr_trn_tpcom_ei2001InputVO(inputVO));
             if (result1 <= 0) {
                 throw new ValidException("9080", "취소 거래내역 생성 에러");
             }
-//        } catch (Exception e) {
-//            throw new ValidException("9080", "취소 거래내역 생성 에러. 상세 : " + e.getCause());
-//        }
+        } catch (Exception e) {
+            throw new ValidException("9080", "취소 거래내역 생성 에러. 상세 : " + e.getCause());
+        }
 
         String cnclTyp;
         if (CommonFunction.isStringEquals(inputVO.getAns_cd(), "60")) {
@@ -55,7 +56,7 @@ public class CntrinsertServiceImpl implements CntrinsertService {
         } else {
             cnclTyp = "1";
         }
-//        try {
+        try {
             int result = apr_dealtr_trnMapper.apr_dealtr_trn_tpcom_eu2001(
                     new Apr_dealtr_trn_tpcom_eu2001InputVO(
                             cnclTyp,
@@ -87,9 +88,9 @@ public class CntrinsertServiceImpl implements CntrinsertService {
             } else {
                 throw new ValidException("9080", "원거래내역 갱신 에러");
             }
-//        } catch (Exception e) {
-//            throw new ValidException("9080", "원거래내역 갱신 에러. 상세 : " + e.getCause());
-//        }
+        } catch (Exception e) {
+            throw new ValidException("9080", "원거래내역 갱신 에러. 상세 : " + e.getCause());
+        }
 
 
         log.info("거래내역은 금방 갱신되지유?????" + new SimpleDateFormat("yyyy/MM/dd/ HH:mm:ss").format(System.currentTimeMillis()));

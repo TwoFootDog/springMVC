@@ -33,6 +33,7 @@ public class MeminfqryServiceImpl implements MeminfqryService {
     private MeminfqryOutputWrapperVO outputWrapperVO;   // 응답 header + body
 
 
+    @Override
     public MeminfqryOutputWrapperVO syncCall(MeminfqryInputWrapperVO inputWrapperVO) {
 
         inputVO = inputWrapperVO.getBody();

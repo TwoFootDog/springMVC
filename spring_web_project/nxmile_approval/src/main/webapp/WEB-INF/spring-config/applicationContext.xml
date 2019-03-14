@@ -39,9 +39,6 @@
     <context:component-scan base-package="com.commons.exception" />
     <context:component-scan base-package="com.commons.dao" />
 
-    <!-- 요청 해더를 bean으로 등록-->
-    <bean id="requestHeader" class="com.commons.domain.CustomizeHeaderVO"/>
-
     <!-- 트랜잭션 매니저 -->
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSource"/>

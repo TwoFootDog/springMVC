@@ -36,6 +36,7 @@ public class OnmsgchkServiceImpl implements OnmsgchkService {
 
 
     /* 온라인 전문 유효성 체크(BM_COM_ONMSGCHK) */
+    @Override
     public OnmsgchkOutputWrapperVO syncCall(OnmsgchkInputWrapperVO inputWrapperVO) {
 
         header = inputWrapperVO.getHeader();
@@ -103,6 +104,7 @@ public class OnmsgchkServiceImpl implements OnmsgchkService {
 
 
     /* 공통 입력값 유효성 체크*/
+    @Override
     public void commonInputDataValidChk(OnmsgchkInputVO inputVO) {
         if (StringUtils.isEmpty(inputVO.getTrc_no())) {
             throw new ValidException("7777", "추적번호 미 유입");
