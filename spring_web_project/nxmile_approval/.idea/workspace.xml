@@ -8,15 +8,25 @@
   <component name="ChangeListManager">
     <list default="true" id="5113db8d-b6a3-4ac0-b35e-eb1f3774eece" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/commons/dao/MongoDBDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/commons/dao/MongoDBDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/CntrinsertServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/CntrinsertServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/GetaprvnoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/GetaprvnoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/MeminfqryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/MeminfqryServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/MempntuptServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/MempntuptServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/OnmsgchkServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/OnmsgchkServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/OritrqryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tpcom_apr/service/OritrqryServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-config/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-config/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring_test_project/.idea/dataSources/a69c7c9a-cd08-4c5a-ba1e-a39009efdbbe.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring_test_project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_test_project/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring_test_project/src/main/java/com/test/dao/BoardDAOImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring_test_project/src/main/java/com/test/dao/daoInterface/BoardDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_test_project/src/main/java/com/test/persistent/BoardDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring_test_project/src/main/java/com/test/mapper/BoardMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring_test_project/src/main/java/com/test/service/BoardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_test_project/src/main/java/com/test/service/BoardServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring_test_project/src/main/resources/com/test/mapper/BoardMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_test_project/src/main/resources/com/test/mapper/BoardMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring_test_project/src/main/webapp/WEB-INF/spring-config/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_test_project/src/main/webapp/WEB-INF/spring-config/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring_test_project/target/classes/com/test/dao/BoardDAOImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring_test_project/target/classes/com/test/dao/daoInterface/BoardDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring_test_project/target/classes/com/test/mapper/BoardMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring_test_project/target/classes/com/test/mapper/BoardMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_test_project/target/classes/com/test/mapper/BoardMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring_test_project/target/classes/com/test/service/BoardServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_test_project/target/classes/com/test/service/BoardServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring_test_project/target/spring_test_project-1.0-SNAPSHOT/WEB-INF/classes/com/test/dao/BoardDAOImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring_test_project/target/spring_test_project-1.0-SNAPSHOT/WEB-INF/classes/com/test/dao/daoInterface/BoardDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring_test_project/target/spring_test_project-1.0-SNAPSHOT/WEB-INF/classes/com/test/mapper/BoardMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring_test_project/target/spring_test_project-1.0-SNAPSHOT/WEB-INF/classes/com/test/mapper/BoardMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_test_project/target/spring_test_project-1.0-SNAPSHOT/WEB-INF/classes/com/test/mapper/BoardMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring_test_project/target/spring_test_project-1.0-SNAPSHOT/WEB-INF/classes/com/test/service/BoardServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_test_project/target/spring_test_project-1.0-SNAPSHOT/WEB-INF/classes/com/test/service/BoardServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring_test_project/target/spring_test_project-1.0-SNAPSHOT/WEB-INF/spring-config/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_test_project/target/spring_test_project-1.0-SNAPSHOT/WEB-INF/spring-config/applicationContext.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -85,15 +95,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/domain/sql/Aprv_no_ocboff_tpcom_vs_2001OutputVO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/domain/sql/Aprv_dy_tm_tpcom_vs2001OutputVO.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="126">
@@ -105,7 +106,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/domain/sql/Apr_dealtr_trn_tpcom_vs2035OutputVO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-570">
+            <state relative-caret-position="126">
               <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
             </state>
           </provider>
@@ -123,7 +124,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/domain/sql/Apr_dealtr_trn_tpcom_vf2001OutputVO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-714">
+            <state relative-caret-position="126">
               <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
             </state>
           </provider>
@@ -141,7 +142,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/domain/service/OritrqryOutputVO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-954">
+            <state relative-caret-position="126">
               <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
             </state>
           </provider>
@@ -151,16 +152,28 @@
         <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/17767cd7-215e-4198-a9d5-1ffcf5e9857c/console.sql">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
-              <caret line="20" column="2" lean-forward="true" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
+              <caret line="20" column="2" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-config/applicationContext.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="34" column="76" selection-start-line="34" selection-start-column="76" selection-end-line="34" selection-end-column="76" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-config/applicationContext.xml">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="47" column="18" lean-forward="true" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
+            <state relative-caret-position="444">
+              <caret line="57" selection-start-line="57" selection-end-line="57" />
+              <folding>
+                <marker date="1552379345903" expanded="true" signature="6104:6131" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -348,7 +361,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -415,24 +428,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nxmile_approval" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nxmile_approval" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nxmile_approval" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nxmile_approval" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="nxmile_approval" type="b2602c69:ProjectViewProjectNode" />
@@ -566,7 +561,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -575,7 +570,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552539727763" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ex03" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../spring_test_project" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Facets" />
@@ -879,6 +874,8 @@
       <workItem from="1552474446542" duration="1708000" />
       <workItem from="1552524063484" duration="7200000" />
       <workItem from="1552544691790" duration="6567000" />
+      <workItem from="1552614921395" duration="843000" />
+      <workItem from="1552622978575" duration="1306000" />
     </task>
     <servers />
   </component>
@@ -915,7 +912,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="663826000" />
+    <option name="totallyTimeSpent" value="665975000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -930,7 +927,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49916804" visible="true" weight="0.20522387" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49916804" visible="true" weight="0.20948827" />
       <window_info id="Structure" order="1" sideWeight="0.5005574" side_tool="true" weight="0.25053304" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1078,16 +1075,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="38" column="36" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3132">
-          <caret line="174" column="39" selection-start-line="174" selection-start-column="39" selection-end-line="174" selection-end-column="39" />
-          <folding>
-            <marker date="1552379345903" expanded="true" signature="6104:6131" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1285,16 +1272,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/domain/sql/Apr_dealtr_trn_tpcom_vs2035InputVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/domain/sql/Apr_dealtr_trn_tpcom_vs2035OutputVO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-570">
+        <state relative-caret-position="126">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
@@ -1308,7 +1288,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/domain/sql/Apr_dealtr_trn_tpcom_vf2001OutputVO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-714">
+        <state relative-caret-position="126">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
@@ -1322,7 +1302,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/domain/service/OritrqryOutputVO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-954">
+        <state relative-caret-position="126">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
@@ -1330,14 +1310,31 @@
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/17767cd7-215e-4198-a9d5-1ffcf5e9857c/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
-          <caret line="20" column="2" lean-forward="true" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
+          <caret line="20" column="2" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tpcom_apr/domain/sql/Apr_dealtr_trn_tpcom_vs2035InputVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-config/applicationContext.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="47" column="18" lean-forward="true" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
+        <state relative-caret-position="360">
+          <caret line="34" column="76" selection-start-line="34" selection-start-column="76" selection-end-line="34" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
+          <folding>
+            <marker date="1552379345903" expanded="true" signature="6104:6131" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

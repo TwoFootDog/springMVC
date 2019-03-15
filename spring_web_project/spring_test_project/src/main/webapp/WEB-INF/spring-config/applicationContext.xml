@@ -2,10 +2,12 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/context
-       http://www.springframework.org/schema/context/spring-context.xsd">
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring.xsd">
 
     <!-- HikariCP connection pool bean 셋팅-->
     <bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
@@ -23,17 +25,12 @@
     <!-- DB connection 및 SQL전달/리턴을 위한 SQLSession을 만들어내는 SQLSessionFactory bean 셋팅-->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"></property>
-        <property name="mapperLocations" value="classpath:com/test/mapper/**/*Mapper.xml"></property>
+        <property name="mapperLocations" value="classpath:com/test/mapper/**/**Mapper.xml"></property>
     </bean>
 
-    <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate" destroy-method="clearCache">
-        <constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory"></constructor-arg>
-    </bean>
+    <mybatis-spring:scan base-package="com.test.persistent" />
 
-    <!-- base-package 에 정의된 package 내 클래스 및 xml을 SQL 처리를 위한 mapper로 인식-->
-    <!--<mybatis-spring:scan base-package="com.test.mapper" />-->
-
-    <context:component-scan base-package="com.test.dao" />
+    <context:component-scan base-package="com.test.persistent" />
 
     <!-- base-package에 정의된 package내 소스 중 @Component가 작성된 Class를 bean으로 인식-->
     <context:component-scan base-package="com.test.service" />

@@ -1,6 +1,6 @@
-package com.test.mapper;
+package com.test.persistent;
 
-public interface BoardMapper {
+public interface BoardDAO {
     public String getTime();
     public String getReplyer(int bno);
 

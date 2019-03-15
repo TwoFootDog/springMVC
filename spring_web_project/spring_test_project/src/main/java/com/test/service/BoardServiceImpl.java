@@ -1,7 +1,6 @@
 package com.test.service;
 
-import com.test.dao.daoInterface.BoardDAO;
-import com.test.mapper.BoardMapper;
+import com.test.persistent.BoardDAO;
 import com.test.service.serviceInterface.BoardService;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
